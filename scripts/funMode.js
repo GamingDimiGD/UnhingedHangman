@@ -6,6 +6,7 @@ const fun = () => {
     pab.style.color = `rgb(${rng(rmv)},${rng(rmv)},${rng(rmv)})`
     keyboardDiv.querySelectorAll('button').forEach(btn => {
         btn.style.background = `rgb(${rng(rmv)},${rng(rmv)},${rng(rmv)})`
+        btn.style.transition = "unset"
         if (btn.disabled) btn.style.background = `rgb(${rng((rmv + 1) / 4)},${rng((rmv + 1) / 4)},${rng((rmv + 1) / 4)})`
         if (rmv === 0 && btn.disabled) btn.style.opacity = '0'
         btn.style.margin = `-${rng(2)}px`
