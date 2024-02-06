@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: center;
+    min-height: 100vh;
+    background: #003c00;
+}
+
+.navbar audio {
+    margin-left: 10px;
+}
+
+.boss-dialogue {
+    position: absolute;
+    z-index: -1;
+    display: none;
+}
+
+.boss-dialogue li {
+    color: white;
+}
+
+.random {
+    display: none;
+    position: absolute;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    background: #00ff00;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 10%;
+    padding: 1rem;
+    color: #003c00;
+    max-height: 50px;
+}
+
+.navbar li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ff0000;
+}
+
+.info {
+    position: absolute;
+    right: 10px;
+    gap: 10px;
+    display: flex;
+}
+
+.container {
+    width: 850px;
+    background-color: #fff;
+    display: flex;
+    gap: 70px;
+    align-items: flex-end;
+    padding: 60px 40px;
+    border-radius: 10px;
+}
+.hangman-box img {
+    max-width: 270px;
+    border-radius: 5px;
+    border: 3px solid #003c00;
+    
+}
+.hangman-box h1 {
+    font-size: 1.45rem;
+    margin-top: 20px;
+    text-align: center;
+}
+.word-display {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    overflow-wrap: wrap;
+    
+}
+.word-display .letter {
+    width: 28px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #000;
+    transition: border-bottom 0.3s ease-in-out;
+    
+}
+.word-display .letter.guessed {
+    border-color: transparent;
+    margin: -40px 0 35px;
+}
+.game-box h4 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.game-box h4 b {
+    font-weight: 600;
+}
+.game-box .guesses-text b {
+    color: #f00;
+}
+.game-box .keyboard {
+    display: flex;
+    gap: 5px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+:where(.game-modal, .keyboard) button {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #003c00;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.qwerty {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #003c00;
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 7px;
+    margin-top: 7px;
+}
+
+button {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #003c00;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background 0.2s ease;
+}
+
+.navbar button {
+    padding: 2px 7px;
+}
+
+.dropdown button {
+    padding: 2px 7px;
+}
+    
+:where(body) button:hover {
+    background: #00ff00;
+}
+.keyboard button {
+    padding: 7px;
+    width: calc(100% / 9 - 5px);
+}
+
+button[disabled] {
+    background-color: #003c003c;
+    pointer-events: none;
+}
+
+:where(.game-modal, .keyboard) button:hover {
+    background: #0f0;
+}
+
+.game-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    background: #000000a0;
+    transition: opacity 0.5s ease;
+    display: flex;
+}
+
+.game-modal .content {
+    background: #fff;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.game-modal img {
+    max-width: 130px;
+}
+
+.game-modal h4 {
+    font-size: 1.53rem;
+    margin-bottom: 20px;
+}
+
+.game-modal p {
+    font-size: 1.15rem;
+    margin: 15px 0 30px;
+    font-weight: 500;
+}
+
+.game-modal p#meaning {
+    margin-top: -15px;
+}
+
+.game-modal p b {
+    color: #003c00;
+    font-weight: 600;
+}
+.game-modal button {
+    padding: 12px 23px;
+    background-color: #003c00;
+    border-radius: 7px;
+    color: #0f0;
+}
+
+.toggle {
+    display: none;
+}
+
+.dropdown a {
+    color: red;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: absolute;
+    right: 1rem;
+    top: 60px;
+    background: #003c003c;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s ease;
+    flex-direction: column;
+    height: 0;
+}
+
+.dropdown.open {
+    height: auto;
+}
+
+.dropbut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    margin: 7px 4px;
+}
+
+.game-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 726px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+    }
+    .hangman-box img {
+        max-width: 200px;
+    }
+    .hangman-box h1 {
+        display: none;
+    }
+    .navbar {
+        background: none;
+        color: white;
+    }
+    .navbar h1 {
+        background: #003c00;
+        border-radius: 4px;
+        padding: 2px;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    .navbar audio {
+        display: none;
+    }
+    .navbut {
+        display: none;
+    }
+    .toggle {
+        display: flex;
+        background: #003c00;
+        border-radius: 4px;
+        padding: 2px 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .info li {
+        background-color: #003c00;
+        border-radius: 4px;
+        padding: 3px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.container h1#help {
+    display: none;
+    font-size: 190px;
+}
+
+@media (max-width: 1100px) {
+    .navbar audio {
+        display: none;
+    }
+}
+
+@media (max-width: 200px) {
+    .game-box {
+        display: none;
+    }
+    .hangman-box {
+        display: none;
+    }
+    .container h1#help {
+        display: flex;
+        font-size: 160px;
+    }
+    .navbar {
+        display: none;
+    }
+}
+@media (max-height: 200px) {
+    .game-box {
+        display: none;
+    }
+    .hangman-box {
+        display: none;
+    }
+    .container h1#help {
+        display: flex;
+    }
+    .navbar {
+        display: none;
+    }
+}

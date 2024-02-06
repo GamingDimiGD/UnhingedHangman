@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/homepage.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/1.6.1/kute.min.js"
+        integrity="sha512-DeLO4mdijNCQ3uOZDb1u+sUadgQUQnPr3zlPejMZBNbLi9rreaGwBjIJXYPU8WNJpRWb9LG6RpP6kdodXw6AGg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+    <script src="scripts/web.js" defer></script>
+    <title>首頁 - Unhinged Hangman</title>
+</head>
+
+<body>
+    <div class="text">
+        <svg class="bubble" id="visual" viewBox="0 0 900 600" width="900" height="600"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <g transform="translate(417.5820092583164 301.8433759914637)">
+                <path id="blob1"
+                    d="M178.2 -169.4C228.2 -128.2 264.1 -64.1 249.7 -14.4C235.4 35.4 170.7 70.7 120.7 111.2C70.7 151.7 35.4 197.4 -15.2 212.6C-65.8 227.8 -131.5 212.5 -162.9 172C-194.2 131.5 -191.1 65.8 -181.3 9.8C-171.5 -46.2 -155.1 -92.4  -123.7 -133.6C-92.4 -174.7 -46.2 -210.9 9 -219.8C64.1 -228.8 128.2 -210.6 178.2 -169.4"
+                    fill="#004c00"></path>
+            </g>
+            <g transform="translate(414.41350194497716 303.2088901443424)" style="visibility: hidden;">
+                <path id="blob2"
+                    d="M137.2 -124.9C184.9 -89.6 235.5 -44.8 248.4 13C261.4 70.7 236.8 141.4 189.1 166.4C141.4 191.4 70.7 170.7 10.7 160C-49.3 149.3 -98.5 148.5 -132.2 123.5C-165.9 98.5 -183.9 49.3 -180.2 3.8C-176.4 -41.7 -150.8 -83.4 -117.1 -118.8C-83.4 -154.1 -41.7 -183.1 1.5 -184.6C44.8 -186.1 89.6 -160.2 137.2 -124.9"
+                    fill="#004c00"></path>
+            </g>
+        </svg>
+        <h1 class="alert">
+            重要！怕閃爍的人記得在遊戲介面上方的按鈕把閃爍關掉！
+        </h1>
+
+        <h1 class="title">
+            UNHINGED HANGMAN 遊戲
+        </h1>
+
+        <p>
+            這個遊戲有<b class="alert">2196個英文字</b>，打贏一局可以知道意思，可以邊玩邊練英文，一舉兩得！
+        </p>
+
+        <p>
+            不知道遊戲怎麼玩就<a href="html/howtoplay.html" class="alert">點我</a>。
+        </p>
+
+        <div class="coolanim">
+            <button id="play" onclick="
+new Audio('../sfx/START.mp3').play();
+setTimeout(() => {
+    location.href = 'html/index.html';
+}, 4000)
+">
+                <h2>點我到遊戲介面</h2>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
