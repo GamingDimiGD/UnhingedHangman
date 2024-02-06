@@ -40,8 +40,8 @@
         <h1 class="title">HANGMAN</h1>
         <div class="info">
             <a href="howtoplay.html" class="navbut">怎麼玩?</a>
-            <button id="tfl" class="navbut">關閉閃爍</button>
-            <button id="antilag" class="navbut">減少效果</button>
+            <button id="tfl" class="navbut" onclick="toggleflash()">關閉閃爍</button>
+            <button id="antilag" class="navbut" onclick="tal()">減少效果</button>
             <button id="save" class="navbut" onclick="save()">儲存</button>
             <li>詞彙量: <b id="va">我不知道</b> / <b id="via">我不知道</b></li>
             <button class="toggle" onclick="
@@ -56,8 +56,8 @@
     </nav>
     <div class="dropdown">
         <a href="howtoplay.html" class="dropbut">怎麼玩?</a>
-        <button id="tfl2" class="dropbut">關閉閃爍</button>
-        <button id="antilag2" class="dropbut">減少效果</button>
+        <button id="tfl2" class="dropbut" onclick="toggleflash()">關閉閃爍</button>
+        <button id="antilag2" class="dropbut" onclick="tal()">減少效果</button>
         <button id="save2" class="dropbut" onclick="save()">儲存</button>
         <button id="mute" class="dropbut" onclick="muteMusic()">關音樂</button>
     </div>

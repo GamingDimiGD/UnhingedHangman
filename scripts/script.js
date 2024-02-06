@@ -6,7 +6,7 @@ let rmv = 255
 const pngAmount = 2
 const gifAmount = 2
 let autosaveText = '每10秒自動儲存'
-let version = 'BETA v1.0'
+let version = 'BETA v1.0.1'
 const keyboardDiv = document.querySelector(".keyboard");
 const worddisplayDiv = document.querySelector('.word-display')
 const gameModal = document.querySelector('.game-modal')
@@ -33,9 +33,6 @@ const toggleflash = () => {
         document.getElementById('tfl2').innerText = '關閉閃爍'
     }
 }
-
-document.getElementById('tfl').addEventListener('click', toggleflash)
-document.getElementById('tfl2').addEventListener('click', toggleflash)
 
 const removeWord = (wordToRemove) => {
     const newArray = []
