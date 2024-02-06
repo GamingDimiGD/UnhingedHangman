@@ -11,6 +11,7 @@ const fun = () => {
         if (rmv === 0 && btn.disabled) btn.style.opacity = '0'
         btn.style.margin = `-${rng(2)}px`
     })
+    qwerty.style.transition = `unset`
     qwerty.style.background = `rgb(${rng(rmv)},${rng(rmv)},${rng(rmv)})`
     if (qwerty.disabled) qwerty.style.background = `rgb(${rng((rmv + 1) / 4)},${rng((rmv + 1) / 4)},${rng((rmv + 1) / 4)})`
     document.querySelector('.navbar').style.color = `rgb(${rng(rmv)},${rng(rmv)},${rng(rmv)})`
