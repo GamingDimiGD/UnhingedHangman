@@ -74,12 +74,12 @@ body {
     align-items: flex-end;
     padding: 60px 40px;
     border-radius: 10px;
+    transition: background 3s ease;
 }
 .hangman-box img {
     max-width: 270px;
     border-radius: 5px;
     border: 3px solid #003c00;
-    
 }
 .hangman-box h1 {
     font-size: 1.45rem;

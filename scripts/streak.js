@@ -51,7 +51,7 @@ setInterval(() => {
         b = b - cs
         g = g + cs
     }
-    if (winStreak > 10) {
+    if (winStreak >= 10) {
         document.querySelector('.hangman-box img').style.border = "5px solid " + styleText
         document.querySelector('.navbar').style.color = styleText
         streakText.style.border = "3px solid " + styleText
@@ -77,6 +77,7 @@ const checkStreak = (amount) => {
         keyboardDiv.querySelectorAll('button').forEach(btn => {
             btn.style.color = '#fff'
         })
+        game.style.border = 'none'
     } else if (winStreak >= 5 && winStreak < 10) {
         game.style.background = '#fff000'
         document.querySelector('.hangman-box img').style.border = "5px solid #ff0000"
