@@ -65,12 +65,16 @@ const streakText = document.querySelector('.streak')
 let si
 const checkStreak = (amount) => {
     winStreak++
-    if (!isNaN(amount)) winStreak = amount
-    if(winStreak > vocabAmount) {
+    if(!isNaN(vocabAmount)) if(winStreak > vocabAmount || winStreak > vocab.length ||　winStreak > oVocab.length) {
         setInterval(() => alert('你這個開掛仔'))
         sfx('../sfx/eeeeuuugh.mp3')
         music.pause()
+        return
     }
+    if(winStreak > hiStreak && amount !== 0) hiStreak++
+    document.querySelector('.hi-streak').innerText = '最高連勝紀錄: ' + hiStreak
+    $.jStorage.set('hiStreak', hiStreak)
+    if (!isNaN(amount)) winStreak = amount
     streakText.innerText = winStreak + ' 連勝'
     if(winStreak < 5) {
         clearInterval(si)

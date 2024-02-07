@@ -2,6 +2,9 @@ console.log('你好呀 不要在這裡放入文字 除非你是設計遊戲的�
 
 let funMode = false
 let winStreak = 0
+let hiStreak = 0
+if($.jStorage.get('hiStreak')) hiStreak = $.jStorage.get('hiStreak')
+document.querySelector('.hi-streak').innerText = '最高連勝紀錄: ' + hiStreak
 let rmv = 255
 const pngAmount = 2
 const gifAmount = 2
