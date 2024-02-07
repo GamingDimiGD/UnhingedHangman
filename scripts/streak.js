@@ -66,6 +66,11 @@ let si
 const checkStreak = (amount) => {
     winStreak++
     if (!isNaN(amount)) winStreak = amount
+    if(winStreak > vocabAmount) {
+        setInterval(() => alert('你這個開掛仔'))
+        sfx('../sfx/eeeeuuugh.mp3')
+        music.pause()
+    }
     streakText.innerText = winStreak + ' 連勝'
     if(winStreak < 5) {
         clearInterval(si)
@@ -79,6 +84,7 @@ const checkStreak = (amount) => {
         })
         game.style.border = 'none'
     } else if (winStreak >= 5 && winStreak < 10) {
+        clearInterval(si)
         game.style.background = '#fff000'
         document.querySelector('.hangman-box img').style.border = "5px solid #ff0000"
         streakText.style.color = '#ff0000'
@@ -88,6 +94,7 @@ const checkStreak = (amount) => {
             streakText.style.margin = rng(3) + 'px'
         })
     } else if(winStreak >= 10) {
+        clearInterval(si)
         game.style.background = '#cc77ff'
         game.style.border = '5px solid cyan'
         
