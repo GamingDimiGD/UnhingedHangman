@@ -159,7 +159,7 @@ const initGame = (button, clickedLetter) => {
     if (currentWord.toLowerCase().includes(clickedLetter)) {
         if (clickedLetter !== " ") {
             [...currentWord].forEach((letter, index) => {
-                if (letter === clickedLetter) {
+                if (letter.toLowerCase() === clickedLetter) {
                     correctLetters.push(letter)
                     worddisplayDiv.querySelectorAll('li')[index].innerText = letter
                     worddisplayDiv.querySelectorAll('li')[index].classList.add('guessed')
