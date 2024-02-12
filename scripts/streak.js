@@ -72,6 +72,10 @@ const checkStreak = (amount) => {
         return
     }*/
     if(winStreak > hiStreak && amount !== 0) hiStreak++
+    if(hiStreak >= 5 || winStreak >= 5) giveAch('5streak')
+    if(hiStreak >= 10 || winStreak >= 10) giveAch('10streak')
+    if(hiStreak >= 50 || winStreak >= 50) giveAch('50streak')
+    
     document.querySelector('.hi-streak').innerText = '最高連勝紀錄: ' + hiStreak
     $.jStorage.set('hiStreak', hiStreak)
     if (!isNaN(amount)) winStreak = amount

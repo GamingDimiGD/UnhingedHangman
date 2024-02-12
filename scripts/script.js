@@ -15,6 +15,8 @@ const gameModal = document.querySelector('.game-modal')
 const pab = document.querySelector('.play-again')
 const hangman = document.querySelector('body')
 const game = document.querySelector('.container')
+const ab = document.getElementById('achievements')
+const abm = document.querySelector('.achievements-modal')
 let currentWord, wordmeaning, correctLetters, wrongGuessCount
 const maxGuesses = 6
 let vocabAmount = 0
@@ -44,6 +46,9 @@ const removeWord = (wordToRemove) => {
         }
     }
     vocabAmount++
+    if(vocabAmount >= 100) giveAch('100words')
+    if(vocabAmount >= 500) giveAch('500words')
+    if(vocabAmount >= 1000) giveAch('1kwords')
     if(vocabAmount !== oVocab.length - newArray.length) vocabAmount = oVocab.length - newArray.length
     return newArray
 }
@@ -52,6 +57,11 @@ const resetGame = () => {
     document.querySelector('.info li b#va').innerText = vocabAmount
     correctLetters = [], wrongGuessCount = 0
     worddisplayDiv.innerHTML = currentWord.toLowerCase().split("").map(() => `<li class="letter"></li>`).join("")
+    if(currentWord.length > 12) {
+        worddisplayDiv.querySelectorAll('.letter').forEach(e => e.style.width = '20px')
+    } else {
+        worddisplayDiv.querySelectorAll('.letter').forEach(e => e.style.width = '28px')
+    }
     gameModal.classList.remove("show")
     document.querySelector('.guesses-text b').innerText = wrongGuessCount + ' / ' + maxGuesses
     document.querySelector('.hangman-box').innerHTML = `
@@ -79,6 +89,8 @@ let bd = 10
 
 const getRandomWord = () => {
     if (vocab.length === 0) {
+        giveAch('endgame')
+        if(bossFightMode) bd = 0
         bda = true          /**/
         if (bd === 10)  /**/    /**/bossSays('哈囉', 7)
     else if (bd === 9)/**/bossSays/**/('你玩太久了', 7)
@@ -98,10 +110,11 @@ const getRandomWord = () => {
             bossSays(glitch(dfahjshkjdafshj), 4)
             sfx('../sfx/ah.mp3')
         } else if (bd === 0) {
-            game.style.display = 'none'
-            game.style.width =
+            game.style.display = 'none' 
             bossLi.style.display = 'none'
             document.querySelector('.navbar').style.display = 'none'
+            ab.style.display = 'none'
+            abm.style.display = 'none'
             bossSays('', 0.001)
             bossReady()
         }
@@ -126,8 +139,11 @@ const getRandomWord = () => {
 
 getRandomWord()
 
+let modalText, gameOverStatus
+
 const gameOver = (isVictory) => {
     if (isVictory) {
+        giveAch('won')
         checkStreak()
         vocab = removeWord(currentWord)
         sfx('../sfx/yay.mp3')
@@ -140,8 +156,8 @@ const gameOver = (isVictory) => {
             party()
         }
     } else sad()
-    const modalText = isVictory ? `你找到了: ` : `答案是: `
-    const gameOverStatus = isVictory ? `你贏了!` : `你輸了!`
+    modalText = isVictory ? `你找到了: ` : `答案是: `
+    gameOverStatus = isVictory ? `你贏了!` : `你輸了!`
     let pic = isVictory ? 'win.png' : 'lose.png'
     if (funMode) {
         if (rng(1) === 0) pic = Math.floor(Math.random() * gifAmount) + '.gif'
@@ -153,6 +169,29 @@ const gameOver = (isVictory) => {
     document.querySelector('.content p#ans').innerHTML = `<p id="ans">${modalText}<b>${currentWord}</b> </p>`
     document.querySelector('.content p#meaning b').innerText = wordmeaning
     document.querySelector('.play-again').innerText = isVictory ? `繼續遊玩!` : `再玩一次!`
+    if(minigamemode && isVictory) {
+        pab.removeEventListener('click', getRandomWord);
+        bh -= 1000
+        pab.addEventListener('click', () => {
+            game.style.display = 'none'
+            gameModal.classList.remove('show')
+            if(bh < 0) bh = 0
+            bhbb.innerText = bh + '/' + bhm
+            if(!ph <= 0) ph += 3
+            phbb.innerText = ph + '/' + phm
+            bossLi.style.display = 'block'
+            bossLi.innerText = '好痛啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊'
+            setTimeout(() => {
+                bossLi.innerText = ''
+            }, 3000)
+        })
+        minigamemode = false
+    } else if(minigamemode && !isVictory) {
+        ph--
+        if(ph < 0) ph = 0
+        phbb.innerText = ph + '/' + phm
+        bossGetRandomWord()
+    }
 }
 
 const initGame = (button, clickedLetter) => {
@@ -204,6 +243,7 @@ document.querySelector('.hangman-box img').addEventListener('click', () => {
     funNumber++
     console.log(funNumber, funMode)
     if (funNumber >= 7) {
+        giveAch('fun')
         version = '好玩版' + funNumber
         funMode = true
         versionText.innerText = version

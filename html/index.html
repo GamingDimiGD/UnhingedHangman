@@ -6,9 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" type="x-icon" href="../images/logo.jpeg" />
+    
+    <!-- cdn lib -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.js" integrity="sha512-/xG2u1+39ezvrTHLgDuWJ07cIOJdBgYxOQ8s/2DkeRWInLMfe4aLBe/5Zd8ECpY/uBKsdY+i1xOEGG4a6RnXHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/fbd704794c.js" crossorigin="anonymous"></script>
+    
     <!-- files -->
-
     <script src="../scripts/global.js" defer></script>
+    <script src="../scripts/achievements.js" defer></script>
+    <script src="../scripts/held.js" defer></script>
     <script src="../scripts/rng.js" defer></script>
     <script src="../scripts/muteMusic.js" defer></script>
     <script src="../scripts/sfx.js" defer></script>
@@ -16,22 +25,23 @@
     <script src="../scripts/vocab.js" defer></script>
     <script src="../scripts/bossDialogue.js" defer></script>
     <script src="../scripts/glitch.js" defer></script>
+    <script src="../scripts/boss.js" defer></script>
+    <script src="../scripts/inputHandler.js" defer></script>
     <script src="../scripts/script.js" defer></script>
     <script src="../scripts/streak.js" defer></script>
     <script src="../scripts/confetti.js" defer></script>
     <script src="../scripts/funMode.js" defer></script>
     <script src="../scripts/autosave.js" defer></script>
-    <script src="../scripts/boss.js" defer></script>
+    <script src="../scripts/bossFight.js" defer></script>
     
-    <!-- cdn lib -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.js" integrity="sha512-/xG2u1+39ezvrTHLgDuWJ07cIOJdBgYxOQ8s/2DkeRWInLMfe4aLBe/5Zd8ECpY/uBKsdY+i1xOEGG4a6RnXHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/fbd704794c.js" crossorigin="anonymous"></script>
     <title>Hangman 遊戲</title>
 </head>
 
 <body>
+    <h1 class="health-bar bhb">
+       柴柴（方形） <b>100/100</b>
+    </h1>
+    
     <p class="random">A</p>
     <div class="boss-dialogue">
         <img src="../images/sticks.png" class="sticks"/>
@@ -102,7 +112,32 @@
             <b class="hi-streak">
                 最高連勝紀錄: 0
             </b>
+            <b class="boss-fight-badge"></b>
         </div>
+    </div>
+    <p class="health-bar phb">
+       血量 <b>10/10</b>
+    </p>
+
+    <button id="achievements" onclick="document.querySelector('.achievements-modal').classList.toggle('show')">
+        <i class="fa-solid fa-certificate"></i>
+        成就
+    </button>
+
+    <div class="achievements-modal">
+        <div class="content">
+            <h1>成就 <b id="yaa">你的數目</b>/<b id="aa">成就數目</b></h1>
+            <div class="alist">
+               
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="notification">
+       <p>
+           你駭客嗎
+       <p>
     </div>
 </body>
 <!--   boo   -->
