@@ -289,6 +289,12 @@ button[disabled] {
 }
 
 @media (max-width: 726px) {
+    #achievements {
+        display: none;
+    }
+    #ach {
+        z-index: 999;
+    }
     .container {
         flex-direction: column;
         padding: 30px 15px;
