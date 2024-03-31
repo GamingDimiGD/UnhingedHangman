@@ -5,7 +5,6 @@ const saveButton2 = document.getElementById('save2')
 const save = () => {
     $.jStorage.set('vocab', vocab)
     $.jStorage.set('vocabAmount', vocabAmount)
-    showNotif('已儲存👍', 1)
     autosaveIndicator.innerText = '已儲存👍'
     autosaveIndicator.style.color = '#0f0'
     saveButton.innertext = '已儲存👍'

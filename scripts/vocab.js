@@ -2,10847 +2,15185 @@ let vocab = [
     {
         word: 'abbreviation',
         hint: 'Mr. Mrs. 等縮寫',
-        meaning: '縮寫，指用一個詞的第一個(或前面幾個)字母和最後一個字母組成一個縮寫，後面再加個點，像Mister => Mr. \nN.'
+        meaning: '縮寫，指用一個詞的第一個(或前面幾個)字母和最後一個字母組成一個縮寫，後面再加個點，像Mister => Mr. \nN.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ability',
         hint: '玩這個遊戲可以培養一個"技能"',
-        meaning: '1. 能力；才能，才智 N. \n2. 用於把以 -able 或 -ible 結尾的形容詞轉化為名詞，表示這些形容詞具有的特性 如: sustainable => sustainability'
+        meaning: '1. 能力；才能，才智 N. \n2. 用於把以 -able 或 -ible 結尾的形容詞轉化為名詞，表示這些形容詞具有的特性 如: sustainable => sustainability',
+        v: 0,
+        new: false,
     },
     {
         word: 'about',
         hint: '可以是副詞或介係詞',
-        meaning: '1. 正要；快要 adv. \n2. 關於 prep. \n3. 英式英文中的about和around有同樣的意思，但美式英文通常用around adv.'
+        meaning: '1. 正要；快要 adv. \n2. 關於 prep. \n3. 英式英文中的about和around有同樣的意思，但美式英文通常用around adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'abrupt',
         hint: '"突然"發生一件事情，我完全"沒預料"到',
-        meaning: '1. 突然且完全沒預料到的 adj. \n2. 很不禮貌且不友善的 adj.'
+        meaning: '1. 突然且完全沒預料到的 adj. \n2. 很不禮貌且不友善的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'absolute',
         hint: '你"絕對"猜得出來',
-        meaning: '1. 絕對的 adj. \n2. 不受限制的 adj. \n3. 完全的 adj.'
+        meaning: '1. 絕對的 adj. \n2. 不受限制的 adj. \n3. 完全的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'acute',
         hint: '數學名詞',
-        meaning: '1. 是銳角的 (若要做名詞用，要加 angle => acute angle 銳角) adj. \n2. 十分嚴重的 adj. \n3. 敏銳的，靈敏的；機敏的，有洞察力的 adj.'
+        meaning: '1. 是銳角的 (若要做名詞用，要加 angle => acute angle 銳角) adj. \n2. 十分嚴重的 adj. \n3. 敏銳的，靈敏的；機敏的，有洞察力的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'adjective',
         hint: '縮寫是 adj.',
-        meaning: '形容詞，縮寫是adj. N.'
+        meaning: '形容詞，縮寫是adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'adore',
         hint: '愛，尊重 動詞',
-        meaning: '1. 愛慕，熱愛；非常喜歡 V. \n2. 崇拜；敬仰 V.'
+        meaning: '1. 愛慕，熱愛；非常喜歡 V. \n2. 崇拜；敬仰 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'adorable',
         hint: 'cute 的另一種說法',
-        meaning: '可愛的；討人喜歡的 adj.'
+        meaning: '可愛的；討人喜歡的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'again',
         hint: '當你打輸一個遊戲時，想按 PLAY _____',
-        meaning: '1. 再來一次 又來 adv. \n2. 復原 adv.'
+        meaning: '1. 再來一次 又來 adv. \n2. 復原 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'age',
         hint: '"光陰"似箭，"歲月"如梭',
-        meaning: '1. 年齡，年紀 N. \n2. 時代，如石器時代 the stone age N.'
+        meaning: '1. 年齡，年紀 N. \n2. 時代，如石器時代 the stone age N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'agent',
         hint: 'FBI _____',
-        meaning: '1. 代理人 N. \n2. 經紀人 N. \n3. 特務、間諜 N. \n4. 原動力、動因；作用劑 N. '
+        meaning: '1. 代理人 N. \n2. 經紀人 N. \n3. 特務、間諜 N. \n4. 原動力、動因；作用劑 N. ',
+        v: 0,
+        new: false,
     },
     {
         word: 'agile',
         hint: '可以形容貓咪和兔子',
-        meaning: '1. 敏捷的 adj. \n2. 機敏的 adj. \n3. 見機行事的，反應快速的 adj.'
+        meaning: '1. 敏捷的 adj. \n2. 機敏的 adj. \n3. 見機行事的，反應快速的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'agree',
         hint: '每次一個網站要你閱讀什麼東西時候要你做事',
-        meaning: '1. 同意，同意這件事 V. \n2. 贊同 V.'
+        meaning: '1. 同意，同意這件事 V. \n2. 贊同 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ahead',
         hint: '你的螢幕就在你「前方」！',
-        meaning: '1. 前方 adv. \n2. 將來 adv. \n3. 佔優勢 adv. \n4. 勝過 adv.'
+        meaning: '1. 前方 adv. \n2. 將來 adv. \n3. 佔優勢 adv. \n4. 勝過 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'aim',
         hint: '你的"目標"是打贏這個遊戲',
-        meaning: '1. 目標 N. \n2. 瞄準 V. \n3. 打算 V.'
+        meaning: '1. 目標 N. \n2. 瞄準 V. \n3. 打算 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'air',
         hint: '地球上無所不在',
-        meaning: '1. 空氣 N. \n2. 搭飛機 N. \n3. 風度 N. \n4. 旋律 N. \n5. 在電視上播放、直播 V. \n6. 公開 V. \n7. （使）什麼物品用什麼方式弄乾或（使）通風 V.'
+        meaning: '1. 空氣 N. \n2. 搭飛機 N. \n3. 風度 N. \n4. 旋律 N. \n5. 在電視上播放、直播 V. \n6. 公開 V. \n7. （使）什麼物品用什麼方式弄乾或（使）通風 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'airplane',
         hint: '在空中飛的東西',
-        meaning: '飛機 N.'
+        meaning: '飛機 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'alarm',
         hint: '地震時會叫東西',
-        meaning: '1. 警報 N. \n2. 警報器 N. \n3. 鬧鐘 N. \n4. 驚慌 N. \n5. 讓人擔心或害怕 V.'
+        meaning: '1. 警報 N. \n2. 警報器 N. \n3. 鬧鐘 N. \n4. 驚慌 N. \n5. 讓人擔心或害怕 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'alcohol',
         hint: '在臺灣18歲才能喝',
-        meaning: '酒、酒精 N.'
+        meaning: '酒、酒精 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'alike',
         hint: '可以是形容詞也可以是副詞',
-        meaning: '1. 相似的 adv. \n2. 類似的 adj.'
+        meaning: '1. 相似的 adv. \n2. 類似的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'alive',
         hint: '不是死的',
-        meaning: '活著的 仍然存在的 adj.'
+        meaning: '活著的 仍然存在的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'allow',
         hint: '允許',
-        meaning: '1. 允許，准許 V. \n2. 承認 V.'
+        meaning: '1. 允許，准許 V. \n2. 承認 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'already',
         hint: '過去的事',
-        meaning: '已經 adv.'
+        meaning: '已經 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'also',
         hint: '你玩，我"也"要玩',
-        meaning: '也 adv.'
+        meaning: '也 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'although',
         hint: '"儘管"如此，我還是不會給答案',
-        meaning: '儘管 conj.'
+        meaning: '儘管 conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'altogether',
         hint: '你"總共"在這個遊戲花不知道多少分鐘',
-        meaning: '總共 adv.'
+        meaning: '總共 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'amaze',
         hint: '哇！',
-        meaning: '使驚嘆 V.'
+        meaning: '使驚嘆 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ambiguous',
         hint: 'Ỹ̴̨̤͙̗̭̲̫̬̣̗̫̮̮̰̖͓̺̩̲͍͎̦̞̞͍͈̦͖̤̻̗̯͇̜̅̀̊̄̎̅̈́͆̄͒̎̓́̀̽̽̚̚͜͜o̵̡̨̫̖͓̻̦̣̤̞͙̟̼̭̤͇̱͐̈́͂̂́͊́̈́̋̈̀̉͊̈́̂̀͌͠u̶̡̡̢̨̞̦̲͓̳͉̦͚̙͕̞̼̞̲̟̣̰̖͖͍̗̠̜̪̝̞̮̱̪͔̘̣͖̫̙̮̝͇̥̭͙̫̭̓̓ͅͅ ̶̢̧̢̡̛̤͎͇̖͇̯͉̠̣̘̻̼̝̙͇̱̘̤͖̩̟̬͕̤̹̘̙͈͒̄̔̀̏̍͛̓̌͌̇̃̃̉̑͌̎̇͑͌̂͐͐̋̀͋̉̓͂͂̇̃͒͋͊̕̕̕͝͝͝w̴̡̡̡̛̛̹̻̰͚͇̠̘͒̒̀̍͛͛̇̉̈́͆̄̈́̌̀̈́̇̅́̂̍̑̆̈̈́̋̀͑̔̌̏͂̏͊̉͊̇͌̽͗̔̆͋̈͘͘̕͝͝ǫ̵̨̢̡̙̦͙̩̳̣̼͇̘̮̘̹̤̙̯͍̭̜̓̓̀́͒̾̈́̇̾͌͛̈́̊̌͌͜͝͠͝ų̴͉̹͍̮͖̱̈̿̉̇͌́̾̄̀͋̔̔̔̂̋̃̌̂̐̊̂͛͌͋̅̅̈̒̍͋̏̃͝͝ͅl̶̢̡̧̨̛͖̰̲̹̳͈̣̣̞͚̼̖̦̦͓͇̦̜͙̙̣̹͔̩̃̔́͗̇̒́̅̈́̃̆̐͒̎̈̌̌̆̒̆͑̀̓̊́͛̋̚͘͘͘͝͠d̷̡̟̰̩͎͉̹̜̳͈͍̩͇̞͇̳͔̣̪̞͓̜͚̰̹̦͑̉̈́͌̔̆͘͜ͅn̶̨̨̧̧͙͎̼̝̩̤̝̹̳͓͓̪͓̱̪̪̱̝̮͈̗̟̟̥̘͎̩̮͎̳͛̇͒͆̀̆̒͊̓̈͜’̸̨̹͓̝͔̫̟̹̣̺͍͉̬̎͆́̐̾̋̃̾̃͗̉̒̔̍́̄̆̐̄̔̓̾̚͠͠ţ̵̡̨̛̬͍͎̲̱̻̳̺͈͎̲̩͓̪̯͔̖̪͍̪͚͈̜̺̪̮̬̻̼̘̤̻̱̤̙͖̬̆̄̋̇̏́͋̍̂́́́̓́̓́̆͋̕͘̚͜͠͝ͅ ̴͕̥̱̜̥̣͕͐́̌̇̀̈́̏́̐̎̓̾̉̓̋͑̋̑̒̅͋̂̐̀́͛̓͋̆̈͊̈́͋̔̋̾̚̕̚̚̚͘͝͝͠ķ̴̧̧̲̣̠̤̪̹͓̭̘̝̠͈̫̠͚̰̠͔̟͖̳̦͔͚͉̮͐͒̃̒̈̇̾̽͂͛́̈́̀̀̀͌̽̀̈̎̄͌͋͒̑͆͂̎͒͑̒͗̓̈́͑͛̑̑͊͐̌͘͠͝͝n̷̬̤͉̠̞̮̤̞̻͎̼̰̗̆͆̎̀͐͜ͅô̴̢̡̧̧̼̜̖̩̯͎̞̜͉̪͈͔͍̻͓̘͚̠̹͇̟͉̱̈̎̏̾̇͆̔̓͌̌̇ͅw̶̢̪͙͓̗̝̫̦̤̩͍̞̹͇̪̝̥͈̐͑́̒̿̄̄̉̚̚̕͝ ̴̧̝̪̜̞̚',
-        meaning: '含糊不清的 adj. \n抱歉提示壞了'
+        meaning: '含糊不清的 adj. \n抱歉提示壞了',
+        v: 0,
+        new: false,
     },
     {
         word: 'ambition',
         hint: '很想完成一件事，像打贏這遊戲',
-        meaning: '野心 N.'
+        meaning: '野心 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ambulance',
         hint: 'ㄛㄧㄛㄧ',
-        meaning: '1. 救護車 N.'
+        meaning: '1. 救護車 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'amend',
         hint: '改正錯誤事情',
-        meaning: '1. 修正，修訂 V.'
+        meaning: '1. 修正，修訂 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'amiable',
         hint: '和藹可親的',
-        meaning: '1. 和藹可親的 adj.'
+        meaning: '1. 和藹可親的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'amid',
         hint: '"在"提示"之中"有答案',
-        meaning: '1. 在...之中 prep.'
+        meaning: '1. 在...之中 prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'among',
         hint: '太空狼人殺名字（我知道是很久以前的遊戲）',
-        meaning: '1. 在...之中 prep.'
+        meaning: '1. 在...之中 prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'amount',
         hint: '你的詞彙"量"',
-        meaning: '1. 總數 N.'
+        meaning: '1. 總數 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ample',
         hint: '這個遊戲"充滿"未解之謎（真的嗎）',
-        meaning: '1. 充足的 adj.'
+        meaning: '1. 充足的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'amuse',
         hint: '給別人好玩的東西可以"使"別人"娛樂"',
-        meaning: '1. 使娛樂 V.'
+        meaning: '1. 使娛樂 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'amusement',
         hint: '打這個遊戲就是它一種',
-        meaning: '1. 娛樂 N.'
+        meaning: '1. 娛樂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'analyze',
         hint: '我每次都要在程式碼裡面做的事情',
-        meaning: '1. 分析 V.'
+        meaning: '1. 分析 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ancestor',
         hint: '我父母的父母的父母的父母的父母的...',
-        meaning: '1. 祖先 N.'
+        meaning: '1. 祖先 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ancient',
         hint: '很久很久以前',
-        meaning: '1. 古老的 adj.'
+        meaning: '1. 古老的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'and',
         hint: '很常用的連結詞',
-        meaning: '1. 和，並且 conj.'
+        meaning: '1. 和，並且 conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'anger',
         hint: '當一個遊戲太難使你一直輸，你會做的事',
-        meaning: '1. 憤怒 N.'
+        meaning: '1. 憤怒 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'angle',
         hint: '另一個數學名詞',
-        meaning: '1. 角度 N.'
+        meaning: '1. 角度 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'animal',
         hint: '一種生物',
-        meaning: '1. 動物 N.'
+        meaning: '1. 動物 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'announce',
         hint: '讓大家知道',
-        meaning: '1. 宣布 V.'
+        meaning: '1. 宣布 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'annoy',
         hint: '太煩人了',
-        meaning: '1. 使惱怒 V.'
+        meaning: '1. 使惱怒 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'annual',
         hint: '每365天的',
-        meaning: '1. 每年的 adj.'
+        meaning: '1. 每年的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'another',
         hint: '不是這個',
-        meaning: '1. 另一個 adj.'
+        meaning: '1. 另一個 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'answer',
         hint: '這個遊戲你要"回答"問題',
-        meaning: '1. 回答 N. V.'
+        meaning: '1. 回答 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'anxiety',
         hint: '一種負面情緒',
-        meaning: '1. 焦慮 N.'
+        meaning: '1. 焦慮 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'any',
         hint: '我對這個遊戲沒有"任何"疑問',
-        meaning: '1. 任何 adj. pron.'
+        meaning: '1. 任何 adj. pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'apology',
         hint: '對不起，我不知道答案',
-        meaning: '1. 道歉 N.'
+        meaning: '1. 道歉 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'apparent',
         hint: '我這樣會太明顯，我還是不要加引號好了',
-        meaning: '1. 明顯的 adj.'
+        meaning: '1. 明顯的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'appeal',
         hint: '這遊戲會"吸引"人（會嗎）',
-        meaning: '1. 吸引 N. V.'
+        meaning: '1. 吸引 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'appear',
         hint: '一個野生的詞"出現"了！',
-        meaning: '1. 出現 V.'
+        meaning: '1. 出現 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'appoint',
         hint: '這只有用過google classroom的人知道，每次你還沒交作業時，繳交專區會寫"已__"，找出他的英文就是答案',
-        meaning: '1. 指派 V.'
+        meaning: '1. 指派 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'approach',
         hint: '終點正越來越"接近"',
-        meaning: '1. 接近 N. V.'
+        meaning: '1. 接近 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'approve',
         hint: '我"贊成"這遊戲的說法',
-        meaning: '1. 贊成 V.'
+        meaning: '1. 贊成 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'approximate',
         hint: '我"大約"會花一個月做這個遊戲（看看準不準）',
-        meaning: '1. 近似的 adj. V.'
+        meaning: '1. 近似的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'arise',
         hint: '"發生"什麼事？',
-        meaning: '發生 V.'
+        meaning: '發生 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'arm',
         hint: '手臂',
-        meaning: '手臂 N.'
+        meaning: '手臂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'around',
         hint: '在...周圍',
-        meaning: '在...周圍 prep. adv.'
+        meaning: '在...周圍 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'arrange',
         hint: '安排',
-        meaning: '安排 V.'
+        meaning: '安排 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'arrest',
         hint: '逮捕',
-        meaning: '逮捕 V.'
+        meaning: '逮捕 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'arrive',
         hint: '到達',
-        meaning: '到達 V.'
+        meaning: '到達 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'article',
         hint: '文章',
-        meaning: '文章 N.'
+        meaning: '文章 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'artificial',
         hint: '人造的',
-        meaning: '人造的 adj.'
+        meaning: '人造的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'as',
         hint: '如同',
-        meaning: '如同 conj.'
+        meaning: '如同 conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ashamed',
         hint: '感到羞愧的',
-        meaning: '感到羞愧的 adj.'
+        meaning: '感到羞愧的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'aside',
         hint: '在一邊',
-        meaning: '在一邊 adv. (Hint: 把東西放在一邊)'
+        meaning: '在一邊 adv. (Hint: 把東西放在一邊)',
+        v: 0,
+        new: false,
     },
     {
         word: 'ask',
         hint: '問',
-        meaning: '問 V.'
+        meaning: '問 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'asleep',
         hint: '睡著的',
-        meaning: '睡著的 adj.'
+        meaning: '睡著的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'aspect',
         hint: '方面',
-        meaning: '方面 N.'
+        meaning: '方面 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'assault',
         hint: '攻擊',
-        meaning: '攻擊 N. V.'
+        meaning: '攻擊 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'assert',
         hint: '斷言',
-        meaning: '斷言 V.'
+        meaning: '斷言 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'assess',
         hint: '評估',
-        meaning: '評估 V.'
+        meaning: '評估 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'asset',
         hint: '資產',
-        meaning: '資產 N.'
+        meaning: '資產 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'assign',
         hint: '分配',
-        meaning: '分配 V.'
+        meaning: '分配 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'assist',
         hint: '協助',
-        meaning: '協助 V.'
+        meaning: '協助 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'associate',
         hint: '聯想',
-        meaning: '聯想 V. \n2. 同事 N. adj.'
+        meaning: '聯想 V. \n2. 同事 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'assume',
         hint: '假設',
-        meaning: '假設 V.'
+        meaning: '假設 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'athlete',
         hint: '運動員',
-        meaning: '運動員 N.'
+        meaning: '運動員 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'atmosphere',
         hint: '大氣層',
-        meaning: '大氣層 N.'
+        meaning: '大氣層 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'attach',
         hint: '附上',
-        meaning: '附上 V.'
+        meaning: '附上 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'attack',
         hint: '攻擊',
-        meaning: '攻擊 N. V.'
+        meaning: '攻擊 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'attempt',
         hint: '嘗試',
-        meaning: '嘗試 N. V.'
+        meaning: '嘗試 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'attend',
         hint: '參加',
-        meaning: '參加 V.'
+        meaning: '參加 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'attention',
         hint: '注意力',
-        meaning: '注意力 N.'
+        meaning: '注意力 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'attitude',
         hint: '態度',
-        meaning: '態度 N.'
+        meaning: '態度 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'attract',
         hint: '吸引',
-        meaning: '吸引 V.'
+        meaning: '吸引 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'auction',
         hint: '拍賣',
-        meaning: '拍賣 N. V.'
+        meaning: '拍賣 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'audience',
         hint: '觀眾',
-        meaning: '觀眾 N.'
+        meaning: '觀眾 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'August',
         hint: '我生日後一個月',
-        meaning: '八月 N.'
+        meaning: '八月 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'aunt',
         hint: '阿姨',
-        meaning: '阿姨 N.'
+        meaning: '阿姨 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'authentic',
         hint: '真實的',
-        meaning: '真實的 adj.'
+        meaning: '真實的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'authority',
         hint: '權威',
-        meaning: '權威 N.'
+        meaning: '權威 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'automatic',
         hint: '自動的',
-        meaning: '自動的 adj.'
+        meaning: '自動的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'avenue',
         hint: '大道',
-        meaning: '大道 N.'
+        meaning: '大道 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'average',
         hint: '平均',
-        meaning: '平均 N. adj. V.'
+        meaning: '平均 N. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'avoid',
         hint: '避免',
-        meaning: '避免 V.'
+        meaning: '避免 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'awake',
         hint: '醒著的',
-        meaning: '醒著的 adj.'
+        meaning: '醒著的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'award',
         hint: '這個遊戲不會給"獎勵"',
-        meaning: '獎、獎勵 N. V.'
+        meaning: '獎、獎勵 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'awesome',
         hint: '太讚了',
-        meaning: '令人驚嘆的 adj.'
+        meaning: '令人驚嘆的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'awful',
         hint: '太爛了',
-        meaning: '糟糕的 adj.'
+        meaning: '糟糕的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'awkward',
         hint: '尷尬的',
-        meaning: '尷尬的 adj.'
+        meaning: '尷尬的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'baby',
         hint: '嬰兒',
-        meaning: '嬰兒 N.'
+        meaning: '嬰兒 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'back',
         hint: '背部',
-        meaning: '1. 背部 N. \n2. 後面 adv.'
+        meaning: '1. 背部 N. \n2. 後面 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bad',
         hint: '不能形容這遊戲',
-        meaning: '不好的 adj.'
+        meaning: '不好的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bag',
         hint: '袋子',
-        meaning: '袋子 N.'
+        meaning: '袋子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'balance',
         hint: '平衡',
-        meaning: '平衡 N. V.'
+        meaning: '平衡 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ball',
         hint: '球',
-        meaning: '球 N.'
+        meaning: '球 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'band',
         hint: '樂團',
-        meaning: '樂團 N.'
+        meaning: '樂團 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bank',
         hint: '銀行',
-        meaning: '銀行 N. \n2. 河岸 N.'
+        meaning: '銀行 N. \n2. 河岸 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bar',
         hint: '酒吧',
-        meaning: '酒吧 N.'
+        meaning: '酒吧 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bare',
         hint: '赤裸的',
-        meaning: '赤裸的 adj.'
+        meaning: '赤裸的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bargain',
         hint: '交易',
-        meaning: '交易 N. V.'
+        meaning: '交易 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'barrier',
         hint: '障礙',
-        meaning: '障礙 N.'
+        meaning: '障礙 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'base',
         hint: '基地',
-        meaning: '基地 N.'
+        meaning: '基地 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'basic',
         hint: '基本的',
-        meaning: '基本的 adj.'
+        meaning: '基本的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'basket',
         hint: '籃子',
-        meaning: '籃子 N.'
+        meaning: '籃子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bath',
         hint: '洗澡',
-        meaning: '洗澡 N. V.'
+        meaning: '洗澡 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'battery',
         hint: '電池',
-        meaning: '電池 N.'
+        meaning: '電池 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'battle',
         hint: '戰鬥',
-        meaning: '戰鬥 N. V.'
+        meaning: '戰鬥 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'be',
         hint: '英文老師最愛的動詞',
-        meaning: 'be動詞 V.'
+        meaning: 'be動詞 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'beach',
         hint: '海灘',
-        meaning: '海灘 N.'
+        meaning: '海灘 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bear',
         hint: '熊',
-        meaning: '熊 N.'
+        meaning: '熊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'beat',
         hint: '打敗',
-        meaning: '打敗 V.'
+        meaning: '打敗 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'beautiful',
         hint: '美麗的',
-        meaning: '美麗的 adj.'
+        meaning: '美麗的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'because',
         hint: '因為',
-        meaning: '因為 conj.'
+        meaning: '因為 conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'become',
         hint: '變成',
-        meaning: '變成 V.'
+        meaning: '變成 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bed',
         hint: '床',
-        meaning: '床 N.'
+        meaning: '床 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'before',
         hint: '在...之前',
-        meaning: '在...之前 prep. conj. adv.'
+        meaning: '在...之前 prep. conj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'begin',
         hint: '那我們要"開始"囉！',
-        meaning: '開始 V.'
+        meaning: '開始 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'behave',
         hint: '表現',
-        meaning: '表現 V.'
+        meaning: '表現 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'behind',
         hint: '我在你後面（沒有啦）',
-        meaning: '在...後面 prep. adv.'
+        meaning: '在...後面 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'believe',
         hint: '"相信"我，這遊戲有彩蛋',
-        meaning: '相信 V.'
+        meaning: '相信 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bell',
         hint: '鈴',
-        meaning: '鈴 N.'
+        meaning: '鈴 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'belong',
         hint: '屬於',
-        meaning: '屬於 V.'
+        meaning: '屬於 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'below',
         hint: '在...下方',
-        meaning: '在...下方 prep. adv.'
+        meaning: '在...下方 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'belt',
         hint: '腰帶',
-        meaning: '腰帶 N.'
+        meaning: '腰帶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bench',
         hint: '長凳',
-        meaning: '長凳 N.'
+        meaning: '長凳 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'beneath',
         hint: '在...下面',
-        meaning: '在...下面 prep. adv.'
+        meaning: '在...下面 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'benefit',
         hint: '好處',
-        meaning: '好處 N. V.'
+        meaning: '好處 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'beside',
         hint: '在...旁邊',
-        meaning: '在...旁邊 prep. adv.'
+        meaning: '在...旁邊 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'best',
         hint: '最好的',
-        meaning: '1. 最好的 adj. adv. \n2. 最佳 N.'
+        meaning: '1. 最好的 adj. adv. \n2. 最佳 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'better',
         hint: '更好的',
-        meaning: '更好的 adj. adv.'
+        meaning: '更好的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'between',
         hint: '在...之間',
-        meaning: '在...之間 prep.'
+        meaning: '在...之間 prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'beyond',
         hint: '超過',
-        meaning: '超過 prep.'
+        meaning: '超過 prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bicycle',
         hint: '自行車',
-        meaning: '自行車 N.'
+        meaning: '自行車 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'big',
         hint: '大的',
-        meaning: '大的 adj.'
+        meaning: '大的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bill',
         hint: '帳單',
-        meaning: '帳單 N. \n2. 紙鈔 N.'
+        meaning: '帳單 N. \n2. 紙鈔 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'biology',
         hint: '我國一時第二強的科目',
-        meaning: '生物學 N.'
+        meaning: '生物學 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bird',
         hint: '會飛很高的內溫動物',
-        meaning: '鳥 N.'
+        meaning: '鳥 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'birth',
         hint: '這件事沒發生就不會有你',
-        meaning: '出生 N.'
+        meaning: '出生 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'birthday',
         hint: '7月26日',
-        meaning: '生日 N.'
+        meaning: '生日 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bit',
         hint: '小片',
-        meaning: '1. 小片 N. \n2. 電腦位元，像32-bit或64-bit N.'
+        meaning: '1. 小片 N. \n2. 電腦位元，像32-bit或64-bit N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bite',
         hint: '咬',
-        meaning: '1. 咬 V. \n2. 一口 N.'
+        meaning: '1. 咬 V. \n2. 一口 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bitter',
         hint: '苦的',
-        meaning: '苦的 adj.'
+        meaning: '苦的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'black',
         hint: '白色的相反',
-        meaning: '黑色的 adj.'
+        meaning: '黑色的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'blame',
         hint: '不要怪說為什麼沒在這個提示裡加引號',
-        meaning: '責怪 V. N.'
+        meaning: '責怪 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'blanket',
         hint: '毯子',
-        meaning: '毯子、被子 N.'
+        meaning: '毯子、被子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'block',
         hint: '一個有六個面立體圖形',
-        meaning: '1. 區塊 N. \n2. 阻擋 V. \n3. 方塊 N.'
+        meaning: '1. 區塊 N. \n2. 阻擋 V. \n3. 方塊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'blood',
         hint: '受傷時會流出來的東西',
-        meaning: '血液 N.'
+        meaning: '血液 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'blow',
         hint: '吹',
-        meaning: '1. 吹 V. \n2. 打擊 N.'
+        meaning: '1. 吹 V. \n2. 打擊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'blue',
         hint: '三原色其中一個顏色',
-        meaning: '1. 藍色的 adj.'
+        meaning: '1. 藍色的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'board',
         hint: '木板',
-        meaning: '木板 N.'
+        meaning: '木板 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'boat',
         hint: '浮在海上東西',
-        meaning: '船 N.'
+        meaning: '船 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'body',
         hint: '大家都有的',
-        meaning: '身體 N.'
+        meaning: '身體 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'boil',
         hint: '可以讓水變水蒸氣',
-        meaning: '煮沸 V.'
+        meaning: '煮沸 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bomb',
         hint: '會爆炸的東西',
-        meaning: '1. 炸彈 N. \n2. 失敗 N.'
+        meaning: '1. 炸彈 N. \n2. 失敗 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bone',
         hint: '白色的、很硬的、在你身體裡',
-        meaning: '骨頭 N.'
+        meaning: '骨頭 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'book',
         hint: '我最討厭讀的東西',
-        meaning: '書 N.'
+        meaning: '書 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'border',
         hint: '邊界',
-        meaning: '邊界 N.'
+        meaning: '邊界 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bore',
         hint: '使厭煩',
-        meaning: '使厭煩 V.'
+        meaning: '使厭煩 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'borrow',
         hint: '借',
-        meaning: '借 V.'
+        meaning: '借 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'both',
         hint: '兩者',
-        meaning: '兩者 pron. adj.'
+        meaning: '兩者 pron. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bother',
         hint: '打擾',
-        meaning: '打擾 V. N.'
+        meaning: '打擾 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bottle',
         hint: '瓶子',
-        meaning: '瓶子 N.'
+        meaning: '瓶子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bottom',
         hint: '底部',
-        meaning: '1. 底部 N. \n2. 臀部 N.'
+        meaning: '1. 底部 N. \n2. 臀部 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'boundary',
         hint: '界限',
-        meaning: '界限 N.'
+        meaning: '界限 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bow',
         hint: '鞠躬',
-        meaning: '鞠躬 V. N.'
+        meaning: '鞠躬 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bowl',
         hint: '碗',
-        meaning: '碗 N.'
+        meaning: '碗 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'box',
         hint: '盒子',
-        meaning: '盒子 N.'
+        meaning: '盒子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'boy',
         hint: '男孩',
-        meaning: '男孩 N.'
+        meaning: '男孩 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'brain',
         hint: '頭裡面的東西',
-        meaning: '大腦 N.'
+        meaning: '大腦 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'branch',
         hint: '樹枝',
-        meaning: '1. 樹枝 N. \n2. 分支 N.'
+        meaning: '1. 樹枝 N. \n2. 分支 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'brave',
         hint: '勇敢的',
-        meaning: '勇敢的 adj.'
+        meaning: '勇敢的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bread',
         hint: '我超愛吃',
-        meaning: '麵包 N.'
+        meaning: '麵包 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'break',
         hint: '打破',
-        meaning: '打破 V. N.'
+        meaning: '打破 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'breakfast',
         hint: '早餐',
-        meaning: '早餐 N.'
+        meaning: '早餐 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'breath',
         hint: '你現在就在做的事',
-        meaning: '呼吸 N.'
+        meaning: '呼吸 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'brick',
         hint: '有些牆壁是用這個做的',
-        meaning: '磚塊 N.'
+        meaning: '磚塊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bridge',
         hint: '橋',
-        meaning: '橋 N.'
+        meaning: '橋 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'brief',
         hint: '簡短的',
-        meaning: '簡短的 adj.'
+        meaning: '簡短的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bright',
         hint: '黑暗的相反',
-        meaning: '明亮的 adj.'
+        meaning: '明亮的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bring',
         hint: '帶來',
-        meaning: '帶來 V.'
+        meaning: '帶來 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'broad',
         hint: '寬廣的',
-        meaning: '寬廣的 adj.'
+        meaning: '寬廣的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'broadcast',
         hint: '廣播',
-        meaning: '廣播 N. V.'
+        meaning: '廣播 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'brother',
         hint: '簡稱 bro.',
-        meaning: '兄弟 N.'
+        meaning: '兄弟 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'brown',
         hint: '棕色的',
-        meaning: '棕色的 adj.'
+        meaning: '棕色的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'brush',
         hint: '刷子',
-        meaning: '刷子 N. V.'
+        meaning: '刷子 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bubble',
         hint: '泡泡',
-        meaning: '泡泡 N.'
+        meaning: '泡泡 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'budget',
         hint: '預算',
-        meaning: '1. 預算 N. V. \n2. 廉價、廉價的 N. adj.'
+        meaning: '1. 預算 N. V. \n2. 廉價、廉價的 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'build',
         hint: '建造',
-        meaning: '建造 N. V.'
+        meaning: '建造 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'building',
         hint: '建築物',
-        meaning: '1. 建築物 N. \n2. 正在建 V.'
+        meaning: '1. 建築物 N. \n2. 正在建 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bullet',
         hint: '子彈',
-        meaning: '1. 子彈 N. \n2. 一個清單的其中一點 N.'
+        meaning: '1. 子彈 N. \n2. 一個清單的其中一點 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bump',
         hint: '碰撞',
-        meaning: '碰撞 V. N.'
+        meaning: '碰撞 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'burn',
         hint: '燃燒',
-        meaning: '燃燒 V. N.'
+        meaning: '燃燒 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'burst',
         hint: '爆裂',
-        meaning: '爆裂 V. N.'
+        meaning: '爆裂 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bury',
         hint: '埋',
-        meaning: '埋 V.'
+        meaning: '埋 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'bus',
         hint: '公車',
-        meaning: '公車 N.'
+        meaning: '公車 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'business',
         hint: '事業',
-        meaning: '1. 事業 N. \n2. 商業 N.'
+        meaning: '1. 事業 N. \n2. 商業 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'busy',
         hint: '最近超忙碌，都來不及加引號',
-        meaning: '忙碌的 adj.'
+        meaning: '忙碌的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'but',
         hint: '但我就是不會加引號',
-        meaning: '但是 conj.'
+        meaning: '但是 conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'butter',
         hint: '奶油',
-        meaning: '奶油 N.'
+        meaning: '奶油 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'button',
         hint: '按鈕',
-        meaning: '1. 按鈕 N. \n2. 扣子 N.'
+        meaning: '1. 按鈕 N. \n2. 扣子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'buy',
         hint: '買',
-        meaning: '買 V.'
+        meaning: '買 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'by',
         hint: '藉著',
-        meaning: '藉著 prep. adv.'
+        meaning: '藉著 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cabinet',
         hint: '櫥櫃',
-        meaning: '櫥櫃 N.'
+        meaning: '櫥櫃 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cable',
         hint: '電纜',
-        meaning: '電線、電纜 N.'
+        meaning: '電線、電纜 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cake',
         hint: '超好吃點心',
-        meaning: '蛋糕 N.'
+        meaning: '蛋糕 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'calculate',
         hint: '數學需要做的事',
-        meaning: '計算 V.'
+        meaning: '計算 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'calendar',
         hint: '日曆',
-        meaning: '日曆 N.'
+        meaning: '日曆 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'call',
         hint: '打電話',
-        meaning: '打電話 V. N.'
+        meaning: '打電話 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'camera',
         hint: '一個可以把東西拍起來東西',
-        meaning: '相機 N.'
+        meaning: '相機 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'camp',
         hint: '營地',
-        meaning: '1. 營地 N. \n2. 錄影 V.'
+        meaning: '1. 營地 N. \n2. 錄影 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'campaign',
         hint: '活動',
-        meaning: '1. 活動 N. V. \n2. 選舉時拉票 V.'
+        meaning: '1. 活動 N. V. \n2. 選舉時拉票 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'can',
         hint: '能',
-        meaning: '1. 能 aux. \n2. 瓶子、罐子 N.'
+        meaning: '1. 能 aux. \n2. 瓶子、罐子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cancel',
         hint: '取消',
-        meaning: '取消 V.'
+        meaning: '取消 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'candle',
         hint: '放在蛋糕東西',
-        meaning: '蠟燭 N.'
+        meaning: '蠟燭 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'candy',
         hint: '小孩最愛吃的東西',
-        meaning: '糖果 N.'
+        meaning: '糖果 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cap',
         hint: '帽子',
-        meaning: '1. 帽子，指這種🧢 N. \n2. 網路用語，形容一件事情是假的 adj.'
+        meaning: '1. 帽子，指這種🧢 N. \n2. 網路用語，形容一件事情是假的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'capital',
         hint: '首都',
-        meaning: '1. 首都 N. \n2. 資本 N. \n3. 大寫字母 adj.'
+        meaning: '1. 首都 N. \n2. 資本 N. \n3. 大寫字母 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'capture',
         hint: '捕捉',
-        meaning: '捕捉 V. N.'
+        meaning: '捕捉 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'car',
         hint: '汽車',
-        meaning: '汽車 N.'
+        meaning: '汽車 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'card',
         hint: '阿嬤虧"喀"',
-        meaning: '卡片 N.'
+        meaning: '卡片 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'care',
         hint: '關心',
-        meaning: '關心 V. N.'
+        meaning: '關心 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'careful',
         hint: '小心的',
-        meaning: '小心的 adj.'
+        meaning: '小心的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'carry',
         hint: '攜帶',
-        meaning: '攜帶 V.'
+        meaning: '攜帶 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'case',
         hint: '情況',
-        meaning: '情況 N.'
+        meaning: '情況 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cash',
         hint: '現金',
-        meaning: '現金 N.'
+        meaning: '現金 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cat',
         hint: '貓',
-        meaning: '貓 N.'
+        meaning: '貓 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'catch',
         hint: '抓住',
-        meaning: '抓住 V.'
+        meaning: '抓住 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'category',
         hint: '類別',
-        meaning: '類別 N.'
+        meaning: '類別 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cause',
         hint: '引起',
-        meaning: '引起 V. N.'
+        meaning: '引起 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ceiling',
         hint: '天花板',
-        meaning: '天花板 N.'
+        meaning: '天花板 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'celebrate',
         hint: '慶祝',
-        meaning: '慶祝 V.'
+        meaning: '慶祝 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cell',
         hint: '細胞',
-        meaning: '細胞 N.'
+        meaning: '細胞 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'center',
         hint: '中心',
-        meaning: '中心 N.'
+        meaning: '中心 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'century',
         hint: '世紀',
-        meaning: '世紀 N.'
+        meaning: '世紀 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ceremony',
         hint: '典禮',
-        meaning: '典禮 N.'
+        meaning: '典禮 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'chain',
         hint: '鏈',
-        meaning: '鏈 N.'
+        meaning: '鏈 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'chair',
         hint: '椅子',
-        meaning: '椅子 N.'
+        meaning: '椅子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'challenge',
         hint: '挑戰',
-        meaning: '挑戰 N. V.'
+        meaning: '挑戰 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'champion',
         hint: '冠軍',
-        meaning: '冠軍 N.'
+        meaning: '冠軍 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'chance',
         hint: '機會',
-        meaning: '機會 N.'
+        meaning: '機會 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'change',
         hint: '改變',
-        meaning: '改變 V. N.'
+        meaning: '改變 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'channel',
         hint: '頻道',
-        meaning: '頻道 N.'
+        meaning: '頻道 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'charge',
         hint: '收費',
-        meaning: '收費 V. N.'
+        meaning: '收費 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'charity',
         hint: '慈善',
-        meaning: '慈善 N.'
+        meaning: '慈善 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'chart',
         hint: '圖表',
-        meaning: '圖表 N. V.'
+        meaning: '圖表 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'chase',
         hint: '追逐',
-        meaning: '追逐 V. N.'
+        meaning: '追逐 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cheap',
         hint: '便宜的',
-        meaning: '便宜的 adj.'
+        meaning: '便宜的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'check',
         hint: '檢查',
-        meaning: '檢查 V. N.'
+        meaning: '檢查 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cheese',
         hint: '乳酪',
-        meaning: '乳酪 N.'
+        meaning: '乳酪 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'chemical',
         hint: '化學的',
-        meaning: '化學的 adj. N.'
+        meaning: '化學的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'chest',
         hint: '胸膛',
-        meaning: '胸膛 N.'
+        meaning: '胸膛 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'chicken',
         hint: '雞肉',
-        meaning: '雞肉 N.'
+        meaning: '雞肉 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'chief',
         hint: '主要的',
-        meaning: '主要的 adj. N.'
+        meaning: '主要的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'child',
         hint: '孩子',
-        meaning: '孩子 N.'
+        meaning: '孩子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'childhood',
         hint: '童年',
-        meaning: '童年 N.'
+        meaning: '童年 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'chip',
         hint: '晶片',
-        meaning: '晶片 N. V.'
+        meaning: '晶片 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'chocolate',
         hint: '巧克力',
-        meaning: '巧克力 N.'
+        meaning: '巧克力 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'choice',
         hint: '選擇',
-        meaning: '選擇 N.'
+        meaning: '選擇 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'choose',
         hint: '選擇',
-        meaning: '選擇 V.'
+        meaning: '選擇 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'church',
         hint: '教堂',
-        meaning: '教堂 N.'
+        meaning: '教堂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cigarette',
         hint: '香煙',
-        meaning: '香煙 N.'
+        meaning: '香煙 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'circle',
         hint: '圓圈',
-        meaning: '圓圈 N. V.'
+        meaning: '圓圈 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'circumstance',
         hint: '情況',
-        meaning: '情況 N.'
+        meaning: '情況 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'citizen',
         hint: '公民',
-        meaning: '公民 N.'
+        meaning: '公民 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'city',
         hint: '城市',
-        meaning: '城市 N.'
+        meaning: '城市 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'civil',
         hint: '公民的',
-        meaning: '公民的 adj.'
+        meaning: '公民的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'claim',
         hint: '聲稱',
-        meaning: '聲稱 V. N.'
+        meaning: '聲稱 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'class',
         hint: '班級',
-        meaning: '班級 N.'
+        meaning: '班級 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'classic',
         hint: '經典的',
-        meaning: '經典的 adj. N.'
+        meaning: '經典的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'clean',
         hint: '清潔',
-        meaning: '清潔 V. adj.'
+        meaning: '清潔 V. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'clerk',
         hint: '店員',
-        meaning: '店員 N.'
+        meaning: '店員 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'click',
         hint: '點擊',
-        meaning: '點擊 V. N.'
+        meaning: '點擊 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'client',
         hint: '客戶',
-        meaning: '客戶 N.'
+        meaning: '客戶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'climate',
         hint: '氣候',
-        meaning: '氣候 N.'
+        meaning: '氣候 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'climb',
         hint: '爬升',
-        meaning: '爬升 V. N.'
+        meaning: '爬升 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'clock',
         hint: '時鐘',
-        meaning: '時鐘 N.'
+        meaning: '時鐘 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'close',
         hint: '關閉',
-        meaning: '關閉 V. adj. adv.'
+        meaning: '關閉 V. adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'closet',
         hint: '壁櫥',
-        meaning: '壁櫥 N.'
+        meaning: '壁櫥 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cloth',
         hint: '布料',
-        meaning: '布料 N.'
+        meaning: '布料 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'clothes',
         hint: '衣服',
-        meaning: '衣服 N.'
+        meaning: '衣服 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cloud',
         hint: '雲',
-        meaning: '雲 N.'
+        meaning: '雲 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'club',
         hint: '俱樂部',
-        meaning: '俱樂部 N.'
+        meaning: '俱樂部 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'clue',
         hint: '線索',
-        meaning: '線索 N.'
+        meaning: '線索 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'coach',
         hint: '教練',
-        meaning: '教練 N. V.'
+        meaning: '教練 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'coal',
         hint: '煤',
-        meaning: '煤 N.'
+        meaning: '煤 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'coast',
         hint: '海岸',
-        meaning: '海岸 N.'
+        meaning: '海岸 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'coat',
         hint: '外套',
-        meaning: '外套 N.'
+        meaning: '外套 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'code',
         hint: '代碼',
-        meaning: '代碼 N.'
+        meaning: '代碼 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'coffee',
         hint: '咖啡',
-        meaning: '咖啡 N.'
+        meaning: '咖啡 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'coin',
         hint: '硬幣',
-        meaning: '硬幣 N.'
+        meaning: '硬幣 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cold',
         hint: '冷的',
-        meaning: '冷的 adj. N.'
+        meaning: '冷的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'collaborate',
         hint: '合作',
-        meaning: '合作 V.'
+        meaning: '合作 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'collapse',
         hint: '崩潰',
-        meaning: '崩潰 V. N.'
+        meaning: '崩潰 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'collect',
         hint: '收集',
-        meaning: '收集 V.'
+        meaning: '收集 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'college',
         hint: '大學',
-        meaning: '大學 N.'
+        meaning: '大學 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'color',
         hint: '顏色',
-        meaning: '顏色 N. V.'
+        meaning: '顏色 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'combine',
         hint: '結合',
-        meaning: '結合 V.'
+        meaning: '結合 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'comfort',
         hint: '舒適',
-        meaning: '舒適 N. V.'
+        meaning: '舒適 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'command',
         hint: '命令',
-        meaning: '命令 V. N.'
+        meaning: '命令 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'comment',
         hint: '評論',
-        meaning: '評論 V. N.'
+        meaning: '評論 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'commerce',
         hint: '商業',
-        meaning: '商業 N.'
+        meaning: '商業 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'commit',
         hint: '承諾',
-        meaning: '承諾 V.'
+        meaning: '承諾 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'common',
         hint: '共同的',
-        meaning: '共同的 adj.'
+        meaning: '共同的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'community',
         hint: '社區',
-        meaning: '社區 N.'
+        meaning: '社區 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'company',
         hint: '公司',
-        meaning: '公司 N.'
+        meaning: '公司 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'compare',
         hint: '比較',
-        meaning: '比較 V.'
+        meaning: '比較 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'compassion',
         hint: '同情心',
-        meaning: '同情心 N.'
+        meaning: '同情心 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'compete',
         hint: '競爭',
-        meaning: '競爭 V.'
+        meaning: '競爭 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'complete',
         hint: '完成',
-        meaning: '完成 V. adj.'
+        meaning: '完成 V. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'complex',
         hint: '複雜的',
-        meaning: '複雜的 adj.'
+        meaning: '複雜的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'complicate',
         hint: '使複雜',
-        meaning: '使複雜 V.'
+        meaning: '使複雜 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'compose',
         hint: '構成',
-        meaning: '構成 V.'
+        meaning: '構成 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'computer',
         hint: '電腦',
-        meaning: '電腦 N.'
+        meaning: '電腦 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'concern',
         hint: '擔心',
-        meaning: '擔心 V. N.'
+        meaning: '擔心 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'concert',
         hint: '音樂會',
-        meaning: '音樂會 N.'
+        meaning: '音樂會 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'condition',
         hint: '條件',
-        meaning: '條件 N.'
+        meaning: '條件 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'confident',
         hint: '有信心的',
-        meaning: '有信心的 adj.'
+        meaning: '有信心的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'conflict',
         hint: '衝突',
-        meaning: '衝突 N. V.'
+        meaning: '衝突 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'congratulate',
         hint: '祝賀',
-        meaning: '祝賀 V.'
+        meaning: '祝賀 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'connect',
         hint: '連接',
-        meaning: '連接 V.'
+        meaning: '連接 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'clear',
         hint: '清楚的',
-        meaning: '清楚的 adj. V.'
+        meaning: '清楚的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'crown',
         hint: '皇冠',
-        meaning: '皇冠 N.'
+        meaning: '皇冠 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'crucial',
         hint: '關鍵的',
-        meaning: '關鍵的 adj.'
+        meaning: '關鍵的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'crush',
         hint: '壓碎',
-        meaning: '壓碎 V. N.'
+        meaning: '壓碎 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cry',
         hint: '哭泣',
-        meaning: '哭泣 V. N.'
+        meaning: '哭泣 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'crystal',
         hint: '水晶',
-        meaning: '水晶 N.'
+        meaning: '水晶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cube',
         hint: '立方體',
-        meaning: '立方體 N.'
+        meaning: '立方體 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cultivate',
         hint: '培養',
-        meaning: '培養 V.'
+        meaning: '培養 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'culture',
         hint: '文化',
-        meaning: '文化 N.'
+        meaning: '文化 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cup',
         hint: '杯子',
-        meaning: '杯子 N.'
+        meaning: '杯子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'curious',
         hint: '好奇的',
-        meaning: '好奇的 adj.'
+        meaning: '好奇的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'current',
         hint: '當前的',
-        meaning: '當前的 adj. N.'
+        meaning: '當前的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'curtain',
         hint: '窗簾',
-        meaning: '窗簾 N.'
+        meaning: '窗簾 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'curve',
         hint: '彎曲',
-        meaning: '彎曲 V. N.'
+        meaning: '彎曲 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'custom',
         hint: '習慣',
-        meaning: '習慣 N.'
+        meaning: '習慣 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'customer',
         hint: '顧客',
-        meaning: '顧客 N.'
+        meaning: '顧客 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cut',
         hint: '剪',
-        meaning: '剪 V. N.'
+        meaning: '剪 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cycle',
         hint: '循環',
-        meaning: '循環 N. V.'
+        meaning: '循環 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'cylinder',
         hint: '圓柱體',
-        meaning: '圓柱體 N.'
+        meaning: '圓柱體 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dare',
         hint: '敢',
-        meaning: '敢 V.'
+        meaning: '敢 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dark',
         hint: '黑暗',
-        meaning: '黑暗 N. adj.'
+        meaning: '黑暗 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'data',
         hint: '數據',
-        meaning: '數據 N.'
+        meaning: '數據 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'date',
         hint: '日期',
-        meaning: '日期 N. V.'
+        meaning: '日期 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'daughter',
         hint: '女兒',
-        meaning: '女兒 N.'
+        meaning: '女兒 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dawn',
         hint: '黎明',
-        meaning: '黎明 N.'
+        meaning: '黎明 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'day',
         hint: '一天',
-        meaning: '一天 N.'
+        meaning: '一天 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dead',
         hint: '死的',
-        meaning: '死的 adj.'
+        meaning: '死的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'deal',
         hint: '交易',
-        meaning: '交易 N. V.'
+        meaning: '交易 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dear',
         hint: '親愛的',
-        meaning: '親愛的 adj.'
+        meaning: '親愛的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'death',
         hint: '死亡',
-        meaning: '死亡 N.'
+        meaning: '死亡 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'debate',
         hint: '辯論',
-        meaning: '辯論 V. N.'
+        meaning: '辯論 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'debt',
         hint: '債務',
-        meaning: '債務 N.'
+        meaning: '債務 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'decade',
         hint: '十年',
-        meaning: '十年 N.'
+        meaning: '十年 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'decay',
         hint: '腐爛',
-        meaning: '腐爛 V. N.'
+        meaning: '腐爛 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'deceive',
         hint: '欺騙',
-        meaning: '欺騙 V.'
+        meaning: '欺騙 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'December',
         hint: '十二月',
-        meaning: '十二月 N.'
+        meaning: '十二月 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'decide',
         hint: '決定',
-        meaning: '決定 V.'
+        meaning: '決定 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'decision',
         hint: '決定',
-        meaning: '決定 N.'
+        meaning: '決定 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'declare',
         hint: '宣布',
-        meaning: '宣布 V.'
+        meaning: '宣布 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'decorate',
         hint: '裝飾',
-        meaning: '裝飾 V.'
+        meaning: '裝飾 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'decrease',
         hint: '減少',
-        meaning: '減少 V. N.'
+        meaning: '減少 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dedicate',
         hint: '奉獻',
-        meaning: '奉獻 V.'
+        meaning: '奉獻 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'deep',
         hint: '深的',
-        meaning: '深的 adj. adv.'
+        meaning: '深的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'deer',
         hint: '鹿',
-        meaning: '鹿 N.'
+        meaning: '鹿 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'defeat',
         hint: '擊敗',
-        meaning: '擊敗 V. N.'
+        meaning: '擊敗 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'defend',
         hint: '保衛',
-        meaning: '保衛 V.'
+        meaning: '保衛 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'define',
         hint: '定義',
-        meaning: '定義 V.'
+        meaning: '定義 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'degree',
         hint: '學位',
-        meaning: '學位 N.'
+        meaning: '學位 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'delay',
         hint: '延遲',
-        meaning: '延遲 V. N.'
+        meaning: '延遲 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'delegate',
         hint: '代表',
-        meaning: '代表 N. V.'
+        meaning: '代表 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'delete',
         hint: '刪除',
-        meaning: '刪除 V.'
+        meaning: '刪除 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'delight',
         hint: '高興',
-        meaning: '高興 V. N.'
+        meaning: '高興 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'deliver',
         hint: '交付',
-        meaning: '交付 V.'
+        meaning: '交付 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'demand',
         hint: '要求',
-        meaning: '要求 V. N.'
+        meaning: '要求 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'democracy',
         hint: '民主',
-        meaning: '民主 N.'
+        meaning: '民主 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'demonstrate',
         hint: '展示',
-        meaning: '展示 V.'
+        meaning: '展示 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dense',
         hint: '密集的',
-        meaning: '密集的 adj.'
+        meaning: '密集的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'deny',
         hint: '否認',
-        meaning: '否認 V.'
+        meaning: '否認 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'depart',
         hint: '離開',
-        meaning: '離開 V.'
+        meaning: '離開 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'depend',
         hint: '依賴',
-        meaning: '依賴 V.'
+        meaning: '依賴 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'deploy',
         hint: '部署',
-        meaning: '部署 V.'
+        meaning: '部署 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'deposit',
         hint: '存款',
-        meaning: '存款 N. V.'
+        meaning: '存款 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'depress',
         hint: '沮喪',
-        meaning: '沮喪 V.'
+        meaning: '沮喪 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'derive',
         hint: '衍生',
-        meaning: '衍生 V.'
+        meaning: '衍生 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'descend',
         hint: '下降',
-        meaning: '下降 V.'
+        meaning: '下降 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'describe',
         hint: '描述',
-        meaning: '描述 V.'
+        meaning: '描述 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'desert',
         hint: '沙漠',
-        meaning: '沙漠 N. adj. V.'
+        meaning: '沙漠 N. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'design',
         hint: '設計',
-        meaning: '設計 V. N.'
+        meaning: '設計 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'desire',
         hint: '渴望',
-        meaning: '渴望 V. N.'
+        meaning: '渴望 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'desk',
         hint: '書桌',
-        meaning: '書桌 N.'
+        meaning: '書桌 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'destroy',
         hint: '摧毀',
-        meaning: '摧毀 V.'
+        meaning: '摧毀 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'detail',
         hint: '細節',
-        meaning: '細節 N.'
+        meaning: '細節 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'detect',
         hint: '檢測',
-        meaning: '檢測 V.'
+        meaning: '檢測 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'develop',
         hint: '發展',
-        meaning: '發展 V.'
+        meaning: '發展 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'device',
         hint: '設備',
-        meaning: '設備 N.'
+        meaning: '設備 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'devote',
         hint: '奉獻',
-        meaning: '奉獻 V.'
+        meaning: '奉獻 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'diagnose',
         hint: '診斷',
-        meaning: '診斷 V.'
+        meaning: '診斷 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'diamond',
         hint: '麥塊1.16之前最硬的礦',
-        meaning: '鑽石 N.'
+        meaning: '鑽石 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'diary',
         hint: '日記',
-        meaning: '日記 N.'
+        meaning: '日記 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dictate',
         hint: '口述',
-        meaning: '口述 V.'
+        meaning: '口述 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'diet',
         hint: '飲食',
-        meaning: '飲食 N.'
+        meaning: '飲食 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'differ',
         hint: '不同',
-        meaning: '不同 V.'
+        meaning: '不同 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'different',
         hint: '不同的',
-        meaning: '不同的 adj.'
+        meaning: '不同的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'difficult',
         hint: '困難的',
-        meaning: '困難的 adj.'
+        meaning: '困難的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dig',
         hint: '挖',
-        meaning: '挖 V.'
+        meaning: '挖 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dimension',
         hint: '維度',
-        meaning: '維度 N.'
+        meaning: '維度 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dine',
         hint: '用餐',
-        meaning: '用餐 V.'
+        meaning: '用餐 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dip',
         hint: '浸',
-        meaning: '浸 V. N.'
+        meaning: '浸 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'direct',
         hint: '直接',
-        meaning: '直接 adj. V.'
+        meaning: '直接 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'direction',
         hint: '方向',
-        meaning: '方向 N.'
+        meaning: '方向 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'director',
         hint: '導演',
-        meaning: '導演 N.'
+        meaning: '導演 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dirt',
         hint: '污垢',
-        meaning: '污垢 N.'
+        meaning: '污垢 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'disagree',
         hint: '不同意',
-        meaning: '不同意 V.'
+        meaning: '不同意 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'disappear',
         hint: '消失',
-        meaning: '消失 V.'
+        meaning: '消失 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'disappoint',
         hint: '使失望',
-        meaning: '使失望 V.'
+        meaning: '使失望 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'disapprove',
         hint: '不贊成',
-        meaning: '不贊成 V.'
+        meaning: '不贊成 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'disaster',
         hint: '災難',
-        meaning: '災難 N.'
+        meaning: '災難 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'discipline',
         hint: '紀律',
-        meaning: '紀律 N. V.'
+        meaning: '紀律 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'discover',
         hint: '發現',
-        meaning: '發現 V.'
+        meaning: '發現 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'discuss',
         hint: '討論',
-        meaning: '討論 V.'
+        meaning: '討論 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'disease',
         hint: '疾病',
-        meaning: '疾病 N.'
+        meaning: '疾病 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dish',
         hint: '碟子',
-        meaning: '碟子 N.'
+        meaning: '碟子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'dismiss',
         hint: '解雇',
-        meaning: '解雇 V.'
+        meaning: '解雇 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'disorder',
         hint: '失調',
-        meaning: '失調 N.'
+        meaning: '失調 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'display',
         hint: '展示',
-        meaning: '展示 V. N.'
+        meaning: '展示 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'eight',
         hint: '一個數字',
-        meaning: '八 N.'
+        meaning: '八 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'either',
         hint: '任一',
-        meaning: '任一 adj. pron.'
+        meaning: '任一 adj. pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'elbow',
         hint: '肘',
-        meaning: '肘 N. V.'
+        meaning: '肘 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'elderly',
         hint: '年長的',
-        meaning: '年長的 adj.'
+        meaning: '年長的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'elect',
         hint: '選舉',
-        meaning: '選舉 V. adj.'
+        meaning: '選舉 V. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'elegant',
         hint: '優雅的',
-        meaning: '優雅的 adj.'
+        meaning: '優雅的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'element',
         hint: '元素',
-        meaning: '元素 N.'
+        meaning: '元素 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'elevator',
         hint: '電梯',
-        meaning: '電梯 N.'
+        meaning: '電梯 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'else',
         hint: '其他',
-        meaning: '其他 pron. adv.'
+        meaning: '其他 pron. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'embark',
         hint: '著手',
-        meaning: '著手 V.'
+        meaning: '著手 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'embrace',
         hint: '擁抱',
-        meaning: '擁抱 V. N.'
+        meaning: '擁抱 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'emerge',
         hint: '出現',
-        meaning: '出現 V.'
+        meaning: '出現 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'emotion',
         hint: '情感',
-        meaning: '情感 N.'
+        meaning: '情感 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'employ',
         hint: '雇用',
-        meaning: '雇用 V.'
+        meaning: '雇用 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'empty',
         hint: '空的',
-        meaning: '空的 adj. V.'
+        meaning: '空的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'enable',
         hint: '使能夠',
-        meaning: '使能夠 V.'
+        meaning: '使能夠 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'encounter',
         hint: '遭遇',
-        meaning: '遭遇 V. N.'
+        meaning: '遭遇 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'end',
         hint: '結束',
-        meaning: '結束 V. N.'
+        meaning: '結束 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'endure',
         hint: '忍受',
-        meaning: '忍受 V.'
+        meaning: '忍受 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'enemy',
         hint: '敵人',
-        meaning: '敵人 N.'
+        meaning: '敵人 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'energy',
         hint: '能源',
-        meaning: '能源 N.'
+        meaning: '能源 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'enforce',
         hint: '實施',
-        meaning: '實施 V.'
+        meaning: '實施 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'engage',
         hint: '參與',
-        meaning: '參與 V.'
+        meaning: '參與 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'engine',
         hint: '引擎',
-        meaning: '引擎 N.'
+        meaning: '引擎 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'enhance',
         hint: '增強',
-        meaning: '增強 V.'
+        meaning: '增強 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'enjoy',
         hint: '享受',
-        meaning: '享受 V.'
+        meaning: '享受 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'enlist',
         hint: '入伍',
-        meaning: '入伍 V.'
+        meaning: '入伍 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ensure',
         hint: '確保',
-        meaning: '確保 V.'
+        meaning: '確保 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'enter',
         hint: '進入',
-        meaning: '進入 V.'
+        meaning: '進入 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'entertain',
         hint: '娛樂',
-        meaning: '娛樂 V.'
+        meaning: '娛樂 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'enthusiasm',
         hint: '熱情',
-        meaning: '熱情 N.'
+        meaning: '熱情 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'entire',
         hint: '整個',
-        meaning: '整個 adj.'
+        meaning: '整個 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'entrance',
         hint: '出口的相反',
-        meaning: '入口 N.'
+        meaning: '入口 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'envelope',
         hint: '信封',
-        meaning: '信封 N.'
+        meaning: '信封 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'environment',
         hint: '環境',
-        meaning: '環境 N.'
+        meaning: '環境 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'envy',
         hint: '羨慕',
-        meaning: '羨慕 V. N.'
+        meaning: '羨慕 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'equal',
         hint: '平等',
-        meaning: '平等 adj. V.'
+        meaning: '平等 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'equip',
         hint: '裝備',
-        meaning: '裝備 V.'
+        meaning: '裝備 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'era',
         hint: '時代',
-        meaning: '時代 N.'
+        meaning: '時代 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'erase',
         hint: '擦除',
-        meaning: '擦除 V.'
+        meaning: '擦除 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'error',
         hint: '錯誤',
-        meaning: '錯誤 N.'
+        meaning: '錯誤 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'escape',
         hint: '逃脫',
-        meaning: '逃脫 V. N.'
+        meaning: '逃脫 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'especially',
         hint: '特別',
-        meaning: '特別 adv.'
+        meaning: '特別 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'essay',
         hint: '文章',
-        meaning: '文章 N.'
+        meaning: '文章 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'essential',
         hint: '必要的',
-        meaning: '必要的 adj.'
+        meaning: '必要的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'establish',
         hint: '建立',
-        meaning: '建立 V.'
+        meaning: '建立 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'estimate',
         hint: '估計',
-        meaning: '估計 V. N.'
+        meaning: '估計 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ethnic',
         hint: '種族的',
-        meaning: '種族的 adj.'
+        meaning: '種族的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'evacuate',
         hint: '疏散',
-        meaning: '疏散 V.'
+        meaning: '疏散 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'evaluate',
         hint: '評估',
-        meaning: '評估 V.'
+        meaning: '評估 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'even',
         hint: '甚至',
-        meaning: '甚至 adv. adj.'
+        meaning: '甚至 adv. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'event',
         hint: '事件',
-        meaning: '事件 N.'
+        meaning: '事件 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ever',
         hint: '曾經',
-        meaning: '曾經 adv.'
+        meaning: '曾經 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ever',
         hint: '曾經',
-        meaning: '曾經 adv.'
+        meaning: '曾經 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'every',
         hint: '每個',
-        meaning: '每個 adj.'
+        meaning: '每個 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'evidence',
         hint: '證據',
-        meaning: '證據 N.'
+        meaning: '證據 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'evil',
         hint: '邪惡',
-        meaning: '邪惡 adj. N.'
+        meaning: '邪惡 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'exact',
         hint: '確切',
-        meaning: '確切 adj. V.'
+        meaning: '確切 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'example',
         hint: '例子',
-        meaning: '例子 N.'
+        meaning: '例子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'exceed',
         hint: '超過',
-        meaning: '超過 V.'
+        meaning: '超過 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'excel',
         hint: '擅長',
-        meaning: '擅長 V.'
+        meaning: '擅長 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'except',
         hint: '除了',
-        meaning: '除了 prep. conj.'
+        meaning: '除了 prep. conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'exchange',
         hint: '交換',
-        meaning: '交換 V. N.'
+        meaning: '交換 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'excite',
         hint: '激動',
-        meaning: '激動 V.'
+        meaning: '激動 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'exclude',
         hint: '排除',
-        meaning: '排除 V.'
+        meaning: '排除 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'excuse',
         hint: '藉口',
-        meaning: '藉口 N. V.'
+        meaning: '藉口 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'execute',
         hint: '執行',
-        meaning: '執行 V.'
+        meaning: '執行 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'exercise',
         hint: '運動',
-        meaning: '運動 V. N.'
+        meaning: '運動 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'exhaust',
         hint: '耗盡',
-        meaning: '耗盡 V. N.'
+        meaning: '耗盡 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'exhibit',
         hint: '展覽',
-        meaning: '展覽 V. N.'
+        meaning: '展覽 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'exist',
         hint: '存在',
-        meaning: '存在 V.'
+        meaning: '存在 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'exit',
         hint: '入口相反',
-        meaning: '1. 出口（出門的地方） N. \n2. 出去 V.'
+        meaning: '1. 出口（出門的地方） N. \n2. 出去 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'expand',
         hint: '擴大',
-        meaning: '擴大 V.'
+        meaning: '擴大 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'expect',
         hint: '期望',
-        meaning: '期望 V.'
+        meaning: '期望 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'experience',
         hint: '經驗',
-        meaning: '經驗 N. V.'
+        meaning: '經驗 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'expert',
         hint: '專家',
-        meaning: '專家 N. adj.'
+        meaning: '專家 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'explain',
         hint: '解釋',
-        meaning: '解釋 V.'
+        meaning: '解釋 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'explode',
         hint: '爆炸',
-        meaning: '爆炸 V.'
+        meaning: '爆炸 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'explore',
         hint: '探索',
-        meaning: '探索 V.'
+        meaning: '探索 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'export',
         hint: '進口的相反',
-        meaning: '出口（進口到別的地方，不是緊急出口的出口） V.'
+        meaning: '出口（進口到別的地方，不是緊急出口的出口） V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'express',
         hint: '表達',
-        meaning: '表達 V. adj.'
+        meaning: '表達 V. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'extend',
         hint: '延伸',
-        meaning: '延伸 V.'
+        meaning: '延伸 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'extra',
         hint: '額外的',
-        meaning: '額外的 adj. N.'
+        meaning: '額外的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'extreme',
         hint: '極端',
-        meaning: '極端 adj. N.'
+        meaning: '極端 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'eye',
         hint: '用來看的東西ˋ',
-        meaning: '眼睛 N.'
+        meaning: '眼睛 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'face',
         hint: '臉',
-        meaning: '1. 臉 N. \n2. 面對 V.'
+        meaning: '1. 臉 N. \n2. 面對 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fact',
         hint: '事實',
-        meaning: '事實 N.'
+        meaning: '事實 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'factory',
         hint: '工廠',
-        meaning: '工廠 N.'
+        meaning: '工廠 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fade',
         hint: '褪色',
-        meaning: '褪色 V.'
+        meaning: '褪色 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fail',
         hint: '失敗',
-        meaning: '失敗 V.'
+        meaning: '失敗 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fair',
         hint: '公平的',
-        meaning: '公平的 adj.'
+        meaning: '公平的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'faith',
         hint: '信仰',
-        meaning: '信仰 N.'
+        meaning: '信仰 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fall',
         hint: '你辦到腳時發生的事情',
-        meaning: '1. 跌倒 V. \n2. 掉落 V. \n3. 降低 V. \n4. 屬於 V. \n5. 變成 V. \n6. 被打敗 V. \n7. 落敗 V. \n8. 戰死 V. \n9. （板球）打擊手被淘汰出局 V. \n10. 降臨 V. \n11. 下垂 V.'
+        meaning: '1. 跌倒 V. \n2. 掉落 V. \n3. 降低 V. \n4. 屬於 V. \n5. 變成 V. \n6. 被打敗 V. \n7. 落敗 V. \n8. 戰死 V. \n9. （板球）打擊手被淘汰出局 V. \n10. 降臨 V. \n11. 下垂 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'false',
         hint: '真的的相反',
-        meaning: '1. 假的 adj. \n2. 虛偽的 adj. \n3. 錯誤的 adj. \n4. 虛情假意的 adj. \n5. 不忠誠；不可靠的 adj.'
+        meaning: '1. 假的 adj. \n2. 虛偽的 adj. \n3. 錯誤的 adj. \n4. 虛情假意的 adj. \n5. 不忠誠；不可靠的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fame',
         hint: '名譽',
-        meaning: '名譽 N.'
+        meaning: '名譽 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'family',
         hint: '家庭',
-        meaning: '家庭 N.'
+        meaning: '家庭 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'famous',
         hint: '著名的',
-        meaning: '著名的 adj.'
+        meaning: '著名的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fan',
         hint: '可以吹風的',
-        meaning: '1. 電風扇 N. \n2.球迷 N.'
+        meaning: '1. 電風扇 N. \n2.球迷 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fantasy',
         hint: '幻想',
-        meaning: '幻想 N.'
+        meaning: '幻想 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'far',
         hint: '形容距離',
-        meaning: '遠 adv. adj.'
+        meaning: '遠 adv. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'farm',
         hint: '農場',
-        meaning: '農場 N. V.'
+        meaning: '農場 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fashion',
         hint: '時尚',
-        meaning: '時尚 N. V.'
+        meaning: '時尚 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fast',
         hint: '形容速度',
-        meaning: '1. 快、快的 adj. adv. \n2. 齋戒、齋戒期 N. V.'
+        meaning: '1. 快、快的 adj. adv. \n2. 齋戒、齋戒期 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fat',
         hint: '不運動的後果',
-        meaning: '肥胖 adj. N.'
+        meaning: '肥胖 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'father',
         hint: '你的親人',
-        meaning: '父親 N.'
+        meaning: '父親 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fault',
         hint: '錯誤',
-        meaning: '錯誤（誰的錯） N.'
+        meaning: '錯誤（誰的錯） N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'favor',
         hint: '喜愛',
-        meaning: '喜愛 N. V.'
+        meaning: '喜愛 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fear',
         hint: '害怕',
-        meaning: '害怕 V. N.'
+        meaning: '害怕 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'feature',
         hint: '特徵',
-        meaning: '特徵 N. V.'
+        meaning: '特徵 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fee',
         hint: '費用',
-        meaning: '費用 N.'
+        meaning: '費用 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'feed',
         hint: '餵養',
-        meaning: '餵養 V.'
+        meaning: '餵養 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'feel',
         hint: '感覺',
-        meaning: '感覺 V.'
+        meaning: '感覺 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'female',
         hint: '女性',
-        meaning: '女性 N. adj.'
+        meaning: '女性 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fence',
         hint: '籬笆',
-        meaning: '籬笆 N. V.'
+        meaning: '籬笆 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'festival',
         hint: '節日',
-        meaning: '節日 N.'
+        meaning: '節日 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fetch',
         hint: '取',
-        meaning: '取 V.'
+        meaning: '取 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fever',
         hint: '發燒',
-        meaning: '發燒 N.'
+        meaning: '發燒 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'few',
         hint: '少數',
-        meaning: '少數 adj. pron.'
+        meaning: '少數 adj. pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fiber',
         hint: '纖維',
-        meaning: '纖維 N.'
+        meaning: '纖維 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fiction',
         hint: '小說',
-        meaning: '小說 N.'
+        meaning: '小說 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'field',
         hint: '領域',
-        meaning: '領域 N.'
+        meaning: '領域 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fight',
         hint: '打鬥',
-        meaning: '打鬥 V. N.'
+        meaning: '打鬥 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'figure',
         hint: '數字',
-        meaning: '1. 輪廓、人影；畫像；身材 N. \n2. 數字 N. \e4. 照片，簡寫fig. N. \n4. 認為 V. \n5. 出現、參加、被包括 V. \n6. 計算 V.'
+        meaning: '1. 輪廓、人影；畫像；身材 N. \n2. 數字 N. \e4. 照片，簡寫fig. N. \n4. 認為 V. \n5. 出現、參加、被包括 V. \n6. 計算 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'file',
         hint: 'photo.png script.js video.mp4 這些',
-        meaning: '文件 N. V.'
+        meaning: '文件 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fill',
         hint: '填充',
-        meaning: '填充 V.'
+        meaning: '填充 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'film',
         hint: '電影',
-        meaning: '電影 N. V.'
+        meaning: '電影 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'filter',
         hint: '過濾',
-        meaning: '過濾 V. N.'
+        meaning: '過濾 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'final',
         hint: '最終的',
-        meaning: '最終的 adj.'
+        meaning: '最終的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'find',
         hint: '找到',
-        meaning: '找到 V.'
+        meaning: '找到 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fine',
         hint: '罰款',
-        meaning: '罰款 N. adj. V.'
+        meaning: '罰款 N. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'finger',
         hint: '手指',
-        meaning: '手指 N.'
+        meaning: '手指 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'finish',
         hint: '完成',
-        meaning: '完成 V. N.'
+        meaning: '完成 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fire',
         hint: '火',
-        meaning: '火 N. V.'
+        meaning: '火 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'firm',
         hint: '公司',
-        meaning: '公司 N. adj.'
+        meaning: '公司 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'first',
         hint: '第一',
-        meaning: '第一 adj. adv.'
+        meaning: '第一 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fish',
         hint: '什麼水中游？',
-        meaning: '魚 N. V.'
+        meaning: '魚 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fit',
         hint: '合適',
-        meaning: '合適 adj. V.'
+        meaning: '合適 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'five',
         hint: '數字',
-        meaning: '五 N. adj.'
+        meaning: '五 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fix',
         hint: '修理',
-        meaning: '修理 V. N.'
+        meaning: '修理 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flag',
         hint: '旗幟',
-        meaning: '旗幟 N.'
+        meaning: '旗幟 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flame',
         hint: '火焰',
-        meaning: '火焰 N. V.'
+        meaning: '火焰 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flash',
         hint: '閃光',
-        meaning: '閃光 N. V.'
+        meaning: '閃光 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flat',
         hint: '平坦的',
-        meaning: '平坦的 adj. N.'
+        meaning: '平坦的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flavor',
         hint: '味道',
-        meaning: '味道 N.'
+        meaning: '味道 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flee',
         hint: '逃走',
-        meaning: '逃走 V.'
+        meaning: '逃走 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fleet',
         hint: '艦隊',
-        meaning: '艦隊 N.'
+        meaning: '艦隊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flesh',
         hint: '肉體',
-        meaning: '肉體 N.'
+        meaning: '肉體 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flex',
         hint: '彎曲',
-        meaning: '彎曲 V.'
+        meaning: '彎曲 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flight',
         hint: '飛行',
-        meaning: '飛行 N.'
+        meaning: '飛行 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flip',
         hint: '翻轉',
-        meaning: '翻轉 V.'
+        meaning: '翻轉 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'float',
         hint: '漂浮',
-        meaning: '漂浮 V. N.'
+        meaning: '漂浮 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flock',
         hint: '群',
-        meaning: '群 N. V.'
+        meaning: '群 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'floor',
         hint: '地板',
-        meaning: '地板 N.'
+        meaning: '地板 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flower',
         hint: '花',
-        meaning: '花 N. V.'
+        meaning: '花 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fluid',
         hint: '液體',
-        meaning: '液體 N. adj.'
+        meaning: '液體 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'flush',
         hint: '沖洗',
-        meaning: '沖洗 V. N.'
+        meaning: '沖洗 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fly',
         hint: '飛行',
-        meaning: '飛行 V. N.'
+        meaning: '飛行 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'focus',
         hint: '焦點',
-        meaning: '焦點 N. V.'
+        meaning: '焦點 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fold',
         hint: '折疊',
-        meaning: '折疊 V. N.'
+        meaning: '折疊 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'follow',
         hint: '跟隨',
-        meaning: '跟隨 V.'
+        meaning: '跟隨 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'food',
         hint: '食物',
-        meaning: '食物 N.'
+        meaning: '食物 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fool',
         hint: '傻瓜',
-        meaning: '傻瓜 N. V.'
+        meaning: '傻瓜 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'foot',
         hint: '腳',
-        meaning: '腳 N.'
+        meaning: '腳 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'for',
         hint: '為了',
-        meaning: '為了 prep. conj.'
+        meaning: '為了 prep. conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'force',
         hint: '力量',
-        meaning: '力量 N. V.'
+        meaning: '力量 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'forecast',
         hint: '預測',
-        meaning: '預測 V. N.'
+        meaning: '預測 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'foreign',
         hint: '外國的',
-        meaning: '外國的 adj.'
+        meaning: '外國的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'forest',
         hint: '森林',
-        meaning: '森林 N.'
+        meaning: '森林 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'forget',
         hint: '忘記',
-        meaning: '忘記 V.'
+        meaning: '忘記 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'forgive',
         hint: '原諒',
-        meaning: '原諒 V.'
+        meaning: '原諒 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fork',
         hint: '叉子',
-        meaning: '叉子 N.'
+        meaning: '叉子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'form',
         hint: '形式',
-        meaning: '形式 N. V.'
+        meaning: '形式 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fortune',
         hint: '財富',
-        meaning: '財富 N.'
+        meaning: '財富 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'forward',
         hint: '向前',
-        meaning: '向前 adv. adj. V.'
+        meaning: '向前 adv. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'found',
         hint: '找到',
-        meaning: '找到 V.'
+        meaning: '找到 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'four',
         hint: '數字',
-        meaning: '四 N. adj.'
+        meaning: '四 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'frame',
         hint: '框架',
-        meaning: '框架 N. V.'
+        meaning: '框架 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'free',
         hint: '詐騙方法，讓想要__東西被騙',
-        meaning: '1. 免費的 adj. adv. \n2. 自由的 adj. adv.'
+        meaning: '1. 免費的 adj. adv. \n2. 自由的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'freeze',
         hint: '冷凍',
-        meaning: '冷凍 V.'
+        meaning: '冷凍 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fresh',
         hint: '新鮮的',
-        meaning: '新鮮的 adj.'
+        meaning: '新鮮的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'friction',
         hint: '摩擦',
-        meaning: '摩擦 N.'
+        meaning: '摩擦 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'friend',
         hint: '朋友',
-        meaning: '朋友 N.'
+        meaning: '朋友 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'frighten',
         hint: '嚇唬',
-        meaning: '嚇唬 V.'
+        meaning: '嚇唬 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'from',
         hint: '從',
-        meaning: '從 prep.'
+        meaning: '從 prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'front',
         hint: '前面',
-        meaning: '前面 N. adj.'
+        meaning: '前面 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fruit',
         hint: '水果',
-        meaning: '水果 N.'
+        meaning: '水果 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fuel',
         hint: '燃料',
-        meaning: '燃料 N. V.'
+        meaning: '燃料 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'full',
         hint: '滿的',
-        meaning: '滿的 adj.'
+        meaning: '滿的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fun',
         hint: '有趣',
-        meaning: '有趣 adj. N.'
+        meaning: '有趣 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'function',
         hint: '功能',
-        meaning: '功能 N. V.'
+        meaning: '功能 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'fund',
         hint: '基金',
-        meaning: '基金 N.'
+        meaning: '基金 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'funeral',
         hint: '葬禮',
-        meaning: '葬禮 N.'
+        meaning: '葬禮 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'funny',
         hint: '滑稽的',
-        meaning: '滑稽的 adj.'
+        meaning: '滑稽的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'furniture',
         hint: '家具',
-        meaning: '家具 N.'
+        meaning: '家具 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'further',
         hint: '更遠',
-        meaning: '更遠 adj. adv. V.'
+        meaning: '更遠 adj. adv. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'future',
         hint: '未來',
-        meaning: '未來 N. adj.'
+        meaning: '未來 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gain',
         hint: '獲得',
-        meaning: '獲得 V. N.'
+        meaning: '獲得 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'galaxy',
         hint: '星系',
-        meaning: '星系 N.'
+        meaning: '星系 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gallery',
         hint: '畫廊',
-        meaning: '畫廊 N.'
+        meaning: '畫廊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'game',
         hint: '你現在在玩的',
-        meaning: '遊戲 N.'
+        meaning: '遊戲 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'GamingDimiGD',
         hint: '我的使用者名稱',
-        meaning: '遊戲迪米，記得訂閱喔（不用特別記住這個詞）'
+        meaning: '遊戲迪米，記得訂閱喔（不用特別記住這個詞）',
+        v: 0,
+        new: false,
     },
     {
         word: 'gap',
         hint: '缺口',
-        meaning: '缺口 N.'
+        meaning: '缺口 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'garage',
         hint: '車庫',
-        meaning: '車庫 N.'
+        meaning: '車庫 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'garden',
         hint: '花園',
-        meaning: '花園 N. V.'
+        meaning: '花園 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gas',
         hint: '氣體',
-        meaning: '氣體 N.'
+        meaning: '氣體 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gather',
         hint: '收集',
-        meaning: '收集 V.'
+        meaning: '收集 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gauge',
         hint: '測量儀',
-        meaning: '測量儀 N. V.'
+        meaning: '測量儀 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'general',
         hint: '一般的',
-        meaning: '一般的 adj. N.'
+        meaning: '一般的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'generate',
         hint: '生成',
-        meaning: '生成 V.'
+        meaning: '生成 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'genius',
         hint: '天才',
-        meaning: '天才 N.'
+        meaning: '天才 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gentle',
         hint: '溫和的',
-        meaning: '溫和的 adj.'
+        meaning: '溫和的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'genuine',
         hint: '真正的',
-        meaning: '真正的 adj.'
+        meaning: '真正的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gesture',
         hint: '手勢',
-        meaning: '手勢 N. V.'
+        meaning: '手勢 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'get',
         hint: '獲得',
-        meaning: '獲得 V.'
+        meaning: '獲得 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'giant',
         hint: '巨大的',
-        meaning: '巨大的 adj. N.'
+        meaning: '巨大的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gift',
         hint: '禮物',
-        meaning: '禮物 N.'
+        meaning: '禮物 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'girl',
         hint: '女孩',
-        meaning: '女孩 N.'
+        meaning: '女孩 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'give',
         hint: '給予',
-        meaning: '給予 V.'
+        meaning: '給予 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'glad',
         hint: '高興的',
-        meaning: '高興的 adj.'
+        meaning: '高興的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'glance',
         hint: '一瞥',
-        meaning: '一瞥 V. N.'
+        meaning: '一瞥 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'glass',
         hint: '玻璃',
-        meaning: '玻璃 N.'
+        meaning: '玻璃 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'global',
         hint: '全球的',
-        meaning: '全球的 adj.'
+        meaning: '全球的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'glove',
         hint: '手套',
-        meaning: '手套 N.'
+        meaning: '手套 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'go',
         hint: '去',
-        meaning: '去 V.'
+        meaning: '去 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'goal',
         hint: '目標',
-        meaning: '目標 N.'
+        meaning: '目標 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'god',
         hint: '神',
-        meaning: '神 N.'
+        meaning: '神 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gold',
         hint: '黃金',
-        meaning: '黃金 N. adj.'
+        meaning: '黃金 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'good',
         hint: '好的',
-        meaning: '好的 adj.'
+        meaning: '好的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'govern',
         hint: '統治',
-        meaning: '統治 V.'
+        meaning: '統治 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grab',
         hint: '抓住',
-        meaning: '抓住 V.'
+        meaning: '抓住 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grace',
         hint: '優雅',
-        meaning: '優雅 N.'
+        meaning: '優雅 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grade',
         hint: '成績',
-        meaning: '成績 N. V.'
+        meaning: '成績 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grain',
         hint: '穀物',
-        meaning: '穀物 N.'
+        meaning: '穀物 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grand',
         hint: '宏偉的',
-        meaning: '宏偉的 adj.'
+        meaning: '宏偉的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grant',
         hint: '授予',
-        meaning: '授予 V. N.'
+        meaning: '授予 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grape',
         hint: '葡萄',
-        meaning: '葡萄 N.'
+        meaning: '葡萄 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grass',
         hint: '中文用錯方式就會變成髒話',
-        meaning: '草 N.'
+        meaning: '草 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grateful',
         hint: '感激的',
-        meaning: '感激的 adj.'
+        meaning: '感激的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gravity',
         hint: '重力',
-        meaning: '重力 N.'
+        meaning: '重力 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'great',
         hint: '偉大的',
-        meaning: '偉大的 adj.'
+        meaning: '偉大的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'green',
         hint: '我最愛的顏色',
-        meaning: '綠色 adj. N.'
+        meaning: '綠色 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grid',
         hint: '網格',
-        meaning: '網格 N.'
+        meaning: '網格 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grief',
         hint: '悲傷',
-        meaning: '悲傷 N.'
+        meaning: '悲傷 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grind',
         hint: '磨碎',
-        meaning: '磨碎 V. N.'
+        meaning: '磨碎 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grip',
         hint: '握緊',
-        meaning: '握緊 V. N.'
+        meaning: '握緊 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grocery',
         hint: '食品雜貨',
-        meaning: '食品雜貨 N.'
+        meaning: '食品雜貨 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gross',
         hint: '總共的',
-        meaning: '總共的 adj.'
+        meaning: '總共的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ground',
         hint: '地面',
-        meaning: '地面 N. V.'
+        meaning: '地面 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'group',
         hint: '團體',
-        meaning: '團體 N. V.'
+        meaning: '團體 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'grow',
         hint: '成長',
-        meaning: '成長 V.'
+        meaning: '成長 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'guarantee',
         hint: '保證',
-        meaning: '保證 V. N.'
+        meaning: '保證 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'guard',
         hint: '守衛',
-        meaning: '守衛 N. V.'
+        meaning: '守衛 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'guess',
         hint: '猜測',
-        meaning: '猜測 V. N.'
+        meaning: '猜測 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'guide',
         hint: '指導',
-        meaning: '指導 V. N.'
+        meaning: '指導 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'guilt',
         hint: '內疚',
-        meaning: '內疚 N.'
+        meaning: '內疚 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'guitar',
         hint: '吉他',
-        meaning: '吉他 N.'
+        meaning: '吉他 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gun',
         hint: '槍',
-        meaning: '槍 N.'
+        meaning: '槍 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gut',
         hint: '腸子',
-        meaning: '腸子 N.'
+        meaning: '腸子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'gym',
         hint: '健身房',
-        meaning: '健身房 N.'
+        meaning: '健身房 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'habit',
         hint: '習慣',
-        meaning: '習慣 N.'
+        meaning: '習慣 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hair',
         hint: '頭髮',
-        meaning: '頭髮 N.'
+        meaning: '頭髮 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'half',
         hint: '一半',
-        meaning: '一半 N. adj. adv.'
+        meaning: '一半 N. adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hall',
         hint: '大廳',
-        meaning: '大廳 N.'
+        meaning: '大廳 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hand',
         hint: '手',
-        meaning: '手 N. V.'
+        meaning: '手 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'handle',
         hint: '處理',
-        meaning: '處理 V. N.'
+        meaning: '處理 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hang',
         hint: '掛',
-        meaning: '掛 V.'
+        meaning: '掛 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'happen',
         hint: '發生',
-        meaning: '發生 V.'
+        meaning: '發生 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'happy',
         hint: '快樂的',
-        meaning: '快樂的 adj.'
+        meaning: '快樂的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'harbor',
         hint: '港口',
-        meaning: '港口 N. V.'
+        meaning: '港口 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hard',
         hint: '困難的',
-        meaning: '困難的 adj. adv.'
+        meaning: '困難的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'harvest',
         hint: '收穫',
-        meaning: '收穫 N. V.'
+        meaning: '收穫 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hat',
         hint: '帽子',
-        meaning: '帽子 N.'
+        meaning: '帽子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hate',
         hint: '討厭',
-        meaning: '討厭 V. N.'
+        meaning: '討厭 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'have',
         hint: '擁有',
-        meaning: '擁有 V. aux.'
+        meaning: '擁有 V. aux.',
+        v: 0,
+        new: false,
     },
     {
         word: 'head',
         hint: '頭',
-        meaning: '頭 N. V.'
+        meaning: '頭 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'headline',
         hint: '標題',
-        meaning: '標題 N.'
+        meaning: '標題 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'heal',
         hint: '治愈',
-        meaning: '治愈 V.'
+        meaning: '治愈 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'health',
         hint: '健康',
-        meaning: '健康 N.'
+        meaning: '健康 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hear',
         hint: '聽見',
-        meaning: '聽見 V.'
+        meaning: '聽見 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'heart',
         hint: '心臟',
-        meaning: '心臟 N.'
+        meaning: '心臟 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'heat',
         hint: '熱',
-        meaning: '熱 N. V.'
+        meaning: '熱 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'heaven',
         hint: '天堂',
-        meaning: '天堂 N.'
+        meaning: '天堂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'heavy',
         hint: '沉重的',
-        meaning: '沉重的 adj.'
+        meaning: '沉重的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'heel',
         hint: '腳後跟',
-        meaning: '腳後跟 N.'
+        meaning: '腳後跟 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'height',
         hint: '高度',
-        meaning: '高度 N.'
+        meaning: '高度 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hello',
         hint: '你好',
-        meaning: '你好 int.'
+        meaning: '你好 int.',
+        v: 0,
+        new: false,
     },
     {
         word: 'helmet',
         hint: '頭盔',
-        meaning: '頭盔 N.'
+        meaning: '頭盔 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'help',
         hint: '拜託幫助我我忘記我引號要放哪裡了',
-        meaning: '幫助 V. N.'
+        meaning: '幫助 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hen',
         hint: '母雞',
-        meaning: '母雞 N.'
+        meaning: '母雞 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'her',
         hint: '她的',
-        meaning: '她的 pron.'
+        meaning: '她的 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'here',
         hint: '這裡',
-        meaning: '這裡 adv.'
+        meaning: '這裡 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hero',
         hint: '英雄',
-        meaning: '英雄 N.'
+        meaning: '英雄 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hidden',
         hint: '隱藏的',
-        meaning: '隱藏的 adj.'
+        meaning: '隱藏的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hidden',
         hint: '隱藏的',
-        meaning: '隱藏的 adj.'
+        meaning: '隱藏的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hide',
         hint: '躲藏',
-        meaning: '躲藏 V.'
+        meaning: '躲藏 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'high',
         hint: '高的',
-        meaning: '高的 adj.'
+        meaning: '高的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'highlight',
         hint: '突顯',
-        meaning: '突顯 V. N.'
+        meaning: '突顯 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'highway',
         hint: '高速公路',
-        meaning: '高速公路 N.'
+        meaning: '高速公路 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hill',
         hint: '山丘',
-        meaning: '山丘 N.'
+        meaning: '山丘 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hint',
         hint: '提示',
-        meaning: '提示 V. N.'
+        meaning: '提示 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hip',
         hint: '臀部',
-        meaning: '臀部 N.'
+        meaning: '臀部 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hire',
         hint: '聘請',
-        meaning: '聘請 V. N.'
+        meaning: '聘請 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'history',
         hint: '歷史',
-        meaning: '歷史 N.'
+        meaning: '歷史 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hit',
         hint: '打擊',
-        meaning: '打擊 V. N.'
+        meaning: '打擊 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hold',
         hint: '持有',
-        meaning: '持有 V. N.'
+        meaning: '持有 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hole',
         hint: '洞',
-        meaning: '洞 N.'
+        meaning: '洞 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'holiday',
         hint: '假期',
-        meaning: '假期 N.'
+        meaning: '假期 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hollow',
         hint: '空心的',
-        meaning: '空心的 adj. V.'
+        meaning: '空心的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'home',
         hint: '家',
-        meaning: '家 N. adv.'
+        meaning: '家 N. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'honest',
         hint: '誠實的',
-        meaning: '誠實的 adj.'
+        meaning: '誠實的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'honey',
         hint: '蜜糖',
-        meaning: '蜜糖 N.'
+        meaning: '蜜糖 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hood',
         hint: '兜帽',
-        meaning: '兜帽 N.'
+        meaning: '兜帽 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hook',
         hint: '鉤',
-        meaning: '鉤 N. V.'
+        meaning: '鉤 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hope',
         hint: '希望',
-        meaning: '希望 V. N.'
+        meaning: '希望 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'horizon',
         hint: '地平線',
-        meaning: '地平線 N.'
+        meaning: '地平線 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'horn',
         hint: '號角',
-        meaning: '號角 N.'
+        meaning: '號角 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'horror',
         hint: '恐懼',
-        meaning: '恐懼 N.'
+        meaning: '恐懼 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'horse',
         hint: '馬',
-        meaning: '馬 N.'
+        meaning: '馬 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hospital',
         hint: '醫院',
-        meaning: '醫院 N.'
+        meaning: '醫院 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'host',
         hint: '主持',
-        meaning: '主持 V. N.'
+        meaning: '主持 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hot',
         hint: '熱的',
-        meaning: '熱的 adj.'
+        meaning: '熱的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hotel',
         hint: '旅館',
-        meaning: '旅館 N.'
+        meaning: '旅館 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hour',
         hint: '小時',
-        meaning: '小時 N.'
+        meaning: '小時 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'house',
         hint: '房子',
-        meaning: '房子 N. V.'
+        meaning: '房子 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hover',
         hint: '盤旋',
-        meaning: '盤旋 V.'
+        meaning: '盤旋 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hub',
         hint: '樞紐',
-        meaning: '樞紐 N.'
+        meaning: '樞紐 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'huge',
         hint: '巨大的',
-        meaning: '巨大的 adj.'
+        meaning: '巨大的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'human',
         hint: '人類',
-        meaning: '人類 N. adj.'
+        meaning: '人類 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'humble',
         hint: '謙虛',
-        meaning: '謙虛 adj. V.'
+        meaning: '謙虛 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'humor',
         hint: '幽默',
-        meaning: '幽默 N. V.'
+        meaning: '幽默 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hundred',
         hint: '一百',
-        meaning: '一百 N. adj.'
+        meaning: '一百 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hungry',
         hint: '飢餓的',
-        meaning: '飢餓的 adj.'
+        meaning: '飢餓的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hunt',
         hint: '獵',
-        meaning: '獵 V. N.'
+        meaning: '獵 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hurry',
         hint: '趕緊',
-        meaning: '趕緊 V. N.'
+        meaning: '趕緊 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hurt',
         hint: '受傷',
-        meaning: '受傷 V.'
+        meaning: '受傷 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'husband',
         hint: '丈夫',
-        meaning: '丈夫 N.'
+        meaning: '丈夫 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'hypothesis',
         hint: '假設',
-        meaning: '假設 N.'
+        meaning: '假設 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ice',
         hint: '冰',
-        meaning: '冰 N. V.'
+        meaning: '冰 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'idea',
         hint: '主意',
-        meaning: '主意 N.'
+        meaning: '主意 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ideal',
         hint: '理想',
-        meaning: '理想 N. adj.'
+        meaning: '理想 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'identical',
         hint: '相同的',
-        meaning: '相同的 adj.'
+        meaning: '相同的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'identify',
         hint: '識別',
-        meaning: '識別 V.'
+        meaning: '識別 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'identity',
         hint: '身份',
-        meaning: '身份 N.'
+        meaning: '身份 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ignore',
         hint: '忽略',
-        meaning: '忽略 V.'
+        meaning: '忽略 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ill',
         hint: '生病的',
-        meaning: '生病的 adj.'
+        meaning: '生病的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'illegal',
         hint: '非法的',
-        meaning: '非法的 adj.'
+        meaning: '非法的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'illness',
         hint: '疾病',
-        meaning: '疾病 N.'
+        meaning: '疾病 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'illustrate',
         hint: '說明',
-        meaning: '說明 V.'
+        meaning: '說明 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'image',
         hint: '影像',
-        meaning: '影像 N.'
+        meaning: '影像 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'imagination',
         hint: '想像力',
-        meaning: '想像力 N.'
+        meaning: '想像力 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'imagine',
         hint: '想像',
-        meaning: '想像 V.'
+        meaning: '想像 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'imitate',
         hint: '模仿',
-        meaning: '模仿 V.'
+        meaning: '模仿 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'immense',
         hint: '巨大的',
-        meaning: '巨大的 adj.'
+        meaning: '巨大的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'immerse',
         hint: '浸沒',
-        meaning: '浸沒 V.'
+        meaning: '浸沒 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'immune',
         hint: '免疫的',
-        meaning: '免疫的 adj.'
+        meaning: '免疫的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'impact',
         hint: '影響',
-        meaning: '影響 N. V.'
+        meaning: '影響 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'implement',
         hint: '實施',
-        meaning: '實施 V. N.'
+        meaning: '實施 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'implicate',
         hint: '牽連',
-        meaning: '牽連 V.'
+        meaning: '牽連 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'implicit',
         hint: '含蓄的',
-        meaning: '含蓄的 adj.'
+        meaning: '含蓄的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'imply',
         hint: '暗示',
-        meaning: '暗示 V.'
+        meaning: '暗示 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'import',
         hint: '進口',
-        meaning: '進口 V. N.'
+        meaning: '進口 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'impose',
         hint: '強加',
-        meaning: '強加 V.'
+        meaning: '強加 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'impress',
         hint: '印象深刻',
-        meaning: '印象深刻 V.'
+        meaning: '印象深刻 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'improve',
         hint: '改善',
-        meaning: '改善 V.'
+        meaning: '改善 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'impulse',
         hint: '衝動',
-        meaning: '衝動 N.'
+        meaning: '衝動 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'in',
         hint: '在...內',
-        meaning: '在...內 prep. adv.'
+        meaning: '在...內 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'incentive',
         hint: '激勵',
-        meaning: '激勵 N.'
+        meaning: '激勵 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'inch',
         hint: '英寸',
-        meaning: '英寸 N.'
+        meaning: '英寸 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'incident',
         hint: '事件',
-        meaning: '事件 N.'
+        meaning: '事件 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'include',
         hint: '包括',
-        meaning: '包括 V.'
+        meaning: '包括 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'income',
         hint: '收入',
-        meaning: '收入 N.'
+        meaning: '收入 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'incorporate',
         hint: '合併',
-        meaning: '合併 V.'
+        meaning: '合併 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'increase',
         hint: '增加',
-        meaning: '增加 V. N.'
+        meaning: '增加 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'incredible',
         hint: '難以置信的',
-        meaning: '難以置信的 adj.'
+        meaning: '難以置信的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'independence',
         hint: '獨立',
-        meaning: '獨立 N.'
+        meaning: '獨立 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'index',
         hint: '指數',
-        meaning: '指數 N.'
+        meaning: '指數 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'indicate',
         hint: '指示',
-        meaning: '指示 V.'
+        meaning: '指示 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'individual',
         hint: '個體',
-        meaning: '個體 N. adj.'
+        meaning: '個體 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'indoor',
         hint: '室內',
-        meaning: '室內 adj.'
+        meaning: '室內 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'industry',
         hint: '工業',
-        meaning: '工業 N.'
+        meaning: '工業 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'infect',
         hint: '感染',
-        meaning: '感染 V.'
+        meaning: '感染 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'infer',
         hint: '推斷',
-        meaning: '推斷 V.'
+        meaning: '推斷 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'infinite',
         hint: '無窮的',
-        meaning: '無窮的 adj.'
+        meaning: '無窮的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'influence',
         hint: '影響',
-        meaning: '影響 N. V.'
+        meaning: '影響 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'inform',
         hint: '通知',
-        meaning: '通知 V.'
+        meaning: '通知 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'information',
         hint: '資訊',
-        meaning: '資訊 N.'
+        meaning: '資訊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'infrastructure',
         hint: '基礎設施',
-        meaning: '基礎設施 N.'
+        meaning: '基礎設施 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ingredient',
         hint: '成分',
-        meaning: '成分 N.'
+        meaning: '成分 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'inhabit',
         hint: '居住',
-        meaning: '居住 V.'
+        meaning: '居住 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'inherit',
         hint: '繼承',
-        meaning: '繼承 V.'
+        meaning: '繼承 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'initial',
         hint: '最初的',
-        meaning: '最初的 adj.'
+        meaning: '最初的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'initiate',
         hint: '開始',
-        meaning: '開始 V.'
+        meaning: '開始 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'inject',
         hint: '注射',
-        meaning: '注射 V.'
+        meaning: '注射 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'injure',
         hint: '傷害',
-        meaning: '傷害 V.'
+        meaning: '傷害 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'inn',
         hint: '小旅館',
-        meaning: '小旅館 N.'
+        meaning: '小旅館 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'innocent',
         hint: '無辜的',
-        meaning: '無辜的 adj.'
+        meaning: '無辜的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'innovate',
         hint: '創新',
-        meaning: '創新 V.'
+        meaning: '創新 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'input',
         hint: '輸入',
-        meaning: '輸入 N. V.'
+        meaning: '輸入 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'inquiry',
         hint: '詢問',
-        meaning: '詢問 N.'
+        meaning: '詢問 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'insane',
         hint: '瘋狂的',
-        meaning: '瘋狂的 adj.'
+        meaning: '瘋狂的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'insect',
         hint: '昆蟲',
-        meaning: '昆蟲 N.'
+        meaning: '昆蟲 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'insert',
         hint: '插入',
-        meaning: '插入 V. N.'
+        meaning: '插入 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'inside',
         hint: '內部',
-        meaning: '內部 n. adj. adv. prep.'
+        meaning: '內部 n. adj. adv. prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'insist',
         hint: '堅持',
-        meaning: '堅持 V.'
+        meaning: '堅持 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'inspect',
         hint: '檢查',
-        meaning: '檢查 V.'
+        meaning: '檢查 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'inspire',
         hint: '激勵',
-        meaning: '激勵 V.'
+        meaning: '激勵 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'install',
         hint: '安裝',
-        meaning: '安裝 V.'
+        meaning: '安裝 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'instance',
         hint: '例子',
-        meaning: '例子 N.'
+        meaning: '例子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'instant',
         hint: '瞬間',
-        meaning: '瞬間 N. adj.'
+        meaning: '瞬間 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'instead',
         hint: '代替',
-        meaning: '代替 adv.'
+        meaning: '代替 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'institute',
         hint: '學會',
-        meaning: '學會 N. V.'
+        meaning: '學會 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'instruct',
         hint: '指導',
-        meaning: '指導 V.'
+        meaning: '指導 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'insulate',
         hint: '隔絕',
-        meaning: '隔絕 V.'
+        meaning: '隔絕 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'insult',
         hint: '侮辱',
-        meaning: '侮辱 V. N.'
+        meaning: '侮辱 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'insurance',
         hint: '保險',
-        meaning: '保險 N.'
+        meaning: '保險 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'integrate',
         hint: '整合',
-        meaning: '整合 V.'
+        meaning: '整合 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'integrity',
         hint: '完整',
-        meaning: '完整 N.'
+        meaning: '完整 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'intelligent',
         hint: '聰明的',
-        meaning: '聰明的 adj.'
+        meaning: '聰明的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'intend',
         hint: '打算',
-        meaning: '打算 V.'
+        meaning: '打算 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'intense',
         hint: '強烈的',
-        meaning: '強烈的 adj.'
+        meaning: '強烈的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'intention',
         hint: '意圖',
-        meaning: '意圖 N.'
+        meaning: '意圖 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'interaction',
         hint: '互動',
-        meaning: '互動 N.'
+        meaning: '互動 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'interest',
         hint: '興趣',
-        meaning: '興趣 N. V.'
+        meaning: '興趣 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'interface',
         hint: '介面',
-        meaning: '介面 N.'
+        meaning: '介面 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'interfere',
         hint: '干擾',
-        meaning: '干擾 V.'
+        meaning: '干擾 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'interior',
         hint: '內部的',
-        meaning: '內部的 adj. N.'
+        meaning: '內部的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'intermediate',
         hint: '中間的',
-        meaning: '中間的 adj.'
+        meaning: '中間的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'internal',
         hint: '內部的',
-        meaning: '內部的 adj.'
+        meaning: '內部的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'interpret',
         hint: '解釋',
-        meaning: '解釋 V.'
+        meaning: '解釋 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'interrupt',
         hint: '打擾',
-        meaning: '打擾 V.'
+        meaning: '打擾 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'interval',
         hint: '間隔',
-        meaning: '間隔 N.'
+        meaning: '間隔 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'interview',
         hint: '面談',
-        meaning: '面談 V. N.'
+        meaning: '面談 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'intimate',
         hint: '親密的',
-        meaning: '親密的 adj.'
+        meaning: '親密的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'intimidate',
         hint: '威嚇',
-        meaning: '威嚇 V.'
+        meaning: '威嚇 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'intricate',
         hint: '複雜的',
-        meaning: '複雜的 adj.'
+        meaning: '複雜的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'intrinsic',
         hint: '內在的',
-        meaning: '內在的 adj.'
+        meaning: '內在的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'introduce',
         hint: '介紹',
-        meaning: '介紹 V.'
+        meaning: '介紹 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'invade',
         hint: '侵入',
-        meaning: '侵入 V.'
+        meaning: '侵入 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'invent',
         hint: '發明',
-        meaning: '發明 V.'
+        meaning: '發明 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'invest',
         hint: '投資',
-        meaning: '投資 V.'
+        meaning: '投資 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'invite',
         hint: '邀請',
-        meaning: '邀請 V. N.'
+        meaning: '邀請 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'involve',
         hint: '涉及',
-        meaning: '涉及 V.'
+        meaning: '涉及 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'iron',
         hint: '鐵',
-        meaning: '鐵 N. V.'
+        meaning: '鐵 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'island',
         hint: '島嶼',
-        meaning: '島嶼 N.'
+        meaning: '島嶼 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'isolate',
         hint: '孤立',
-        meaning: '孤立 V.'
+        meaning: '孤立 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'issue',
         hint: '問題',
-        meaning: '問題 N. V.'
+        meaning: '問題 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'itch',
         hint: '發癢',
-        meaning: '發癢 V. N.'
+        meaning: '發癢 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'item',
         hint: '項目',
-        meaning: '項目 N.'
+        meaning: '項目 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'its',
         hint: '它的',
-        meaning: '它的 pron.'
+        meaning: '它的 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'jacket',
         hint: '夾克',
-        meaning: '夾克 N.'
+        meaning: '夾克 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'jar',
         hint: '罐子',
-        meaning: '罐子 N.'
+        meaning: '罐子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'jazz',
         hint: '爵士樂',
-        meaning: '爵士樂 N.'
+        meaning: '爵士樂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'jealous',
         hint: '嫉妒的',
-        meaning: '嫉妒的 adj.'
+        meaning: '嫉妒的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'jeans',
         hint: '牛仔褲',
-        meaning: '牛仔褲 N.'
+        meaning: '牛仔褲 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'jelly',
         hint: '果凍',
-        meaning: '果凍 N.'
+        meaning: '果凍 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'jewel',
         hint: '珠寶',
-        meaning: '珠寶 N.'
+        meaning: '珠寶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'job',
         hint: '工作',
-        meaning: '工作 N.'
+        meaning: '工作 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'join',
         hint: '參加',
-        meaning: '參加 V.'
+        meaning: '參加 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'joint',
         hint: '關節',
-        meaning: '關節 N. adj.'
+        meaning: '關節 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'joke',
         hint: '笑話',
-        meaning: '笑話 N. V.'
+        meaning: '笑話 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'journal',
         hint: '期刊',
-        meaning: '期刊 N.'
+        meaning: '期刊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'journey',
         hint: '旅行',
-        meaning: '旅行 N. V.'
+        meaning: '旅行 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'joy',
         hint: '歡樂',
-        meaning: '歡樂 N.'
+        meaning: '歡樂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'judge',
         hint: '法官',
-        meaning: '法官 N. V.'
+        meaning: '法官 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'juice',
         hint: '果汁',
-        meaning: '果汁 N.'
+        meaning: '果汁 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'jump',
         hint: '跳躍',
-        meaning: '跳躍 V. N.'
+        meaning: '跳躍 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'jungle',
         hint: '叢林',
-        meaning: '叢林 N.'
+        meaning: '叢林 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'junior',
         hint: '年少的',
-        meaning: '年少的 adj. N.'
+        meaning: '年少的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'jury',
         hint: '陪審團',
-        meaning: '陪審團 N.'
+        meaning: '陪審團 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'just',
-        hint: '正義的',
-        meaning: '正義的 adj. adv.'
+        hint: '只是',
+        meaning: '只是 adv.',
+        v: 1,
+        new: false,
     },
     {
         word: 'justice',
         hint: '正義',
-        meaning: '正義 N.'
+        meaning: '正義 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'justify',
         hint: '證明...是正當的',
-        meaning: '證明...是正當的 V.'
+        meaning: '證明...是正當的 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'keen',
         hint: '敏銳的',
-        meaning: '敏銳的 adj.'
+        meaning: '敏銳的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'keep',
         hint: '保持',
-        meaning: '保持 V.'
+        meaning: '保持 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'kettle',
         hint: '水壺',
-        meaning: '水壺 N.'
+        meaning: '水壺 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'key',
         hint: '鑰匙',
-        meaning: '鑰匙 N. adj.'
+        meaning: '鑰匙 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'kick',
         hint: '踢',
-        meaning: '踢 V. N.'
+        meaning: '踢 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'kid',
         hint: '小孩',
-        meaning: '小孩 N.'
+        meaning: '小孩 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'kill',
         hint: '殺',
-        meaning: '殺 V.'
+        meaning: '殺 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'kind',
         hint: '種類',
-        meaning: '種類 N. adj.'
+        meaning: '種類 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'king',
         hint: '國王',
-        meaning: '國王 N.'
+        meaning: '國王 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'kingdom',
         hint: '王國',
-        meaning: '王國 N.'
+        meaning: '王國 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'kiss',
         hint: '親吻',
-        meaning: '親吻 V. N.'
+        meaning: '親吻 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'kitchen',
         hint: '廚房',
-        meaning: '廚房 N.'
+        meaning: '廚房 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'knee',
         hint: '膝蓋',
-        meaning: '膝蓋 N.'
+        meaning: '膝蓋 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'knife',
         hint: '刀',
-        meaning: '刀 N.'
+        meaning: '刀 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'knock',
         hint: '敲',
-        meaning: '敲 V. N.'
+        meaning: '敲 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'know',
         hint: '知道',
-        meaning: '知道 V.'
+        meaning: '知道 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'knowledge',
         hint: '知識',
-        meaning: '知識 N.'
+        meaning: '知識 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'label',
         hint: '標籤',
-        meaning: '標籤 N. V.'
+        meaning: '標籤 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'labor',
         hint: '勞動',
-        meaning: '勞動 N. V.'
+        meaning: '勞動 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lack',
         hint: '缺乏',
-        meaning: '缺乏 V. N.'
+        meaning: '缺乏 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ladder',
         hint: '梯子',
-        meaning: '梯子 N.'
+        meaning: '梯子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lady',
         hint: '女士',
-        meaning: '女士 N.'
+        meaning: '女士 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lake',
         hint: '湖',
-        meaning: '湖 N.'
+        meaning: '湖 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lamp',
         hint: '燈',
-        meaning: '燈 N.'
+        meaning: '燈 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'land',
         hint: '土地',
-        meaning: '土地 N. V.'
+        meaning: '土地 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'language',
         hint: '語言',
-        meaning: '語言 N.'
+        meaning: '語言 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'large',
         hint: '大的',
-        meaning: '大的 adj.'
+        meaning: '大的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'last',
         hint: '持續',
-        meaning: '持續 adj. adv. V.'
+        meaning: '持續 adj. adv. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'late',
         hint: '晚的',
-        meaning: '晚的 adj. adv.'
+        meaning: '晚的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'laugh',
         hint: '笑',
-        meaning: '笑 V. N.'
+        meaning: '笑 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'launch',
         hint: '發射',
-        meaning: '發射 V. N.'
+        meaning: '發射 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'law',
         hint: '法律',
-        meaning: '法律 N.'
+        meaning: '法律 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lawn',
         hint: '草地',
-        meaning: '草地 N.'
+        meaning: '草地 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lawyer',
         hint: '律師',
-        meaning: '律師 N.'
+        meaning: '律師 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lay',
         hint: '放置',
-        meaning: '放置 V.'
+        meaning: '放置 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lazy',
         hint: '懶惰的',
-        meaning: '懶惰的 adj.'
+        meaning: '懶惰的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lead',
         hint: '領導',
-        meaning: '領導 V. N.'
+        meaning: '領導 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'leaf',
         hint: '葉子',
-        meaning: '葉子 N.'
+        meaning: '葉子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'league',
         hint: '聯盟',
-        meaning: '聯盟 N.'
+        meaning: '聯盟 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lean',
         hint: '傾斜',
-        meaning: '傾斜 V. adj.'
+        meaning: '傾斜 V. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'learn',
         hint: '學習',
-        meaning: '學習 V.'
+        meaning: '學習 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'least',
         hint: '最少',
-        meaning: '最少的 adj. adv.'
+        meaning: '最少的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'leather',
         hint: '皮革',
-        meaning: '皮革 N.'
+        meaning: '皮革 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'leave',
         hint: '離開',
-        meaning: '離開 V. N.'
+        meaning: '離開 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lecture',
         hint: '演講',
-        meaning: '演講 N. V.'
+        meaning: '演講 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'left',
         hint: '左邊',
-        meaning: '左邊 N. adj. V.'
+        meaning: '左邊 N. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'leg',
         hint: '腿',
-        meaning: '腿 N.'
+        meaning: '腿 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'legal',
         hint: '合法的',
-        meaning: '合法的 adj.'
+        meaning: '合法的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'legend',
         hint: '傳說',
-        meaning: '傳說 N.'
+        meaning: '傳說 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lemon',
         hint: '檸檬',
-        meaning: '檸檬 N.'
+        meaning: '檸檬 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lend',
         hint: '借出',
-        meaning: '借出 V.'
+        meaning: '借出 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'length',
         hint: '長度',
-        meaning: '長度 N.'
+        meaning: '長度 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'less',
         hint: '更少的',
-        meaning: '更少的 adj. adv.'
+        meaning: '更少的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lesson',
         hint: '課程',
-        meaning: '課程 N.'
+        meaning: '課程 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'let',
         hint: '讓',
-        meaning: '讓 V.'
+        meaning: '讓 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'letter',
         hint: '信',
-        meaning: '信 N.'
+        meaning: '信 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'level',
         hint: '水平',
-        meaning: '水平 N. adj. V.'
+        meaning: '水平 N. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'liability',
         hint: '負債',
-        meaning: '負債 N.'
+        meaning: '負債 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'liberal',
         hint: '自由的',
-        meaning: '自由的 adj.'
+        meaning: '自由的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'library',
         hint: '圖書館',
-        meaning: '圖書館 N.'
+        meaning: '圖書館 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'license',
         hint: '執照',
-        meaning: '執照 N. V.'
+        meaning: '執照 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lick',
         hint: '舔',
-        meaning: '舔 V. N.'
+        meaning: '舔 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lid',
         hint: '蓋子',
-        meaning: '蓋子 N.'
+        meaning: '蓋子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lie',
         hint: '說謊',
-        meaning: '說謊 V. N.'
+        meaning: '說謊 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'life',
         hint: '生命',
-        meaning: '生命 N.'
+        meaning: '生命 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lift',
         hint: '舉起',
-        meaning: '舉起 V. N.'
+        meaning: '舉起 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'light',
         hint: '光',
-        meaning: '光 N. adj. V.'
+        meaning: '光 N. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'like',
         hint: '喜歡',
-        meaning: '喜歡 prep. adj. V.'
+        meaning: '喜歡 prep. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'limb',
         hint: '肢',
-        meaning: '肢 N.'
+        meaning: '肢 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'limit',
         hint: '限制',
-        meaning: '限制 V. N.'
+        meaning: '限制 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'line',
         hint: '線',
-        meaning: '線 N.'
+        meaning: '線 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'link',
         hint: '連結',
-        meaning: '連結 V. N.'
+        meaning: '連結 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lip',
         hint: '嘴唇',
-        meaning: '嘴唇 N.'
+        meaning: '嘴唇 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'liquid',
         hint: '液體',
-        meaning: '液體 N. adj.'
+        meaning: '液體 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'list',
         hint: '清單',
-        meaning: '清單 N. V.'
+        meaning: '清單 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'listen',
         hint: '聽',
-        meaning: '聽 V.'
+        meaning: '聽 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'literal',
         hint: '字面的',
-        meaning: '字面的 adj.'
+        meaning: '字面的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'little',
         hint: '小的',
-        meaning: '小的 adj. pron.'
+        meaning: '小的 adj. pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'live',
         hint: '活的',
-        meaning: '活的 adj. V.'
+        meaning: '活的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'load',
         hint: '負擔',
-        meaning: '負擔 N. V.'
+        meaning: '負擔 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'loan',
         hint: '貸款',
-        meaning: '貸款 N. V.'
+        meaning: '貸款 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'local',
         hint: '地方的',
-        meaning: '地方的 adj.'
+        meaning: '地方的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lock',
         hint: '鎖',
-        meaning: '鎖 N. V.'
+        meaning: '鎖 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'log',
         hint: '原木',
-        meaning: '原木 N.'
+        meaning: '原木 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lonely',
         hint: '孤獨的',
-        meaning: '孤獨的 adj.'
+        meaning: '孤獨的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'long',
         hint: '長的',
-        meaning: '長的 adj. adv. V.'
+        meaning: '長的 adj. adv. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'look',
         hint: '看',
-        meaning: '看 V. N.'
+        meaning: '看 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'loose',
         hint: '鬆的',
-        meaning: '鬆的 adj. V.'
+        meaning: '鬆的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lose',
         hint: '失去',
-        meaning: '失去 V.'
+        meaning: '失去 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'loss',
         hint: '損失',
-        meaning: '損失 N.'
+        meaning: '損失 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lot',
         hint: '很多',
-        meaning: '很多 pron. N.'
+        meaning: '很多 pron. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'loud',
         hint: '大聲的',
-        meaning: '大聲的 adj. adv.'
+        meaning: '大聲的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'love',
         hint: '愛',
-        meaning: '愛 N. V.'
+        meaning: '愛 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'low',
         hint: '低的',
-        meaning: '低的 adj. adv. N.'
+        meaning: '低的 adj. adv. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'loyal',
         hint: '忠誠的',
-        meaning: '忠誠的 adj.'
+        meaning: '忠誠的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'luck',
         hint: '運氣',
-        meaning: '運氣 N.'
+        meaning: '運氣 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'luggage',
         hint: '行李',
-        meaning: '行李 N.'
+        meaning: '行李 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lump',
         hint: '塊',
-        meaning: '塊 N. V.'
+        meaning: '塊 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lunch',
         hint: '午餐',
-        meaning: '午餐 N.'
+        meaning: '午餐 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'lung',
         hint: '肺',
-        meaning: '肺 N.'
+        meaning: '肺 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'machine',
         hint: '機器',
-        meaning: '機器 N.'
+        meaning: '機器 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mad',
         hint: '發瘋的',
-        meaning: '發瘋的 adj.'
+        meaning: '發瘋的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'magazine',
         hint: '雜誌',
-        meaning: '雜誌 N.'
+        meaning: '雜誌 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'magic',
         hint: '魔法',
-        meaning: '魔法 N. adj.'
+        meaning: '魔法 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mail',
         hint: '郵件',
-        meaning: '郵件 N. V.'
+        meaning: '郵件 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'main',
         hint: '主要的',
-        meaning: '主要的 adj.'
+        meaning: '主要的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'maintain',
         hint: '維持',
-        meaning: '維持 V.'
+        meaning: '維持 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'major',
         hint: '主要的',
-        meaning: '主要的 adj. N.'
+        meaning: '主要的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'make',
         hint: '製造',
-        meaning: '製造 V.'
+        meaning: '製造 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'maker',
         hint: '製造者',
-        meaning: '製造者 N.'
+        meaning: '製造者 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'male',
         hint: '男性',
-        meaning: '男性 N. adj.'
+        meaning: '男性 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mall',
         hint: '購物中心',
-        meaning: '購物中心 N.'
+        meaning: '購物中心 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'man',
         hint: '男人',
-        meaning: '男人 N.'
+        meaning: '男人 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'manage',
         hint: '管理',
-        meaning: '管理 V.'
+        meaning: '管理 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'management',
         hint: '管理',
-        meaning: '管理 N.'
+        meaning: '管理 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'manager',
         hint: '經理',
-        meaning: '經理 N.'
+        meaning: '經理 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mandate',
         hint: '授權',
-        meaning: '授權 N. V.'
+        meaning: '授權 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'manner',
         hint: '方式',
-        meaning: '方式 N.'
+        meaning: '方式 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'manufacturer',
         hint: '製造商',
-        meaning: '製造商 N.'
+        meaning: '製造商 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'many',
         hint: '許多',
-        meaning: '許多 pron.'
+        meaning: '許多 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'map',
         hint: '地圖',
-        meaning: '地圖 N. V.'
+        meaning: '地圖 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'march',
         hint: '行軍',
-        meaning: '行軍 V. N.'
+        meaning: '行軍 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'margin',
         hint: '邊緣',
-        meaning: '邊緣 N.'
+        meaning: '邊緣 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mark',
         hint: '標記',
-        meaning: '標記 V. N.'
+        meaning: '標記 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'market',
         hint: '市場',
-        meaning: '市場 N. V.'
+        meaning: '市場 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'marriage',
         hint: '婚姻',
-        meaning: '婚姻 N.'
+        meaning: '婚姻 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'marry',
         hint: '結婚',
-        meaning: '結婚 V.'
+        meaning: '結婚 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mask',
         hint: '口罩',
-        meaning: '口罩 N. V.'
+        meaning: '口罩 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mass',
         hint: '大眾',
-        meaning: '大眾 N. adj.'
+        meaning: '大眾 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'master',
         hint: '主人',
-        meaning: '主人 N. V.'
+        meaning: '主人 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'match',
         hint: '比賽',
-        meaning: '比賽 N. V.'
+        meaning: '比賽 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mate',
         hint: '伙伴',
-        meaning: '伙伴 N. V.'
+        meaning: '伙伴 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'material',
         hint: '材料',
-        meaning: '材料 N. adj.'
+        meaning: '材料 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'math',
         hint: '數學',
-        meaning: '數學 N.'
+        meaning: '數學 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'matter',
         hint: '事情',
-        meaning: '事情 N. V.'
+        meaning: '事情 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'maximum',
         hint: '最大值',
-        meaning: '最大值 N. adj.'
+        meaning: '最大值 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'maybe',
         hint: '或許',
-        meaning: '或許 adv.'
+        meaning: '或許 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'meal',
         hint: '餐',
-        meaning: '餐 N.'
+        meaning: '餐 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mean',
         hint: '意味',
-        meaning: '意味 V. adj.'
+        meaning: '意味 V. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'meaning',
         hint: '意義',
-        meaning: '意義 N.'
+        meaning: '意義 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'measure',
         hint: '測量',
-        meaning: '測量 V. N.'
+        meaning: '測量 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'meat',
         hint: '肉',
-        meaning: '肉 N.'
+        meaning: '肉 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'media',
         hint: '媒體',
-        meaning: '媒體 N.'
+        meaning: '媒體 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'medical',
         hint: '醫療的',
-        meaning: '醫療的 adj.'
+        meaning: '醫療的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'medicine',
         hint: '藥物',
-        meaning: '藥物 N.'
+        meaning: '藥物 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'meet',
         hint: '見面',
-        meaning: '見面 V.'
+        meaning: '見面 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'meeting',
         hint: '會議',
-        meaning: '會議 N.'
+        meaning: '會議 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'melt',
         hint: '融化',
-        meaning: '融化 V.'
+        meaning: '融化 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'member',
         hint: '成員',
-        meaning: '成員 N.'
+        meaning: '成員 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'memorandum',
         hint: '備忘錄',
-        meaning: '備忘錄 N.'
+        meaning: '備忘錄 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'memory',
         hint: '記憶',
-        meaning: '記憶 N.'
+        meaning: '記憶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mention',
         hint: '提到',
-        meaning: '提到 V. N.'
+        meaning: '提到 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'menu',
         hint: '菜單',
-        meaning: '菜單 N.'
+        meaning: '菜單 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mere',
         hint: '僅僅的',
-        meaning: '僅僅的 adj.'
+        meaning: '僅僅的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'merit',
         hint: '價值',
-        meaning: '價值 N.'
+        meaning: '價值 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'message',
         hint: '訊息',
-        meaning: '訊息 N.'
+        meaning: '訊息 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'metal',
         hint: '金屬',
-        meaning: '金屬 N. adj.'
+        meaning: '金屬 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'method',
         hint: '方法',
-        meaning: '方法 N.'
+        meaning: '方法 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'middle',
         hint: '中間',
-        meaning: '中間 N. adj.'
+        meaning: '中間 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'midnight',
         hint: '午夜',
-        meaning: '午夜 N.'
+        meaning: '午夜 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'might',
         hint: '可能',
-        meaning: '可能 aux. N.'
+        meaning: '可能 aux. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mild',
         hint: '溫和的',
-        meaning: '溫和的 adj.'
+        meaning: '溫和的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mile',
         hint: '英里',
-        meaning: '英里 N.'
+        meaning: '英里 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'military',
         hint: '軍事的',
-        meaning: '軍事的 adj.'
+        meaning: '軍事的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'milk',
         hint: '牛奶',
-        meaning: '牛奶 N. V.'
+        meaning: '牛奶 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mind',
         hint: '心意',
-        meaning: '心意 N. V.'
+        meaning: '心意 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mine',
         hint: '我的',
-        meaning: '我的 pron.'
+        meaning: '我的 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mineral',
         hint: '礦物',
-        meaning: '礦物 N. adj.'
+        meaning: '礦物 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'minimum',
         hint: '最小值',
-        meaning: '最小值 N. adj.'
+        meaning: '最小值 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'minister',
         hint: '部長',
-        meaning: '部長 N. V.'
+        meaning: '部長 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'minor',
         hint: '未成年人',
-        meaning: '未成年人 N. adj.'
+        meaning: '未成年人 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'minute',
         hint: '分鐘',
-        meaning: '分鐘 N.'
+        meaning: '分鐘 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mirror',
         hint: '鏡子',
-        meaning: '鏡子 N. V.'
+        meaning: '鏡子 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'miss',
         hint: '錯過',
-        meaning: '錯過 V. N.'
+        meaning: '錯過 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mission',
         hint: '任務',
-        meaning: '任務 N.'
+        meaning: '任務 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mistake',
         hint: '錯誤',
-        meaning: '錯誤 N. V.'
+        meaning: '錯誤 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mix',
         hint: '混合',
-        meaning: '混合 V. N.'
+        meaning: '混合 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mixture',
         hint: '混合物',
-        meaning: '混合物 N.'
+        meaning: '混合物 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mobile',
         hint: '行動的',
-        meaning: '行動的 adj.'
+        meaning: '行動的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'model',
         hint: '模型',
-        meaning: '模型 N. V.'
+        meaning: '模型 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'modern',
         hint: '現代的',
-        meaning: '現代的 adj.'
+        meaning: '現代的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'modest',
         hint: '謙虛的',
-        meaning: '謙虛的 adj.'
+        meaning: '謙虛的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mom',
         hint: '媽媽',
-        meaning: '媽媽 N.'
+        meaning: '媽媽 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'moment',
         hint: '時刻',
-        meaning: '時刻 N.'
+        meaning: '時刻 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'money',
         hint: '錢',
-        meaning: '錢 N.'
+        meaning: '錢 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'monitor',
         hint: '監控',
-        meaning: '監控 V. N.'
+        meaning: '監控 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'month',
         hint: '月',
-        meaning: '月 N.'
+        meaning: '月 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mood',
         hint: '心情',
-        meaning: '心情 N.'
+        meaning: '心情 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'moon',
         hint: '月亮',
-        meaning: '月亮 N.'
+        meaning: '月亮 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'moral',
         hint: '道德的',
-        meaning: '道德的 adj.'
+        meaning: '道德的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'more',
         hint: '更多的',
-        meaning: '更多的 adj. pron. adv.'
+        meaning: '更多的 adj. pron. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'morning',
         hint: '早晨',
-        meaning: '早晨 N.'
+        meaning: '早晨 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'most',
         hint: '大多數',
-        meaning: '大多數 pron. adv.'
+        meaning: '大多數 pron. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mother',
         hint: '母親',
-        meaning: '母親 N.'
+        meaning: '母親 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'motion',
         hint: '運動',
-        meaning: '運動 N. V.'
+        meaning: '運動 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'motor',
         hint: '馬達',
-        meaning: '馬達 N.'
+        meaning: '馬達 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mount',
         hint: '安裝',
-        meaning: '安裝 V. N.'
+        meaning: '安裝 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mountain',
         hint: '山',
-        meaning: '山 N.'
+        meaning: '山 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mouse',
         hint: '老鼠',
-        meaning: '老鼠 N.'
+        meaning: '老鼠 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mouth',
         hint: '嘴巴',
-        meaning: '嘴巴 N.'
+        meaning: '嘴巴 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'move',
         hint: '移動',
-        meaning: '移動 V. N.'
+        meaning: '移動 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'movie',
         hint: '電影',
-        meaning: '電影 N.'
+        meaning: '電影 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'much',
         hint: '很多',
-        meaning: '很多 adj. pron. adv.'
+        meaning: '很多 adj. pron. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mud',
         hint: '泥巴',
-        meaning: '泥巴 N.'
+        meaning: '泥巴 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'multiple',
         hint: '多個的',
-        meaning: '多個的 adj.'
+        meaning: '多個的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'muscle',
         hint: '肌肉',
-        meaning: '肌肉 N.'
+        meaning: '肌肉 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'museum',
         hint: '博物館',
-        meaning: '博物館 N.'
+        meaning: '博物館 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'music',
         hint: '音樂',
-        meaning: '音樂 N.'
+        meaning: '音樂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'must',
         hint: '必須',
-        meaning: '必須 aux.'
+        meaning: '必須 aux.',
+        v: 0,
+        new: false,
     },
     {
         word: 'mystery',
         hint: '神秘',
-        meaning: '神秘 N. adj.'
+        meaning: '神秘 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nail',
         hint: '釘子',
-        meaning: '釘子 N. V.'
+        meaning: '釘子 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'name',
         hint: '名字',
-        meaning: '名字 N. V.'
+        meaning: '名字 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'narrow',
         hint: '狹窄',
-        meaning: '狹窄 adj. V.'
+        meaning: '狹窄 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nation',
         hint: '國家',
-        meaning: '國家 N.'
+        meaning: '國家 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'native',
         hint: '本地的',
-        meaning: '本地的 adj. N.'
+        meaning: '本地的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'natural',
         hint: '自然的',
-        meaning: '自然的 adj.'
+        meaning: '自然的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nature',
         hint: '自然',
-        meaning: '自然 N.'
+        meaning: '自然 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'near',
         hint: '近',
-        meaning: '近 adj. adv. prep. v.'
+        meaning: '近 adj. adv. prep. v.',
+        v: 0,
+        new: false,
     },
     {
         word: 'necessary',
         hint: '必要的',
-        meaning: '必要的 adj.'
+        meaning: '必要的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'neck',
         hint: '脖子',
-        meaning: '脖子 N.'
+        meaning: '脖子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'need',
         hint: '需要',
-        meaning: '需要 V. N.'
+        meaning: '需要 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'negative',
         hint: '否定的',
-        meaning: '否定的 adj.'
+        meaning: '否定的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'negotiate',
         hint: '談判',
-        meaning: '談判 V.'
+        meaning: '談判 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'neighbor',
         hint: '鄰居',
-        meaning: '鄰居 N.'
+        meaning: '鄰居 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'neither',
         hint: '也不',
-        meaning: '也不 conj. pron.'
+        meaning: '也不 conj. pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nephew',
         hint: '侄子',
-        meaning: '侄子 N.'
+        meaning: '侄子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nerve',
         hint: '神經',
-        meaning: '神經 N.'
+        meaning: '神經 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nest',
         hint: '巢',
-        meaning: '巢 N. V.'
+        meaning: '巢 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'net',
         hint: '網',
-        meaning: '網 N. adj. V.'
+        meaning: '網 N. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'network',
         hint: '網路',
-        meaning: '網路 N. V.'
+        meaning: '網路 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'never',
         hint: '從不',
-        meaning: '從不 adv.'
+        meaning: '從不 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'new',
         hint: '新的',
-        meaning: '新的 adj.'
+        meaning: '新的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'news',
         hint: '新聞',
-        meaning: '新聞 N.'
+        meaning: '新聞 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'next',
         hint: '下一個',
-        meaning: '下一個 adj. adv.'
+        meaning: '下一個 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nice',
         hint: '好的',
-        meaning: '好的 adj.'
+        meaning: '好的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'night',
         hint: '夜晚',
-        meaning: '夜晚 N.'
+        meaning: '夜晚 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nine',
         hint: '九',
-        meaning: '九 num.'
+        meaning: '九 num.',
+        v: 0,
+        new: false,
     },
     {
         word: 'no',
         hint: '沒有',
-        meaning: '沒有 adv.'
+        meaning: '沒有 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'noble',
         hint: '高貴的',
-        meaning: '高貴的 adj.'
+        meaning: '高貴的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'noise',
         hint: '噪音',
-        meaning: '噪音 N.'
+        meaning: '噪音 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nominate',
         hint: '提名',
-        meaning: '提名 V.'
+        meaning: '提名 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'none',
         hint: '沒有',
-        meaning: '沒有 pron.'
+        meaning: '沒有 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'noon',
         hint: '中午',
-        meaning: '中午 N.'
+        meaning: '中午 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nor',
         hint: '也不',
-        meaning: '也不 conj.'
+        meaning: '也不 conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'north',
         hint: '北方',
-        meaning: '北方 N.'
+        meaning: '北方 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nose',
         hint: '鼻子',
-        meaning: '鼻子 N.'
+        meaning: '鼻子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'not',
         hint: '不',
-        meaning: '不 adv.'
+        meaning: '不 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'note',
         hint: '筆記',
-        meaning: '筆記 N. V.'
+        meaning: '筆記 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nothing',
         hint: '沒什麼',
-        meaning: '沒什麼 pron.'
+        meaning: '沒什麼 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'notice',
         hint: '注意',
-        meaning: '注意 V. N.'
+        meaning: '注意 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'novel',
         hint: '小說',
-        meaning: '小說 N. adj.'
+        meaning: '小說 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'now',
         hint: '現在',
-        meaning: '現在 adv.'
+        meaning: '現在 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nowhere',
         hint: '任何地方都不',
-        meaning: '任何地方都不 adv.'
+        meaning: '任何地方都不 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nuclear',
         hint: '核的',
-        meaning: '核的 adj.'
+        meaning: '核的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'number',
         hint: '數字',
-        meaning: '數字 N. V.'
+        meaning: '數字 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'numerous',
         hint: '眾多的',
-        meaning: '眾多的 adj.'
+        meaning: '眾多的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nurse',
         hint: '護士',
-        meaning: '護士 N. V.'
+        meaning: '護士 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'nut',
         hint: '堅果',
-        meaning: '堅果 N.'
+        meaning: '堅果 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'oak',
         hint: '橡樹',
-        meaning: '橡樹 N.'
+        meaning: '橡樹 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'obey',
         hint: '服從',
-        meaning: '服從 V.'
+        meaning: '服從 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'object',
         hint: '物體',
-        meaning: '物體 N. V.'
+        meaning: '物體 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'objective',
         hint: '目標',
-        meaning: '目標 N. adj.'
+        meaning: '目標 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'obligation',
         hint: '義務',
-        meaning: '義務 N.'
+        meaning: '義務 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'observe',
         hint: '觀察',
-        meaning: '觀察 V.'
+        meaning: '觀察 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'obtain',
         hint: '獲得',
-        meaning: '獲得 V.'
+        meaning: '獲得 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'obvious',
         hint: '明顯的',
-        meaning: '明顯的 adj.'
+        meaning: '明顯的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'occasion',
         hint: '場合',
-        meaning: '場合 N.'
+        meaning: '場合 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'occupy',
         hint: '佔據',
-        meaning: '佔據 V.'
+        meaning: '佔據 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'occur',
         hint: '發生',
-        meaning: '發生 V.'
+        meaning: '發生 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ocean',
         hint: '海洋',
-        meaning: '海洋 N.'
+        meaning: '海洋 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'odd',
         hint: '奇怪的',
-        meaning: '奇怪的 adj.'
+        meaning: '奇怪的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'of',
         hint: '的',
-        meaning: '的 prep.'
+        meaning: '的 prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'off',
         hint: '離開',
-        meaning: '離開 prep. adv.'
+        meaning: '離開 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'offer',
         hint: '提供',
-        meaning: '提供 V. N.'
+        meaning: '提供 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'office',
         hint: '辦公室',
-        meaning: '辦公室 N.'
+        meaning: '辦公室 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'officer',
         hint: '官員',
-        meaning: '官員 N.'
+        meaning: '官員 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'official',
         hint: '官方的',
-        meaning: '官方的 adj. N.'
+        meaning: '官方的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'often',
         hint: '經常',
-        meaning: '經常 adv.'
+        meaning: '經常 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'oil',
         hint: '油',
-        meaning: '油 N. V.'
+        meaning: '油 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'okay',
         hint: '好的',
-        meaning: '好的 adv.'
+        meaning: '好的 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'old',
         hint: '老的',
-        meaning: '老的 adj.'
+        meaning: '老的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'on',
         hint: '在',
-        meaning: '在 prep. adv.'
+        meaning: '在 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'once',
         hint: '一次',
-        meaning: '一次 adv. conj.'
+        meaning: '一次 adv. conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'one',
         hint: '一',
-        meaning: '一 num. pron.'
+        meaning: '一 num. pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'onion',
         hint: '洋蔥',
-        meaning: '洋蔥 N.'
+        meaning: '洋蔥 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'only',
         hint: '只有',
-        meaning: '只有 adv. adj.'
+        meaning: '只有 adv. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'onto',
         hint: '到...上',
-        meaning: '到...上 prep.'
+        meaning: '到...上 prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'open',
         hint: '打開',
-        meaning: '打開 adj. V.'
+        meaning: '打開 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'operate',
         hint: '操作',
-        meaning: '操作 V.'
+        meaning: '操作 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'operation',
         hint: '操作',
-        meaning: '操作 N.'
+        meaning: '操作 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'operator',
         hint: '操作者',
-        meaning: '操作者 N.'
+        meaning: '操作者 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'opinion',
         hint: '意見',
-        meaning: '意見 N.'
+        meaning: '意見 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'opportunity',
         hint: '機會',
-        meaning: '機會 N.'
+        meaning: '機會 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'oppose',
         hint: '反對',
-        meaning: '反對 V.'
+        meaning: '反對 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'opposite',
         hint: '相反的',
-        meaning: '相反的 adj. N.'
+        meaning: '相反的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'option',
         hint: '選項',
-        meaning: '選項 N.'
+        meaning: '選項 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'or',
         hint: '或者',
-        meaning: '或者 conj.'
+        meaning: '或者 conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'orange',
         hint: '橙色',
-        meaning: '橙色 N. adj.'
+        meaning: '橙色 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'order',
         hint: '訂單',
-        meaning: '訂單 N. V.'
+        meaning: '訂單 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ordinary',
         hint: '普通的',
-        meaning: '普通的 adj.'
+        meaning: '普通的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'organ',
         hint: '器官',
-        meaning: '器官 N.'
+        meaning: '器官 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'organization',
         hint: '組織',
-        meaning: '組織 N.'
+        meaning: '組織 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'organize',
         hint: '組織',
-        meaning: '組織 V.'
+        meaning: '組織 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'origin',
         hint: '起源',
-        meaning: '起源 N.'
+        meaning: '起源 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'original',
         hint: '原始的',
-        meaning: '原始的 adj.'
+        meaning: '原始的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'other',
         hint: '其他的',
-        meaning: '其他的 adj. pron.'
+        meaning: '其他的 adj. pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'otherwise',
         hint: '否則',
-        meaning: '否則 adv.'
+        meaning: '否則 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ought',
         hint: '應該',
-        meaning: '應該 aux. v.'
+        meaning: '應該 aux. v.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ounce',
         hint: '盎司',
-        meaning: '盎司 N.'
+        meaning: '盎司 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'our',
         hint: '我們的',
-        meaning: '我們的 pron.'
+        meaning: '我們的 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ours',
         hint: '我們的',
-        meaning: '我們的 pron.'
+        meaning: '我們的 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ourselves',
         hint: '我們自己',
-        meaning: '我們自己 pron.'
+        meaning: '我們自己 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'out',
         hint: '外面',
-        meaning: '外面 adv. prep.'
+        meaning: '外面 adv. prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'outcome',
         hint: '結果',
-        meaning: '結果 N.'
+        meaning: '結果 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'output',
         hint: '輸出',
-        meaning: '輸出 N.'
+        meaning: '輸出 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'outside',
         hint: '外面',
-        meaning: '外面 prep. adv. adj. n.'
+        meaning: '外面 prep. adv. adj. n.',
+        v: 0,
+        new: false,
     },
     {
         word: 'oven',
         hint: '烤箱',
-        meaning: '烤箱 N.'
+        meaning: '烤箱 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'over',
         hint: '結束',
-        meaning: '結束 prep. adv. adj.'
+        meaning: '結束 prep. adv. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'overall',
         hint: '整體的',
-        meaning: '整體的 adj. adv.'
+        meaning: '整體的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'overcome',
         hint: '克服',
-        meaning: '克服 V.'
+        meaning: '克服 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'overlook',
         hint: '俯瞰',
-        meaning: '俯瞰 V.'
+        meaning: '俯瞰 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'overnight',
         hint: '一夜之間',
-        meaning: '一夜之間 adv. adj.'
+        meaning: '一夜之間 adv. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'oversee',
         hint: '監管',
-        meaning: '監管 V.'
+        meaning: '監管 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'overtake',
         hint: '追趕',
-        meaning: '追趕 V.'
+        meaning: '追趕 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'owe',
         hint: '欠',
-        meaning: '欠 V.'
+        meaning: '欠 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'own',
         hint: '擁有',
-        meaning: '擁有 V. adj. pron.'
+        meaning: '擁有 V. adj. pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'owner',
         hint: '擁有者',
-        meaning: '擁有者 N.'
+        meaning: '擁有者 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pace',
         hint: '步調',
-        meaning: '步調 N. V.'
+        meaning: '步調 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pack',
         hint: '包裹',
-        meaning: '包裹 V. N.'
+        meaning: '包裹 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'package',
         hint: '包裹',
-        meaning: '包裹 N. V.'
+        meaning: '包裹 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'page',
         hint: '頁',
-        meaning: '頁 N.'
+        meaning: '頁 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pain',
         hint: '疼痛',
-        meaning: '疼痛 N.'
+        meaning: '疼痛 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'paint',
         hint: '油漆',
-        meaning: '油漆 V. N.'
+        meaning: '油漆 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pair',
         hint: '一對',
-        meaning: '一對 N. V.'
+        meaning: '一對 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'palace',
         hint: '宮殿',
-        meaning: '宮殿 N.'
+        meaning: '宮殿 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pale',
         hint: '蒼白',
-        meaning: '蒼白 adj. V.'
+        meaning: '蒼白 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pan',
         hint: '平底鍋',
-        meaning: '平底鍋 N.'
+        meaning: '平底鍋 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'panel',
         hint: '面板',
-        meaning: '面板 N.'
+        meaning: '面板 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'panic',
         hint: '恐慌',
-        meaning: '恐慌 N. V.'
+        meaning: '恐慌 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pant',
         hint: '氣喘',
-        meaning: '氣喘 V. N.'
+        meaning: '氣喘 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'paper',
         hint: '紙',
-        meaning: '紙 N.'
+        meaning: '紙 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'paragraph',
         hint: '段落',
-        meaning: '段落 N.'
+        meaning: '段落 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'parallel',
         hint: '平行',
-        meaning: '平行 adj. N. V.'
+        meaning: '平行 adj. N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'parent',
         hint: '父母',
-        meaning: '父母 N.'
+        meaning: '父母 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'park',
         hint: '公園',
-        meaning: '公園 N. V.'
+        meaning: '公園 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'part',
         hint: '部分',
-        meaning: '部分 N.'
+        meaning: '部分 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'participant',
         hint: '參與者',
-        meaning: '參與者 N.'
+        meaning: '參與者 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'participate',
         hint: '參與',
-        meaning: '參與 V.'
+        meaning: '參與 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'particular',
         hint: '特別的',
-        meaning: '特別的 adj.'
+        meaning: '特別的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'partner',
         hint: '夥伴',
-        meaning: '夥伴 N. V.'
+        meaning: '夥伴 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'party',
         hint: '派對',
-        meaning: '派對 N.'
+        meaning: '派對 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pass',
         hint: '通過',
-        meaning: '通過 V. N.'
+        meaning: '通過 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'passage',
         hint: '通道',
-        meaning: '通道 N.'
+        meaning: '通道 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'passenger',
         hint: '乘客',
-        meaning: '乘客 N.'
+        meaning: '乘客 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'passion',
         hint: '激情',
-        meaning: '激情 N.'
+        meaning: '激情 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'past',
         hint: '過去',
-        meaning: '過去 adj. prep. N.'
+        meaning: '過去 adj. prep. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'path',
         hint: '小路',
-        meaning: '小路 N.'
+        meaning: '小路 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'patience',
         hint: '耐心',
-        meaning: '耐心 N.'
+        meaning: '耐心 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'patient',
         hint: '病人',
-        meaning: '病人 N. adj.'
+        meaning: '病人 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pattern',
         hint: '模式',
-        meaning: '模式 N.'
+        meaning: '模式 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pause',
         hint: '暫停',
-        meaning: '暫停 V. N.'
+        meaning: '暫停 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pay',
         hint: '支付',
-        meaning: '支付 V. N.'
+        meaning: '支付 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'peace',
         hint: '和平',
-        meaning: '和平 N.'
+        meaning: '和平 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'peak',
         hint: '峰頂',
-        meaning: '峰頂 N.'
+        meaning: '峰頂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'peanut',
         hint: '花生',
-        meaning: '花生 N.'
+        meaning: '花生 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pear',
         hint: '梨',
-        meaning: '梨 N.'
+        meaning: '梨 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'peasant',
         hint: '農民',
-        meaning: '農民 N.'
+        meaning: '農民 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'peculiar',
         hint: '奇怪的',
-        meaning: '奇怪的 adj.'
+        meaning: '奇怪的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pen',
         hint: '筆',
-        meaning: '筆 N.'
+        meaning: '筆 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'penalty',
         hint: '處罰',
-        meaning: '處罰 N.'
+        meaning: '處罰 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pencil',
         hint: '鉛筆',
-        meaning: '鉛筆 N.'
+        meaning: '鉛筆 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'people',
         hint: '人們',
-        meaning: '人們 N.'
+        meaning: '人們 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'perceive',
         hint: '感知',
-        meaning: '感知 V.'
+        meaning: '感知 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'percentage',
         hint: '百分比',
-        meaning: '百分比 N.'
+        meaning: '百分比 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'perception',
         hint: '感知',
-        meaning: '感知 N.'
+        meaning: '感知 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'perfect',
         hint: '完美的',
-        meaning: '完美的 adj. V.'
+        meaning: '完美的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'perform',
         hint: '表演',
-        meaning: '表演 V.'
+        meaning: '表演 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'performance',
         hint: '表演',
-        meaning: '表演 N.'
+        meaning: '表演 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'perhaps',
         hint: '也許',
-        meaning: '也許 adv.'
+        meaning: '也許 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'period',
         hint: '時期',
-        meaning: '時期 N.'
+        meaning: '時期 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'permanent',
         hint: '永久的',
-        meaning: '永久的 adj.'
+        meaning: '永久的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'permission',
         hint: '許可',
-        meaning: '許可 N.'
+        meaning: '許可 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'permit',
         hint: '許可',
-        meaning: '許可 V. N.'
+        meaning: '許可 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'person',
         hint: '人',
-        meaning: '人 N.'
+        meaning: '人 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'personal',
         hint: '個人的',
-        meaning: '個人的 adj.'
+        meaning: '個人的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'personality',
         hint: '個性',
-        meaning: '個性 N.'
+        meaning: '個性 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'persuade',
         hint: '說服',
-        meaning: '說服 V.'
+        meaning: '說服 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pet',
         hint: '寵物',
-        meaning: '寵物 N.'
+        meaning: '寵物 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'phone',
         hint: '電話',
-        meaning: '電話 N. V.'
+        meaning: '電話 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'photo',
         hint: '照片',
-        meaning: '照片 N.'
+        meaning: '照片 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'photograph',
         hint: '照片',
-        meaning: '照片 N. V.'
+        meaning: '照片 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'phrase',
         hint: '詞組',
-        meaning: '詞組 N.'
+        meaning: '詞組 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'physical',
         hint: '身體的',
-        meaning: '身體的 adj.'
+        meaning: '身體的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'physics',
         hint: '物理學',
-        meaning: '物理學 N.'
+        meaning: '物理學 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'piano',
         hint: '鋼琴',
-        meaning: '鋼琴 N.'
+        meaning: '鋼琴 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pick',
         hint: '挑選',
-        meaning: '挑選 V. N.'
+        meaning: '挑選 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'picture',
         hint: '圖片',
-        meaning: '圖片 N. V.'
+        meaning: '圖片 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pie',
         hint: '派',
-        meaning: '派 N.'
+        meaning: '派 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'piece',
         hint: '一片',
-        meaning: '一片 N.'
+        meaning: '一片 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pig',
         hint: '豬',
-        meaning: '豬 N.'
+        meaning: '豬 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pile',
         hint: '堆',
-        meaning: '堆 N. V.'
+        meaning: '堆 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pill',
         hint: '藥丸',
-        meaning: '藥丸 N.'
+        meaning: '藥丸 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pilot',
         hint: '飛行員',
-        meaning: '飛行員 N. V.'
+        meaning: '飛行員 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pin',
         hint: '大頭針',
-        meaning: '大頭針 N. V.'
+        meaning: '大頭針 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pine',
         hint: '松樹',
-        meaning: '松樹 N.'
+        meaning: '松樹 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pink',
         hint: '粉紅色',
-        meaning: '粉紅色 N. adj.'
+        meaning: '粉紅色 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pioneer',
         hint: '先鋒',
-        meaning: '先鋒 N. V.'
+        meaning: '先鋒 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pipe',
         hint: '管子',
-        meaning: '管子 N. V.'
+        meaning: '管子 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pitch',
         hint: '音調',
-        meaning: '音調 N. V.'
+        meaning: '音調 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pizza',
         hint: '比薩',
-        meaning: '比薩 N.'
+        meaning: '比薩 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'place',
         hint: '地方',
-        meaning: '地方 N. V.'
+        meaning: '地方 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'plan',
         hint: '計劃',
-        meaning: '計劃 N. V.'
+        meaning: '計劃 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'plane',
         hint: '飛機',
-        meaning: '飛機 N.'
+        meaning: '飛機 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'planet',
         hint: '行星',
-        meaning: '行星 N.'
+        meaning: '行星 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'plastic',
         hint: '塑料',
-        meaning: '塑料 N. adj.'
+        meaning: '塑料 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'plate',
         hint: '盤子',
-        meaning: '盤子 N.'
+        meaning: '盤子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'platform',
         hint: '平臺',
-        meaning: '平臺 N.'
+        meaning: '平臺 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'play',
         hint: '玩',
-        meaning: '玩 V. N.'
+        meaning: '玩 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pleasant',
         hint: '愉快的',
-        meaning: '愉快的 adj.'
+        meaning: '愉快的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'please',
         hint: '請',
-        meaning: '請 V. adv.'
+        meaning: '請 V. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pleasure',
         hint: '快樂',
-        meaning: '快樂 N.'
+        meaning: '快樂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'plenty',
         hint: '充足',
-        meaning: '充足 pron. adj. adv. n.'
+        meaning: '充足 pron. adj. adv. n.',
+        v: 0,
+        new: false,
     },
     {
         word: 'plot',
         hint: '情節',
-        meaning: '情節 N. V.'
+        meaning: '情節 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'plunge',
         hint: '跳水',
-        meaning: '跳水 V. N.'
+        meaning: '跳水 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'plural',
         hint: '複數的',
-        meaning: '複數的 adj.'
+        meaning: '複數的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'plus',
         hint: '加',
-        meaning: '加 prep. adj. N.'
+        meaning: '加 prep. adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pocket',
         hint: '口袋',
-        meaning: '口袋 N.'
+        meaning: '口袋 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'poem',
         hint: '詩',
-        meaning: '詩 N.'
+        meaning: '詩 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'poet',
         hint: '詩人',
-        meaning: '詩人 N.'
+        meaning: '詩人 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'poetry',
         hint: '詩歌',
-        meaning: '詩歌 N.'
+        meaning: '詩歌 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'point',
         hint: '點',
-        meaning: '點 N. V.'
+        meaning: '點 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'poison',
         hint: '毒藥',
-        meaning: '毒藥 N. V.'
+        meaning: '毒藥 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pole',
         hint: '杆',
-        meaning: '杆 N.'
+        meaning: '杆 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'police',
         hint: '警察',
-        meaning: '警察 N.'
+        meaning: '警察 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'policy',
         hint: '政策',
-        meaning: '政策 N.'
+        meaning: '政策 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'polish',
         hint: '擦亮',
-        meaning: '擦亮 V. N.'
+        meaning: '擦亮 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'polite',
         hint: '有禮貌的',
-        meaning: '有禮貌的 adj.'
+        meaning: '有禮貌的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'political',
         hint: '政治的',
-        meaning: '政治的 adj.'
+        meaning: '政治的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'politician',
         hint: '政治家',
-        meaning: '政治家 N.'
+        meaning: '政治家 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'politics',
         hint: '政治',
-        meaning: '政治 N.'
+        meaning: '政治 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pollution',
         hint: '污染',
-        meaning: '污染 N.'
+        meaning: '污染 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pond',
         hint: '池塘',
-        meaning: '池塘 N.'
+        meaning: '池塘 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pool',
         hint: '游泳池',
-        meaning: '游泳池 N.'
+        meaning: '游泳池 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'poor',
         hint: '貧窮的',
-        meaning: '貧窮的 adj.'
+        meaning: '貧窮的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pop',
         hint: '流行的',
-        meaning: '流行的 adj. N. V.'
+        meaning: '流行的 adj. N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'popular',
         hint: '受歡迎的',
-        meaning: '受歡迎的 adj.'
+        meaning: '受歡迎的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'population',
         hint: '人口',
-        meaning: '人口 N.'
+        meaning: '人口 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'port',
         hint: '港口',
-        meaning: '港口 N.'
+        meaning: '港口 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pose',
         hint: '擺姿勢',
-        meaning: '擺姿勢 V. N.'
+        meaning: '擺姿勢 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'position',
         hint: '位置',
-        meaning: '位置 N.'
+        meaning: '位置 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'positive',
         hint: '積極的',
-        meaning: '積極的 adj.'
+        meaning: '積極的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'possess',
         hint: '擁有',
-        meaning: '擁有 V.'
+        meaning: '擁有 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'possession',
         hint: '擁有',
-        meaning: '擁有 N.'
+        meaning: '擁有 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'possibility',
         hint: '可能性',
-        meaning: '可能性 N.'
+        meaning: '可能性 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'possible',
         hint: '可能的',
-        meaning: '可能的 adj.'
+        meaning: '可能的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'post',
         hint: '郵件',
-        meaning: '郵件 N. V.'
+        meaning: '郵件 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pot',
         hint: '鍋',
-        meaning: '鍋 N.'
+        meaning: '鍋 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'potato',
         hint: '馬鈴薯',
-        meaning: '馬鈴薯 N.'
+        meaning: '馬鈴薯 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'potential',
         hint: '潛在的',
-        meaning: '潛在的 adj. N.'
+        meaning: '潛在的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pound',
         hint: '磅',
-        meaning: '磅 N. V.'
+        meaning: '磅 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pour',
         hint: '倒',
-        meaning: '倒 V.'
+        meaning: '倒 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'poverty',
         hint: '貧困',
-        meaning: '貧困 N.'
+        meaning: '貧困 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'powder',
         hint: '粉末',
-        meaning: '粉末 N.'
+        meaning: '粉末 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'power',
         hint: '力量',
-        meaning: '力量 N.'
+        meaning: '力量 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'powerful',
         hint: '強大的',
-        meaning: '強大的 adj.'
+        meaning: '強大的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'practice',
         hint: '實踐',
-        meaning: '實踐 N. V.'
+        meaning: '實踐 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'praise',
         hint: '讚揚',
-        meaning: '讚揚 N. V.'
+        meaning: '讚揚 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pray',
         hint: '祈禱',
-        meaning: '祈禱 V.'
+        meaning: '祈禱 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'preach',
         hint: '傳教',
-        meaning: '傳教 V.'
+        meaning: '傳教 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'precede',
         hint: '在...之前',
-        meaning: '在...之前 V.'
+        meaning: '在...之前 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'precious',
         hint: '珍貴的',
-        meaning: '珍貴的 adj.'
+        meaning: '珍貴的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prefer',
         hint: '更喜歡',
-        meaning: '更喜歡 V.'
+        meaning: '更喜歡 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pregnant',
         hint: '懷孕的',
-        meaning: '懷孕的 adj.'
+        meaning: '懷孕的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prejudice',
         hint: '偏見',
-        meaning: '偏見 N. V.'
+        meaning: '偏見 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'preliminary',
         hint: '初步的',
-        meaning: '初步的 adj.'
+        meaning: '初步的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'premier',
         hint: '首相',
-        meaning: '首相 N. adj.'
+        meaning: '首相 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'premise',
         hint: '前提',
-        meaning: '前提 N.'
+        meaning: '前提 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'premium',
         hint: '保險費',
-        meaning: '保險費 N.'
+        meaning: '保險費 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'preparation',
         hint: '準備',
-        meaning: '準備 N.'
+        meaning: '準備 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prepare',
         hint: '準備',
-        meaning: '準備 V.'
+        meaning: '準備 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'presence',
         hint: '存在',
-        meaning: '存在 N.'
+        meaning: '存在 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'present',
         hint: '禮物',
-        meaning: '禮物 N. adj. V.'
+        meaning: '禮物 N. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'preserve',
         hint: '保護',
-        meaning: '保護 V. N.'
+        meaning: '保護 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'president',
         hint: '總統',
-        meaning: '總統 N.'
+        meaning: '總統 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'press',
         hint: '按',
-        meaning: '按 V. N.'
+        meaning: '按 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pressure',
         hint: '壓力',
-        meaning: '壓力 N.'
+        meaning: '壓力 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'presume',
         hint: '假設',
-        meaning: '假設 V.'
+        meaning: '假設 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pretend',
         hint: '假裝',
-        meaning: '假裝 V.'
+        meaning: '假裝 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pretty',
         hint: '漂亮',
-        meaning: '漂亮 adj. adv.'
+        meaning: '漂亮 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prevail',
         hint: '盛行',
-        meaning: '盛行 V.'
+        meaning: '盛行 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prevent',
         hint: '防止',
-        meaning: '防止 V.'
+        meaning: '防止 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'previous',
         hint: '先前的',
-        meaning: '先前的 adj.'
+        meaning: '先前的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'price',
         hint: '價格',
-        meaning: '價格 N.'
+        meaning: '價格 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pride',
         hint: '驕傲',
-        meaning: '驕傲 N. V.'
+        meaning: '驕傲 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'primary',
         hint: '主要的',
-        meaning: '主要的 adj.'
+        meaning: '主要的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prime',
         hint: '主要的',
-        meaning: '主要的 adj. V.'
+        meaning: '主要的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'primitive',
         hint: '原始的',
-        meaning: '原始的 adj.'
+        meaning: '原始的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prince',
         hint: '王子',
-        meaning: '王子 N.'
+        meaning: '王子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'princess',
         hint: '公主',
-        meaning: '公主 N.'
+        meaning: '公主 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'principle',
         hint: '原則',
-        meaning: '原則 N.'
+        meaning: '原則 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'print',
         hint: '印刷',
-        meaning: '印刷 V. N.'
+        meaning: '印刷 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prior',
         hint: '先前的',
-        meaning: '先前的 adj.'
+        meaning: '先前的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'priority',
         hint: '優先',
-        meaning: '優先 N.'
+        meaning: '優先 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prison',
         hint: '監獄',
-        meaning: '監獄 N.'
+        meaning: '監獄 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'private',
         hint: '私人的',
-        meaning: '私人的 adj.'
+        meaning: '私人的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prize',
         hint: '獎品',
-        meaning: '獎品 N.'
+        meaning: '獎品 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'probability',
         hint: '可能性',
-        meaning: '可能性 N.'
+        meaning: '可能性 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'probable',
         hint: '可能的',
-        meaning: '可能的 adj.'
+        meaning: '可能的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'problem',
         hint: '問題',
-        meaning: '問題 N.'
+        meaning: '問題 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'procedure',
         hint: '程序',
-        meaning: '程序 N.'
+        meaning: '程序 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'proceed',
         hint: '繼續',
-        meaning: '繼續 V.'
+        meaning: '繼續 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'process',
         hint: '過程',
-        meaning: '過程 N. V.'
+        meaning: '過程 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'produce',
         hint: '生產',
-        meaning: '生產 V. N.'
+        meaning: '生產 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'product',
-        hint: '產品',
-        meaning: '產品 N.'
+        hint: '產品', // 耶 一萬行 😎✌️
+        meaning: '產品 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'production',
         hint: '生產',
-        meaning: '生產 N.'
+        meaning: '生產 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'profession',
         hint: '職業',
-        meaning: '職業 N.'
+        meaning: '職業 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'professional',
         hint: '專業的',
-        meaning: '專業的 adj. N.'
+        meaning: '專業的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'professor',
         hint: '教授',
-        meaning: '教授 N.'
+        meaning: '教授 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'profile',
         hint: '簡介',
-        meaning: '簡介 N.'
+        meaning: '簡介 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'profit',
         hint: '利潤',
-        meaning: '利潤 N. V.'
+        meaning: '利潤 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'program',
         hint: '節目',
-        meaning: '節目 N.'
+        meaning: '節目 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'progress',
         hint: '進展',
-        meaning: '進展 N. V.'
+        meaning: '進展 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'progressive',
         hint: '進步的',
-        meaning: '進步的 adj.'
+        meaning: '進步的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'project',
         hint: '項目',
-        meaning: '項目 N. V.'
+        meaning: '項目 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'promise',
         hint: '承諾',
-        meaning: '承諾 N. V.'
+        meaning: '承諾 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'promote',
         hint: '促進',
-        meaning: '促進 V.'
+        meaning: '促進 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prompt',
         hint: '迅速的',
-        meaning: '迅速的 adj. V.'
+        meaning: '迅速的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'proof',
         hint: '證據',
-        meaning: '證據 N.'
+        meaning: '證據 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'propose',
         hint: '提議',
-        meaning: '提議 V.'
+        meaning: '提議 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prospect',
         hint: '前景',
-        meaning: '前景 N.'
+        meaning: '前景 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'protect',
         hint: '保護',
-        meaning: '保護 V.'
+        meaning: '保護 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'protest',
         hint: '抗議',
-        meaning: '抗議 V. N.'
+        meaning: '抗議 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'proud',
         hint: '自豪的',
-        meaning: '自豪的 adj.'
+        meaning: '自豪的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'prove',
         hint: '證明',
-        meaning: '證明 V.'
+        meaning: '證明 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'provide',
         hint: '提供',
-        meaning: '提供 V.'
+        meaning: '提供 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'province',
         hint: '省',
-        meaning: '省 N.'
+        meaning: '省 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'provoke',
         hint: '激怒',
-        meaning: '激怒 V.'
+        meaning: '激怒 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'psychology',
         hint: '心理學',
-        meaning: '心理學 N.'
+        meaning: '心理學 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'public',
         hint: '公共的',
-        meaning: '公共的 adj. N.'
+        meaning: '公共的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'publication',
         hint: '出版物',
-        meaning: '出版物 N.'
+        meaning: '出版物 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'publish',
         hint: '出版',
-        meaning: '出版 V.'
+        meaning: '出版 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'puddle',
         hint: '水坑',
-        meaning: '水坑 N.'
+        meaning: '水坑 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pull',
         hint: '拉',
-        meaning: '拉 V. N.'
+        meaning: '拉 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pump',
         hint: '泵',
-        meaning: '泵 N. V.'
+        meaning: '泵 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'punch',
         hint: '拳擊',
-        meaning: '拳擊 V. N.'
+        meaning: '拳擊 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'punish',
         hint: '懲罰',
-        meaning: '懲罰 V.'
+        meaning: '懲罰 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pupil',
         hint: '學生',
-        meaning: '學生 N.'
+        meaning: '學生 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'purchase',
         hint: '購買',
-        meaning: '購買 V. N.'
+        meaning: '購買 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pure',
         hint: '純粹的',
-        meaning: '純粹的 adj.'
+        meaning: '純粹的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'purple',
         hint: '紫色',
-        meaning: '紫色 N. adj.'
+        meaning: '紫色 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'purpose',
         hint: '目的',
-        meaning: '目的 N.'
+        meaning: '目的 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'pursue',
         hint: '追求',
-        meaning: '追求 V.'
+        meaning: '追求 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'push',
         hint: '推',
-        meaning: '推 V. N.'
+        meaning: '推 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'put',
         hint: '放',
-        meaning: '放 V.'
+        meaning: '放 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'puzzle',
         hint: '謎語',
-        meaning: '謎語 N. V.'
+        meaning: '謎語 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'qualify',
         hint: '符合條件',
-        meaning: '符合條件 V.'
+        meaning: '符合條件 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'quality',
         hint: '質量',
-        meaning: '質量 N.'
+        meaning: '質量 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'quantity',
         hint: '數量',
-        meaning: '數量 N.'
+        meaning: '數量 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'quarrel',
         hint: '爭吵',
-        meaning: '爭吵 V. N.'
+        meaning: '爭吵 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'quarter',
         hint: '四分之一',
-        meaning: '四分之一 N.'
+        meaning: '四分之一 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'queen',
         hint: '女王',
-        meaning: '女王 N.'
+        meaning: '女王 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'question',
         hint: '問題',
-        meaning: '問題 N. V.'
+        meaning: '問題 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'quick',
         hint: '快的',
-        meaning: '快的 adj. adv.'
+        meaning: '快的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'quiet',
         hint: '安靜',
-        meaning: '安靜 adj. V.'
+        meaning: '安靜 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'quit',
         hint: '退出',
-        meaning: '退出 V.'
+        meaning: '退出 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'quite',
         hint: '相當',
-        meaning: '相當 adv.'
+        meaning: '相當 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'quote',
         hint: '引用',
-        meaning: '引用 V. N.'
+        meaning: '引用 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rabbit',
         hint: '兔子',
-        meaning: '兔子 N.'
+        meaning: '兔子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'race',
         hint: '比賽',
-        meaning: '比賽 N. V.'
+        meaning: '比賽 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rack',
         hint: '架子',
-        meaning: '架子 N. V.'
+        meaning: '架子 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'radar',
         hint: '雷達',
-        meaning: '雷達 N.'
+        meaning: '雷達 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'radiate',
         hint: '輻射',
-        meaning: '輻射 V.'
+        meaning: '輻射 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'radical',
         hint: '激進的',
-        meaning: '激進的 adj. N.'
+        meaning: '激進的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'radio',
         hint: '收音機',
-        meaning: '收音機 N. V.'
+        meaning: '收音機 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'radius',
         hint: '半徑',
-        meaning: '半徑 N.'
+        meaning: '半徑 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rage',
         hint: '憤怒',
-        meaning: '憤怒 N. V.'
+        meaning: '憤怒 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rain',
         hint: '雨',
-        meaning: '雨 N. V.'
+        meaning: '雨 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'raise',
         hint: '升高',
-        meaning: '升高 V.'
+        meaning: '升高 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rally',
         hint: '集會',
-        meaning: '集會 N. V.'
+        meaning: '集會 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'random',
         hint: '隨機的',
-        meaning: '隨機的 adj.'
+        meaning: '隨機的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'range',
         hint: '範圍',
-        meaning: '範圍 N. V.'
+        meaning: '範圍 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rank',
         hint: '等級',
-        meaning: '等級 N. V.'
+        meaning: '等級 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rapid',
         hint: '迅速的',
-        meaning: '迅速的 adj.'
+        meaning: '迅速的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rare',
         hint: '罕見的',
-        meaning: '罕見的 adj.'
+        meaning: '罕見的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rat',
         hint: '老鼠',
-        meaning: '老鼠 N.'
+        meaning: '老鼠 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rate',
         hint: '比率',
-        meaning: '比率 N. V.'
+        meaning: '比率 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rather',
         hint: '寧願',
-        meaning: '寧願 adv.'
+        meaning: '寧願 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ratio',
         hint: '比例',
-        meaning: '比例 N.'
+        meaning: '比例 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rational',
         hint: '理性的',
-        meaning: '理性的 adj.'
+        meaning: '理性的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'raw',
         hint: '生的',
-        meaning: '生的 adj.'
+        meaning: '生的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reach',
         hint: '達到',
-        meaning: '達到 V. N.'
+        meaning: '達到 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'react',
         hint: '反應',
-        meaning: '反應 V.'
+        meaning: '反應 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'read',
         hint: '讀',
-        meaning: '讀 V.'
+        meaning: '讀 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ready',
         hint: '準備好的',
-        meaning: '準備好的 adj.'
+        meaning: '準備好的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'real',
         hint: '真實的',
-        meaning: '真實的 adj.'
+        meaning: '真實的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reality',
         hint: '現實',
-        meaning: '現實 N.'
+        meaning: '現實 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'realize',
         hint: '實現',
-        meaning: '實現 V.'
+        meaning: '實現 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'really',
         hint: '真的',
-        meaning: '真的 adv.'
+        meaning: '真的 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reason',
         hint: '原因',
-        meaning: '原因 N. V.'
+        meaning: '原因 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reasonable',
         hint: '合理的',
-        meaning: '合理的 adj.'
+        meaning: '合理的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rebel',
         hint: '反叛',
-        meaning: '反叛 V. N.'
+        meaning: '反叛 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'recall',
         hint: '回想',
-        meaning: '回想 V. N.'
+        meaning: '回想 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'receive',
         hint: '接收',
-        meaning: '接收 V.'
+        meaning: '接收 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'recent',
         hint: '最近的',
-        meaning: '最近的 adj.'
+        meaning: '最近的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reception',
         hint: '接待',
-        meaning: '接待 N.'
+        meaning: '接待 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'recipe',
         hint: '食譜',
-        meaning: '食譜 N.'
+        meaning: '食譜 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'record',
         hint: '記錄',
-        meaning: '記錄 N. V.'
+        meaning: '記錄 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'recover',
         hint: '康復',
-        meaning: '康復 V.'
+        meaning: '康復 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'red',
         hint: '紅色',
-        meaning: '紅色 N. adj.'
+        meaning: '紅色 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reduce',
         hint: '減少',
-        meaning: '減少 V.'
+        meaning: '減少 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'refer',
         hint: '參考',
-        meaning: '參考 V.'
+        meaning: '參考 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reference',
         hint: '參考',
-        meaning: '參考 N.'
+        meaning: '參考 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reflect',
         hint: '反射',
-        meaning: '反射 V.'
+        meaning: '反射 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reform',
         hint: '改革',
-        meaning: '改革 V. N.'
+        meaning: '改革 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'refuse',
         hint: '拒絕',
-        meaning: '拒絕 V. N.'
+        meaning: '拒絕 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'regard',
         hint: '看待',
-        meaning: '看待 V. N.'
+        meaning: '看待 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'region',
         hint: '地區',
-        meaning: '地區 N.'
+        meaning: '地區 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'register',
         hint: '登記',
-        meaning: '登記 V. N.'
+        meaning: '登記 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'regret',
         hint: '後悔',
-        meaning: '後悔 V. N.'
+        meaning: '後悔 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'regular',
         hint: '規律的',
-        meaning: '規律的 adj.'
+        meaning: '規律的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reject',
         hint: '拒絕',
-        meaning: '拒絕 V. N.'
+        meaning: '拒絕 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'relate',
         hint: '有關聯',
-        meaning: '有關聯 V.'
+        meaning: '有關聯 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'relation',
         hint: '關係',
-        meaning: '關係 N.'
+        meaning: '關係 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'relative',
         hint: '相對的',
-        meaning: '相對的 adj. N.'
+        meaning: '相對的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'relax',
         hint: '放鬆',
-        meaning: '放鬆 V.'
+        meaning: '放鬆 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'release',
         hint: '釋放',
-        meaning: '釋放 V. N.'
+        meaning: '釋放 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'relevant',
         hint: '相關的',
-        meaning: '相關的 adj.'
+        meaning: '相關的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reliable',
         hint: '可靠的',
-        meaning: '可靠的 adj.'
+        meaning: '可靠的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'relief',
         hint: '減輕',
-        meaning: '減輕 N.'
+        meaning: '減輕 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'religion',
         hint: '宗教',
-        meaning: '宗教 N.'
+        meaning: '宗教 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rely',
         hint: '依賴',
-        meaning: '依賴 V.'
+        meaning: '依賴 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'remain',
         hint: '保持',
-        meaning: '保持 V.'
+        meaning: '保持 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'remark',
         hint: '評論',
-        meaning: '評論 V. N.'
+        meaning: '評論 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'remember',
         hint: '記得',
-        meaning: '記得 V.'
+        meaning: '記得 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'remind',
         hint: '提醒',
-        meaning: '提醒 V.'
+        meaning: '提醒 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'remote',
         hint: '遠程的',
-        meaning: '遠程的 adj.'
+        meaning: '遠程的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'remove',
         hint: '移除',
-        meaning: '移除 V.'
+        meaning: '移除 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rent',
         hint: '租金',
-        meaning: '租金 N. V.'
+        meaning: '租金 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'repair',
         hint: '修理',
-        meaning: '修理 V. N.'
+        meaning: '修理 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'repeat',
         hint: '重複',
-        meaning: '重複 V. N.'
+        meaning: '重複 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'replace',
         hint: '替換',
-        meaning: '替換 V.'
+        meaning: '替換 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reply',
         hint: '回答',
-        meaning: '回答 V. N.'
+        meaning: '回答 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'report',
         hint: '報告',
-        meaning: '報告 V. N.'
+        meaning: '報告 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'represent',
         hint: '代表',
-        meaning: '代表 V.'
+        meaning: '代表 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'republic',
         hint: '共和國',
-        meaning: '共和國 N.'
+        meaning: '共和國 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reputation',
         hint: '聲譽',
-        meaning: '聲譽 N.'
+        meaning: '聲譽 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'request',
         hint: '請求',
-        meaning: '請求 V. N.'
+        meaning: '請求 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'require',
         hint: '需要',
-        meaning: '需要 V.'
+        meaning: '需要 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rescue',
         hint: '救援',
-        meaning: '救援 V. N.'
+        meaning: '救援 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'research',
         hint: '研究',
-        meaning: '研究 N. V.'
+        meaning: '研究 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'resemble',
         hint: '相似',
-        meaning: '相似 V.'
+        meaning: '相似 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reserve',
         hint: '儲備',
-        meaning: '儲備 V. N.'
+        meaning: '儲備 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'resident',
         hint: '居民',
-        meaning: '居民 N.'
+        meaning: '居民 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'resist',
         hint: '抵抗',
-        meaning: '抵抗 V.'
+        meaning: '抵抗 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'resolve',
         hint: '解決',
-        meaning: '解決 V. N.'
+        meaning: '解決 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'resort',
         hint: '度假勝地',
-        meaning: '度假勝地 N. V.'
+        meaning: '度假勝地 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'resource',
         hint: '資源',
-        meaning: '資源 N.'
+        meaning: '資源 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'respect',
         hint: '尊重',
-        meaning: '尊重 V. N.'
+        meaning: '尊重 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'respond',
         hint: '回應',
-        meaning: '回應 V.'
+        meaning: '回應 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rest',
         hint: '休息',
-        meaning: '休息 V. N.'
+        meaning: '休息 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'result',
         hint: '結果',
-        meaning: '結果 N. V.'
+        meaning: '結果 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'resume',
         hint: '恢復',
-        meaning: '恢復 V. N.'
+        meaning: '恢復 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'retire',
         hint: '退休',
-        meaning: '退休 V.'
+        meaning: '退休 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'return',
         hint: '返回',
-        meaning: '返回 V. N.'
+        meaning: '返回 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reveal',
         hint: '揭示',
-        meaning: '揭示 V.'
+        meaning: '揭示 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reverse',
         hint: '相反',
-        meaning: '相反 adj. V. N.'
+        meaning: '相反 adj. V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'review',
         hint: '評論',
-        meaning: '評論 V. N.'
+        meaning: '評論 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'revise',
         hint: '修訂',
-        meaning: '修訂 V.'
+        meaning: '修訂 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'revive',
         hint: '復興',
-        meaning: '復興 V.'
+        meaning: '復興 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'revolution',
         hint: '革命',
-        meaning: '革命 N.'
+        meaning: '革命 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'reward',
         hint: '獎勵',
-        meaning: '獎勵 V. N.'
+        meaning: '獎勵 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rhythm',
         hint: '節奏',
-        meaning: '節奏 N.'
+        meaning: '節奏 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rib',
         hint: '肋骨',
-        meaning: '肋骨 N.'
+        meaning: '肋骨 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rice',
         hint: '米飯',
-        meaning: '米飯 N.'
+        meaning: '米飯 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rich',
         hint: '富有的',
-        meaning: '富有的 adj.'
+        meaning: '富有的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rid',
         hint: '擺脫',
-        meaning: '擺脫 V.'
+        meaning: '擺脫 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ride',
         hint: '騎',
-        meaning: '騎 V. N.'
+        meaning: '騎 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ridge',
         hint: '山脊',
-        meaning: '山脊 N.'
+        meaning: '山脊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'right',
         hint: '右邊',
-        meaning: '右邊 N. adj. adv.'
+        meaning: '右邊 N. adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ring',
         hint: '戒指',
-        meaning: '戒指 N. V.'
+        meaning: '戒指 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rip',
         hint: '撕裂',
-        meaning: '撕裂 V. N.'
+        meaning: '撕裂 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rise',
         hint: '上升',
-        meaning: '上升 V. N.'
+        meaning: '上升 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'risk',
         hint: '風險',
-        meaning: '風險 N. V.'
+        meaning: '風險 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'river',
         hint: '河',
-        meaning: '河 N.'
+        meaning: '河 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'road',
         hint: '道路',
-        meaning: '道路 N.'
+        meaning: '道路 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rob',
         hint: '搶劫',
-        meaning: '搶劫 V.'
+        meaning: '搶劫 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rock',
         hint: '岩石',
-        meaning: '岩石 N. V.'
+        meaning: '岩石 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'role',
         hint: '角色',
-        meaning: '角色 N.'
+        meaning: '角色 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'roll',
         hint: '滾動',
-        meaning: '滾動 V. N.'
+        meaning: '滾動 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'roof',
         hint: '屋頂',
-        meaning: '屋頂 N.'
+        meaning: '屋頂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'room',
         hint: '房間',
-        meaning: '房間 N.'
+        meaning: '房間 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'root',
         hint: '根',
-        meaning: '根 N. V.'
+        meaning: '根 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rope',
         hint: '繩子',
-        meaning: '繩子 N.'
+        meaning: '繩子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rose',
         hint: '玫瑰',
-        meaning: '玫瑰 N.'
+        meaning: '玫瑰 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rough',
         hint: '粗糙的',
-        meaning: '粗糙的 adj.'
+        meaning: '粗糙的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'round',
         hint: '圓形的',
-        meaning: '圓形的 adj. adv. N. V.'
+        meaning: '圓形的 adj. adv. N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'route',
         hint: '路線',
-        meaning: '路線 N.'
+        meaning: '路線 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'row',
         hint: '排',
-        meaning: '排 N. V.'
+        meaning: '排 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'royal',
         hint: '皇家',
-        meaning: '皇家 adj.'
+        meaning: '皇家 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rub',
         hint: '擦',
-        meaning: '擦 V. N.'
+        meaning: '擦 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rubber',
         hint: '橡膠',
-        meaning: '橡膠 N.'
+        meaning: '橡膠 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rude',
         hint: '粗魯的',
-        meaning: '粗魯的 adj.'
+        meaning: '粗魯的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rug',
         hint: '地毯',
-        meaning: '地毯 N.'
+        meaning: '地毯 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ruin',
         hint: '毀壞',
-        meaning: '毀壞 V. N.'
+        meaning: '毀壞 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rule',
         hint: '規則',
-        meaning: '規則 N. V.'
+        meaning: '規則 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'run',
         hint: '跑',
-        meaning: '跑 V. N.'
+        meaning: '跑 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rural',
         hint: '鄉村的',
-        meaning: '鄉村的 adj.'
+        meaning: '鄉村的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'rush',
         hint: '急匆匆',
-        meaning: '急匆匆 V. N.'
+        meaning: '急匆匆 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sack',
         hint: '麻袋',
-        meaning: '麻袋 N. V.'
+        meaning: '麻袋 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sad',
         hint: '悲傷的',
-        meaning: '悲傷的 adj.'
+        meaning: '悲傷的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'safe',
         hint: '安全的',
-        meaning: '安全的 adj.'
+        meaning: '安全的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sail',
         hint: '航行',
-        meaning: '航行 V. N.'
+        meaning: '航行 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sake',
         hint: '緣故',
-        meaning: '緣故 N.'
+        meaning: '緣故 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'salad',
         hint: '沙拉',
-        meaning: '沙拉 N.'
+        meaning: '沙拉 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'salary',
         hint: '薪水',
-        meaning: '薪水 N.'
+        meaning: '薪水 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sale',
         hint: '出售',
-        meaning: '出售 N.'
+        meaning: '出售 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'salt',
         hint: '鹽',
-        meaning: '鹽 N.'
+        meaning: '鹽 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'same',
         hint: '相同的',
-        meaning: '相同的 adj. pron.'
+        meaning: '相同的 adj. pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sample',
         hint: '樣本',
-        meaning: '樣本 N. V.'
+        meaning: '樣本 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sand',
         hint: '沙子',
-        meaning: '沙子 N. V.'
+        meaning: '沙子 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'satellite',
         hint: '衛星',
-        meaning: '衛星 N.'
+        meaning: '衛星 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'satisfy',
         hint: '滿足',
-        meaning: '滿足 V.'
+        meaning: '滿足 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sauce',
         hint: '醬汁',
-        meaning: '醬汁 N.'
+        meaning: '醬汁 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'save',
         hint: '保存',
-        meaning: '保存 V.'
+        meaning: '保存 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'say',
         hint: '說',
-        meaning: '說 V.'
+        meaning: '說 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scale',
         hint: '規模',
-        meaning: '規模 N.'
+        meaning: '規模 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scan',
         hint: '掃描',
-        meaning: '掃描 V. N.'
+        meaning: '掃描 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scar',
         hint: '疤痕',
-        meaning: '疤痕 N. V.'
+        meaning: '疤痕 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scatter',
         hint: '散射',
-        meaning: '散射 V.'
+        meaning: '散射 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scene',
         hint: '場景',
-        meaning: '場景 N.'
+        meaning: '場景 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'schedule',
         hint: '時間表',
-        meaning: '時間表 N. V.'
+        meaning: '時間表 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scheme',
         hint: '計劃',
-        meaning: '計劃 N. V.'
+        meaning: '計劃 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'school',
         hint: '學校',
-        meaning: '學校 N.'
+        meaning: '學校 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'science',
         hint: '科學',
-        meaning: '科學 N.'
+        meaning: '科學 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scissors',
         hint: '剪刀',
-        meaning: '剪刀 N.'
+        meaning: '剪刀 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scope',
         hint: '範圍',
-        meaning: '範圍 N.'
+        meaning: '範圍 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'score',
         hint: '分數',
-        meaning: '分數 N. V.'
+        meaning: '分數 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scrape',
         hint: '刮',
-        meaning: '刮 V. N.'
+        meaning: '刮 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scratch',
         hint: '搔',
-        meaning: '搔 V. N.'
+        meaning: '搔 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scream',
         hint: '尖叫',
-        meaning: '尖叫 V. N.'
+        meaning: '尖叫 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'screen',
         hint: '屏幕',
-        meaning: '屏幕 N. V.'
+        meaning: '屏幕 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'screw',
         hint: '螺絲釘',
-        meaning: '螺絲釘 N. V.'
+        meaning: '螺絲釘 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'script',
         hint: '腳本',
-        meaning: '腳本 N.'
+        meaning: '腳本 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'scrutiny',
         hint: '細查',
-        meaning: '細查 N.'
+        meaning: '細查 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sculpture',
         hint: '雕塑',
-        meaning: '雕塑 N.'
+        meaning: '雕塑 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sea',
         hint: '海',
-        meaning: '海 N.'
+        meaning: '海 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'search',
         hint: '搜索',
-        meaning: '搜索 V. N.'
+        meaning: '搜索 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'season',
         hint: '季節',
-        meaning: '季節 N. V.'
+        meaning: '季節 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'seat',
         hint: '座位',
-        meaning: '座位 N. V.'
+        meaning: '座位 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'second',
         hint: '秒',
-        meaning: '秒 N. adj. adv.'
+        meaning: '秒 N. adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'secret',
         hint: '秘密',
-        meaning: '秘密 adj. N.'
+        meaning: '秘密 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'section',
         hint: '部分',
-        meaning: '部分 N.'
+        meaning: '部分 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'secure',
         hint: '安全的',
-        meaning: '安全的 adj. V.'
+        meaning: '安全的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'see',
         hint: '看見',
-        meaning: '看見 V.'
+        meaning: '看見 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'seed',
         hint: '種子',
-        meaning: '種子 N. V.'
+        meaning: '種子 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'seek',
         hint: '尋找',
-        meaning: '尋找 V.'
+        meaning: '尋找 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'seem',
         hint: '似乎',
-        meaning: '似乎 V.'
+        meaning: '似乎 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'segment',
         hint: '段',
-        meaning: '段 N.'
+        meaning: '段 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'seize',
         hint: '抓住',
-        meaning: '抓住 V.'
+        meaning: '抓住 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'select',
         hint: '選擇',
-        meaning: '選擇 V. adj.'
+        meaning: '選擇 V. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'self',
         hint: '自己',
-        meaning: '自己 pron. adj.'
+        meaning: '自己 pron. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sell',
         hint: '賣',
-        meaning: '賣 V.'
+        meaning: '賣 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'semester',
         hint: '學期',
-        meaning: '學期 N.'
+        meaning: '學期 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'semi',
         hint: '半',
-        meaning: '半 prefix.'
+        meaning: '半 prefix.',
+        v: 0,
+        new: false,
     },
     {
         word: 'senate',
         hint: '參議院',
-        meaning: '參議院 N.'
+        meaning: '參議院 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'send',
         hint: '發送',
-        meaning: '發送 V.'
+        meaning: '發送 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'senior',
         hint: '高年級',
-        meaning: '高年級 adj. N.'
+        meaning: '高年級 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sense',
         hint: '感覺',
-        meaning: '感覺 N. V.'
+        meaning: '感覺 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sensitive',
         hint: '敏感的',
-        meaning: '敏感的 adj.'
+        meaning: '敏感的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sentence',
         hint: '句子',
-        meaning: '句子 N.'
+        meaning: '句子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'separate',
         hint: '分開的',
-        meaning: '分開的 adj. V.'
+        meaning: '分開的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sequence',
         hint: '序列',
-        meaning: '序列 N.'
+        meaning: '序列 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'series',
         hint: '系列',
-        meaning: '系列 N.'
+        meaning: '系列 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'serious',
         hint: '嚴肅的',
-        meaning: '嚴肅的 adj.'
+        meaning: '嚴肅的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'serve',
         hint: '提供',
-        meaning: '提供 V.'
+        meaning: '提供 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'service',
         hint: '服務',
-        meaning: '服務 N.'
+        meaning: '服務 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'session',
         hint: '會議',
-        meaning: '會議 N.'
+        meaning: '會議 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'set',
         hint: '設置',
-        meaning: '設置 V. N.'
+        meaning: '設置 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'settle',
         hint: '解決',
-        meaning: '解決 V.'
+        meaning: '解決 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'severe',
         hint: '嚴重的',
-        meaning: '嚴重的 adj.'
+        meaning: '嚴重的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sew',
         hint: '縫',
-        meaning: '縫 V.'
+        meaning: '縫 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shade',
         hint: '陰影',
-        meaning: '陰影 N. V.'
+        meaning: '陰影 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shadow',
         hint: '影子',
-        meaning: '影子 N. V.'
+        meaning: '影子 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shake',
         hint: '搖動',
-        meaning: '搖動 V. N.'
+        meaning: '搖動 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shall',
         hint: '將',
-        meaning: '將 aux. V.'
+        meaning: '將 aux. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shallow',
         hint: '淺的',
-        meaning: '淺的 adj.'
+        meaning: '淺的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shame',
         hint: '羞愧',
-        meaning: '羞愧 N.'
+        meaning: '羞愧 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shape',
         hint: '形狀',
-        meaning: '形狀 N. V.'
+        meaning: '形狀 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'share',
         hint: '分享',
-        meaning: '分享 V. N.'
+        meaning: '分享 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sharp',
         hint: '鋒利的',
-        meaning: '鋒利的 adj. adv.'
+        meaning: '鋒利的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'she',
         hint: '她',
-        meaning: '她 pron.'
+        meaning: '她 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sheep',
         hint: '羊',
-        meaning: '羊 N.'
+        meaning: '羊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sheet',
         hint: '床單',
-        meaning: '床單 N.'
+        meaning: '床單 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shelf',
         hint: '書架',
-        meaning: '書架 N.'
+        meaning: '書架 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shell',
         hint: '殼',
-        meaning: '殼 N.'
+        meaning: '殼 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shelter',
         hint: '庇護所',
-        meaning: '庇護所 N. V.'
+        meaning: '庇護所 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shield',
         hint: '盾牌',
-        meaning: '盾牌 N. V.'
+        meaning: '盾牌 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shift',
         hint: '轉移',
-        meaning: '轉移 V. N.'
+        meaning: '轉移 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shine',
         hint: '發光',
-        meaning: '發光 V. N.'
+        meaning: '發光 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ship',
         hint: '船',
-        meaning: '船 N. V.'
+        meaning: '船 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shirt',
         hint: '襯衫',
-        meaning: '襯衫 N.'
+        meaning: '襯衫 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shock',
         hint: '震驚',
-        meaning: '震驚 V. N.'
+        meaning: '震驚 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shoe',
         hint: '鞋',
-        meaning: '鞋 N.'
+        meaning: '鞋 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shoot',
         hint: '射擊',
-        meaning: '射擊 V. N.'
+        meaning: '射擊 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shop',
         hint: '商店',
-        meaning: '商店 N. V.'
+        meaning: '商店 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shore',
         hint: '岸',
-        meaning: '岸 N.'
+        meaning: '岸 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'short',
         hint: '短的',
-        meaning: '短的 adj.'
+        meaning: '短的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'should',
         hint: '應該',
-        meaning: '應該 aux. V.'
+        meaning: '應該 aux. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shoulder',
         hint: '肩膀',
-        meaning: '肩膀 N. V.'
+        meaning: '肩膀 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shout',
         hint: '喊',
-        meaning: '喊 V. N.'
+        meaning: '喊 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'show',
         hint: '展示',
-        meaning: '展示 V. N.'
+        meaning: '展示 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shrink',
         hint: '縮小',
-        meaning: '縮小 V.'
+        meaning: '縮小 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'shut',
         hint: '關閉',
-        meaning: '關閉 V. adj.'
+        meaning: '關閉 V. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sick',
         hint: '生病的',
-        meaning: '生病的 adj.'
+        meaning: '生病的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'side',
         hint: '側面',
-        meaning: '側面 N.'
+        meaning: '側面 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sight',
         hint: '視力',
-        meaning: '視力 N.'
+        meaning: '視力 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sign',
         hint: '標誌',
-        meaning: '標誌 N. V.'
+        meaning: '標誌 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'signal',
         hint: '信號',
-        meaning: '信號 N. V.'
+        meaning: '信號 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'silence',
         hint: '寂靜',
-        meaning: '寂靜 N. V.'
+        meaning: '寂靜 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'silent',
         hint: '沉默的',
-        meaning: '沉默的 adj.'
+        meaning: '沉默的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'silk',
         hint: '絲綢',
-        meaning: '絲綢 N.'
+        meaning: '絲綢 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'silver',
         hint: '銀色的',
-        meaning: '銀色的 adj. N. V.'
+        meaning: '銀色的 adj. N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'similar',
         hint: '相似的',
-        meaning: '相似的 adj.'
+        meaning: '相似的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'simple',
         hint: '簡單的',
-        meaning: '簡單的 adj.'
+        meaning: '簡單的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'since',
         hint: '自從',
-        meaning: '自從 conj. prep.'
+        meaning: '自從 conj. prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sing',
         hint: '唱歌',
-        meaning: '唱歌 V.'
+        meaning: '唱歌 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'single',
         hint: '單一的',
-        meaning: '單一的 adj.'
+        meaning: '單一的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sink',
         hint: '沉',
-        meaning: '沉 V. N.'
+        meaning: '沉 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sister',
         hint: '姐妹',
-        meaning: '姐妹 N.'
+        meaning: '姐妹 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sit',
         hint: '坐',
-        meaning: '坐 V.'
+        meaning: '坐 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'site',
         hint: '地點',
-        meaning: '地點 N.'
+        meaning: '地點 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'situation',
         hint: '情況',
-        meaning: '情況 N.'
+        meaning: '情況 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'six',
         hint: '六',
-        meaning: '六 N. adj.'
+        meaning: '六 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'size',
         hint: '尺寸',
-        meaning: '尺寸 N.'
+        meaning: '尺寸 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'skill',
         hint: '技能',
-        meaning: '技能 N.'
+        meaning: '技能 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'skin',
         hint: '皮膚',
-        meaning: '皮膚 N. V.'
+        meaning: '皮膚 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'skirt',
         hint: '裙子',
-        meaning: '裙子 N.'
+        meaning: '裙子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sky',
         hint: '天空',
-        meaning: '天空 N.'
+        meaning: '天空 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sleep',
         hint: '睡覺',
-        meaning: '睡覺 V. N.'
+        meaning: '睡覺 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'slide',
         hint: '滑動',
-        meaning: '滑動 V. N.'
+        meaning: '滑動 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'slight',
         hint: '輕微的',
-        meaning: '輕微的 adj.'
+        meaning: '輕微的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'slip',
         hint: '滑倒',
-        meaning: '滑倒 V. N.'
+        meaning: '滑倒 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'slow',
         hint: '慢的',
-        meaning: '慢的 adj. adv.'
+        meaning: '慢的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'small',
         hint: '小的',
-        meaning: '小的 adj.'
+        meaning: '小的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'smart',
         hint: '聰明的',
-        meaning: '聰明的 adj.'
+        meaning: '聰明的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'smell',
         hint: '嗅覺',
-        meaning: '嗅覺 N. V.'
+        meaning: '嗅覺 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'smile',
         hint: '微笑',
-        meaning: '微笑 V. N.'
+        meaning: '微笑 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'smoke',
         hint: '煙',
-        meaning: '煙 N. V.'
+        meaning: '煙 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'smooth',
         hint: '平滑的',
-        meaning: '平滑的 adj. V.'
+        meaning: '平滑的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'snack',
         hint: '點心',
-        meaning: '點心 N.'
+        meaning: '點心 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'snake',
         hint: '蛇',
-        meaning: '蛇 N.'
+        meaning: '蛇 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'snow',
         hint: '雪',
-        meaning: '雪 N. V.'
+        meaning: '雪 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'so',
         hint: '這麼',
-        meaning: '這麼 adv. conj.'
+        meaning: '這麼 adv. conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'soap',
         hint: '肥皂',
-        meaning: '肥皂 N.'
+        meaning: '肥皂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'social',
         hint: '社會的',
-        meaning: '社會的 adj.'
+        meaning: '社會的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'society',
         hint: '社會',
-        meaning: '社會 N.'
+        meaning: '社會 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sock',
         hint: '襪子',
-        meaning: '襪子 N.'
+        meaning: '襪子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'soft',
         hint: '軟的',
-        meaning: '軟的 adj.'
+        meaning: '軟的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'software',
         hint: '軟體',
-        meaning: '軟體 N.'
+        meaning: '軟體 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'soil',
         hint: '土壤',
-        meaning: '土壤 N. V.'
+        meaning: '土壤 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'solar',
         hint: '太陽的',
-        meaning: '太陽的 adj.'
+        meaning: '太陽的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'soldier',
         hint: '士兵',
-        meaning: '士兵 N.'
+        meaning: '士兵 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'solid',
         hint: '固體的',
-        meaning: '固體的 adj.'
+        meaning: '固體的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'solution',
         hint: '解決方案',
-        meaning: '解決方案 N.'
+        meaning: '解決方案 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'solve',
         hint: '解決',
-        meaning: '解決 V.'
+        meaning: '解決 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'some',
         hint: '一些',
-        meaning: '一些 adj. pron.'
+        meaning: '一些 adj. pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'somebody',
         hint: '某人',
-        meaning: '某人 pron.'
+        meaning: '某人 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'someone',
         hint: '有人',
-        meaning: '有人 pron.'
+        meaning: '有人 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'something',
         hint: '某物',
-        meaning: '某物 pron.'
+        meaning: '某物 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sometimes',
         hint: '有時',
-        meaning: '有時 adv.'
+        meaning: '有時 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'somewhere',
         hint: '某處',
-        meaning: '某處 adv.'
+        meaning: '某處 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'son',
         hint: '兒子',
-        meaning: '兒子 N.'
+        meaning: '兒子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'song',
         hint: '歌曲',
-        meaning: '歌曲 N.'
+        meaning: '歌曲 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'soon',
         hint: '很快',
-        meaning: '很快 adv.'
+        meaning: '很快 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sophisticated',
         hint: '複雜的',
-        meaning: '複雜的 adj.'
+        meaning: '複雜的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sore',
         hint: '疼痛的',
-        meaning: '疼痛的 adj.'
+        meaning: '疼痛的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sorry',
         hint: '抱歉的',
-        meaning: '抱歉的 adj.'
+        meaning: '抱歉的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sort',
         hint: '類型',
-        meaning: '類型 N. V.'
+        meaning: '類型 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'soul',
         hint: '靈魂',
-        meaning: '靈魂 N.'
+        meaning: '靈魂 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sound',
         hint: '聲音',
-        meaning: '聲音 N. V. adj.'
+        meaning: '聲音 N. V. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'soup',
         hint: '湯',
-        meaning: '湯 N.'
+        meaning: '湯 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'source',
         hint: '來源',
-        meaning: '來源 N.'
+        meaning: '來源 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'south',
         hint: '南',
-        meaning: '南 N. adj. adv.'
+        meaning: '南 N. adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'space',
         hint: '空間',
-        meaning: '空間 N.'
+        meaning: '空間 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'speak',
         hint: '說話',
-        meaning: '說話 V.'
+        meaning: '說話 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'special',
         hint: '特別的',
-        meaning: '特別的 adj.'
+        meaning: '特別的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'species',
         hint: '物種',
-        meaning: '物種 N.'
+        meaning: '物種 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'specific',
         hint: '具體的',
-        meaning: '具體的 adj.'
+        meaning: '具體的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'speech',
         hint: '演講',
-        meaning: '演講 N.'
+        meaning: '演講 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'speed',
         hint: '速度',
-        meaning: '速度 N. V.'
+        meaning: '速度 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'spell',
         hint: '拼寫',
-        meaning: '拼寫 V. N.'
+        meaning: '拼寫 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'spend',
         hint: '花費',
-        meaning: '花費 V.'
+        meaning: '花費 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'spirit',
         hint: '精神',
-        meaning: '精神 N.'
+        meaning: '精神 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'spite',
         hint: '惡意',
-        meaning: '惡意 N.'
+        meaning: '惡意 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'split',
         hint: '分裂',
-        meaning: '分裂 V. N. adj.'
+        meaning: '分裂 V. N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'spoil',
         hint: '破壞',
-        meaning: '破壞 V.'
+        meaning: '破壞 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sponsor',
         hint: '贊助商',
-        meaning: '贊助商 N. V.'
+        meaning: '贊助商 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'spoon',
         hint: '湯匙',
-        meaning: '湯匙 N.'
+        meaning: '湯匙 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sport',
         hint: '運動',
-        meaning: '運動 N. V.'
+        meaning: '運動 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'spot',
         hint: '斑點',
-        meaning: '斑點 N. V.'
+        meaning: '斑點 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'spread',
         hint: '擴散',
-        meaning: '擴散 V. N.'
+        meaning: '擴散 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'spring',
         hint: '春天',
-        meaning: '春天 N. V.'
+        meaning: '春天 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'spy',
         hint: '間諜',
-        meaning: '間諜 N. V.'
+        meaning: '間諜 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'square',
         hint: '正方形',
-        meaning: '正方形 N. adj.'
+        meaning: '正方形 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stable',
         hint: '穩定的',
-        meaning: '穩定的 adj. N.'
+        meaning: '穩定的 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'staff',
         hint: '職員',
-        meaning: '職員 N.'
+        meaning: '職員 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stage',
         hint: '舞台',
-        meaning: '舞台 N.'
+        meaning: '舞台 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stair',
         hint: '樓梯',
-        meaning: '樓梯 N.'
+        meaning: '樓梯 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stake',
         hint: '風險',
-        meaning: '風險 N. V.'
+        meaning: '風險 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stand',
         hint: '站立',
-        meaning: '站立 V. N.'
+        meaning: '站立 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'standard',
         hint: '標準',
-        meaning: '標準 N. adj.'
+        meaning: '標準 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'star',
         hint: '星星',
-        meaning: '星星 N. V.'
+        meaning: '星星 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'start',
         hint: '開始',
-        meaning: '開始 V. N.'
+        meaning: '開始 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'state',
         hint: '州',
-        meaning: '州 N.'
+        meaning: '州 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'statement',
         hint: '聲明',
-        meaning: '聲明 N.'
+        meaning: '聲明 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'station',
         hint: '車站',
-        meaning: '車站 N.'
+        meaning: '車站 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'statistics',
         hint: '統計',
-        meaning: '統計 N.'
+        meaning: '統計 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'status',
         hint: '狀態',
-        meaning: '狀態 N.'
+        meaning: '狀態 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stay',
         hint: '逗留',
-        meaning: '逗留 V. N.'
+        meaning: '逗留 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'steady',
         hint: '穩定的',
-        meaning: '穩定的 adj.'
+        meaning: '穩定的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'steak',
         hint: '牛排',
-        meaning: '牛排 N.'
+        meaning: '牛排 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'steal',
         hint: '偷竊',
-        meaning: '偷竊 V.'
+        meaning: '偷竊 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'steam',
         hint: '蒸汽',
-        meaning: '蒸汽 N. V.'
+        meaning: '蒸汽 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'steel',
         hint: '鋼鐵',
-        meaning: '鋼鐵 N.'
+        meaning: '鋼鐵 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'steep',
         hint: '陡峭的',
-        meaning: '陡峭的 adj. V.'
+        meaning: '陡峭的 adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'step',
         hint: '步驟',
-        meaning: '步驟 N. V.'
+        meaning: '步驟 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stick',
         hint: '棒',
-        meaning: '棒 N. V.'
+        meaning: '棒 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'still',
         hint: '仍然',
-        meaning: '仍然 adv.'
+        meaning: '仍然 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sting',
         hint: '螫',
-        meaning: '螫 V. N.'
+        meaning: '螫 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stir',
         hint: '攪拌',
-        meaning: '攪拌 V. N.'
+        meaning: '攪拌 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stock',
         hint: '股票',
-        meaning: '股票 N.'
+        meaning: '股票 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stomach',
         hint: '胃',
-        meaning: '胃 N.'
+        meaning: '胃 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stone',
         hint: '石頭',
-        meaning: '石頭 N.'
+        meaning: '石頭 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stop',
         hint: '停止',
-        meaning: '停止 V. N.'
+        meaning: '停止 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'storage',
         hint: '儲存',
-        meaning: '儲存 N.'
+        meaning: '儲存 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'store',
         hint: '商店',
-        meaning: '商店 N. V.'
+        meaning: '商店 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'storm',
         hint: '風暴',
-        meaning: '風暴 N. V.'
+        meaning: '風暴 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'story',
         hint: '故事',
-        meaning: '故事 N.'
+        meaning: '故事 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stove',
         hint: '爐灶',
-        meaning: '爐灶 N.'
+        meaning: '爐灶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'straight',
         hint: '直的',
-        meaning: '直的 adj. adv.'
+        meaning: '直的 adj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'strange',
         hint: '奇怪的',
-        meaning: '奇怪的 adj.'
+        meaning: '奇怪的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'strategy',
         hint: '策略',
-        meaning: '策略 N.'
+        meaning: '策略 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stream',
         hint: '流',
-        meaning: '流 N. V.'
+        meaning: '流 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'street',
         hint: '街道',
-        meaning: '街道 N.'
+        meaning: '街道 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'strength',
         hint: '力量',
-        meaning: '力量 N.'
+        meaning: '力量 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stress',
         hint: '壓力',
-        meaning: '壓力 N. V.'
+        meaning: '壓力 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stretch',
         hint: '伸展',
-        meaning: '伸展 V. N.'
+        meaning: '伸展 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'strike',
         hint: '罷工',
-        meaning: '罷工 V. N.'
+        meaning: '罷工 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'string',
         hint: '線',
-        meaning: '線 N.'
+        meaning: '線 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'strip',
         hint: '條',
-        meaning: '條 N. V.'
+        meaning: '條 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stroke',
         hint: '中風',
-        meaning: '中風 N. V.'
+        meaning: '中風 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'strong',
         hint: '強壯的',
-        meaning: '強壯的 adj.'
+        meaning: '強壯的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'structure',
         hint: '結構',
-        meaning: '結構 N.'
+        meaning: '結構 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'struggle',
         hint: '奮鬥',
-        meaning: '奮鬥 V. N.'
+        meaning: '奮鬥 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'student',
         hint: '學生',
-        meaning: '學生 N.'
+        meaning: '學生 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'studio',
         hint: '工作室',
-        meaning: '工作室 N.'
+        meaning: '工作室 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'study',
         hint: '學習',
-        meaning: '學習 N. V.'
+        meaning: '學習 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stuff',
         hint: '東西',
-        meaning: '東西 N. V.'
+        meaning: '東西 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'stupid',
         hint: '愚蠢的',
-        meaning: '愚蠢的 adj.'
+        meaning: '愚蠢的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'style',
         hint: '風格',
-        meaning: '風格 N.'
+        meaning: '風格 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'subject',
         hint: '主題',
-        meaning: '主題 N. adj. V.'
+        meaning: '主題 N. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'substance',
         hint: '物質',
-        meaning: '物質 N.'
+        meaning: '物質 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'substitute',
         hint: '代替',
-        meaning: '代替 N. V.'
+        meaning: '代替 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'subtle',
         hint: '微妙的',
-        meaning: '微妙的 adj.'
+        meaning: '微妙的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'succeed',
         hint: '成功',
-        meaning: '成功 V.'
+        meaning: '成功 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'success',
         hint: '成功',
-        meaning: '成功 N.'
+        meaning: '成功 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'such',
         hint: '這樣的',
-        meaning: '這樣的 adj. pron.'
+        meaning: '這樣的 adj. pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sudden',
         hint: '突然的',
-        meaning: '突然的 adj.'
+        meaning: '突然的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'suffer',
         hint: '遭受',
-        meaning: '遭受 V.'
+        meaning: '遭受 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sugar',
         hint: '糖',
-        meaning: '糖 N.'
+        meaning: '糖 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'suggest',
         hint: '建議',
-        meaning: '建議 V.'
+        meaning: '建議 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'suggestion',
         hint: '建議',
-        meaning: '建議 N.'
+        meaning: '建議 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'suit',
         hint: '西裝',
-        meaning: '西裝 N. V.'
+        meaning: '西裝 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sum',
         hint: '總和',
-        meaning: '總和 N.'
+        meaning: '總和 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'summer',
         hint: '夏天',
-        meaning: '夏天 N. adj.'
+        meaning: '夏天 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sun',
         hint: '太陽',
-        meaning: '太陽 N.'
+        meaning: '太陽 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'supper',
         hint: '晚餐',
-        meaning: '晚餐 N.'
+        meaning: '晚餐 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'supply',
         hint: '供應',
-        meaning: '供應 V. N.'
+        meaning: '供應 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'support',
         hint: '支持',
-        meaning: '支持 V. N.'
+        meaning: '支持 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'suppose',
         hint: '假設',
-        meaning: '假設 V.'
+        meaning: '假設 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sure',
         hint: '確定的',
-        meaning: '確定的 adj.'
+        meaning: '確定的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'surface',
         hint: '表面',
-        meaning: '表面 N. V.'
+        meaning: '表面 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'surprise',
         hint: '驚喜',
-        meaning: '驚喜 N. V.'
+        meaning: '驚喜 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'surround',
         hint: '包圍',
-        meaning: '包圍 V.'
+        meaning: '包圍 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'survey',
         hint: '調查',
-        meaning: '調查 N. V.'
+        meaning: '調查 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'survive',
         hint: '生存',
-        meaning: '生存 V.'
+        meaning: '生存 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'suspect',
         hint: '懷疑',
-        meaning: '懷疑 V. N. adj.'
+        meaning: '懷疑 V. N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'suspend',
         hint: '暫停',
-        meaning: '暫停 V.'
+        meaning: '暫停 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'swallow',
         hint: '吞嚥',
-        meaning: '吞嚥 V. N.'
+        meaning: '吞嚥 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'swear',
         hint: '發誓',
-        meaning: '發誓 V.'
+        meaning: '發誓 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sweat',
         hint: '汗',
-        meaning: '汗 N. V.'
+        meaning: '汗 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sweep',
         hint: '掃',
-        meaning: '掃 V. N.'
+        meaning: '掃 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sweet',
         hint: '甜的',
-        meaning: '甜的 adj.'
+        meaning: '甜的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'swim',
         hint: '游泳',
-        meaning: '游泳 V.'
+        meaning: '游泳 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'swing',
         hint: '擺動',
-        meaning: '擺動 V. N.'
+        meaning: '擺動 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'switch',
         hint: '開關',
-        meaning: '開關 N. V.'
+        meaning: '開關 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'symbol',
         hint: '符號',
-        meaning: '符號 N.'
+        meaning: '符號 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'sympathy',
         hint: '同情',
-        meaning: '同情 N.'
+        meaning: '同情 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'system',
         hint: '系統',
-        meaning: '系統 N.'
+        meaning: '系統 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'table',
         hint: '桌子',
-        meaning: '桌子 N.'
+        meaning: '桌子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tackle',
         hint: '處理',
-        meaning: '處理 V. N.'
+        meaning: '處理 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tail',
         hint: '尾巴',
-        meaning: '尾巴 N.'
+        meaning: '尾巴 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'take',
         hint: '拿取',
-        meaning: '拿取 V.'
+        meaning: '拿取 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'talk',
         hint: '談話',
-        meaning: '談話 V. N.'
+        meaning: '談話 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tall',
         hint: '高的',
-        meaning: '高的 adj.'
+        meaning: '高的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tank',
         hint: '槽，坦克',
-        meaning: '槽 N. 坦克 N.'
+        meaning: '槽 N. 坦克 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tap',
         hint: '水龍頭',
-        meaning: '水龍頭 N. 輕拍 V.'
+        meaning: '水龍頭 N. 輕拍 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'target',
         hint: '目標',
-        meaning: '目標 N. V.'
+        meaning: '目標 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'task',
         hint: '任務',
-        meaning: '任務 N.'
+        meaning: '任務 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'taste',
         hint: '味道',
-        meaning: '味道 N. 品嚐 V.'
+        meaning: '味道 N. 品嚐 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tax',
         hint: '稅',
-        meaning: '稅 N. 徵稅 V.'
+        meaning: '稅 N. 徵稅 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tea',
         hint: '茶',
-        meaning: '茶 N.'
+        meaning: '茶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'teach',
         hint: '教',
-        meaning: '教 V.'
+        meaning: '教 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'team',
         hint: '團隊',
-        meaning: '團隊 N.'
+        meaning: '團隊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tear',
         hint: '眼淚，撕裂',
-        meaning: '眼淚 N. 撕裂 V.'
+        meaning: '眼淚 N. 撕裂 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'technical',
         hint: '技術的',
-        meaning: '技術的 adj.'
+        meaning: '技術的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'technology',
         hint: '科技',
-        meaning: '科技 N.'
+        meaning: '科技 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'telephone',
         hint: '電話',
-        meaning: '電話 N. V.'
+        meaning: '電話 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'television',
         hint: '電視',
-        meaning: '電視 N.'
+        meaning: '電視 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tell',
         hint: '告訴',
-        meaning: '告訴 V.'
+        meaning: '告訴 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'temperature',
         hint: '溫度',
-        meaning: '溫度 N.'
+        meaning: '溫度 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'temporary',
         hint: '暫時的',
-        meaning: '暫時的 adj.'
+        meaning: '暫時的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ten',
         hint: '十',
-        meaning: '十 N.'
+        meaning: '十 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tend',
         hint: '傾向',
-        meaning: '傾向 V.'
+        meaning: '傾向 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tennis',
         hint: '網球',
-        meaning: '網球 N.'
+        meaning: '網球 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'term',
         hint: '學期，術語',
-        meaning: '學期 N. 術語 N.'
+        meaning: '學期 N. 術語 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'terrible',
         hint: '糟糕的',
-        meaning: '糟糕的 adj.'
+        meaning: '糟糕的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'test',
         hint: '測驗，測試',
-        meaning: '測驗 N. 測試 N. V.'
+        meaning: '測驗 N. 測試 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'text',
         hint: '文本',
-        meaning: '文本 N.'
+        meaning: '文本 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'than',
         hint: '比',
-        meaning: '比 prep.'
+        meaning: '比 prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'thank',
         hint: '感謝',
-        meaning: '感謝 V.'
+        meaning: '感謝 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'the',
         hint: '定冠詞',
-        meaning: '定冠詞'
+        meaning: '定冠詞',
+        v: 0,
+        new: false,
     },
     {
         word: 'theater',
         hint: '劇場',
-        meaning: '劇場 N.'
+        meaning: '劇場 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'theme',
         hint: '主題',
-        meaning: '主題 N.'
+        meaning: '主題 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'then',
         hint: '然後',
-        meaning: '然後 adv.'
+        meaning: '然後 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'theory',
         hint: '理論',
-        meaning: '理論 N.'
+        meaning: '理論 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'there',
         hint: '那裡',
-        meaning: '那裡 adv.'
+        meaning: '那裡 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'they',
         hint: '他們',
-        meaning: '他們 pron.'
+        meaning: '他們 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'thick',
         hint: '厚的',
-        meaning: '厚的 adj.'
+        meaning: '厚的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'thin',
         hint: '薄的',
-        meaning: '薄的 adj.'
+        meaning: '薄的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'thing',
         hint: '事情',
-        meaning: '事情 N.'
+        meaning: '事情 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'think',
         hint: '想，認為',
-        meaning: '想 V. 認為 V.'
+        meaning: '想 V. 認為 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'third',
         hint: '第三',
-        meaning: '第三 adj. N.'
+        meaning: '第三 adj. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'thirsty',
         hint: '口渴的',
-        meaning: '口渴的 adj.'
+        meaning: '口渴的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'this',
         hint: '這',
-        meaning: '這 pron.'
+        meaning: '這 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'those',
         hint: '那些',
-        meaning: '那些 pron.'
+        meaning: '那些 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'though',
         hint: '雖然',
-        meaning: '雖然 conj. adv.'
+        meaning: '雖然 conj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'thought',
         hint: '思考，想法',
-        meaning: '思考 N. 想法 N.'
+        meaning: '思考 N. 想法 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'thread',
         hint: '線',
-        meaning: '線 N.'
+        meaning: '線 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'threat',
         hint: '威脅',
-        meaning: '威脅 N.'
+        meaning: '威脅 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'three',
         hint: '三',
-        meaning: '三 N.'
+        meaning: '三 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'thrill',
         hint: '興奮',
-        meaning: '興奮 N. V.'
+        meaning: '興奮 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'through',
         hint: '透過',
-        meaning: '透過 prep. adv.'
+        meaning: '透過 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'throw',
         hint: '丟',
-        meaning: '丟 V.'
+        meaning: '丟 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'throw',
         hint: '丟',
-        meaning: '丟 V.'
+        meaning: '丟 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'thumb',
         hint: '拇指',
-        meaning: '拇指 N.'
+        meaning: '拇指 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'thunder',
         hint: '雷聲',
-        meaning: '雷聲 N. V.'
+        meaning: '雷聲 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'Thursday',
         hint: '星期四',
-        meaning: '星期四 N.'
+        meaning: '星期四 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ticket',
         hint: '票',
-        meaning: '票 N.'
+        meaning: '票 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tide',
         hint: '潮汐',
-        meaning: '潮汐 N.'
+        meaning: '潮汐 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tie',
         hint: '綁，領帶',
-        meaning: '綁 V. 領帶 N.'
+        meaning: '綁 V. 領帶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tight',
         hint: '緊的',
-        meaning: '緊的 adj.'
+        meaning: '緊的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'till',
         hint: '直到',
-        meaning: '直到 conj. prep.'
+        meaning: '直到 conj. prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'time',
         hint: '時間，次數',
-        meaning: '時間 N. 次數 N.'
+        meaning: '時間 N. 次數 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tin',
         hint: '罐頭',
-        meaning: '罐頭 N.'
+        meaning: '罐頭 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tiny',
         hint: '極小的',
-        meaning: '極小的 adj.'
+        meaning: '極小的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tip',
         hint: '尖端，小費',
-        meaning: '尖端 N. 小費 N. V.'
+        meaning: '尖端 N. 小費 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tire',
         hint: '輪胎，疲勞',
-        meaning: '輪胎 N. 疲勞 V.'
+        meaning: '輪胎 N. 疲勞 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'title',
         hint: '標題',
-        meaning: '標題 N.'
+        meaning: '標題 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'today',
         hint: '今天',
-        meaning: '今天 adv. n.'
+        meaning: '今天 adv. n.',
+        v: 0,
+        new: false,
     },
     {
         word: 'toe',
         hint: '腳趾',
-        meaning: '腳趾 N.'
+        meaning: '腳趾 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'together',
         hint: '一起',
-        meaning: '一起 adv.'
+        meaning: '一起 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'toilet',
         hint: '馬桶',
-        meaning: '馬桶 N.'
+        meaning: '馬桶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tomorrow',
         hint: '明天',
-        meaning: '明天 adv. n.'
+        meaning: '明天 adv. n.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tongue',
         hint: '舌頭，語言',
-        meaning: '舌頭 N. 語言 N.'
+        meaning: '舌頭 N. 語言 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tonight',
         hint: '今晚',
-        meaning: '今晚 adv. n.'
+        meaning: '今晚 adv. n.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tool',
         hint: '工具',
-        meaning: '工具 N.'
+        meaning: '工具 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tooth',
         hint: '牙齒',
-        meaning: '牙齒 N.'
+        meaning: '牙齒 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'top',
         hint: '頂部，最高點',
-        meaning: '頂部 N. 最高點 N. adj. V.'
+        meaning: '頂部 N. 最高點 N. adj. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'topic',
         hint: '主題',
-        meaning: '主題 N.'
+        meaning: '主題 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'total',
         hint: '總數',
-        meaning: '總數 adj. N. V.'
+        meaning: '總數 adj. N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'touch',
         hint: '觸摸，感動',
-        meaning: '觸摸 V. 感動 N. V.'
+        meaning: '觸摸 V. 感動 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tough',
         hint: '困難的，堅韌的',
-        meaning: '困難的 adj. 堅韌的 adj.'
+        meaning: '困難的 adj. 堅韌的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tour',
         hint: '旅遊，巡迴',
-        meaning: '旅遊 N. 巡迴 N. V.'
+        meaning: '旅遊 N. 巡迴 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'toward',
         hint: '朝著',
-        meaning: '朝著 prep. adv.' // 耶 一萬行 😎✌️
+        meaning: '朝著 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tower',
         hint: '塔樓',
-        meaning: '塔樓 N.'
+        meaning: '塔樓 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'town',
         hint: '城鎮',
-        meaning: '城鎮 N.'
+        meaning: '城鎮 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'toy',
         hint: '玩具',
-        meaning: '玩具 N.'
+        meaning: '玩具 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'track',
         hint: '軌道，足跡',
-        meaning: '軌道 N. 足跡 N. V.'
+        meaning: '軌道 N. 足跡 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'trade',
         hint: '貿易，交易',
-        meaning: '貿易 N. 交易 N. V.'
+        meaning: '貿易 N. 交易 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'traffic',
         hint: '交通',
-        meaning: '交通 N.'
+        meaning: '交通 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'train',
         hint: '火車，訓練',
-        meaning: '火車 N. 訓練 N. V.'
+        meaning: '火車 N. 訓練 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'translate',
         hint: '翻譯',
-        meaning: '翻譯 V.'
+        meaning: '翻譯 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'transport',
         hint: '運輸',
-        meaning: '運輸 N. V.'
+        meaning: '運輸 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'trap',
         hint: '陷阱',
-        meaning: '陷阱 N. V.'
+        meaning: '陷阱 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'travel',
         hint: '旅行',
-        meaning: '旅行 N. V.'
+        meaning: '旅行 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'treat',
         hint: '對待，治療',
-        meaning: '對待 V. 治療 V. N.'
+        meaning: '對待 V. 治療 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tree',
         hint: '樹',
-        meaning: '樹 N.'
+        meaning: '樹 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'trip',
         hint: '旅行，絆倒',
-        meaning: '旅行 N. 絆倒 V.'
+        meaning: '旅行 N. 絆倒 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'trouble',
         hint: '麻煩，困擾',
-        meaning: '麻煩 N. 困擾 N. V.'
+        meaning: '麻煩 N. 困擾 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'true',
         hint: '真實的，正確的',
-        meaning: '真實的 adj. 正確的 adj.'
+        meaning: '真實的 adj. 正確的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'trust',
         hint: '信任，信賴',
-        meaning: '信任 N. 信賴 N. V.'
+        meaning: '信任 N. 信賴 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'truth',
         hint: '真相',
-        meaning: '真相 N.'
+        meaning: '真相 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'try',
         hint: '嘗試',
-        meaning: '嘗試 V. N.'
+        meaning: '嘗試 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tube',
         hint: '管，地鐵',
-        meaning: '管 N. 地鐵 N.'
+        meaning: '管 N. 地鐵 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'tune',
         hint: '曲調',
-        meaning: '曲調 N. V.'
+        meaning: '曲調 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'turn',
         hint: '轉動，輪流',
-        meaning: '轉動 V. 輪流 N.'
+        meaning: '轉動 V. 輪流 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'twist',
         hint: '扭轉，轉折',
-        meaning: '扭轉 V. 轉折 N.'
+        meaning: '扭轉 V. 轉折 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'two',
         hint: '二',
-        meaning: '二 N.'
+        meaning: '二 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'type',
         hint: '類型，打字',
-        meaning: '類型 N. 打字 V.'
+        meaning: '類型 N. 打字 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'typical',
         hint: '典型的',
-        meaning: '典型的 adj.'
+        meaning: '典型的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'ugly',
         hint: '醜陋的',
-        meaning: '醜陋的 adj.'
+        meaning: '醜陋的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'umbrella',
         hint: '雨傘',
-        meaning: '雨傘 N.'
+        meaning: '雨傘 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'uncle',
         hint: '叔叔，舅舅',
-        meaning: '叔叔 N. 舅舅 N.'
+        meaning: '叔叔 N. 舅舅 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'under',
         hint: '在...下面',
-        meaning: '在...下面 prep. adv.'
+        meaning: '在...下面 prep. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'understand',
         hint: '理解',
-        meaning: '理解 V.'
+        meaning: '理解 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'unit',
         hint: '單位',
-        meaning: '單位 N.'
+        meaning: '單位 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'universe',
         hint: '宇宙',
-        meaning: '宇宙 N.'
+        meaning: '宇宙 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'university',
         hint: '大學',
-        meaning: '大學 N.'
+        meaning: '大學 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'unless',
         hint: '除非',
-        meaning: '除非 conj.'
+        meaning: '除非 conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'until',
         hint: '直到',
-        meaning: '直到 prep. conj.'
+        meaning: '直到 prep. conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'up',
         hint: '向上，高興',
-        meaning: '向上 adv. 高興 adj.'
+        meaning: '向上 adv. 高興 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'upon',
         hint: '在...之上',
-        meaning: '在...之上 prep.'
+        meaning: '在...之上 prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'upper',
         hint: '上面的，較高的',
-        meaning: '上面的 adj. 較高的 adj.'
+        meaning: '上面的 adj. 較高的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'upset',
         hint: '不安的，翻覆',
-        meaning: '不安的 adj. 翻覆 V.'
+        meaning: '不安的 adj. 翻覆 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'urban',
         hint: '都市的',
-        meaning: '都市的 adj.'
+        meaning: '都市的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'urge',
         hint: '衝動，力勸',
-        meaning: '衝動 N. 力勸 V.'
+        meaning: '衝動 N. 力勸 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'urgent',
         hint: '緊急的',
-        meaning: '緊急的 adj.'
+        meaning: '緊急的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'us',
         hint: '我們',
-        meaning: '我們 pron.'
+        meaning: '我們 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'use',
         hint: '使用',
-        meaning: '使用 N. V.'
+        meaning: '使用 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'usual',
         hint: '通常的',
-        meaning: '通常的 adj.'
+        meaning: '通常的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'valley',
         hint: '山谷',
-        meaning: '山谷 N.'
+        meaning: '山谷 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'valuable',
         hint: '有價值的',
-        meaning: '有價值的 adj.'
+        meaning: '有價值的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'value',
         hint: '價值',
-        meaning: '價值 N. V.'
+        meaning: '價值 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'van',
         hint: '貨車，房車',
-        meaning: '貨車 N. 房車 N.'
+        meaning: '貨車 N. 房車 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'vapor',
         hint: '蒸氣',
-        meaning: '蒸氣 N.'
+        meaning: '蒸氣 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'variety',
         hint: '多樣性',
-        meaning: '多樣性 N.'
+        meaning: '多樣性 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'various',
         hint: '各種各樣的',
-        meaning: '各種各樣的 adj.'
+        meaning: '各種各樣的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'vast',
         hint: '廣大的',
-        meaning: '廣大的 adj.'
+        meaning: '廣大的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'vegetable',
         hint: '蔬菜',
-        meaning: '蔬菜 N.'
+        meaning: '蔬菜 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'vehicle',
         hint: '交通工具',
-        meaning: '交通工具 N.'
+        meaning: '交通工具 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'venture',
         hint: '冒險，冒險活動',
-        meaning: '冒險 N. 冒險活動 N. V.'
+        meaning: '冒險 N. 冒險活動 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'version',
         hint: '版本',
-        meaning: '版本 N.'
+        meaning: '版本 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'very',
         hint: '非常，完全',
-        meaning: '非常 adv. 完全 adv.'
+        meaning: '非常 adv. 完全 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'vessel',
         hint: '船舶，器皿',
-        meaning: '船舶 N. 器皿 N.'
+        meaning: '船舶 N. 器皿 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'veteran',
         hint: '老兵，經驗豐富的人',
-        meaning: '老兵 N. 經驗豐富的人 adj.'
+        meaning: '老兵 N. 經驗豐富的人 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'victim',
         hint: '受害者',
-        meaning: '受害者 N.'
+        meaning: '受害者 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'victory',
         hint: '勝利',
-        meaning: '勝利 N.'
+        meaning: '勝利 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'video',
         hint: '影片',
-        meaning: '影片 N.'
+        meaning: '影片 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'view',
         hint: '看法，視圖',
-        meaning: '看法 N. 視圖 N. V.'
+        meaning: '看法 N. 視圖 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'village',
         hint: '村莊',
-        meaning: '村莊 N.'
+        meaning: '村莊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'violence',
         hint: '暴力',
-        meaning: '暴力 N.'
+        meaning: '暴力 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'violent',
         hint: '兇猛的，暴力的',
-        meaning: '兇猛的 adj. 暴力的 adj.'
+        meaning: '兇猛的 adj. 暴力的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'virtue',
         hint: '美德',
-        meaning: '美德 N.'
+        meaning: '美德 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'virus',
         hint: '病毒',
-        meaning: '病毒 N.'
+        meaning: '病毒 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'visible',
         hint: '可見的',
-        meaning: '可見的 adj.'
+        meaning: '可見的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'visit',
         hint: '拜訪，參觀',
-        meaning: '拜訪 V. 參觀 N. V.'
+        meaning: '拜訪 V. 參觀 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'visual',
         hint: '視覺的',
-        meaning: '視覺的 adj.'
+        meaning: '視覺的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'vital',
         hint: '重要的，生死攸關的',
-        meaning: '重要的 adj. 生死攸關的 adj.'
+        meaning: '重要的 adj. 生死攸關的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'voice',
         hint: '聲音，發聲',
-        meaning: '聲音 N. 發聲 V.'
+        meaning: '聲音 N. 發聲 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'volume',
         hint: '音量，冊',
-        meaning: '音量 N. 冊 N.'
+        meaning: '音量 N. 冊 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'volunteer',
         hint: '志願者，自願',
-        meaning: '志願者 N. 自願 V. adj.'
+        meaning: '志願者 N. 自願 V. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'vote',
         hint: '投票，選舉',
-        meaning: '投票 N. 選舉 N. V.'
+        meaning: '投票 N. 選舉 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'vowel',
         hint: '母音',
-        meaning: '母音 N.'
+        meaning: '母音 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'voyage',
         hint: '航行，航海',
-        meaning: '航行 N. 航海 N. V.'
+        meaning: '航行 N. 航海 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wage',
         hint: '工資',
-        meaning: '工資 N.'
+        meaning: '工資 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wagon',
         hint: '四輪運貨馬車',
-        meaning: '四輪運貨馬車 N.'
+        meaning: '四輪運貨馬車 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wait',
         hint: '等待，等候',
-        meaning: '等待 V. 等候 N.'
+        meaning: '等待 V. 等候 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wake',
         hint: '醒來，喚醒',
-        meaning: '醒來 V. 喚醒 V. N.'
+        meaning: '醒來 V. 喚醒 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'walk',
         hint: '步行，散步',
-        meaning: '步行 V. 散步 N.'
+        meaning: '步行 V. 散步 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wall',
         hint: '牆',
-        meaning: '牆 N.'
+        meaning: '牆 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wander',
         hint: '漫遊，徘徊',
-        meaning: '漫遊 V. 徘徊 V.'
+        meaning: '漫遊 V. 徘徊 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'want',
         hint: '想要，渴望',
-        meaning: '想要 V. 渴望 V. N.'
+        meaning: '想要 V. 渴望 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'war',
         hint: '戰爭',
-        meaning: '戰爭 N.'
+        meaning: '戰爭 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'warm',
         hint: '溫暖的，使暖和',
-        meaning: '溫暖的 adj. 使暖和 V.'
+        meaning: '溫暖的 adj. 使暖和 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'warn',
         hint: '警告，告誡',
-        meaning: '警告 V. 告誡 V.'
+        meaning: '警告 V. 告誡 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wash',
         hint: '洗，清洗',
-        meaning: '洗 V. 清洗 V. N.'
+        meaning: '洗 V. 清洗 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'waste',
         hint: '浪費，廢物',
-        meaning: '浪費 V. 廢物 N.'
+        meaning: '浪費 V. 廢物 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'watch',
         hint: '觀看，手錶',
-        meaning: '觀看 V. 手錶 N.'
+        meaning: '觀看 V. 手錶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'water',
         hint: '水，澆水',
-        meaning: '水 N. 澆水 V.'
+        meaning: '水 N. 澆水 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wave',
         hint: '波浪，揮手',
-        meaning: '波浪 N. 揮手 V.'
+        meaning: '波浪 N. 揮手 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'way',
         hint: '方式，道路',
-        meaning: '方式 N. 道路 N.'
+        meaning: '方式 N. 道路 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'weak',
         hint: '虛弱的',
-        meaning: '虛弱的 adj.'
+        meaning: '虛弱的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wealth',
         hint: '財富',
-        meaning: '財富 N.'
+        meaning: '財富 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'weapon',
         hint: '武器',
-        meaning: '武器 N.'
+        meaning: '武器 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wear',
         hint: '穿著，磨損',
-        meaning: '穿著 V. 磨損 V.'
+        meaning: '穿著 V. 磨損 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'weather',
         hint: '天氣',
-        meaning: '天氣 N.'
+        meaning: '天氣 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'weave',
         hint: '編織，編織物',
-        meaning: '編織 V. 編織物 N.'
+        meaning: '編織 V. 編織物 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'web',
         hint: '網，網狀結構',
-        meaning: '網 N. 網狀結構 N.'
+        meaning: '網 N. 網狀結構 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'week',
         hint: '星期，週',
-        meaning: '星期 N. 週 N.'
+        meaning: '星期 N. 週 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'weigh',
         hint: '稱重，掂量',
-        meaning: '稱重 V. 掂量 V.'
+        meaning: '稱重 V. 掂量 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'welcome',
         hint: '歡迎，受歡迎的',
-        meaning: '歡迎 V. 受歡迎的 adj.'
+        meaning: '歡迎 V. 受歡迎的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'well',
         hint: '好，井',
-        meaning: '好 adj. 井 N. adv.'
+        meaning: '好 adj. 井 N. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'west',
         hint: '西方，西部',
-        meaning: '西方 N. 西部 N.'
+        meaning: '西方 N. 西部 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wet',
         hint: '濕的，弄濕',
-        meaning: '濕的 adj. 弄濕 V.'
+        meaning: '濕的 adj. 弄濕 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'whale',
         hint: '鯨魚',
-        meaning: '鯨魚 N.'
+        meaning: '鯨魚 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'what',
         hint: '什麼',
-        meaning: '什麼 pron.'
+        meaning: '什麼 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wheat',
         hint: '小麥',
-        meaning: '小麥 N.'
+        meaning: '小麥 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wheel',
         hint: '輪子',
-        meaning: '輪子 N.'
+        meaning: '輪子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'when',
         hint: '何時',
-        meaning: '何時 adv. conj.'
+        meaning: '何時 adv. conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'where',
         hint: '哪裡',
-        meaning: '哪裡 adv.'
+        meaning: '哪裡 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'whether',
         hint: '是否',
-        meaning: '是否 conj.'
+        meaning: '是否 conj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'which',
         hint: '哪一個',
-        meaning: '哪一個 pron.'
+        meaning: '哪一個 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'while',
         hint: '當...的時候，一會兒',
-        meaning: '當...的時候 conj. 一會兒 n.'
+        meaning: '當...的時候 conj. 一會兒 n.',
+        v: 0,
+        new: false,
     },
     {
         word: 'whisper',
         hint: '耳語，低語',
-        meaning: '耳語 N. 低語 V.'
+        meaning: '耳語 N. 低語 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'white',
         hint: '白色',
-        meaning: '白色 adj. n.'
+        meaning: '白色 adj. n.',
+        v: 0,
+        new: false,
     },
     {
         word: 'who',
         hint: '誰',
-        meaning: '誰 pron.'
+        meaning: '誰 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'whole',
         hint: '整個，全部的',
-        meaning: '整個 adj. 全部的 adj.'
+        meaning: '整個 adj. 全部的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'why',
         hint: '為什麼',
-        meaning: '為什麼 adv.'
+        meaning: '為什麼 adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wide',
         hint: '寬的，廣泛的',
-        meaning: '寬的 adj. 廣泛的 adj.'
+        meaning: '寬的 adj. 廣泛的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wife',
         hint: '妻子',
-        meaning: '妻子 N.'
+        meaning: '妻子 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wild',
         hint: '野生的，狂野的',
-        meaning: '野生的 adj. 狂野的 adj.'
+        meaning: '野生的 adj. 狂野的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'will',
         hint: '意志，將要',
-        meaning: '意志 N. 將要 aux. v.'
+        meaning: '意志 N. 將要 aux. v.',
+        v: 0,
+        new: false,
     },
     {
         word: 'win',
         hint: '贏得，獲勝',
-        meaning: '贏得 V. 獲勝 V.'
+        meaning: '贏得 V. 獲勝 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wind',
         hint: '風，轉動',
-        meaning: '風 N. 轉動 V.'
+        meaning: '風 N. 轉動 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'window',
         hint: '窗戶',
-        meaning: '窗戶 N.'
+        meaning: '窗戶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wine',
         hint: '葡萄酒',
-        meaning: '葡萄酒 N.'
+        meaning: '葡萄酒 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wing',
         hint: '翅膀',
-        meaning: '翅膀 N.'
+        meaning: '翅膀 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'winter',
         hint: '冬天',
-        meaning: '冬天 N.'
+        meaning: '冬天 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wire',
         hint: '金屬線，電線',
-        meaning: '金屬線 N. 電線 N.'
+        meaning: '金屬線 N. 電線 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wise',
         hint: '聰明的，明智的',
-        meaning: '聰明的 adj. 明智的 adj.'
+        meaning: '聰明的 adj. 明智的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wish',
         hint: '希望，祝愿',
-        meaning: '希望 V. 祝愿 N.'
+        meaning: '希望 V. 祝愿 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'with',
         hint: '與...一起，用',
-        meaning: '與...一起 prep. 用 prep.'
+        meaning: '與...一起 prep. 用 prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'withdraw',
         hint: '撤回，提款',
-        meaning: '撤回 V. 提款 V.'
+        meaning: '撤回 V. 提款 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'within',
         hint: '在...之內',
-        meaning: '在...之內 prep.'
+        meaning: '在...之內 prep.',
+        v: 0,
+        new: false,
     },
     {
         word: 'without',
         hint: '沒有，無',
-        meaning: '沒有 prep. conj. adv.'
+        meaning: '沒有 prep. conj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'witness',
         hint: '目擊者，見證',
-        meaning: '目擊者 N. 見證 V. N.'
+        meaning: '目擊者 N. 見證 V. N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wolf',
         hint: '狼',
-        meaning: '狼 N.'
+        meaning: '狼 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'woman',
         hint: '女人',
-        meaning: '女人 N.'
+        meaning: '女人 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wonder',
         hint: '驚奇，好奇',
-        meaning: '驚奇 N. V. 好奇 N. V.'
+        meaning: '驚奇 N. V. 好奇 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wood',
         hint: '木頭',
-        meaning: '木頭 N.'
+        meaning: '木頭 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wool',
         hint: '羊毛',
-        meaning: '羊毛 N.'
+        meaning: '羊毛 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'word',
         hint: '單詞，言語',
-        meaning: '單詞 N. 言語 N.'
+        meaning: '單詞 N. 言語 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'work',
         hint: '工作，操作',
-        meaning: '工作 N. V. 操作 N. V.'
+        meaning: '工作 N. V. 操作 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'world',
         hint: '世界',
-        meaning: '世界 N.'
+        meaning: '世界 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'worry',
         hint: '擔心，煩惱',
-        meaning: '擔心 V. 煩惱 N. V.'
+        meaning: '擔心 V. 煩惱 N. V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'worth',
         hint: '價值，值得的',
-        meaning: '價值 N. 值得的 adj.'
+        meaning: '價值 N. 值得的 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wrap',
         hint: '包裹，裹住',
-        meaning: '包裹 V. 裹住 V.'
+        meaning: '包裹 V. 裹住 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wrist',
         hint: '手腕',
-        meaning: '手腕 N.'
+        meaning: '手腕 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'write',
         hint: '寫，撰寫',
-        meaning: '寫 V. 撰寫 V.'
+        meaning: '寫 V. 撰寫 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'wrong',
         hint: '錯誤的，不正確',
-        meaning: '錯誤的 adj. 不正確 adj.'
+        meaning: '錯誤的 adj. 不正確 adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'yard',
         hint: '院子，碼',
-        meaning: '院子 N. 碼 N.'
+        meaning: '院子 N. 碼 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'year',
         hint: '年',
-        meaning: '年 N.'
+        meaning: '年 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'yellow',
         hint: '黃色',
-        meaning: '黃色 adj. n.'
+        meaning: '黃色 adj. n.',
+        v: 0,
+        new: false,
     },
     {
         word: 'yes',
         hint: '是，同意',
-        meaning: '是 adv. 同意 interj.'
+        meaning: '是 adv. 同意 interj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'yesterday',
         hint: '昨天',
-        meaning: '昨天 adv. n.'
+        meaning: '昨天 adv. n.',
+        v: 0,
+        new: false,
     },
     {
         word: 'yet',
         hint: '但是，然而',
-        meaning: '但是 conj. adv.'
+        meaning: '但是 conj. adv.',
+        v: 0,
+        new: false,
     },
     {
         word: 'yield',
         hint: '產量，屈服',
-        meaning: '產量 N. 屈服 V.'
+        meaning: '產量 N. 屈服 V.',
+        v: 0,
+        new: false,
     },
     {
         word: 'you',
         hint: '你，你們',
-        meaning: '你 pron. 你們 pron.'
+        meaning: '你 pron. 你們 pron.',
+        v: 0,
+        new: false,
     },
     {
         word: 'young',
         hint: '年輕的，年輕人',
-        meaning: '年輕的 adj. 年輕人 n.'
+        meaning: '年輕的 adj. 年輕人 n.',
+        v: 0,
+        new: false,
     },
     {
         word: 'youth',
         hint: '青少年，年輕',
-        meaning: '青少年 n. 年輕 n.'
+        meaning: '青少年 n. 年輕 n.',
+        v: 0,
+        new: false,
     },
     {
         word: 'zero',
         hint: '零',
-        meaning: '零 N. adj.'
+        meaning: '零 N. adj.',
+        v: 0,
+        new: false,
     },
     {
         word: 'zone',
         hint: '區域，地帶',
-        meaning: '區域 N. 地帶 N.'
+        meaning: '區域 N. 地帶 N.',
+        v: 0,
+        new: false,
     },
     {
         word: 'zoo',
         hint: '動物園',
-        meaning: '動物園 N.'
+        meaning: '動物園 N.',
+        v: 0,
+        new: false,
     }
 ]
 

@@ -69,7 +69,9 @@ const bossGetRandomWord = () => {
 }
 
 const endFight = () => {
+    if(isGameOver) return
     isGameOver = true
+    document.head.querySelectorAll('meta')[2].content = 'width=device-width, initial-scale=1'
     vocab = oVocab
     vocabAmount = 0
     canvas.width = 0

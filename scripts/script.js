@@ -6,8 +6,9 @@ let hiStreak = 0
 if($.jStorage.get('hiStreak')) hiStreak = $.jStorage.get('hiStreak')
 document.querySelector('.hi-streak').innerText = '最高連勝紀錄: ' + hiStreak
 let rmv = 255
-const pngAmount = 2
+const pngAmount = 3
 const gifAmount = 2
+let giveAmount = 10
 let autosaveText = '每10秒自動儲存'
 const keyboardDiv = document.querySelector(".keyboard");
 const worddisplayDiv = document.querySelector('.word-display')
@@ -21,10 +22,19 @@ let currentWord, wordmeaning, correctLetters, wrongGuessCount
 const maxGuesses = 6
 let vocabAmount = 0
 let oVocab = vocab
+let sd = document.getElementById('sparkles')
 document.querySelector('.info li b#via').innerText = vocab.length
 if ($.jStorage.get('vocabAmount')) vocabAmount = $.jStorage.get('vocabAmount')
 if ($.jStorage.get('vocab')) vocab = $.jStorage.get('vocab')
+if (!$.jStorage.get('sparkles')) $.jStorage.set('sparkles', vocabAmount * 10)
+sd.innerText = $.jStorage.get('sparkles')
 
+if($.jStorage.get('loginStreak') >= 365) giveAmount = giveAmount * 999
+else if($.jStorage.get('loginStreak') >= 100) giveAmount = giveAmount * 10
+else if($.jStorage.get('loginStreak') >= 30) giveAmount = giveAmount * 5
+else if($.jStorage.get('loginStreak') >= 15) giveAmount = giveAmount * 4
+else if($.jStorage.get('loginStreak') >= 10) giveAmount = giveAmount * 3
+else if($.jStorage.get('loginStreak') >= 5) giveAmount = giveAmount * 2
 
 const toggleflash = () => {
     if (rmv === 255) {
@@ -37,6 +47,23 @@ const toggleflash = () => {
         document.getElementById('tfl2').innerText = '關閉閃爍'
     }
 }
+
+oVocab.forEach(word => {
+    if(!vocab.find(a => a.word === word.word)) console.log('skip')
+    else if(word.v !== vocab.find(a => a.word === word.word).v && word.word === vocab.find(a => a.word === word.word).word) {
+        const newArray = []
+        for (let bi = 0; bi < vocab.length; bi++) {
+            if (vocab[bi].word !== word.word) {
+                newArray.push(vocab[bi])
+            }
+        }
+        vocab = newArray
+        vocab.push(word)
+    }
+    if(word.new) {
+        vocab.push(word)
+    }
+})
 
 const removeWord = (wordToRemove) => {
     const newArray = []
@@ -144,6 +171,7 @@ let modalText, gameOverStatus
 const gameOver = (isVictory) => {
     if (isVictory) {
         giveAch('won')
+        giveSparkles(giveAmount + winStreak)
         checkStreak()
         vocab = removeWord(currentWord)
         sfx('../sfx/yay.mp3')
@@ -226,10 +254,15 @@ const initGame = (button, clickedLetter) => {
 }
 
 for (let i = 97; i <= 122; i++) {
+    let ib = i
+    if(new Date().getDate() === 1 && new Date().getMonth() + 1 === 4) {
+        ib++
+        if(ib > 122) ib = 97
+    }
     const button = document.createElement("button")
-    button.innerText = String.fromCharCode(i)
+    button.innerText = String.fromCharCode(ib)
     keyboardDiv.appendChild(button)
-    button.addEventListener('click', e => initGame(e.target, String.fromCharCode(i)))
+    button.addEventListener('click', e => initGame(e.target, String.fromCharCode(ib)))
 }
 
 pab.addEventListener('click', getRandomWord);
@@ -250,3 +283,6 @@ document.querySelector('.hangman-box img').addEventListener('click', () => {
         interval = setInterval(fun, is)
     }
 })
+if(new Date().getDate() === 1 && new Date().getMonth() + 1 === 4) {
+    giveAch('af')
+}

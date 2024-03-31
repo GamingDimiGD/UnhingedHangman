@@ -36,7 +36,7 @@ body {
 }
 
 .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     background: #00ff00;
     width: 100%;
@@ -46,6 +46,7 @@ body {
     padding: 1rem;
     color: #003c00;
     max-height: 50px;
+    z-index: 2;
 }
 
 .navbar li {
@@ -77,9 +78,11 @@ body {
     transition: background 3s ease;
 }
 .hangman-box img {
-    max-width: 270px;
+    width: 270px;
+    height: 270px;
     border-radius: 5px;
     border: 3px solid #003c00;
+    background: #fff;
 }
 .hangman-box h1 {
     font-size: 1.45rem;
@@ -128,7 +131,9 @@ body {
     margin-top: 40px;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 495px;
 }
+
 :where(.game-modal, .keyboard) button {
     color: #fff;
     font-size: 1rem;
@@ -139,6 +144,10 @@ body {
     background: #003c00;
     border-radius: 4px;
     text-transform: uppercase;
+}
+
+.keyboard button {
+    border: 3px solid #0f0;
 }
 
 .qwerty {
@@ -193,22 +202,6 @@ button[disabled] {
     background: #0f0;
 }
 
-.game-modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    background: #000000a0;
-    transition: opacity 0.5s ease;
-    display: flex;
-}
-
 .game-modal .content {
     background: #fff;
     max-width: 420px;
@@ -248,30 +241,26 @@ button[disabled] {
     color: #0f0;
 }
 
-.toggle {
-    display: none;
-}
-
 .dropdown a {
     color: red;
     text-decoration: none;
 }
 
 .dropdown {
-    position: absolute;
+    position: fixed;
     right: 1rem;
-    top: 60px;
     background: #003c003c;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    transition: height 0.2s ease;
+    transition: top 0.4s ease;
     flex-direction: column;
-    height: 0;
+    top: -100%;
+    z-index: 0;
 }
 
 .dropdown.open {
-    height: auto;
+    top: 60px;
 }
 
 .dropbut {
@@ -283,9 +272,8 @@ button[disabled] {
     margin: 7px 4px;
 }
 
-.game-modal.show {
-    opacity: 1;
-    pointer-events: auto;
+.navbut {
+    display: none;
 }
 
 @media (max-width: 726px) {
@@ -301,7 +289,8 @@ button[disabled] {
         align-items: center;
     }
     .hangman-box img {
-        max-width: 200px;
+        width: 200px;
+        height: 200px;
     }
     .hangman-box h1 {
         display: none;
@@ -316,6 +305,10 @@ button[disabled] {
         padding: 2px;
         padding-left: 7px;
         padding-right: 7px;
+        color: white;
+    }
+    .info li {
+        color: white;
     }
     .navbar audio {
         display: none;
@@ -345,8 +338,8 @@ button[disabled] {
     font-size: 190px;
 }
 
-@media (max-width: 1100px) {
-    .navbar audio {
+@media (max-width: 548px) {
+    .navbar h1 {
         display: none;
     }
 }
@@ -410,22 +403,7 @@ button[disabled] {
     bottom: 20px;
     right: 20px;
     padding: 7px 10px;
-}
-
-.achievements-modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 999;
-    align-items: center;
-    justify-content: center;
-    background: #000000a0;
-    transition: opacity 0.5s ease;
-    display: flex;
+    display: none;
 }
 
 .achievements-modal .content {
@@ -437,6 +415,9 @@ button[disabled] {
     padding: 30px;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    margin: 5px;
+    
 }
 
 .achievements-modal button {
@@ -444,10 +425,6 @@ button[disabled] {
     background-color: #003c00;
     border-radius: 7px;
     color: #0f0;
-}
-
-.achievements-modal.show {
-    opacity: 1;
 }
 
 .achievements-modal .content li {
@@ -464,7 +441,7 @@ button[disabled] {
 }
 
 .notification {
-    position: absolute;
+    position: fixed;
     display: flex;
     bottom: 20px;
     justify-content: center;
@@ -478,4 +455,131 @@ button[disabled] {
     border-radius: 4px;
     transition: opacity 1.5s ease;
     opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 999;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    background: #000000a0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-modal.show {
+    pointer-events: auto;
+}
+.shop-modal .content {
+    background: #fff;
+    max-width: 550px;
+    margin: 5px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    pointer-events: none;
+}
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal.show .content {
+    pointer-events: auto;
+}
+.shop-modal .content .stuff {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.shop-modal .content .stuff div {
+    background: #003c003c;
+    width: calc(100% / 3 - 5px);
+    padding: 5px;
+    border-radius: 4px;
+}
+.daily-login {
+    flex-direction: column;
+}
+.daily-login button {
+    padding: 5px 10px;
+}
+.daily-login .content {
+    background: #fff;
+    max-width: 550px;
+    max-height: 300px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    pointer-events: none;
+}
+.daily-login .content .perks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+.daily-login .content .perks div {
+    background: #003c003c;
+    width: calc(100% / 3 - 5px);
+    min-width: 110px;
+    padding: 5px;
+    border-radius: 4px;
+    height: 150px;
+}
+.perks div img {
+    width: 100%;
+}
+
+.container.transparent {
+    background: #ffffff3c;
+}
+.modal button {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+.game-modal button {
+    padding: 12px 23px;
+}
+.update-modal .content {
+    background: #fff;
+    max-width: 550px;
+    max-height: 60%;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    pointer-events: none;
+}
+.content {
+    background: #fff;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-718.105px, -630px);
+    }
 }

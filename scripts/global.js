@@ -1,4 +1,4 @@
-let version = 'RELEASE v1.0.1'
+let version = 'v1.1.0'
 let bossFightBadge = false
 document.querySelectorAll('.version').forEach(e => e.innerText = version)
 let bossFightMode = false

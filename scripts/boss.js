@@ -174,6 +174,10 @@ const update = () => {
     if(isGameOver) return
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
+    if(window.innerWidth < 726) {
+        document.head.querySelectorAll('meta')[2].content = 'width=device-width, initial-scale=0.75'
+        document.querySelector('.hangman-box').style.display = 'none'
+    }
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     x += vxr
     x += vxl
@@ -185,6 +189,7 @@ const update = () => {
     if (y < 0) y = 0
     if (deg < 0) deg = (deg + 360) % 360
     ctx.fillStyle = '#0f0'
+    if(funMode) ctx.fillStyle = `rgb(${rng(rmv)}, ${rng(rmv)}, ${rng(rmv)}`
     if (ifi > 0) {
         ifi--
         if (ifi % 2 === 0) ctx.fillStyle = '#f00'
@@ -261,6 +266,7 @@ const update = () => {
             b.x -= b.speed
             b.y -= b.speed
         }
+        if(funMode && rmv !== 0) ctx.fillStyle = `rgb(${rng(rmv)}, ${rng(rmv)}, ${rng(rmv)}`
         ctx.fillRect(b.x, b.y, b.width, b.height)
         if (lbossFightMode && x + 70 > b.x && x <= b.x + b.width && y + 70 > b.y && y <= b.y + b.height) {
             console.log('colliding')
@@ -441,6 +447,7 @@ const bossReady = () => {
         $.jStorage.set('bossFightMode', true)
         showHealthBars()
         music.src = '../sfx/nighthawk-Isolation.mp3'
+        if(funMode) music.src = '../sfx/speedofpaul.mp3'
         music.play()
         fight()
     }, 30000)
