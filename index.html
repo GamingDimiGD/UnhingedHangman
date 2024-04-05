@@ -14,7 +14,7 @@
         <script src="scripts/glitch.js" defer></script>
         <script src="scripts/web.js" defer></script>
 
-        <link rel="shortcut icon" type="x-icon" href="/images/logo.jpeg" />
+        <link rel="shortcut icon" type="x-icon" href="images/logo.jpeg" />
         <title>首頁 - Unhinged Hangman</title>
     </head>
 
@@ -55,6 +55,8 @@
                         id="play"
                         onclick="
 new Audio('sfx/START.mp3').play();
+document.body.style.opacity = 0;
+document.body.style.animation = 'white 8s ease';
 setTimeout(() => {
     location.href = 'html/index.html';
 }, 2000)

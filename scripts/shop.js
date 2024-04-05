@@ -4,6 +4,14 @@ let types = [];
 let ckcRainbow = false;
 let t = false
 if($.jStorage.get("t")) t = true
+ 
+const findAll = (array, whatToFind) => {
+    let newArray = [];
+    array.forEach(e => {
+        if(whatToFind(e)) newArray.push(e)
+    })
+    return newArray
+}
 
 class ShopItem {
     constructor(name, price, description, image, type, id, onBuy) {
@@ -20,6 +28,7 @@ class ShopItem {
             let category = document.createElement("h1");
             category.innerHTML = this.type;
             category.style.width = "100%";
+            category.classList.add(this.type)
             stuff.append(category);
             types.push(this.type);
         }
@@ -52,7 +61,28 @@ class ShopItem {
     save(e) {
         $.jStorage.set(this.id, e);
     }
+    hidden(isHidden) {
+        this.item.style.display = isHidden ? "none" : "block";
+        let isAlone = findAll(types, (t) => {
+            return t === this.type
+        }).length <= 1
+        if(isAlone) {
+            document.querySelector('.' + types.find(t => t === this.type)).style.display = 'none'
+        }
+    }
 }
+
+let speedRunMode = false;
+
+let speed = new ShopItem("速通模式", 50, "快點通關！", "../images/speed.png", "遊玩", "speed",
+() => {
+    speedRunMode = true;
+    // document.querySelector('audio').src = "../sfx/WaxTerK  GANGIMARI.mp3"
+    speed.save(true)
+    speed.disable(true)
+})
+speed.hidden(true)
+
 let customKeyColor = new ShopItem(
     "自訂鍵盤邊框顏色",
     100,
@@ -136,18 +166,14 @@ let customBGIMG = new ShopItem(
             dbg.style.padding = "5px 10px";
             dbg.classList.add('beta')
             customBGIMG.item.append(dbg);
-        }
-        let o = customBGIMG.item.querySelectorAll("button")[1];
         o.addEventListener("click", () => {
             t = !t;
             game.classList.toggle("transparent");
         });
-        let rb = customBGIMG.item.querySelectorAll("button")[2];
         rb.addEventListener("click", () => {
             localStorage.removeItem("customBGIMG");
             document.body.style.backgroundImage = "none";
         });
-        let dbg = customBGIMG.item.querySelectorAll("button")[3];
         dbg.addEventListener("click", () => {
             dbgi++;
             if (dbgi > dynamicBGList.length - 1) {
@@ -159,6 +185,7 @@ let customBGIMG = new ShopItem(
             dynamicBGList[dbgi].play();
             $.jStorage.set('dbgi', dbgi)
         });
+        }
         input.click();
         if ($.jStorage.get("customKeyColor")) {
             giveAch("new");
@@ -195,29 +222,26 @@ if ($.jStorage.get("customBGIMG")) {
         dbg.style.padding = "5px 10px";
         dbg.classList.add('beta')
         customBGIMG.item.append(dbg);
+        o.addEventListener("click", () => {
+            t = !t;
+            game.classList.toggle("transparent");
+        });
+        rb.addEventListener("click", () => {
+            localStorage.removeItem("customBGIMG");
+            document.body.style.backgroundImage = "none";
+        });
+        dbg.addEventListener("click", () => {
+            dbgi++;
+            if (dbgi > dynamicBGList.length - 1) {
+                dynamicBGList[dbgi - 1].remove();
+                dbgi = 0;
+            }
+            dbg.innerText = '動態背景' + (dbgi + 1) + '號';
+            if(dynamicBGList[dbgi - 1]) dynamicBGList[dbgi - 1].remove();
+            dynamicBGList[dbgi].play();
+            $.jStorage.set('dbgi', dbgi)
+        });
     }
-    let o = customBGIMG.item.querySelectorAll("button")[1];
-    o.addEventListener("click", () => {
-        t = !t;
-        game.classList.toggle("transparent");
-    });
-    let rb = customBGIMG.item.querySelectorAll("button")[2];
-    rb.addEventListener("click", () => {
-        localStorage.removeItem("customBGIMG");
-        document.body.style.backgroundImage = "none";
-    });
-    let dbg = customBGIMG.item.querySelectorAll("button")[3];
-    dbg.addEventListener("click", () => {
-        dbgi++;
-        if (dbgi > dynamicBGList.length - 1) {
-            dynamicBGList[dbgi - 1].remove();
-            dbgi = 0;
-        }
-        dbg.innerText = '動態背景' + (dbgi + 1) + '號';
-        if(dynamicBGList[dbgi - 1]) dynamicBGList[dbgi - 1].remove();
-        dynamicBGList[dbgi].play();
-        $.jStorage.set('dbgi', dbgi)
-    });
     document.addEventListener('DOMContentLoaded', () => {
         if($.jStorage.get('dbgi')) dynamicBGList[dbgi].play();
     })

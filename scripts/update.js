@@ -6,6 +6,20 @@ if($.jStorage.get('version') !== version) {
 }
 let updateInfo = [
     {
+        title: '小小小更新',
+        version: 'v1.1.1',
+        description: [
+            {
+                title: '新增載入畫面',
+                text: '就醬'
+            },
+            {
+                title: '修復bug',
+                text: '修復動態背景的bug 以及其他bug'
+            }
+        ]
+    },
+    {
         title: '遊戲自訂義更新!',
         version: 'v1.1.0',
         description: [

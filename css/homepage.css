@@ -10,6 +10,7 @@
 body {
     background: #003c00;
     position: fixed;
+    transition: opacity 1s ease;
 }
 
 .load {
@@ -242,4 +243,10 @@ button {
     width: 30%;
     min-width: 300px;
     border-radius: 5px;
+}
+
+@keyframes white {
+    10% {
+        background: #fff;
+    }
 }

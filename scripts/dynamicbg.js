@@ -32,12 +32,21 @@ const newBlock = () => {
         if (x >= canvas.width - 70 || x <= 0) {
             text = String.fromCharCode(rng(122, 97))
             vx = -vx;
-            v = vocab[rng(vocab.length - 1)].word
+            if(x >= canvas.width - 70) x = canvas.width - 70
+            else if(x <= 0) x=0
+            v = oVocab[rng(oVocab.length - 1)].word
         }
         if (y >= canvas.height - 70 || y <= 0) {
             text = String.fromCharCode(rng(122, 97))
             vy = -vy;
-            v = vocab[rng(vocab.length - 1)].word
+            if(y >= canvas.height - 70) y = canvas.height - 70
+            else if(y <= 0) y=0
+            v = oVocab[rng(oVocab.length - 1)].word
+        }
+        if(v.word === currentWord) {
+            while(v.word === currentWord) {
+                v = oVocab[rng(oVocab.length - 1)].word
+            }
         }
         requestAnimationFrame(animate);
     };
