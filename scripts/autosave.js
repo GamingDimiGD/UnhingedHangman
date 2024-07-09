@@ -16,5 +16,14 @@ const save = () => {
         saveButton2.innerText = '儲存'
     }, 1000)
 }
+setInterval(() => {
+    stats.innerHTML = ''
+    $.jStorage.set('data', data)
+    for (const prop in data) {
+        const span = document.createElement('span');
+        span.innerText = `${dataCH[prop]}: ${data[prop]}`;
+        stats.appendChild(span);
+    }
+})
 
 setInterval(save, 10000)

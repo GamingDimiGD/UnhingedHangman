@@ -12,6 +12,7 @@ if(Date.now() - $.jStorage.get("loginTime") > day && Date.now() - $.jStorage.get
     ls.innerText = $.jStorage.get('loginStreak')
     giveSparkles(50)
     dlm.classList.add('show')
+    if(data.bestLoginStreak < $.jStorage.get('loginStreak')) data.bestLoginStreak = $.jStorage.get('loginStreak')
 } else if(Date.now() - $.jStorage.get("loginTime") > day * 2) {
     $.jStorage.set('loginStreak', 0)
     $.jStorage.set('loginTime', Date.now())

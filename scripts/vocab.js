@@ -10578,9 +10578,9 @@ let vocab = [
     },
     {
         word: 'realize',
-        hint: '實現',
-        meaning: '實現 V.',
-        v: 0,
+        hint: '發現',
+        meaning: '發現 V.',
+        v: 2,
         new: false,
     },
     {

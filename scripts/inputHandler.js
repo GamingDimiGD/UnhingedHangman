@@ -5,6 +5,7 @@ const isMobile = () => {
 
 addEventListener('keydown', e => {
     if (isGameOver) return
+    if (!bossFightStarting) return
     if (e.code === 'KeyD' || e.code === 'ArrowRight') vxr = 5
     if (e.code === 'KeyA' || e.code === 'ArrowLeft') vxl = -5
     if (e.code === 'KeyS' || e.code === 'ArrowDown') vyd = 5

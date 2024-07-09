@@ -6,6 +6,7 @@ let bossColor = '#fff'
 
 let canvas = document.createElement('canvas')
 const ctx = canvas.getContext('2d')
+let bossFightStarting = false
 
 let x = 0
 let y = 0
@@ -144,7 +145,7 @@ const bossLaser = (type, color, thickness) => {
 let dli = 0
 let invisibleframes = 180
 let ifi = 0
-
+let timelastframe = []
 const update = () => {
     if (ph < 0) ph = 0
     if(bdb > 1000) bdb.shift()
@@ -179,10 +180,16 @@ const update = () => {
         document.querySelector('.hangman-box').style.display = 'none'
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    x += vxr
-    x += vxl
-    y += vyu
-    y += vyd
+    timelastframe.push(Date.now())
+    let deltatime = 1
+    if(timelastframe.length > 1) {
+        deltatime = (timelastframe[timelastframe.length - 1] - timelastframe[timelastframe.length - 2]) / 15
+    }
+    timelastframe = timelastframe.slice(-2)
+    x += vxr * deltatime
+    x += vxl * deltatime
+    y += vyu * deltatime
+    y += vyd * deltatime
     if (x > canvas.width - 70) x = canvas.width - 70
     if (x < 0) x = 0
     if (y > canvas.height - 70) y = canvas.height - 70
@@ -217,8 +224,8 @@ const update = () => {
         ctx.stroke();
         ctx.closePath();
     }
-    d--
-    if (d === 0) {
+    d -= deltatime
+    if (d <= 0) {
         ctx.fillRect(x + 35, by, 5, 15)
         d = dd
         bullets.push({
@@ -234,12 +241,12 @@ const update = () => {
             bullets.shift()
             sfx('../sfx/fart.mp3')
         } else bossColor = '#fff'
-        b.y -= 5
+        b.y -= 5 * deltatime
         ctx.fillStyle = '#fff'
         ctx.fillRect(b.x + 35, b.y, 5, 15)
     })
     bdb.forEach(b => {
-        b.y += b.speed
+        b.y += b.speed * deltatime
         ctx.fillStyle = '#fff'
         ctx.fillRect(b.x, b.y, b.width, b.height)
         if (lbossFightMode && x + 70 > b.x && x <= b.x + b.width && y + 70 > b.y && y <= b.y + b.height) {
@@ -254,17 +261,17 @@ const update = () => {
     })
     bdib.forEach(b => {
         if (b.id / 4 === Math.floor(b.id / 4)) {
-            b.x += b.speed
-            b.y += b.speed
+            b.x += b.speed * deltatime
+            b.y += b.speed * deltatime
         } else if (b.id / 2 === Math.floor(b.id / 2)) {
-            b.x -= b.speed
-            b.y += b.speed
+            b.x -= b.speed * deltatime
+            b.y += b.speed * deltatime
         } else if (b.id / 4 - Math.floor(b.id / 4) === 0.25) {
-            b.x += b.speed
-            b.y -= b.speed
+            b.x += b.speed * deltatime
+            b.y -= b.speed * deltatime
         } else {
-            b.x -= b.speed
-            b.y -= b.speed
+            b.x -= b.speed * deltatime
+            b.y -= b.speed * deltatime
         }
         if(funMode && rmv !== 0) ctx.fillStyle = `rgb(${rng(rmv)}, ${rng(rmv)}, ${rng(rmv)}`
         ctx.fillRect(b.x, b.y, b.width, b.height)
@@ -279,7 +286,7 @@ const update = () => {
         }
     })
     btb.forEach(b => {
-        b.y -= b.speed
+        b.y -= b.speed * deltatime
         ctx.fillRect(b.x, b.y, b.width, b.height)
         if (lbossFightMode && x + 70 > b.x && x <= b.x + b.width && y + 70 > b.y && y <= b.y + b.height) {
             console.log('colliding')
@@ -293,8 +300,8 @@ const update = () => {
     })
     let ghghgh = 0
     bhba.forEach(b => {
-        if (ghghgh / 2 === Math.floor(ghghgh / 2)) b.x += b.speed
-        else b.x -= b.speed
+        if (ghghgh / 2 === Math.floor(ghghgh / 2)) b.x += b.speed * deltatime
+        else b.x -= b.speed * deltatime
         ghghgh++
         ctx.fillRect(b.x, b.y, b.width, b.height)
         if (lbossFightMode && x + 70 > b.x && x <= b.x + b.width && y + 70 > b.y && y <= b.y + b.height) {
@@ -420,6 +427,7 @@ const bossReady = () => {
             // })
         }
         bossLi.innerText = '...'
+        bossFightStarting = true
         document.querySelector('body').appendChild(canvas)
     }, 10000)
     setTimeout(() => {

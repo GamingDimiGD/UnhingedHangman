@@ -76,7 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".load").style.display = "none";
     }, 12000);
 });
+let balls
 const newBlock = () => {
+    let timelastframe = []
     let canvas = document.createElement("canvas");
     canvas.style.position = 'fixed'
     canvas.style.top = 0
@@ -104,8 +106,15 @@ const newBlock = () => {
         ctx.fillStyle = "#fff";
         ctx.font = "bold 20px Noto Sans TC";
         ctx.fillText(text.toUpperCase(), x + 28, y + 42);
-        x += vx;
-        y += vy;
+        timelastframe.push(Date.now())
+        let deltatime = 1
+        if(timelastframe.length > 1) {
+            deltatime = (timelastframe[timelastframe.length - 1] - timelastframe[timelastframe.length - 2]) / 15
+        }
+        timelastframe = timelastframe.slice(-2)
+        x += vx * deltatime;
+        y += vy * deltatime;
+        if(balls === true)console.log(Math.floor(vx * deltatime), Math.floor(vy * deltatime), timelastframe)
         ctx.fillText(v, x, y + 90);
         if (x >= canvas.width - 70 || x <= 0) {
             text = String.fromCharCode(rng(122, 97))

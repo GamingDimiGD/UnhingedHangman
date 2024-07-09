@@ -11,6 +11,12 @@ let achievements = [
         reward: 2147,
     },
     {
+        name: '發生什麼事了',
+        description: '蛤?我買了什麼?',
+        id: 'gb',
+        reward: rng(300, 0),
+    },
+    {
         name: '贏家',
         description: '贏一局遊戲',
         id: 'won',
@@ -71,6 +77,18 @@ let achievements = [
         reward: 1,
     },
     {
+        name: '好亮',
+        description: '擁有10000✧',
+        id: '10ksparkles',
+        reward: 1,
+    },
+    {
+        name: '大富翁',
+        description: '擁有100000✧',
+        id: '100ksparkles',
+        reward: 0,
+    },
+    {
         name: '西瓜貓',
         description: '領養西瓜貓 (喵)',
         id: 'cat',
@@ -129,6 +147,12 @@ let achievements = [
         description: '愚人節快樂:)',
         id: 'af',
         reward: 69,
+    },
+    {
+        name: '生日快樂!',
+        description: '是迪米生日欸',
+        id: 'birthday',
+        reward: 726,
     }
 ]
 

@@ -111,17 +111,35 @@ const fight = () => {
     setTimeout(() => bossLaser(), 4000)
     setTimeout(() => bossShootBullets('all', 15, 15, 10000, 1, 10), 5000)
     setTimeout(() => {
+        let timelastframe = []
         let fasdfjk = setInterval(() => {
-            bossX -= 10
+            timelastframe.push(Date.now())
+            let deltatime = 1
+            if(timelastframe.length > 1) {
+                deltatime = (timelastframe[timelastframe.length - 1] - timelastframe[timelastframe.length - 2]) / 15
+            }
+            timelastframe = timelastframe.slice(-2)
+            bossX -= 10 * deltatime
             if(bossX < 60) clearInterval(fasdfjk)
-        }, 10)
+        })
     }, 6000)
     setTimeout(() => {
+        let timelastframe = []
         let fasdfjk = setInterval(() => {
+            timelastframe.push(Date.now())
+            let deltatime = 1
+            if(timelastframe.length > 1) {
+                deltatime = (timelastframe[timelastframe.length - 1] - timelastframe[timelastframe.length - 2]) / 15
+            }
             bossX += 10
             if(bossX > canvas.width / 2) clearInterval(fasdfjk)
         }, 10)
         let fasdfjk2 = setInterval(() => {
+            timelastframe.push(Date.now())
+            let deltatime = 1
+            if(timelastframe.length > 1) {
+                deltatime = (timelastframe[timelastframe.length - 1] - timelastframe[timelastframe.length - 2]) / 15
+            }
             bossY -= 10
             if(bossY < canvas.height / 2) clearInterval(fasdfjk2)
         }, 10)

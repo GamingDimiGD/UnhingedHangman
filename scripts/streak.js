@@ -82,7 +82,17 @@ setInterval(() => {
     else if (!t && winStreak >= 5 && winStreak < 10)
         game.style.background = "#fff000";
     else if (!t && winStreak >= 10) game.style.background = "#cc77ff";
-});
+    let textbox = document.querySelector(".text-box");
+    let e = textbox.style
+    if(window.innerWidth < 950 && window.innerWidth > 548) {
+        e.width = `calc(${window.innerWidth}px - 268.8px - 50px)`;
+    } else if(window.innerWidth < 548) {
+        e.width = `100%`;
+        e.maxWidth = `100%`;
+    } else {
+        e.maxWidth = `69%`;
+    }
+}, 10);
 const streakText = document.querySelector(".streak");
 let si;
 const checkStreak = (amount) => {
@@ -117,7 +127,7 @@ const checkStreak = (amount) => {
             btn.style.color = "#fff";
         });
         game.style.border = "none";
-        if (bossFightMode) return;
+        if (bossFightMode || speedRunMode) return;
         if (!music.src.includes("Wallpaper.mp3") && music.src !== "")
             music.src = "../sfx/Wallpaper.mp3";
     } else if (winStreak >= 5 && winStreak < 10) {
@@ -138,7 +148,7 @@ const checkStreak = (amount) => {
         si = setInterval(() => {
             streakText.style.margin = rng(3) + "px";
         });
-        if (bossFightMode) return;
+        if (bossFightMode || speedRunMode) return;
         if (!music.src.includes("Creo-Sphere.mp3") && music.src !== "")
             music.src = "../sfx/Creo-Sphere.mp3";
     }

@@ -1,20 +1,33 @@
 const shop = document.querySelector(".shop-modal");
-const stuff = document.querySelector(".shop-modal .content .stuff");
+let stuff = document.querySelector(".shop-modal .content .stuff");
+const shopButton = document.querySelector(".shop-button")
 let types = [];
 let ckcRainbow = false;
-let t = false
-if($.jStorage.get("t")) t = true
- 
+let t = false;
+if ($.jStorage.get("t")) t = true;
+
 const findAll = (array, whatToFind) => {
     let newArray = [];
-    array.forEach(e => {
-        if(whatToFind(e)) newArray.push(e)
-    })
-    return newArray
-}
+    array.forEach((e) => {
+        if (whatToFind(e)) newArray.push(e);
+    });
+    return newArray;
+};
 
 class ShopItem {
-    constructor(name, price, description, image, type, id, onBuy) {
+    constructor(name = "", price, description = "", image = "", type = "", id = "", onBuy, coolDown, saveCD, si) {
+        /*
+         * Create a new item in the shop using this class lol
+         * @param {string} name - The name of the item
+         * @param {number} price - The price of the item
+         * @param {string} description - The description of the item
+         * @param {string} image - The image of the item
+         * @param {string} type - The type/category of the item
+         * @param {string} id - The jStorage id of the item
+         * @param {function} onBuy - The function to run when the item is bought
+         * @param {number} coolDown - The cool down of the item (in seconds)
+         * @param {boolean} saveCD - Whether to save the cool down of the item or not
+         */
         price = parseInt(price);
         this.name = name;
         this.price = price;
@@ -23,12 +36,16 @@ class ShopItem {
         this.type = type;
         this.id = id;
         this.onBuy = onBuy;
+        this.coolDown = coolDown || 0;
+        this.saveCD = saveCD || false;
+        this.si = si || 0;
 
+        if(si === 1) stuff = document.querySelector(".knowledge-modal .content .stuff")
         if (!types.find((t) => t === this.type)) {
             let category = document.createElement("h1");
             category.innerHTML = this.type;
             category.style.width = "100%";
-            category.classList.add(this.type)
+            category.classList.add(this.type);
             stuff.append(category);
             types.push(this.type);
         }
@@ -37,11 +54,37 @@ class ShopItem {
         item.querySelector("img").style.width = "calc(100% - 20px)";
         item.querySelector("button").style.padding = "5px 10px";
         item.querySelector("button").addEventListener("click", () => {
+            if(this.si !== 0) return
             if ($.jStorage.get("sparkles") < this.price)
                 return showNotif("你買不起!", 1);
             takeSparkles(this.price);
+            if(this.coolDown > 0) {
+                $.jStorage.set(this.id + "-cd", Date.now() + this.coolDown * 1000);
+                setInterval(() => {
+                    let b = this.item.querySelector("button")
+                    if($.jStorage.get(this.id + "-cd") < Date.now()) {
+                        b.disabled = false
+                        b.innerText = this.price + "✧";
+                    } else {
+                        b.disabled = true
+                        b.innerText = `還有${Math.floor(($.jStorage.get(this.id + "-cd") - Date.now()) / 1000)}秒`
+                    }
+                })
+            }
             this.onBuy();
         });
+        if(this.saveCD && $.jStorage.get(this.id + "-cd")) {
+            setInterval(() => {
+                let b = this.item.querySelector("button")
+                if($.jStorage.get(this.id + "-cd") < Date.now()) {
+                    b.disabled = false
+                    b.innerText = this.price + "✧";
+                } else {
+                    b.disabled = true
+                    b.innerText = `還有${Math.floor(($.jStorage.get(this.id + "-cd") - Date.now()) / 1000)}秒`
+                }
+            })
+        }
         this.item = item;
         stuff.append(item);
     }
@@ -53,6 +96,8 @@ class ShopItem {
         if (isDisabled) {
             this.item.querySelector("button").innerText =
                 customText || "已購買";
+        } else {
+            this.item.querySelector("button").innerText = this.price + "✧";
         }
     }
     changeButton(callback) {
@@ -63,26 +108,178 @@ class ShopItem {
     }
     hidden(isHidden) {
         this.item.style.display = isHidden ? "none" : "block";
-        let isAlone = findAll(types, (t) => {
-            return t === this.type
-        }).length <= 1
-        if(isAlone) {
-            document.querySelector('.' + types.find(t => t === this.type)).style.display = 'none'
+        let isAlone =
+            findAll(types, (t) => {
+                return t === this.type;
+            }).length <= 1;
+        if (isAlone) {
+            document.querySelector(
+                "." + types.find((t) => t === this.type),
+            ).style.display = "none";
         }
     }
+    skipCoolDown() {
+        $.jStorage.set(this.id + "-cd", 0)
+    }
 }
-
+let num = 245
+let stupidlyRandomNumber = rng(num)
 let speedRunMode = false;
+let speedRunEnd = false;
+let speedRunCooldown = 60 * 60 * 1000;
+let speedRunWins = 0;
+let speedRunWords = [];
 
-let speed = new ShopItem("速通模式", 50, "快點通關！", "../images/speed.png", "遊玩", "speed",
-() => {
-    speedRunMode = true;
-    // document.querySelector('audio').src = "../sfx/WaxTerK  GANGIMARI.mp3"
-    speed.save(true)
-    speed.disable(true)
+
+let funnyItem = new ShopItem(
+    "???",
+    -1,
+    "???",
+    "../images/???.png",
+    "？？？",
+    "???",
+    () => {
+        music.src = '../sfx/glitch.mp3'
+        showNotif("???", 1);
+        giveAch("gb")
+        $.jStorage.set("funny", true)
+        setTimeout(picksceell, 10000)
+        setTimeout(() => {
+            clearInterval(wH)
+            wH = setInterval(() => {
+                sfx('../sfx/boom.mp3')
+            }, 1000)
+        }, 10000)
+        setTimeout(() => {
+            window.location.reload()
+        }, 18976)
+    }
+)
+shopButton.addEventListener('click', () => {
+    stupidlyRandomNumber = rng(num)
+    if(stupidlyRandomNumber !== 34) {
+        funnyItem.hidden(true)
+    } else funnyItem.hidden(false)
+    console.log(stupidlyRandomNumber)
 })
-speed.hidden(true)
-
+if(stupidlyRandomNumber !== 34) {
+    funnyItem.hidden(true)
+} else funnyItem.hidden(false)
+let speed = new ShopItem(
+    "速通模式",
+    500,
+    "看你在120秒內贏多少次！<br/>會給兩倍的✧，但連勝不給✧。<br/>第一次購買要✧但第二次不用。<br/>啟動後會有一小時冷卻時間。<br/>會重置連勝。",
+    "../images/speed.png",
+    "遊玩",
+    "speed",
+    () => {
+        if (hardMode) return showNotif("不可以重疊模式！");
+        checkStreak(0)
+        document.querySelector('.shop-modal').classList.remove('show')
+        speed.price = 0;
+        let cd = Date.now();
+        speed.save({
+            bought: true,
+            time: cd,
+        });
+        speedRunMode = true;
+        document.querySelector("audio").src = "../sfx/WaxTerK GANGIMARI.mp3";
+        speed.disable(true);
+        let bt = Date.now();
+        let timeout = bt + 120 * 1000;
+        let display = document.createElement("div");
+        let displayText = document.createElement("h2");
+        display.append(displayText);
+        display.classList.add("speedrun");
+        document.body.append(display);
+        game.style.animation = "pulse calc(60s/95/2) infinite";
+        let interval = setInterval(() => {
+            displayText.innerText =
+                Math.floor((timeout - Date.now()) / 10) / 100 + "秒";
+            if (timeout <= Date.now()) {
+                document.querySelector("audio").src = "../sfx/Wallpaper.mp3";
+                speedRunEnd = true;
+                gameOver("srw");
+                speedRunMode = false;
+                speedRunWins = 0;
+                game.style.animation = "unset";
+                speed.disable(false);
+                let gggg = setInterval(() => {
+                    let timeeee = Math.floor(
+                        (cd + speedRunCooldown - Date.now()) / 1000,
+                    );
+                    speed.disable(true, "還有" + timeeee + "秒");
+                    if (timeeee <= 0) {
+                        speed.disable(false);
+                        speed.changeButton((b) => {
+                            b.innerText = "啟動";
+                        });
+                        clearInterval(gggg);
+                    }
+                });
+                document.body.removeChild(display);
+                clearInterval(interval);
+            }
+        });
+    },
+);
+if ($.jStorage.get("speed")) {
+    speed.price = 0;
+    let cd = $.jStorage.get("speed").time;
+    let gggg = setInterval(() => {
+        let timeeee = Math.floor((cd + speedRunCooldown - Date.now()) / 1000);
+        speed.disable(true, "還有" + timeeee + "秒");
+        if (timeeee <= 0) {
+            speed.disable(false);
+            speed.changeButton((b) => {
+                b.innerText = "啟動";
+            });
+            clearInterval(gggg);
+        }
+    });
+}
+let hard = new ShopItem(
+    "困難模式！",
+    1000,
+    "提示是亂碼！<br/>會給10倍✧<br/>會重置連勝。",
+    "../images/hard.png",
+    "遊玩",
+    "hard",
+    () => {
+        if (speedRunMode) return showNotif("不可以重疊模式！");
+        checkStreak(0)
+        hardMode = !hardMode;
+        getRandomWord();
+        if (hardMode) {
+            hard.price = 0;
+            hard.changeButton((b) => {
+                b.innerText = "關閉";
+            });
+        } else {
+            hard.changeButton((b) => {
+                b.innerText = "開啟";
+            });
+        }
+        hard.save(true);
+    },
+);
+if ($.jStorage.get("hard")) {
+    hard.price = 0;
+    hard.changeButton((b) => {
+        b.innerText = "開啟";
+    });
+}
+let changeWord = new ShopItem(
+    "更換單字",
+    200,
+    "更換單字，不會重置連勝。<br/>100秒冷卻。",
+    "../images/change-word.png",
+    "遊玩",
+    "changeWord",
+    () => {
+        getRandomWord()
+    }, 100, true
+)
 let customKeyColor = new ShopItem(
     "自訂鍵盤邊框顏色",
     100,
@@ -122,7 +319,7 @@ if ($.jStorage.get("customKeyColor")) {
         b.innerText = "變換顏色";
     });
 }
-let dbgi = $.jStorage.get('dbgi') || 0;
+let dbgi = $.jStorage.get("dbgi") || 0;
 let customBGIMG = new ShopItem(
     "自訂背景圖片",
     200,
@@ -161,30 +358,30 @@ let customBGIMG = new ShopItem(
             rb.style.padding = "5px 10px";
             customBGIMG.item.append(rb);
             let dbg = document.createElement("button");
-            dbg.innerText = '動態背景' + (dbgi + 1) + '號';
+            dbg.innerText = "動態背景" + (dbgi + 1) + "號";
             dbg.style.marginTop = "10px";
             dbg.style.padding = "5px 10px";
-            dbg.classList.add('beta')
+            dbg.classList.add("beta");
             customBGIMG.item.append(dbg);
-        o.addEventListener("click", () => {
-            t = !t;
-            game.classList.toggle("transparent");
-        });
-        rb.addEventListener("click", () => {
-            localStorage.removeItem("customBGIMG");
-            document.body.style.backgroundImage = "none";
-        });
-        dbg.addEventListener("click", () => {
-            dbgi++;
-            if (dbgi > dynamicBGList.length - 1) {
-                dynamicBGList[dbgi - 1].remove();
-                dbgi = 0;
-            }
-            dbg.innerText = '動態背景' + (dbgi + 1) + '號';
-            if(dynamicBGList[dbgi - 1]) dynamicBGList[dbgi - 1].remove();
-            dynamicBGList[dbgi].play();
-            $.jStorage.set('dbgi', dbgi)
-        });
+            o.addEventListener("click", () => {
+                t = !t;
+                game.classList.toggle("transparent");
+            });
+            rb.addEventListener("click", () => {
+                localStorage.removeItem("customBGIMG");
+                document.body.style.backgroundImage = "none";
+            });
+            dbg.addEventListener("click", () => {
+                dbgi++;
+                if (dbgi > dynamicBGList.length - 1) {
+                    dynamicBGList[dbgi - 1].remove();
+                    dbgi = 0;
+                }
+                dbg.innerText = "動態背景" + (dbgi + 1) + "號";
+                if (dynamicBGList[dbgi - 1]) dynamicBGList[dbgi - 1].remove();
+                dynamicBGList[dbgi].play();
+                $.jStorage.set("dbgi", dbgi);
+            });
         }
         input.click();
         if ($.jStorage.get("customKeyColor")) {
@@ -217,10 +414,10 @@ if ($.jStorage.get("customBGIMG")) {
         rb.style.padding = "5px 10px";
         customBGIMG.item.append(rb);
         let dbg = document.createElement("button");
-        dbg.innerText = '動態背景' + (dbgi + 1) + '號';
+        dbg.innerText = "動態背景" + (dbgi + 1) + "號";
         dbg.style.marginTop = "10px";
         dbg.style.padding = "5px 10px";
-        dbg.classList.add('beta')
+        dbg.classList.add("beta");
         customBGIMG.item.append(dbg);
         o.addEventListener("click", () => {
             t = !t;
@@ -236,15 +433,15 @@ if ($.jStorage.get("customBGIMG")) {
                 dynamicBGList[dbgi - 1].remove();
                 dbgi = 0;
             }
-            dbg.innerText = '動態背景' + (dbgi + 1) + '號';
-            if(dynamicBGList[dbgi - 1]) dynamicBGList[dbgi - 1].remove();
+            dbg.innerText = "動態背景" + (dbgi + 1) + "號";
+            if (dynamicBGList[dbgi - 1]) dynamicBGList[dbgi - 1].remove();
             dynamicBGList[dbgi].play();
-            $.jStorage.set('dbgi', dbgi)
+            $.jStorage.set("dbgi", dbgi);
         });
     }
-    document.addEventListener('DOMContentLoaded', () => {
-        if($.jStorage.get('dbgi')) dynamicBGList[dbgi].play();
-    })
+    document.addEventListener("DOMContentLoaded", () => {
+        if ($.jStorage.get("dbgi")) dynamicBGList[dbgi].play();
+    });
     let img = localStorage.getItem("customBGIMG");
     document.body.style.backgroundImage = "url(" + img + ")";
     document.body.style.backgroundSize = "cover";
@@ -284,12 +481,17 @@ let a = new ShopItem(
         let cat = document.createElement("img");
         cat.src = "../images/2.png";
         cat.style.height = "250%";
+        pd(characters[2], '喵')
+        pd(characters[2], '喵要挖閃喵')
+        pd(characters[2], '喵')
+        dialogue(dialogueQueue)
         document.querySelector(".navbar").appendChild(cat);
         setInterval(
             () => {
                 let adsf = rng(10 * catLevel, 1);
                 giveSparkles(adsf);
                 showNotif("西瓜貓找到了" + adsf + "✧!!", 1);
+                data.catSparkles += adsf;
             },
             (1000 * 60 * 5) / catLevel,
         );
@@ -327,6 +529,7 @@ if ($.jStorage.get("cat")) {
             let adsf = rng(10 * catLevel, 1);
             giveSparkles(adsf);
             showNotif("西瓜貓找到了" + adsf + "✧!!", 1);
+            data.catSparkles += adsf;
         },
         (1000 * 60 * 5) / catLevel,
     );
