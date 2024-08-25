@@ -1,18 +1,15 @@
 let antiLag = false;
 let antiLagButton = document.getElementById("antilag");
-let antiLagButton2 = document.getElementById("antilag2");
 let sadAmount = 0;
 
 const tal = () => {
     if (antiLag) {
         antiLag = false;
         antiLagButton.innerText = "減少效果";
-        antiLagButton2.innerText = "減少效果";
         is = 50;
     } else {
         antiLag = true;
         antiLagButton.innerText = "增加效果";
-        antiLagButton2.innerText = "增加效果";
         is = 250;
     }
     if (funMode) {
@@ -63,9 +60,9 @@ const party = () => {
 const sad = () => {
     sadAmount++;
     checkStreak(0);
-    if (sadAmount > 10) new Audio("../sfx/eeeeuuugh.mp3").play();
-    if (rng(2) === 1) new Audio("../sfx/wah-wah-wah-wahahaha.mp3").play();
-    else new Audio("../sfx/cry.mp3").play();
+    if (sadAmount > 10) sfx("eeeeuuugh")
+    if (rng(2) === 1) sfx("wah-wah-wah-wahahaha")
+    else sfx("cry")
     confetti({
         spread: 360,
         ticks: 200,

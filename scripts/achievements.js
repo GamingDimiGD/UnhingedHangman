@@ -5,6 +5,12 @@ const yaa = document.getElementById('yaa')
 
 let achievements = [
     {
+        name: '世界救星',
+        description: '從柴柴手中救出這個世界',
+        id: 'finalBossBadge',
+        reward: 99999,
+    },
+    {
         name: '遊戲救世主',
         description: '恭喜打敗柴柴！',
         id: 'bossFightBadge',
@@ -153,6 +159,12 @@ let achievements = [
         description: '是迪米生日欸',
         id: 'birthday',
         reward: 726,
+    },
+    {
+        name: '等級之王',
+        description: '到達最高30等',
+        id: 'lvl30',
+        reward: 1000,
     }
 ]
 

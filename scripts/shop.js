@@ -147,7 +147,7 @@ let funnyItem = new ShopItem(
         setTimeout(() => {
             clearInterval(wH)
             wH = setInterval(() => {
-                sfx('../sfx/boom.mp3')
+                sfx('boom')
             }, 1000)
         }, 10000)
         setTimeout(() => {
@@ -365,6 +365,14 @@ let customBGIMG = new ShopItem(
             customBGIMG.item.append(dbg);
             o.addEventListener("click", () => {
                 t = !t;
+                if (t && winStreak < 5) game.style.background = "#ffffff3c";
+                else if (t && winStreak >= 5 && winStreak < 10)
+                    game.style.background = "#fff0003c";
+                else if (t && winStreak >= 10) game.style.background = "#cc77ff3c";
+                else if (!t && winStreak < 5) game.style.background = "#ffffff";
+                else if (!t && winStreak >= 5 && winStreak < 10)
+                    game.style.background = "#fff000";
+                else if (!t && winStreak >= 10) game.style.background = "#cc77ff";
                 game.classList.toggle("transparent");
             });
             rb.addEventListener("click", () => {

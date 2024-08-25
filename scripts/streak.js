@@ -74,14 +74,18 @@ setInterval(() => {
         $.jStorage.set("t", t);
         t = $.jStorage.get("t");
     }
-    if (t && winStreak < 5) game.style.background = "#ffffff3c";
-    else if (t && winStreak >= 5 && winStreak < 10)
-        game.style.background = "#fff0003c";
-    else if (t && winStreak >= 10) game.style.background = "#cc77ff3c";
-    else if (!t && winStreak < 5) game.style.background = "#ffffff";
-    else if (!t && winStreak >= 5 && winStreak < 10)
-        game.style.background = "#fff000";
-    else if (!t && winStreak >= 10) game.style.background = "#cc77ff";
+    if(!finalBossMode && !idkAnymore) {
+        if (t && winStreak < 5) game.style.background = "#ffffff3c";
+        else if (t && winStreak >= 5 && winStreak < 10)
+            game.style.background = "#fff0003c";
+        else if (t && winStreak >= 10) game.style.background = "#cc77ff3c";
+        else if (!t && winStreak < 5) game.style.background = "#ffffff";
+        else if (!t && winStreak >= 5 && winStreak < 10)
+            game.style.background = "#fff000";
+        else if (!t && winStreak >= 10) game.style.background = "#cc77ff";
+    } else {
+        game.style.background = '#ffffff00'
+    }
     let textbox = document.querySelector(".text-box");
     let e = textbox.style
     if(window.innerWidth < 950 && window.innerWidth > 548) {
@@ -99,7 +103,7 @@ const checkStreak = (amount) => {
     winStreak++;
     /*if(!isNaN(vocabAmount)) if(winStreak > vocabAmount || winStreak > vocab.length ||　winStreak > oVocab.length) {
         setInterval(() => alert('你這個開掛仔'))
-        sfx('../sfx/eeeeuuugh.mp3')
+        sfx('eeeeuuugh')
         music.pause()
         return
     }*/

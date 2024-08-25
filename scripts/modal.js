@@ -2,7 +2,6 @@ const alertModal = (text, options) => {
     const modal = document.createElement("div");
     modal.classList.add("modal");
     modal.classList.add('alert-modal')
-    modal.classList.add("show");
     modal.innerHTML = `
     <div class="content">
         <h3>${text}</h3>
@@ -21,6 +20,8 @@ const alertModal = (text, options) => {
         b.remove()
         b = document.createElement('div')
         b.classList.add('buttons')
+        b.style.display = 'flex'
+        b.style.justifyContent = 'space-around'
         options.forEach(e => {
             let eb = document.createElement('button')
             if(typeof e === 'string' || e instanceof String) {
@@ -31,7 +32,14 @@ const alertModal = (text, options) => {
                 });
             } else if(typeof e === 'object' || e instanceof Object) {
                 eb.innerHTML = e.text
-                eb.addEventListener("click", e.onclick)
+                const hide = () => {
+                    modal.classList.remove('show')
+                    setTimeout(() => modal.remove(), 1000)
+                }
+                eb.addEventListener("click", () => {
+                    hide()
+                    e.onclick(eb)
+                })
             }
             b.appendChild(eb)
         })
@@ -43,4 +51,5 @@ const alertModal = (text, options) => {
         });
     }
     document.body.appendChild(modal);
+    setTimeout(() => modal.classList.add("show"), 1)
 }

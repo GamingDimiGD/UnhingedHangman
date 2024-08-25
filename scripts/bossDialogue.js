@@ -4,7 +4,7 @@ const music = document.querySelector('.navbar audio')
 let bi
 let mp = false
 
-const bossSays = (wordsToSay, seconds) => {
+const bossSays = (wordsToSay, seconds, stopThatFromHappeningIg) => {
     clearInterval(bi)
     music.controls = false
     music.pause()
@@ -16,6 +16,7 @@ const bossSays = (wordsToSay, seconds) => {
         game.style.opacity = '1'
         game.style.pointerEvents = 'auto'
     }, seconds * 1000)
+    if(stopThatFromHappeningIg) return;
     bd = bd - 1
     bi = setInterval(() => {
         if(!mp) {

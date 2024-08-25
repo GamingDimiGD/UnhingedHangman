@@ -6,6 +6,52 @@ if($.jStorage.get('version') !== version) {
 }
 let updateInfo = [
     {
+        title: '暑假大更新!',
+        version: 'v1.3.0',
+        description: [
+            {
+                title: '時間回朔!',
+                text: '不小心點錯了可以用!'
+            },
+            {
+                title: '等級與附魔!',
+                text: '可以讓遊戲便稍微簡單一點'
+            },
+            {
+                title: '支援鍵盤功能!',
+                text: '你可以用鍵盤猜字!'
+            },
+            {
+                title: '模組!',
+                text: '你現在可以製作/安裝模組!'
+            },
+            {
+                title: '斗內機制!',
+                text: '現在可以斗內我! 不強制你斗內:)'
+            },
+            {
+                title: '檢舉bug!',
+                text: '現在你可以檢舉bug，避免有問題'
+            },
+            {
+                title: '更多詞彙!',
+                text: '等你到最高就知道了，有"一點點小難"'
+            },
+            {
+                title: '設定與遊戲存檔設定!',
+                text: '現在你可以在設定裡面調整部分設定，也可以轉移存檔以及備份存檔'
+            },
+            {
+                title: '更改部分介面，增加成就和秘密',
+                text: '對就這樣'
+            },
+            {
+                title: '修復奇特的bug',
+                text: '有一個在檢舉bug最上面的圖片'
+            }
+        ]
+    },
+    {
         title: '聽說這是個好的更新',
         version: 'v1.2.0',
         description: [

@@ -2,8 +2,60 @@ const isMobile = () => {
     return navigator.maxTouchPoints > 0
 }
 
+const findButton = (letter) => {
+    if(!letter) return 'none';
+    let but
+    keyboardDiv.querySelectorAll('button').forEach(button => {
+        if (button.innerText.toLowerCase() === letter.toLowerCase()) {
+            but = button
+            return;
+        }
+    })
+    return but
+}
+const anyModalsShown = () => {
+    let ba
+    document.querySelectorAll('.modal').forEach(m => {
+        if(m.classList.contains('show')) {
+            ba = true
+        }
+    })
+    return ba
+}
 
 addEventListener('keydown', e => {
+    if (!$('.dialogue')[0].classList.contains('show') && $('.game-modal')[0].classList.contains('show') && e.code === 'Enter') pab.click()
+    else if($('.dialogue')[0].classList.contains('show') && e.code === 'Enter') $('.dialogue')[0].click()
+    if (!anyModalsShown() && !fbd) {
+        if (e.code === 'Digit1') qwerty.click()
+        if (e.code === 'Digit2') undoBut.click()
+        if (e.code === 'KeyA') initGame(findButton('a'), 'a');
+        if (e.code === 'KeyB') initGame(findButton('b'), 'b');
+        if (e.code === 'KeyC') initGame(findButton('c'), 'c');
+        if (e.code === 'KeyD') initGame(findButton('d'), 'd');
+        if (e.code === 'KeyE') initGame(findButton('e'), 'e');
+        if (e.code === 'KeyF') initGame(findButton('f'), 'f');
+        if (e.code === 'KeyG') initGame(findButton('g'), 'g');
+        if (e.code === 'KeyH') initGame(findButton('h'), 'h');
+        if (e.code === 'KeyI') initGame(findButton('i'), 'i');
+        if (e.code === 'KeyJ') initGame(findButton('j'), 'j');
+        if (e.code === 'KeyK') initGame(findButton('k'), 'k');
+        if (e.code === 'KeyL') initGame(findButton('l'), 'l');
+        if (e.code === 'KeyM') initGame(findButton('m'), 'm');
+        if (e.code === 'KeyN') initGame(findButton('n'), 'n');
+        if (e.code === 'KeyO') initGame(findButton('o'), 'o');
+        if (e.code === 'KeyP') initGame(findButton('p'), 'p');
+        if (e.code === 'KeyQ') initGame(findButton('q'), 'q');
+        if (e.code === 'KeyR') initGame(findButton('r'), 'r');
+        if (e.code === 'KeyS') initGame(findButton('s'), 's');
+        if (e.code === 'KeyT') initGame(findButton('t'), 't');
+        if (e.code === 'KeyU') initGame(findButton('u'), 'u');
+        if (e.code === 'KeyV') initGame(findButton('v'), 'v');
+        if (e.code === 'KeyW') initGame(findButton('w'), 'w');
+        if (e.code === 'KeyX') initGame(findButton('x'), 'x');
+        if (e.code === 'KeyY') initGame(findButton('y'), 'y');
+        if (e.code === 'KeyZ') initGame(findButton('z'), 'z');
+    }
     if (isGameOver) return
     if (!bossFightStarting) return
     if (e.code === 'KeyD' || e.code === 'ArrowRight') vxr = 5

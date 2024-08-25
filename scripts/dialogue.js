@@ -1,4 +1,6 @@
 document.querySelector(".dialogue .content img").src = null
+let dialogueModal = document.querySelector(".dialogue");
+let dialogueContent = document.querySelector(".dialogue .content");
 let characters = [
     {
         name: "店員",
@@ -17,6 +19,18 @@ let characters = [
         id: 'cat',
         statusMaxIndex: 0,
         idleIndex: 0,
+    },
+    {
+        name: '阿蛋',
+        id: 'egg',
+        statusMaxIndex: 0,
+        idleIndex: 0,
+    },
+    {
+        name: '柴柴',
+        id: 'sticks',
+        statusMaxIndex: 0,
+        idleIndex: 0,
     }
 ];
 
@@ -24,16 +38,31 @@ characters.forEach((c) => (c.statusAmount = c.statusMaxIndex + 1));
 
 let dialogueQueue = [];
 
-const pd = (character, text, speed, onclick, buttons, promptText, pc, textStyle) => {
+const pd = (character, text, speed, onclick, buttons, promptText, pc, textStyle, sound) => {
+    if(typeof speed === 'object' || speed instanceof Object) {
+        onclick = speed.onclick
+        buttons = speed.buttons
+        promptText = speed.promptText
+        pc = speed.pc
+        textStyle = speed.textStyle
+        sound = speed.sound
+        speed = speed.speed
+    }
+    if(typeof character === 'string' || character instanceof String) {
+        character = characters.find((c) => c.id === character)
+    }
+    if(typeof character === 'number' || character instanceof Number) {
+        character = characters[character]
+    }
     dialogueQueue.push({
-        character, text, speed, onclick, buttons, promptText, pc, textStyle
+        character, text, speed, onclick, buttons, promptText, pc, textStyle, sound
     })
 }
 
 const dialogue = (d) => {
-    let { character, text, speed, onclick, buttons, promptText, pc, textStyle } = d[0]
+    let { character, text, speed, onclick, buttons, promptText, pc, textStyle, sound } = d[0]
+    if(sound) sfx(sound)
     if (!character || !text) return alertModal("ERROR");
-    let dialogueModal = document.querySelector(".dialogue");
     let dialogueTextBox = document.querySelector(".dialogue .content .text-box");
     let characterImg = document.querySelector(".dialogue .content img");
     let characterName = document.querySelector(
@@ -42,10 +71,7 @@ const dialogue = (d) => {
     let dialogueText = document.querySelector(
         ".dialogue .content .text-box .dialogue-text",
     );
-    dialogueText.classList.forEach(e => {
-        if(e === 'dialogue-text') return
-        dialogueText.classList.remove(e)
-    })
+    dialogueText.className = 'dialogue-text'
     characterName.innerText = character.name;
     if(promptText) {
         let r = prompt(promptText)
@@ -155,4 +181,20 @@ if(date(7,26)) {
         giveAch('birthday')
     })
     dialogue(dialogueQueue)
+}
+let dq = () => dialogue(dialogueQueue)
+
+const hardModeActivation = () => {
+    pd(0, '你終於打敗了那個白癡')
+    pd(1, '他怎麼辦到的')
+    pd(0, '不知道')
+    pd(0, '我把詞彙難度調高了看會發生什麼事')
+    pd(1, '我看了真的難到爆')
+    pd(0, '只有300多個而已啦')
+    pd(1, '要確')
+    pd(1, '那些有80%平常基本上不會用到')
+    pd(0, '好吧，靠你了')
+    pd(0, '喔對，時光機現在被加強了')
+    pd(0, '可以時間回朔五次')
+    dq()
 }

@@ -1,4 +1,4 @@
-let version = 'v1.2.0'
+let version = 'v1.3.0'
 let bossFightBadge = false
 document.querySelectorAll('.version').forEach(e => e.innerText = version)
 let bossFightMode = false
@@ -53,3 +53,11 @@ console.log(`
         ██
      ████
 `)
+
+const compareArray = (a, b) => {
+    if(a.length !== b.length) return false
+    for(let i = 0; i < a.length; i++) {
+        if(a[i] !== b[i]) return false
+    }
+    return true
+}

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 * {
     margin: 0;
@@ -53,6 +54,7 @@ body {
     list-style: none;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .navbar a {
@@ -244,25 +246,37 @@ button[disabled] {
 }
 
 .dropdown a {
-    color: red;
+    color: #0f0;
     text-decoration: none;
+    border-radius: 4px;
+    background: #003c00;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 2px 7px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown a:hover {
+    background: #0f0;
+    color: #003c00;
 }
 
 .dropdown {
     position: fixed;
-    right: 1rem;
-    background: #003c003c;
+    background: #ffffff3c;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    transition: top 0.4s ease;
+    display: flex;
     flex-direction: column;
-    top: -100%;
+    right: -100%;
+    transition: right 0.4s ease;
     z-index: 0;
+    top: 60px
 }
 
 .dropdown.open {
-    top: 60px;
+    right: 1rem;
 }
 
 .dropbut {
@@ -271,7 +285,8 @@ button[disabled] {
     justify-content: center;
     color: #fff;
     cursor: pointer;
-    margin: 7px 4px;
+    margin: 4px;
+    border: 3px solid #0f0;
 }
 
 .navbut {
@@ -694,6 +709,10 @@ button[disabled] {
     pointer-events: none;
 }
 
+.dialogue {
+    z-index: 999999999999999;
+}
+
 .dialogue .content {
     width: 100%;
     max-width: 950px;
@@ -753,4 +772,164 @@ button[disabled] {
 }
 .smalltext {
     font-size: 0.7rem;
+}
+.undo {
+    padding: 10px;
+    border-radius: 3000px;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amount-display {
+    display: none;
+}
+
+.manage-save .content {
+    background: #fff;
+    max-width: 550px;
+    margin: 5px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    pointer-events: none;
+}
+
+.small-modals .content {
+    background: #fff;
+    max-width: 550px;
+    margin: 5px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    pointer-events: none;
+}
+
+.slider {
+    position: fixed;
+    top: 30%;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    width: 100vw;
+    height: 200px;
+    animation: holy-this-is-very-cool-i-think 20s linear infinite normal;
+    padding: 0;
+    margin: 0;
+}
+
+.slider button {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+    width: 50px;
+    height: 50px;
+}
+
+.eaten {
+    display: none;
+}
+
+@keyframes holy-this-is-very-cool-i-think {
+    from {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+@keyframes eww {
+    20% {
+        width: 30px
+    }
+    60% {
+        width: 70px
+    }
+    100% {
+        width: 50px
+    }
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.donate-img {
+    max-width: 256px;
+}
+.donate {
+    align-items: center;
+    justify-content: center;
+}
+.bmc-svg {
+    height: 1.5rem;
+}
+
+@keyframes yummy {
+    from {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateY(360deg) scale(0);
+    }
+}
+
+.level-display {
+    gap: 3px
+}
+@media (max-width: 500px) {
+    .navbar {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 420px) {
+    .navbar {
+        font-size: 0.5rem;
+    }
+}
+.enchant-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.enchant-div summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 10px;
+}
+.white {
+    color: #fff;
+}
+
+i {
+    padding-top: 2px;
+    padding-bottom: -2px;
+}
+.idk-what-to-call-this {
+    margin-top: 10px;
+}
+.flush-save {
+    background-color: red;
+}
+.flush-save:hover {
+    background-color: #003c00;
+    color: red;
 }
