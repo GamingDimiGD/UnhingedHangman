@@ -6,6 +6,16 @@ if($.jStorage.get('version') !== version) {
 }
 let updateInfo = [
     {
+        title: "修復部分 Bug 更新",
+        version: 'v1.3.1',
+        description: [
+            {
+                title: "更新內容",
+                text: "修復詞彙錯誤以及增加每日登入按鈕",
+            }
+        ],
+    },
+    {
         title: '暑假大更新!',
         version: 'v1.3.0',
         description: [
