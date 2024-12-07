@@ -187,6 +187,6 @@ $('[data-hover-text]').each((i, el) => {
     })
 })
 
-// if (window.location.href !== 'http://127.0.0.1:5501/html/index.html') {
-//     DisableDevtool();
-// } 
+if (window.location.href !== 'http://127.0.0.1:5501/html/index.html') {
+    DisableDevtool();
+} 
