@@ -1,6 +1,5 @@
 const bossLi = document.querySelector('.boss-dialogue li')
 const bossDialogue = document.querySelector('.boss-dialogue')
-const music = document.querySelector('.navbar audio')
 let bi
 let mp = false
 
@@ -16,11 +15,11 @@ const bossSays = (wordsToSay, seconds, stopThatFromHappeningIg) => {
         game.style.opacity = '1'
         game.style.pointerEvents = 'auto'
     }, seconds * 1000)
-    if(stopThatFromHappeningIg) return;
+    if (stopThatFromHappeningIg) return;
     bd = bd - 1
     bi = setInterval(() => {
-        if(!mp) {
-            music.src = '' // fill this in l8r
+        if (!mp) {
+            music.src = '' // guess i never filled this in
             music.play()
             mp = true
         }

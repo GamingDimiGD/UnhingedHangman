@@ -10,13 +10,13 @@ const alertModal = (text, options) => {
     `;
     let content = modal.querySelector('.content')
     let b = content.querySelector('button')
-    if(typeof options === 'string' || options instanceof String) {
+    if (typeof options === 'string' || options instanceof String) {
         b.innerHTML = options;
         b.addEventListener("click", () => {
             modal.classList.remove('show')
             setTimeout(() => modal.remove(), 1000)
         });
-    } else if(typeof options === 'array' || options instanceof Array) {
+    } else if (typeof options === 'array' || options instanceof Array) {
         b.remove()
         b = document.createElement('div')
         b.classList.add('buttons')
@@ -24,13 +24,13 @@ const alertModal = (text, options) => {
         b.style.justifyContent = 'space-around'
         options.forEach(e => {
             let eb = document.createElement('button')
-            if(typeof e === 'string' || e instanceof String) {
+            if (typeof e === 'string' || e instanceof String) {
                 eb.innerHTML = e
                 eb.addEventListener("click", () => {
                     modal.classList.remove('show')
                     setTimeout(() => modal.remove(), 1000)
                 });
-            } else if(typeof e === 'object' || e instanceof Object) {
+            } else if (typeof e === 'object' || e instanceof Object) {
                 eb.innerHTML = e.text
                 const hide = () => {
                     modal.classList.remove('show')
@@ -44,7 +44,7 @@ const alertModal = (text, options) => {
             b.appendChild(eb)
         })
         content.appendChild(b)
-    } else if(!options) {
+    } else if (!options) {
         b.addEventListener("click", () => {
             modal.classList.remove('show')
             setTimeout(() => modal.remove(), 1000)

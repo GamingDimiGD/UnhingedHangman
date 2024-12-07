@@ -240,6 +240,7 @@ const end = () => {
     bossShootBullets('all', 15, 15, 1)
     hj = false
     sfx('SHOCKWAVE')
+    altChannel.src = ''
     music.src = "../sfx/Wallpaper.mp3";
     setTimeout(() => {
         pd(3, '歐', {
@@ -330,7 +331,7 @@ const thisIsTheEnd = () => {
     })
     dq()
     let i = setInterval(() => {
-        if(bh <= 0) {
+        if (bh <= 0) {
             bh = 0
             clearInterval(i)
             end()
@@ -340,12 +341,12 @@ const thisIsTheEnd = () => {
 }
 
 const phase5 = () => {
-    if(phase > 5) return;
+    if (phase > 5) return;
     clear()
     bhy = true
     bossColor = 'cyan'
     let checkend = setInterval(() => {
-        if(bh <= 0) {
+        if (bh <= 0) {
             clearInterval(hy)
             clearInterval(hy2)
             clearInterval(checkend)
@@ -353,7 +354,7 @@ const phase5 = () => {
         }
     })
     bossTP(100, 100)
-    
+
     let hy = setInterval(() => {
         bh += 5
         bhbb.innerText = bh + "/" + bhm;
@@ -390,19 +391,19 @@ const phase4 = () => {
                 bounce: true
             }
         )
-    },10000)
+    }, 10000)
     let atp42 = setInterval(() => {
         bossShootBullets("all", 15, 15, 30, 50)
         bossTP(rng(canvas.width), rng(canvas.height))
         amount++
-        if(amount %5 === 0) return;
+        if (amount % 5 === 0) return;
         setTimeout(() => {
             bossMoveY(canvas.height - bossH, 7.5)
         })
     }, 1500)
     let checkBH = setInterval(() => {
-        if(bh <= 500) {
-            if(phase >= 5 || amount %5 === 0) return
+        if (bh <= 500) {
+            if (phase >= 5 || amount % 5 === 0) return
             clearInterval(atp41)
             clearInterval(atp42)
             clearInterval(checkBH)
@@ -429,7 +430,7 @@ const phase3 = () => {
         );
     }, 6000)
     let atp32 = setInterval(() => {
-        bossTP(rng(canvas.width) - bossW/2, rng(canvas.height) - bossH/2)
+        bossTP(rng(canvas.width) - bossW / 2, rng(canvas.height) - bossH / 2)
         makeChildren(
             rng(canvas.width),
             rng(canvas.height),
@@ -441,7 +442,7 @@ const phase3 = () => {
     }, 15000)
     let cbh = setInterval(() => {
         if (bh <= 2000) {
-            if(phase >= 4) return;
+            if (phase >= 4) return;
             clearInterval(cbh);
             clearInterval(atp31);
             clearInterval(atp32);
@@ -458,7 +459,7 @@ const phase2 = () => {
     amount = 0;
     let checkBH = setInterval(() => {
         if (bh <= 3000) {
-            if(phase === 3 || amount % 5 === 0) return;
+            if (phase === 3 || amount % 5 === 0) return;
             phase = 3
             clearInterval(keepmovin);
             clearInterval(loop);
@@ -549,7 +550,7 @@ const finalBossFight = () => {
                             console.log("attack pattern 1");
                             let checkBossHealth = setInterval(() => {
                                 if (bh < 3500) {
-                                    if(phase === 2) return;
+                                    if (phase === 2) return;
                                     phase = 2
                                     console.log("attack pattern 2");
                                     if (ph < 10) ph = 10;

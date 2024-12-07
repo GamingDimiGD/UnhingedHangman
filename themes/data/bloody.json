@@ -1,0 +1,84 @@
+{
+    "id": "bloody",
+    "name": "血紅",
+    "description": "阿蛋這什麼東西",
+    "author": "遊戲迪米",
+    "categories": [
+        "紅色系",
+        "亮色系"
+    ],
+    "data": [
+        {
+            "id": "w",
+            "value": "#ffffff"
+        },
+        {
+            "id": "main",
+            "value": "#ff0000"
+        },
+        {
+            "id": "theme",
+            "value": "#3c0000"
+        },
+        {
+            "id": "navbar",
+            "value": "#3c0000"
+        },
+        {
+            "id": "bg",
+            "value": "#3c0000"
+        },
+        {
+            "id": "d",
+            "value": "#3c00003c"
+        },
+        {
+            "id": "dialogue",
+            "value": "#4c0000"
+        },
+        {
+            "id": "text",
+            "value": "#000000"
+        },
+        {
+            "id": "text2",
+            "value": "#ffffff"
+        },
+        {
+            "id": "y",
+            "value": "#fff000"
+        },
+        {
+            "id": "p",
+            "value": "#cc77ff"
+        },
+        {
+            "id": "r",
+            "value": "red"
+        },
+        {
+            "id": "c",
+            "value": "cyan"
+        },
+        {
+            "id": "bh",
+            "value": "#ffffff"
+        },
+        {
+            "id": "link",
+            "value": "#ff0000"
+        },
+        {
+            "id": "lh",
+            "value": "#3c0000"
+        },
+        {
+            "id": "wintext",
+            "value": "#3c0000"
+        },
+        {
+            "id": "notif",
+            "value": "#ff0000"
+        }
+    ]
+}

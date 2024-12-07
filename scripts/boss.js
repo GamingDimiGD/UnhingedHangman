@@ -162,10 +162,10 @@ const makeChildren = (cx, cy, health, vx, vy, bounce) => {
 };
 
 const makeManyChildren = (amount, gap, type) => {
-    if(!amount) return
-    if(!type) type = {}
+    if (!amount) return
+    if (!type) type = {}
     let int = setInterval(() => {
-        if(amount <= 0) return clearInterval(int)
+        if (amount <= 0) return clearInterval(int)
         makeChildren(type.cx, type.cy, type.health, type.vx, type.vy, type.bounce)
         amount--
     }, gap)
@@ -283,7 +283,7 @@ const update = () => {
     }
     d -= deltatime;
     if (d <= 0) {
-        if(finalBossMode) {
+        if (finalBossMode) {
             ctx.fillRect(x + 55 / 2, by, 15, 15)
             ctx.fillRect(x + 55 / 2, y, 15, 15)
             ctx.fillRect(bx, y + 55 / 2, 15, 15)
@@ -330,31 +330,31 @@ const update = () => {
             sfx("fart");
         } else bossColor = "#fff";
         bullets = bullets.filter(e => {
-            e.x < window.innerWidth ||
-            e.y < window.innerHeight ||
-            e.x > 0 || e.y > 0;
+            return e.x < window.innerWidth ||
+                e.y < window.innerHeight ||
+                e.x > 0 || e.y > 0;
         })
         b.y -= 5 * deltatime;
         ctx.fillStyle = "#fff";
         ctx.fillRect(b.x + 35, b.y, 5, 15);
     });
     betterBullets.forEach((b) => {
-        if(b.d === 'up') {
+        if (b.d === 'up') {
             b.y -= bbSpeed * deltatime;
             ctx.fillStyle = "#fff";
             ctx.fillRect(b.x, b.y, 15, 15);
         }
-        if(b.d === 'down') {
+        if (b.d === 'down') {
             b.y += bbSpeed * deltatime;
             ctx.fillStyle = "#fff";
             ctx.fillRect(b.x, b.y, 15, 15);
         }
-        if(b.d === 'right') {
+        if (b.d === 'right') {
             b.x += bbSpeed * deltatime;
             ctx.fillStyle = "#fff";
             ctx.fillRect(b.x, b.y, 15, 15);
         }
-        if(b.d === 'left') {
+        if (b.d === 'left') {
             b.x -= bbSpeed * deltatime;
             ctx.fillStyle = "#fff";
             ctx.fillRect(b.x, b.y, 15, 15);
@@ -371,11 +371,11 @@ const update = () => {
             bhbb.innerText = bh + "/" + bhm;
             betterBullets = betterBullets.filter(e => e !== b)
             sfx("fart");
-        } else bossColor = bhy?"cyan":"#fff";
+        } else bossColor = bhy ? "cyan" : "#fff";
         bullets = bullets.filter(e => {
-            e.x < window.innerWidth ||
-            e.y < window.innerHeight ||
-            e.x > 0 || e.y > 0;
+            return e.x < window.innerWidth ||
+                e.y < window.innerHeight ||
+                e.x > 0 || e.y > 0;
         })
     })
     bdb.forEach((b) => {
@@ -413,7 +413,7 @@ const update = () => {
         }
         if (funMode && rmv !== 0)
             ctx.fillStyle = `rgb(${rng(rmv)}, ${rng(rmv)}, ${rng(rmv)}`;
-            ctx.fillRect(b.x, b.y, b.width, b.height);
+        ctx.fillRect(b.x, b.y, b.width, b.height);
         if (
             lbossFightMode &&
             x + 70 > b.x &&
@@ -473,20 +473,20 @@ const update = () => {
     children.forEach(child => {
         child.x += child.vx * deltatime;
         child.y += child.vy * deltatime;
-        if(bounce) {
-            if(child.x + 50 > window.innerWidth) {
+        if (bounce) {
+            if (child.x + 50 > window.innerWidth) {
                 child.x = window.innerWidth - 50
                 child.vx = -child.vx
             }
-            if(child.x < 0) {
+            if (child.x < 0) {
                 child.x = 0
                 child.vx = -child.vx
             }
-            if(child.y + 50 > window.innerHeight) {
+            if (child.y + 50 > window.innerHeight) {
                 child.y = window.innerHeight - 50
                 child.vy = -child.vy
             }
-            if(child.y < 0) {
+            if (child.y < 0) {
                 child.y = 0
                 child.vy = -child.vy
             }
@@ -510,7 +510,7 @@ const update = () => {
                 sfx("boom");
             }
         }
-        if(child.color !== '#fff') child.color = '#fff'
+        if (child.color !== '#fff') child.color = '#fff'
         betterBullets.forEach(b => {
             if (
                 lbossFightMode &&
@@ -524,8 +524,8 @@ const update = () => {
                 child.color = '#f00'
                 sfx("fart");
             }
-            if(child.health <= 0) {
-                if(rng(25) === 1) {
+            if (child.health <= 0) {
+                if (rng(25) === 1) {
                     ph++
                     phbb.innerText = ph + "/" + phm;
                 }
@@ -533,12 +533,12 @@ const update = () => {
             }
             bullets = bullets.filter(e => {
                 e.x < window.innerWidth ||
-                e.y < window.innerHeight ||
-                e.x > 0 || e.y > 0;
+                    e.y < window.innerHeight ||
+                    e.x > 0 || e.y > 0;
             })
         })
         childcd--
-        if(childcd <= 0) {
+        if (childcd <= 0) {
             childcd = 240
             bossShootBullets('all', 5, 5, 1, 1, 1, true, child.x, child.y, 50, 50)
         }
@@ -548,13 +548,13 @@ const update = () => {
         ctx.fillRect(bossX, bossY, bossW, bossH);
         let sticksSprite = new Image();
         sticksSprite.src = "../images/sticksgbg.png";
-        if(finalBossMode) ctx.drawImage(sticksSprite,bossX + 5, bossY + 5, bossW - 10, bossH - 10)
+        if (finalBossMode) ctx.drawImage(sticksSprite, bossX + 5, bossY + 5, bossW - 10, bossH - 10)
     }
     requestAnimationFrame(update);
 };
 
 setInterval(() => {
-    if(ph >= 10 || ph === 0) return
+    if (ph >= 10 || ph === 0) return
     ph++
     phbb.innerText = ph + "/" + phm;
 }, 10000)
@@ -605,9 +605,9 @@ const bossReady = () => {
             lbossFightMode = true;
             $.jStorage.set("bossFightMode", true);
             showHealthBars();
-            music.src = "../sfx/nighthawk-Isolation.mp3";
-            if (funMode) music.src = "../sfx/speedofpaul.mp3";
-            music.play();
+            altChannel.src = "../sfx/nighthawk-Isolation.mp3";
+            if (funMode) altChannel.src = "../sfx/speedofpaul.mp3";
+            altChannel.play();
             fight();
         }, 30000);
         return;
@@ -629,6 +629,8 @@ const bossReady = () => {
         bossLi.innerText = '你: 你怎麼把鍵盤從我平板上拔出來的'
         $('.dropdown')[0].style.display = 'none'
         $('.navbar')[0].style.display = 'none'
+        $.delete('.dropdown')
+        $.delete('.navbar')
     }, 5000)
     setTimeout(() => {
         bossLi.innerText = '不管了就開始了'
@@ -643,6 +645,7 @@ const bossReady = () => {
         keyboardDiv.display = 'none'
         keyboardDiv.remove()
         game.display = 'none'
+        game.remove()
         bossLi.style.display = 'none'
         showHealthBars();
         music.src = "../sfx/nighthawk-Isolation-remix.mp3";

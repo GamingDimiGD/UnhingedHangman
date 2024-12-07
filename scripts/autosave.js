@@ -5,11 +5,11 @@ const save = () => {
     $.jStorage.set('vocab', vocab)
     $.jStorage.set('vocabAmount', vocabAmount)
     autosaveIndicator.innerText = '已儲存👍'
-    autosaveIndicator.style.color = '#0f0'
+    autosaveIndicator.style.color = 'var(--text)'
     saveButton.innerText = '已儲存👍'
     setTimeout(() => {
         autosaveIndicator.innerText = autosaveText
-        autosaveIndicator.style.color = '#000'
+        autosaveIndicator.style.color = 'var(--text)'
         saveButton.innerText = '儲存'
     }, 1000)
 }

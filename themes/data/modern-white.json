@@ -1,0 +1,83 @@
+{
+    "id": "modern-white",
+    "name": "現代白色",
+    "description": "每個網站大概都長這樣",
+    "author": "遊戲迪米",
+    "categories": [
+        "亮色系"
+    ],
+    "data": [
+        {
+            "id": "w",
+            "value": "#eeeeee"
+        },
+        {
+            "id": "main",
+            "value": "#cccccc"
+        },
+        {
+            "id": "theme",
+            "value": "#cccccc"
+        },
+        {
+            "id": "navbar",
+            "value": "#000000"
+        },
+        {
+            "id": "bg",
+            "value": "#ffffff"
+        },
+        {
+            "id": "d",
+            "value": "#cccccc3c"
+        },
+        {
+            "id": "dialogue",
+            "value": "#bbbbbb"
+        },
+        {
+            "id": "text",
+            "value": "#000000"
+        },
+        {
+            "id": "text2",
+            "value": "#000000"
+        },
+        {
+            "id": "y",
+            "value": "#fff000"
+        },
+        {
+            "id": "p",
+            "value": "#cc77ff"
+        },
+        {
+            "id": "r",
+            "value": "red"
+        },
+        {
+            "id": "c",
+            "value": "cyan"
+        },
+        {
+            "id": "bh",
+            "value": "#ffffff"
+        },
+        {
+            "id": "link",
+            "value": "#000000"
+        },
+        {
+            "id": "lh",
+            "value": "#ffffff"
+        },
+        {
+            "id": "wintext",
+            "value": "#000000"
+        },
+        {
+            "id": "notif",
+            "value": "#000000"
+        }
+    ]
+}

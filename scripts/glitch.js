@@ -24,5 +24,5 @@ let picksceell = () => {
         document.querySelectorAll('h2').forEach(p => p.innerText = glitch(rng(10)))
         document.querySelectorAll('a').forEach(p => p.innerText = glitch(rng(10)))
         document.querySelectorAll('b').forEach(p => p.innerText = glitch(rng(10)))
-    }, antiLag?100:0)
+    }, antiLag ? 100 : 0)
 }

@@ -6,6 +6,36 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans TC', sans-serif;
+    transition: background 0.2s ease-in-out;
+}
+
+:root {
+    --w: #ffffff;
+    --main: #00ff00;
+    --theme: #003c00;
+    --navbar: #003c00;
+    --bg: #003c00;
+    --d: #003c00;
+    --dialogue: #004c00;
+    --text: #000000;
+    --text2: #ffffff;
+    --y: #fff000;
+    --p: #cc77ff;
+    --c: cyan;
+    --r: red;
+    --bh: #ffffff;
+    --link:  #00ff00;
+    --lh:  #003c00;
+    --wintext: #003c00;
+    --notif: #00ff00;
+    --custom-key-color: #00ff00;
+    --ckc-b: #00ff00;
+    --ckc-blur: 0rem;
+    --ckc-animation: unset;
+    --ckc-duration: 0s;
+    --ckc-easing: linear;
+    --ckc-opacity-a: 1;
+    --ckc-opacity-b: 1;
 }
 
 body {
@@ -14,7 +44,8 @@ body {
     padding: 0 10px;
     justify-content: center;
     min-height: 100vh;
-    background: #003c00;
+    background: var(--bg);
+    color:  var(--text);
 }
 
 .navbar audio {
@@ -23,12 +54,12 @@ body {
 
 .boss-dialogue {
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     display: none;
 }
 
 .boss-dialogue li {
-    color: white;
+    color: var(--text2);
 }
 
 .random {
@@ -39,15 +70,15 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-    background: #00ff00;
+    background: var(--main);
     width: 100%;
     display: flex;
     align-items: center;
     height: 10%;
     padding: 1rem;
-    color: #003c00;
+    color: var(--navbar);
     max-height: 50px;
-    z-index: 2;
+    z-index: 10;
 }
 
 .navbar li {
@@ -59,7 +90,6 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: #ff0000;
 }
 
 .info {
@@ -71,20 +101,21 @@ body {
 
 .container {
     width: 850px;
-    background-color: #fff;
+    background-color: var(--w);
     display: flex;
     gap: 70px;
     align-items: flex-end;
     padding: 60px 40px;
     border-radius: 10px;
     transition: background 3s ease;
+    z-index: 0;
 }
 .hangman-box img {
     width: 270px;
     height: 270px;
     border-radius: 5px;
-    border: 3px solid #003c00;
-    background: #fff;
+    border: 3px solid var(--theme);
+    background: var(--w);
 }
 .hangman-box h1 {
     font-size: 1.45rem;
@@ -107,7 +138,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 40px;
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid var(--text);
     transition: border-bottom 0.3s ease-in-out;
     
 }
@@ -137,29 +168,52 @@ body {
 }
 
 :where(.game-modal, .keyboard) button {
-    color: #fff;
+    color: var(--text2);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     outline: none;
     border: none;
-    background: #003c00;
+    background: var(--theme);
     border-radius: 4px;
     text-transform: uppercase;
+    position: relative;
 }
 
-.keyboard button {
-    border: 3px solid #0f0;
+.keyboard button::after, .keyboard button::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 6px);
+    left: calc(50% - 6px);
+    transform: translate(calc(-50% + 6px), calc(-50% + 6px));
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    background: var(--custom-key-color);
+    border-radius: 6px;
+    z-index: -1;
+    animation: var(--ckc-animation) var(--ckc-duration) var(--ckc-easing) infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: var(--ckc-opacity-a);
+}
+
+.keyboard button::before {
+    background: var(--ckc-b);
+    filter: blur(var(--ckc-blur));
+    animation: var(--ckc-animation2) var(--ckc-duration) var(--ckc-easing) infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: var(--ckc-opacity-b);
 }
 
 .qwerty {
-    color: #fff;
+    color: var(--text2);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     outline: none;
     border: none;
-    background: #003c00;
+    background: var(--theme);
     border-radius: 4px;
     text-transform: uppercase;
     padding: 7px;
@@ -167,16 +221,16 @@ body {
 }
 
 button {
-    color: #fff;
+    color: var(--text2);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     outline: none;
     border: none;
-    background: #003c00;
+    background: var(--theme);
     border-radius: 4px;
     text-transform: uppercase;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .navbar button {
@@ -188,7 +242,8 @@ button {
 }
     
 :where(body) button:hover {
-    background: #00ff00;
+    background: var(--main);
+    color: var(--bh)
 }
 .keyboard button {
     padding: 7px;
@@ -196,16 +251,16 @@ button {
 }
 
 button[disabled] {
-    background-color: #003c003c;
+    background-color: var(--d);
     pointer-events: none;
 }
 
 :where(.game-modal, .keyboard) button:hover {
-    background: #0f0;
+    background: var(--main);
 }
 
 .game-modal .content {
-    background: #fff;
+    background: var(--w);
     max-width: 420px;
     max-height: 420px;
     overflow-y: auto;
@@ -213,6 +268,7 @@ button[disabled] {
     text-align: center;
     border-radius: 10px;
     padding: 30px;
+    color: var(--text);
 }
 
 .game-modal img {
@@ -224,32 +280,22 @@ button[disabled] {
     margin-bottom: 20px;
 }
 
-.game-modal p {
-    font-size: 1.15rem;
-    margin: 15px 0 30px;
-    font-weight: 500;
-}
-
-.game-modal p#meaning {
-    margin-top: -15px;
-}
-
 .game-modal p b {
-    color: #003c00;
+    color: var(--wintext);
     font-weight: 600;
 }
 .game-modal button {
     padding: 12px 23px;
-    background-color: #003c00;
+    background-color: var(--theme);
     border-radius: 7px;
-    color: #0f0;
+    color: var(--text2);
 }
 
 .dropdown a {
-    color: #0f0;
+    color: var(--link);
     text-decoration: none;
     border-radius: 4px;
-    background: #003c00;
+    background: var(--theme);
     font-size: 1rem;
     font-weight: 600;
     padding: 2px 7px;
@@ -257,8 +303,8 @@ button[disabled] {
 }
 
 .dropdown a:hover {
-    background: #0f0;
-    color: #003c00;
+    background: var(--main);
+    color: var(--lh);
 }
 
 .dropdown {
@@ -272,7 +318,9 @@ button[disabled] {
     right: -100%;
     transition: right 0.4s ease;
     z-index: 0;
-    top: 60px
+    top: 60px;
+    overflow-y: auto;
+    max-height: 80vh;
 }
 
 .dropdown.open {
@@ -283,10 +331,10 @@ button[disabled] {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: var(--text2);
     cursor: pointer;
     margin: 4px;
-    border: 3px solid #0f0;
+    border: 3px solid var(--main);
 }
 
 .navbut {
@@ -314,18 +362,18 @@ button[disabled] {
     }
     .navbar {
         background: none;
-        color: white;
+        color: var(--w);
     }
     .navbar h1 {
-        background: #003c00;
+        background: var(--theme);
         border-radius: 4px;
         padding: 2px;
         padding-left: 7px;
         padding-right: 7px;
-        color: white;
+        color: var(--w);
     }
     .info li {
-        color: white;
+        color: var(--w);
     }
     .navbar audio {
         display: none;
@@ -335,14 +383,14 @@ button[disabled] {
     }
     .toggle {
         display: flex;
-        background: #003c00;
+        background: var(--theme);
         border-radius: 4px;
         padding: 2px 10px;
         align-items: center;
         justify-content: center;
     }
     .info li {
-        background-color: #003c00;
+        background-color: var(--theme);
         border-radius: 4px;
         padding: 3px;
         padding-left: 5px;
@@ -371,7 +419,8 @@ button[disabled] {
         height: 100%;
     }
     .text-box {
-        height: 90%;
+        height: 100% !important;
+        max-width: 100% !important;
     }
 }
 
@@ -416,7 +465,7 @@ button[disabled] {
 
 .phb {
     bottom: 10px;
-    color: #0f0;
+    color: var(--main);
 }
 
 .phb b {
@@ -438,7 +487,7 @@ button[disabled] {
 }
 
 .achievements-modal .content {
-    background: #fff;
+    background: var(--w);
     max-width: 550px;
     width: 100%;
     text-align: center;
@@ -453,9 +502,9 @@ button[disabled] {
 
 .achievements-modal button {
     padding: 12px 23px;
-    background-color: #003c00;
+    background-color: var(--theme);
     border-radius: 7px;
-    color: #0f0;
+    color: var(--main);
 }
 
 .achievements-modal .content li {
@@ -463,11 +512,11 @@ button[disabled] {
 }
 
 .achievements-modal .content li b {
-    color: #003c00;
+    color: var(--theme);
 }
 
 .achievements-modal .content h3 {
-    color: #003c003c;
+    color: var(--d);
     
 }
 
@@ -477,8 +526,8 @@ button[disabled] {
     bottom: 20px;
     justify-content: center;
     align-items: center;
-    background: #003c00;
-    color: #0f0;
+    background: var(--theme);
+    color: var(--notif);
     z-index: 9999;
     padding: 7px;
     width: calc(100% / 3);
@@ -510,7 +559,7 @@ button[disabled] {
     pointer-events: auto;
 }
 .content.shop {
-    background: #fff;
+    background: var(--w);
     max-width: 550px;
     margin: 5px;
     width: 100%;
@@ -536,7 +585,7 @@ button[disabled] {
     gap: 5px;
 }
 .stuff div {
-    background: #003c003c;
+    background: var(--d);
     width: calc(100% / 3 - 5px);
     padding: 5px;
     border-radius: 4px;
@@ -548,7 +597,7 @@ button[disabled] {
     padding: 5px 10px;
 }
 .daily-login .content {
-    background: #fff;
+    background: var(--w);
     max-width: 550px;
     max-height: 300px;
     width: 100%;
@@ -567,7 +616,7 @@ button[disabled] {
     gap: 5px;
 }
 .daily-login .content .perks div {
-    background: #003c003c;
+    background: var(--d);
     width: calc(100% / 3 - 5px);
     min-width: 110px;
     padding: 5px;
@@ -589,7 +638,7 @@ button[disabled] {
     padding: 12px 23px;
 }
 .update-modal .content {
-    background: #fff;
+    background: var(--w);
     max-width: 550px;
     max-height: 60%;
     width: 100%;
@@ -602,7 +651,7 @@ button[disabled] {
     pointer-events: none;
 }
 .content {
-    background: #fff;
+    background: var(--w);
     border-radius: 10px;
 }
 
@@ -616,7 +665,7 @@ button[disabled] {
 }
 
 .load {
-    background: #fff;
+    background: var(--w);
     position: fixed;
     top: 0;
     left: 0;
@@ -636,34 +685,18 @@ button[disabled] {
     
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-@keyframes pulse {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.01);
-    }
-}
 
 .speedrun {
     position: fixed;
     bottom: 10px;
     right: 10px;
     padding: 2px 7px;
-    color: #fff;
-    background: #003c00;
+    color: var(--w);
+    background: var(--theme);
 }
 
 .market .content {
-    background: #fff;
+    background: var(--w);
     max-width: 550px;
     margin: 5px;
     width: 100%;
@@ -676,7 +709,7 @@ button[disabled] {
     pointer-events: none;
 }
 .stats .content {
-    background: #fff;
+    background: var(--w);
     max-width: 550px;
     margin: 5px;
     width: 100%;
@@ -696,7 +729,7 @@ button[disabled] {
 }
 
 .alert-modal .content {
-    background: #fff;
+    background: var(--w);
     max-width: 230px;
     margin: 5px;
     width: 100%;
@@ -716,22 +749,22 @@ button[disabled] {
 .dialogue .content {
     width: 100%;
     max-width: 950px;
-    background: #004c00;
+    background: var(--dialogue);
     padding: 20px;
     display: flex;
     gap: 10px;
 }
 
 .dialogue .content img {
-    border: 7px solid #003c00;
+    border: 7px solid var(--theme);
     height: 269px;
     width: 269px;
     border-radius: 3px;
 }
 .text-box {
-    color: #fff;
+    color: var(--text2);
     padding: 7px;
-    border: 7px solid #003c00;
+    border: 7px solid var(--theme);
     height: 100%;
     width: 100%;
     border-radius: 3px;
@@ -744,6 +777,7 @@ button[disabled] {
     overflow-x: auto;
     overflow-wrap: break-word;
     width: 100%;
+    font-size: 1.4rem;
 }
 
 @keyframes chroma {
@@ -765,7 +799,7 @@ button[disabled] {
     color: #ff0;
 }
 .darkgreen {
-    color: #003c00;
+    color: var(--theme);
 }
 .bigtext {
     font-size: 3rem;
@@ -773,7 +807,12 @@ button[disabled] {
 .smalltext {
     font-size: 0.7rem;
 }
+.line-through {
+    text-decoration: line-through;
+}
+
 .undo {
+    margin-top: 7.5px;
     padding: 10px;
     border-radius: 3000px;
     height: 2rem;
@@ -784,12 +823,18 @@ button[disabled] {
     justify-content: center;
 }
 
+.undo-button-div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
 .amount-display {
     display: none;
 }
 
 .manage-save .content {
-    background: #fff;
+    background: var(--w);
     max-width: 550px;
     margin: 5px;
     width: 100%;
@@ -803,7 +848,7 @@ button[disabled] {
 }
 
 .small-modals .content {
-    background: #fff;
+    background: var(--w);
     max-width: 550px;
     margin: 5px;
     width: 100%;
@@ -832,8 +877,8 @@ button[disabled] {
     position: absolute;
     inset: 0 0 0 0;
     transform: 
-        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-        translateZ(550px);
+    rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+    translateZ(550px);
     width: 50px;
     height: 50px;
 }
@@ -916,7 +961,7 @@ button[disabled] {
     gap: 10px;
 }
 .white {
-    color: #fff;
+    color: var(--w);
 }
 
 i {
@@ -930,6 +975,419 @@ i {
     background-color: red;
 }
 .flush-save:hover {
-    background-color: #003c00;
+    background-color: var(--theme);
     color: red;
+}
+
+.theme-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-box b {
+    font-size: 1.2rem;
+}
+
+.theme-box input {
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.picker {
+    border: var(--text) 3px solid;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
+.theme-box button {
+    margin: 5px;
+}
+
+.theme-colors {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 10%;
+    gap: 5px;
+}
+
+.preset-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.preset-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    background: var(--d);
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.preset-item img {
+    width: 50%;
+    height: max-content;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.preset-info {
+    margin: 5px;
+    max-width: 40%;
+}
+
+.preset-info b {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 0.7rem;
+}
+
+.shortcut-buttons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    /* justify-content: center; */
+}
+.shortcut-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 50%;
+    overflow-x: hidden;
+}
+
+.shortcut-names {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+}
+.shortcut-names b {
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.cool-display-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.deprecated {
+    display: none;
+}
+
+.mwd {
+    background: var(--d);
+    border-radius: 50px;
+}
+
+.mc {
+    display: flex;
+    flex-direction: column;
+}
+
+.mc span {
+    font-size: 1.2rem;
+}
+
+.mtype {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0 20px;
+}
+
+.m {
+    text-align: left;
+    margin: 20px;
+    background: var(--d);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.meaning.modal .content {
+    max-width: 900px !important;
+}
+
+.antonyms {
+    border-bottom: var(--main) 5px solid;
+    padding-bottom: 10px;
+}
+
+.hover-text {
+    max-width: 30% !important;
+    opacity: 0;
+    position: fixed !important;
+    z-index: 9999999999999999999;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    margin: 5px !important;
+    background: var(--text);
+    color: var(--w);
+    padding: 2px 7px;
+    border-radius: 3px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.event-list .card {
+    padding: 5px;
+    position: relative;
+    display: flex !important;
+    background: var(--theme);
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.event-list .card img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.event-list .card .eg {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(90deg, var(--theme) 70%, #00000000);
+    z-index: 1000;
+}
+.ei {
+    z-index: 1001;
+    color: var(--text2);
+}
+
+
+.sb {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.alpha {
+    position: relative;
+}
+
+.alpha::before {
+    content: 'ALPHA';
+    background: var(--dialogue);
+    color: var(--text2);
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    position: absolute;
+    top: -2px;
+    right: -15px;
+}
+
+.alpha:hover::before {
+    top: -15px;
+}
+
+.beta {
+    position: relative;
+}
+
+.beta::before {
+    content: 'BETA';
+    background: var(--dialogue);
+    color: var(--text2);
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    position: absolute;
+    top: -2px;
+    right: -15px;
+}
+
+.beta:hover::before {
+    top: -15px;
+}
+
+.buggy {
+    position: relative;
+}
+
+.buggy::before {
+    content: '可能壞掉';
+    background: var(--dialogue);
+    color: var(--text2);
+    font-weight: 400;
+    padding: 2px 7px;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    position: absolute;
+    top: -5px;
+    right: -15px;
+    transition: top 0.3s ease-in-out;
+}
+
+.buggy:hover::before {
+    top: -15px;
+}
+
+.shop-item b {
+    font-weight: 600 !important;
+}
+@keyframes rainbow {
+    0% {
+        background: #ff0000;
+    }
+    8% {
+        background: #ff8800;
+    }
+    16% {
+        background: #ffff00;
+    }
+    24% {
+        background: #88ff00;
+    }
+    32% {
+        background: #00ff00;
+    }
+    40% {
+        background: #00ff88;
+    }
+    48% {
+        background: #00ffff;
+    }
+    56% {
+        background: #0088ff;
+    }
+    64% {
+        background: #0000ff;
+    }
+    72% {
+        background: #8800ff;
+    }
+    80% {
+        background: #ff00ff;
+    }
+    88% {
+        background: #ff0088;
+    }
+    100% {
+        background: #ff0000;
+    }
+}
+@keyframes rainbowText {
+    0% {
+        color: #ff0000;
+    }
+    8% {
+        color: #ff8800;
+    }
+    16% {
+        color: #ffff00;
+    }
+    24% {
+        color: #88ff00;
+    }
+    32% {
+        color: #00ff00;
+    }
+    40% {
+        color: #00ff88;
+    }
+    48% {
+        color: #00ffff;
+    }
+    56% {
+        color: #0088ff;
+    }
+    64% {
+        color: #0000ff;
+    }
+    72% {
+        color: #8800ff;
+    }
+    80% {
+        color: #ff00ff;
+    }
+    88% {
+        color: #ff0088;
+    }
+    100% {
+        color: #ff0000;
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.01);
+    }
+}
+@keyframes spinB {
+    from {
+        transform: rotate(0deg)  translate(calc(-50% + 6px), calc(-50% + 6px));
+    }
+    to {
+        transform: rotate(360deg) translate(calc(-50% + 6px), calc(-50% + 6px));
+    }
+}
+@keyframes pulseB {
+    from {
+        transform: scale(1) translate(calc(-50% + 6px), calc(-50% + 6px));
+    }
+    to {
+        transform: scale(1.01) translate(calc(-50% + 6px), calc(-50% + 6px));
+    }
+}
+
+.ckc-options {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.ckc-buttons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content a {
+    color: var(--text)
 }

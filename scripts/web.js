@@ -31,7 +31,6 @@ let msg = [
     "你有" + rng(100, 0) + "% 交到朋友",
     "我比你高",
     "你絕對不知道你打贏這遊戲會發生的事情",
-    "夓㴐",
     "#### ###",
     "綠色正方形，白色長方形，你英文真的不行",
     "我在你後面",
@@ -42,7 +41,11 @@ let msg = [
     rng(1000000000000000000000) + " - 這是你的數（跟遊戲無關）",
     glitch(20),
     'undefined',
-    'null'
+    'null',
+    '這遊戲好奇特',
+    '我是誰我在哪我在做什麼',
+    '我最討厭每次電腦都把什麼改成甚麼，太討厭了',
+    '那個AI好笨'
 ];
 let m = msg[rng(msg.length - 1, 0)];
 
@@ -139,3 +142,8 @@ newBlock();
 const removeAllBlocks = () => {
     document.querySelectorAll('canvas.block').forEach(c => document.body.removeChild(c))
 }
+
+if (dateRange(3, 1, 5, 31)) setVar('load-bg', 'linear-gradient(to right, #FFC5C5,#FFEBD8,#C7DCA7)')
+if (dateRange(6, 1, 8, 31)) setVar('load-bg', 'linear-gradient(to right, #C6E7FF, #D4F6FF, #FBFBFB, #FFDDAE)')
+if (dateRange(9, 1, 11, 31)) setVar('load-bg', 'linear-gradient(to right, #FFB38E,#FFCF9D,#FFB26F)')
+if (dateRange(12, 1, 12, 31) || dateRange(1, 1, 2, 31)) setVar('load-bg', 'linear-gradient(to right, #C4DFDF, #D2E9E9,#E3F4F4,#F8F6F4)')

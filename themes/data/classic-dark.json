@@ -1,0 +1,84 @@
+{
+    "id": "classic-dark",
+    "name": "夜間經典",
+    "description": "UnhingedHangman 的預設顏色，但是是暗色系，對眼睛較舒服吧",
+    "author": "遊戲迪米",
+    "categories": [
+        "綠色系",
+        "暗色系"
+    ],
+    "data": [
+        {
+            "id": "w",
+            "value": "#333333"
+        },
+        {
+            "id": "main",
+            "value": "#003c00"
+        },
+        {
+            "id": "theme",
+            "value": "#007c00"
+        },
+        {
+            "id": "navbar",
+            "value": "#ffffff"
+        },
+        {
+            "id": "bg",
+            "value": "#000000"
+        },
+        {
+            "id": "d",
+            "value": "#003c003c"
+        },
+        {
+            "id": "dialogue",
+            "value": "#004c00"
+        },
+        {
+            "id": "text",
+            "value": "#ffffff"
+        },
+        {
+            "id": "text2",
+            "value": "#ffffff"
+        },
+        {
+            "id": "y",
+            "value": "#555000"
+        },
+        {
+            "id": "p",
+            "value": "#8844bb"
+        },
+        {
+            "id": "r",
+            "value": "#aa0000"
+        },
+        {
+            "id": "c",
+            "value": "cyan"
+        },
+        {
+            "id": "bh",
+            "value": "#ffffff"
+        },
+        {
+            "id": "link",
+            "value": "#ffffff"
+        },
+        {
+            "id": "lh",
+            "value": "#ffffff"
+        },
+        {
+            "id": "wintext",
+            "value": "#00ff00"
+        },
+        {
+            "id": "notif",
+            "value": "#ffffff"
+        }
+    ]
+}

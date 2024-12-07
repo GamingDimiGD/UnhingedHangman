@@ -1,0 +1,84 @@
+{
+    "id": "snowy",
+    "name": "雪白",
+    "description": "又藍又白，閃瞎眼睛?",
+    "author": "遊戲迪米",
+    "categories": [
+        "藍色系",
+        "亮色系"
+    ],
+    "data": [
+        {
+            "id": "w",
+            "value": "#ffffff"
+        },
+        {
+            "id": "main",
+            "value": "#ffffff"
+        },
+        {
+            "id": "theme",
+            "value": "#00ffff"
+        },
+        {
+            "id": "navbar",
+            "value": "#003c3c"
+        },
+        {
+            "id": "bg",
+            "value": "#e1ffff"
+        },
+        {
+            "id": "d",
+            "value": "#003c3c3c"
+        },
+        {
+            "id": "dialogue",
+            "value": "#004c4c"
+        },
+        {
+            "id": "text",
+            "value": "#000000"
+        },
+        {
+            "id": "text2",
+            "value": "#000"
+        },
+        {
+            "id": "y",
+            "value": "#fff000"
+        },
+        {
+            "id": "p",
+            "value": "#cc77ff"
+        },
+        {
+            "id": "r",
+            "value": "red"
+        },
+        {
+            "id": "c",
+            "value": "cyan"
+        },
+        {
+            "id": "bh",
+            "value": "#000000"
+        },
+        {
+            "id": "link",
+            "value": "#000"
+        },
+        {
+            "id": "lh",
+            "value": "#003c3c"
+        },
+        {
+            "id": "wintext",
+            "value": "#003c3c"
+        },
+        {
+            "id": "notif",
+            "value": "#000000"
+        }
+    ]
+}

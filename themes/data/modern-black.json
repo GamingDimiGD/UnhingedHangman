@@ -1,0 +1,83 @@
+{
+    "id": "modern-black",
+    "name": "現代黑色",
+    "description": "黑白感覺",
+    "author": "遊戲迪米",
+    "categories": [
+        "暗色系"
+    ],
+    "data": [
+        {
+            "id": "w",
+            "value": "#444444"
+        },
+        {
+            "id": "main",
+            "value": "#222222"
+        },
+        {
+            "id": "theme",
+            "value": "#222222"
+        },
+        {
+            "id": "navbar",
+            "value": "#ffffff"
+        },
+        {
+            "id": "bg",
+            "value": "#111111"
+        },
+        {
+            "id": "d",
+            "value": "#cccccc3c"
+        },
+        {
+            "id": "dialogue",
+            "value": "#bbbbbb"
+        },
+        {
+            "id": "text",
+            "value": "#ffffff"
+        },
+        {
+            "id": "text2",
+            "value": "#ffffff"
+        },
+        {
+            "id": "y",
+            "value": "#555555"
+        },
+        {
+            "id": "p",
+            "value": "#777777"
+        },
+        {
+            "id": "r",
+            "value": "#ffffff"
+        },
+        {
+            "id": "c",
+            "value": "#ffffff"
+        },
+        {
+            "id": "bh",
+            "value": "#cccccc"
+        },
+        {
+            "id": "link",
+            "value": "#ffffff"
+        },
+        {
+            "id": "lh",
+            "value": "#cccccc"
+        },
+        {
+            "id": "wintext",
+            "value": "#ffffff"
+        },
+        {
+            "id": "notif",
+            "value": "#ffffff"
+        }
+    ]
+}

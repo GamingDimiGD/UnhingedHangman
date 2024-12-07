@@ -1,0 +1,84 @@
+{
+    "id": "purple",
+    "name": "紫色",
+    "description": "紫色，只有紫色",
+    "author": "遊戲迪米",
+    "categories": [
+        "紫色系",
+        "亮色系"
+    ],
+    "data": [
+        {
+            "id": "w",
+            "value": "#77428D"
+        },
+        {
+            "id": "main",
+            "value": "#77428D"
+        },
+        {
+            "id": "theme",
+            "value": "#B28FCE"
+        },
+        {
+            "id": "navbar",
+            "value": "#B28FCE"
+        },
+        {
+            "id": "bg",
+            "value": "#4A225D"
+        },
+        {
+            "id": "d",
+            "value": "#003c003c"
+        },
+        {
+            "id": "dialogue",
+            "value": "#533D5B"
+        },
+        {
+            "id": "text",
+            "value": "#000000"
+        },
+        {
+            "id": "text2",
+            "value": "#ffffff"
+        },
+        {
+            "id": "y",
+            "value": "#fff000"
+        },
+        {
+            "id": "p",
+            "value": "#cc77ff"
+        },
+        {
+            "id": "r",
+            "value": "red"
+        },
+        {
+            "id": "c",
+            "value": "cyan"
+        },
+        {
+            "id": "bh",
+            "value": "#ffffff"
+        },
+        {
+            "id": "link",
+            "value": "#77428D"
+        },
+        {
+            "id": "lh",
+            "value": "#ffffff"
+        },
+        {
+            "id": "wintext",
+            "value": "#ffffff"
+        },
+        {
+            "id": "notif",
+            "value": "#ffffff"
+        }
+    ]
+}

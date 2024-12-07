@@ -3,15 +3,34 @@ let g = 0;
 let b = 0;
 let styleText = `rgb(${r},${g},${b})`;
 let cs = 5;
+let snow = () => {
+    if (antiLag) return;
+    skew = Math.max(0.8, skew - 0.001);
+    confetti({
+        particleCount: 1,
+        startVelocity: 0,
+        ticks: 100,
+        origin: {
+            x: Math.random(),
+            y: Math.random() * skew - 0.2,
+        },
+        colors: ["#ffffff"],
+        shapes: ["circle", "square", 'triangle', "hexagon"],
+        gravity: rng(0.6, 0.4),
+        scalar: rng(1, 0.4),
+        drift: rng(0.4, -0.4),
+    });
+    requestAnimationFrame(snow);
+}
 setInterval(() => {
     if (rmv === 0) {
         document.querySelector(".hangman-box img").style.border =
-            "3px solid #003c00";
-        document.querySelector(".navbar").style.color = "#003c00";
+            "3px solid var(--theme)";
+        document.querySelector(".navbar").style.color = "var(--navbar)";
         streakText.style.border = "none";
-        streakText.style.color = "#000";
+        streakText.style.color = "var(--text)";
         keyboardDiv.querySelectorAll("button").forEach((btn) => {
-            btn.style.color = "#fff";
+            btn.style.color = "var(--text2)";
         });
         return;
     }
@@ -53,9 +72,8 @@ setInterval(() => {
         g = g + cs;
     }
     if (ckcRainbow) {
-        document.querySelectorAll(".keyboard button").forEach((b) => {
-            b.style.border = "3px solid " + styleText;
-        });
+        setVar('custom-key-color', styleText)
+        setVar('ckc-b', styleText)
     }
     if (fmrainbow) {
         ask = styleText;
@@ -70,43 +88,29 @@ setInterval(() => {
             btn.style.color = styleText;
         });
     }
-    if($.jStorage.get('customBGIMG')) {
+    if ($.jStorage.get('customBGIMG')) {
         $.jStorage.set("t", t);
         t = $.jStorage.get("t");
     }
-    if(!finalBossMode && !idkAnymore) {
-        if (t && winStreak < 5) game.style.background = "#ffffff3c";
+    if (!finalBossMode && !idkAnymore && !fbd) {
+        if (t && winStreak < 5) game.style.background = getVar('w') + "3c";
         else if (t && winStreak >= 5 && winStreak < 10)
-            game.style.background = "#fff0003c";
-        else if (t && winStreak >= 10) game.style.background = "#cc77ff3c";
-        else if (!t && winStreak < 5) game.style.background = "#ffffff";
+            game.style.background = getVar('y') + '3c';
+        else if (t && winStreak >= 10) game.style.background = getVar('p') + "3c";
+        else if (!t && winStreak < 5) game.style.background = getVar('w');
         else if (!t && winStreak >= 5 && winStreak < 10)
-            game.style.background = "#fff000";
-        else if (!t && winStreak >= 10) game.style.background = "#cc77ff";
+            game.style.background = getVar('y');
+        else if (!t && winStreak >= 10) game.style.background = getVar('p');
     } else {
-        game.style.background = '#ffffff00'
+        game.style.background = getVar('w')
     }
     let textbox = document.querySelector(".text-box");
     let e = textbox.style
-    if(window.innerWidth < 950 && window.innerWidth > 548) {
-        e.width = `calc(${window.innerWidth}px - 268.8px - 50px)`;
-    } else if(window.innerWidth < 548) {
-        e.width = `100%`;
-        e.maxWidth = `100%`;
-    } else {
-        e.maxWidth = `69%`;
-    }
 }, 10);
 const streakText = document.querySelector(".streak");
 let si;
 const checkStreak = (amount) => {
     winStreak++;
-    /*if(!isNaN(vocabAmount)) if(winStreak > vocabAmount || winStreak > vocab.length ||　winStreak > oVocab.length) {
-        setInterval(() => alert('你這個開掛仔'))
-        sfx('eeeeuuugh')
-        music.pause()
-        return
-    }*/
     if (winStreak > hiStreak && amount !== 0) hiStreak++;
     if (amount !== 0) {
         if (hiStreak >= 5 || winStreak >= 5) giveAch("5streak");
@@ -121,39 +125,41 @@ const checkStreak = (amount) => {
     streakText.innerText = winStreak + " 連勝";
     if (winStreak < 5) {
         clearInterval(si);
-        game.style.background = "#ffffff";
         document.querySelector(".hangman-box img").style.border =
-            "3px solid #003c00";
-        document.querySelector(".navbar").style.color = "#003c00";
+            "3px solid var(--theme)";
+        document.querySelector(".navbar").style.color = "var(--navbar)";
         streakText.style.border = "none";
-        streakText.style.color = "#000";
+        streakText.style.color = "var(--text)";
         keyboardDiv.querySelectorAll("button").forEach((btn) => {
-            btn.style.color = "#fff";
+            btn.style.color = "var(--text2)";
         });
         game.style.border = "none";
         if (bossFightMode || speedRunMode) return;
-        if (!music.src.includes("Wallpaper.mp3") && music.src !== "")
+        if (!music.src.includes("Wallpaper.mp3") && !$.jStorage.get('customMusic') && music.src !== "")
             music.src = "../sfx/Wallpaper.mp3";
+        else if ($.jStorage.get('customMusic') && music.src !== "" && !(music.src === $.jStorage.get('customMusic')))
+            music.src = $.jStorage.get('customMusic');
     } else if (winStreak >= 5 && winStreak < 10) {
         clearInterval(si);
-        game.style.background = "#fff000";
         document.querySelector(".hangman-box img").style.border =
-            "5px solid #ff0000";
-        streakText.style.color = "#ff0000";
+        "5px solid var(--r)";
+        streakText.style.color = "var(--r)";
         streakText.style.borderRadius = "2px";
-        streakText.style.border = "3px solid #ff0000";
+        streakText.style.border = "3px solid var(--r)";
         si = setInterval(() => {
             streakText.style.margin = rng(3) + "px";
         });
     } else if (winStreak >= 10) {
         clearInterval(si);
-        game.style.background = "#cc77ff";
-        game.style.border = "5px solid cyan";
+        game.style.border = "5px solid var(--c)";
         si = setInterval(() => {
             streakText.style.margin = rng(3) + "px";
         });
         if (bossFightMode || speedRunMode) return;
-        if (!music.src.includes("Creo-Sphere.mp3") && music.src !== "")
+        if (!music.src.includes("Creo-Sphere.mp3") && music.src !== "" && !$.jStorage.get('custom10StreakMusic'))
             music.src = "../sfx/Creo-Sphere.mp3";
+        else if ($.jStorage.get('custom10StreakMusic') && music.src !== "" && !(music.src === $.jStorage.get('custom10StreakMusic')))
+            music.src = $.jStorage.get('custom10StreakMusic');
+        
     }
 };

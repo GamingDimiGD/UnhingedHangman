@@ -27,6 +27,7 @@ const gifAmount = 2;
 let giveAmount = 10;
 let autosaveText = "每10秒自動儲存";
 let keyboardDiv = document.querySelector(".keyboard");
+let dictLink = 'https://dictionary.cambridge.org/zht/%E8%A9%9E%E5%85%B8/%E8%8B%B1%E8%AA%9E-%E6%BC%A2%E8%AA%9E-%E7%B9%81%E9%AB%94/'
 const worddisplayDiv = document.querySelector(".word-display");
 const gameModal = document.querySelector(".game-modal");
 const pab = document.querySelector(".play-again");
@@ -129,7 +130,7 @@ const toggleflash = () => {
 };
 
 oVocab.forEach((word) => {
-    if (!vocab.find((a) => a.word === word.word)) console.log("skip");
+    if (!vocab.find((a) => a.word === word.word)) return;
     else if (
         word.v !== vocab.find((a) => a.word === word.word).v &&
         word.word === vocab.find((a) => a.word === word.word).word
@@ -205,7 +206,7 @@ const resetGame = () => {
     document.querySelector(".guesses-text b").innerText =
         wrongGuessCount + " / " + maxGuesses;
     document.querySelector(".hangman-box img").src =
-        `../images/hangman-${wrongGuessCount}.png`;
+        `../images/hangman-states/hangman-${wrongGuessCount}.png`;
     document.querySelector(".hangman-box h6").innerText = version;
     keyboardDiv.querySelectorAll("button").forEach((btn) => {
         btn.disabled = false;
@@ -311,11 +312,12 @@ let tutwin;
 let clickedLetters = [];
 
 const gameOver = (isVictory) => {
-    document.querySelector(".undo").disabled = true;
+    disableUndoButton(true);
     clickedLetters = [];
     data.timesPlayed++;
     undoAmountsLeft = undoAmounts;
     amountDisplay.innerText = `剩${undoAmountsLeft}次`;
+    if(eduMode) $('.advmeaningb')[0].click();
     let xp = rng(8 - $.jStorage.get('fortune')) && $.jStorage.get('fortune') > 0;
     if (isVictory) {
         giveAch("won");
@@ -367,6 +369,7 @@ const gameOver = (isVictory) => {
     document.querySelector(".play-again").innerText = isVictory
         ? `繼續遊玩!`
         : `再玩一次!`;
+    document.querySelector('.meaning-link').href = `${dictLink}${currentWord}`
     gameModal.classList.add("show");
     if (speedRunMode && !speedRunEnd)
         document.querySelector(".play-again").click();
@@ -455,10 +458,11 @@ const initGame = (button, clickedLetter) => {
         } else {
             wrongGuessCount++;
             if (wrongGuessCount > 6) wrongGuessCount = 6;
+            if (wrongGuessCount < 1) wrongGuessCount = 1;
             document.querySelector(".guesses-text b").innerText =
                 wrongGuessCount + " / " + maxGuesses;
             document.querySelector(".hangman-box img").src =
-                `../images/hangman-${wrongGuessCount}.png`;
+                `../images/hangman-states/hangman-${wrongGuessCount}.png`;
             document.querySelector(".hangman-box h6").innerText = version;
             // welp
             // no more cookies for you
@@ -470,7 +474,7 @@ const initGame = (button, clickedLetter) => {
         data.totalGuesses++;
         if(!forgiveness) {
             if ($.jStorage.get("undo") || undoTest)
-                document.querySelector(".undo").disabled = false;
+                disableUndoButton(false)
             clickedLetters.push({
                 letter: clickedLetter,
                 isCorrect: currentWord.toLowerCase().includes(clickedLetter),
@@ -537,17 +541,13 @@ document.querySelector(".hangman-box img").addEventListener("click", () => {
 if (date(4, 1)) {
     giveAch("af");
 }
-if (dateRange(7, 1, 7, 31)) {
-    birthdayParty();
-    giveAmount *= 2;
-    showNotif("是迪米生日! 現在有2倍閃!", 10);
-}
 
 let isBugReportButtonThingChangedToBug = false
 setInterval(() => {
     $('.bug-report')[0].innerText = isBugReportButtonThingChangedToBug ? "遊戲問題" : "檢舉 Bug"
     isBugReportButtonThingChangedToBug = !isBugReportButtonThingChangedToBug
 }, 2000)
+
 
 /**
  *  _____

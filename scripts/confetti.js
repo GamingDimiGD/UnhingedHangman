@@ -111,7 +111,7 @@ const sad = () => {
 let skew = 1;
 let birthdayParty = () => {
     requestAnimationFrame(birthdayParty)
-    if(antiLag || rmv !== 255) return
+    if (antiLag || rmv !== 255) return
     skew = Math.max(0.8, skew - 0.001);
     confetti({
         particleCount: 1,

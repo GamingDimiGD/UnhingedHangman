@@ -3,7 +3,7 @@ const isMobile = () => {
 }
 
 const findButton = (letter) => {
-    if(!letter) return 'none';
+    if (!letter) return 'none';
     let but
     keyboardDiv.querySelectorAll('button').forEach(button => {
         if (button.innerText.toLowerCase() === letter.toLowerCase()) {
@@ -16,7 +16,7 @@ const findButton = (letter) => {
 const anyModalsShown = () => {
     let ba
     document.querySelectorAll('.modal').forEach(m => {
-        if(m.classList.contains('show')) {
+        if (m.classList.contains('show')) {
             ba = true
         }
     })
@@ -24,11 +24,12 @@ const anyModalsShown = () => {
 }
 
 addEventListener('keydown', e => {
-    if (!$('.dialogue')[0].classList.contains('show') && $('.game-modal')[0].classList.contains('show') && e.code === 'Enter') pab.click()
-    else if($('.dialogue')[0].classList.contains('show') && e.code === 'Enter') $('.dialogue')[0].click()
+    if (!$('.dialogue').hasClass('show') && $('.game-modal').hasClass('show') && !$('.meaning.modal').hasClass('show') && e.code === 'Enter') pab.click()
+    else if ($('.dialogue').hasClass('show') && e.code === 'Enter') $('.dialogue')[0].click()
     if (!anyModalsShown() && !fbd) {
-        if (e.code === 'Digit1') qwerty.click()
-        if (e.code === 'Digit2') undoBut.click()
+        $.each($('.shortcut-buttons .shortcut-button'), (i, b) => {
+            if (Number(e.key) === i + 1) $(b)[0].click()
+        })
         if (e.code === 'KeyA') initGame(findButton('a'), 'a');
         if (e.code === 'KeyB') initGame(findButton('b'), 'b');
         if (e.code === 'KeyC') initGame(findButton('c'), 'c');
@@ -132,6 +133,7 @@ addEventListener('mousedown', e => {
 })
 
 addEventListener('mousemove', e => {
+
     mx = e.x
     my = e.y
     dx = x - mx
@@ -148,7 +150,7 @@ let ist = false
 
 addEventListener('touchstart', e => {
     ist = true
-    if(e.touches[0].clientX > x && e.touches[0].clientY > y && e.touches[0].clientX < x + 70 && e.touches[0].clientY < y + 70) {
+    if (e.touches[0].clientX > x && e.touches[0].clientY > y && e.touches[0].clientX < x + 70 && e.touches[0].clientY < y + 70) {
         console.log('touch')
         x = e.touches[0].clientX - 35
         y = e.touches[0].clientY - 35
@@ -156,13 +158,35 @@ addEventListener('touchstart', e => {
 })
 
 addEventListener('touchmove', e => {
-    if(e.touches[0].clientX > x && e.touches[0].clientY > y && e.touches[0].clientX < x + 70 && e.touches[0].clientY < y + 70) {
+    if (e.touches[0].clientX > x && e.touches[0].clientY > y && e.touches[0].clientX < x + 70 && e.touches[0].clientY < y + 70) {
         console.log('touch')
         x = e.touches[0].clientX - 35
         y = e.touches[0].clientY - 35
     }
 })
 
-addEventListener('touchend', e => {
-    //console.log(e)
+addEventListener('mousemove', e => {
+    $('.hover-text')[0].style.transform = `translate(${e.clientX + 30}px,${e.clientY + 30}px)`
+    if (window.innerWidth - e.clientX < window.innerWidth * 0.1) {
+        $('.hover-text')[0].style.transform = `translate(${e.clientX - window.innerWidth * 0.1}px,${e.clientY + 30}px)`
+    }
 })
+let htq;
+$('[data-hover-text]').each((i, el) => {
+    $(el).on('mouseover', e => {
+        if(typeof htq === 'number') clearTimeout(htq);
+        $('.hover-text')[0].style.opacity = '1'
+        $('.hover-text').html($(el).data('hover-text'))
+    })
+    $(el).on('mouseout', e => {
+        $('.hover-text')[0].style.opacity = '0'
+        htq = setTimeout(() => {
+            $('.hover-text').html('')
+            htq = false;
+        }, 400)
+    })
+})
+
+if (window.location.href !== 'http://127.0.0.1:5501/html/index.html') {
+    DisableDevtool();
+} 

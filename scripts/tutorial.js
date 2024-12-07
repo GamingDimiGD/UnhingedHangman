@@ -1,15 +1,15 @@
-if($.jStorage.get('vocabAmount')) $.jStorage.set('playedBefore', true)
+if ($.jStorage.get('vocabAmount')) $.jStorage.set('playedBefore', true)
 let rg = (object, time) => {
     object.style.border = '10px solid red'
-    if(object === document.querySelector('.word-display')) {
+    if (object === document.querySelector('.word-display')) {
         object.style.paddingTop = '30px'
         object.style.paddingBottom = '-30px'
     }
-    if(time === 'infinite') return;
-    if(time === false) time = 0
-    if(!time && time !== 0) time = 2000
+    if (time === 'infinite') return;
+    if (time === false) time = 0
+    if (!time && time !== 0) time = 2000
     setTimeout(() => {
-        if(object === document.querySelector('.word-display')) {
+        if (object === document.querySelector('.word-display')) {
             object.style.paddingTop = '0px'
             object.style.paddingBottom = '0px'
         }
@@ -44,7 +44,7 @@ let t3 = () => {
             pd(characters[0], '可是他們怪怪的...', 100, undefined, undefined, undefined, undefined, 'red')
             pd(characters[1], '你也是', 100, undefined, undefined, undefined, undefined, 'bigtext')
             pd(characters[1], '好吧，剩下的東西就靠你了')
-            pd(characters[1], '欸店員我要一瓶飲料',{
+            pd(characters[1], '欸店員我要一瓶飲料', {
                 onclick: () => $('#howtoplay')[0].disabled = false
             })
             dialogue(dialogueQueue)
@@ -80,9 +80,10 @@ let tutorial2 = () => {
 }
 
 let tutorial = () => {
-    
+
     $('#howtoplay')[0].disabled = true
-    pd(characters[1], `哈囉!我是${glitch(5)}`)
+    pd(characters[1], `哈囉!我是???`)
+    pd(1, `對，那就是我的名字，三個問號`)
     pd(characters[1], '我現在要教你怎麼玩這遊戲')
     pd(characters[1], '喔對你需要我教嗎', 100, undefined, [
         {
@@ -93,6 +94,7 @@ let tutorial = () => {
                 pd(characters[1], '首先，這是是你的鍵盤', 75, () => {
                     document.querySelector('.update-modal').classList.remove('show')
                     document.querySelector('.daily-login').classList.remove('show')
+                    document.querySelector('.settings').classList.remove('show')
                     rg(keyboardDiv)
                     setTimeout(() => {
                         pd(characters[1], '然後這是提示', 100, () => {
@@ -102,13 +104,13 @@ let tutorial = () => {
                                     rg(document.querySelector('.word-display'))
                                     setTimeout(() => {
                                         pd(characters[1], '你要按鍵盤來猜單字')
-     /* Nice piramid ya got here */      pd(characters[1], '你有六次答錯的機會')
+     /* Nice pyramid ya got here */      pd(characters[1], '你有六次答錯的機會')
                                         pd(characters[1], '如果你答對，你的閃(✧)會增加至少10個', 100, () => {
     /* My code is atrocious lol */       rg(document.querySelector('.sparkles-display'))
                                             setTimeout(() => {
                                                 pd(characters[1], '你來挑戰一場吧!', 100, () => {
                                                     let jhon = setInterval(() => {
-                                                        if(tutwin) {
+                                                        if (tutwin) {
                                                             tutorial2()
                                                             clearInterval(jhon)
                                                         }
@@ -142,4 +144,4 @@ let tutorial = () => {
     dialogue(dialogueQueue)
 }
 
-if(!$.jStorage.get('playedBefore')) tutorial()
+if (!$.jStorage.get('playedBefore')) tutorial()

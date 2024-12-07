@@ -6,6 +6,48 @@ if($.jStorage.get('version') !== version) {
 }
 let updateInfo = [
     {
+        title: "最方便的更新!",
+        version: 'v1.4.0',
+        description: [
+            {
+                title: '新增捷徑!',
+                text: '你鍵盤下的按鈕可以更改了! 你可以去冷凍知識庫裡面買!'
+            },
+            {
+                title: '自訂主題與音樂!',
+                text: '不一定要刺眼的白色遊戲版背景了!'
+            },
+            {
+                title: '背景會儲存! 更改為上傳連結!',
+                text: '音樂也是上傳連結。'
+            },
+            {
+                title: '遊戲活動!',
+                text: '像生日那些，很奇特。'
+            },
+            {
+                title: '"更改鍵盤邊框顏色"大改版!',
+                text: '真的很讚對不對?'
+            },
+            {
+                title: '教學網站更改長相!',
+                text: '增加個背景而已。'
+            },
+            {
+                title: '首頁載入畫面改版!',
+                text: '隨四季更改!'
+            },
+            {
+                title: '進階意思與教育模式!',
+                text: '給你最標準的意思!'
+            },
+            {
+                title: '其他細節與修復Bug:',
+                text: '對話字體變大、鍵盤按鈕變大、劍橋英語辭典意思、修復對話框顯示Bug等'
+            }
+        ]
+    },
+    {
         title: "修復部分 Bug 更新",
         version: 'v1.3.1',
         description: [
@@ -140,7 +182,7 @@ updateInfo.forEach(u => {
     })
 })
 umud.querySelectorAll('h2').forEach(e => {
-    e.style.color = '#003c00'
+    e.style.color = 'var(--theme)'
     e.style.textAlign = 'center'
 })
 umud.style.textAlign = 'left';

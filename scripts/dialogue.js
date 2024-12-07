@@ -39,7 +39,7 @@ characters.forEach((c) => (c.statusAmount = c.statusMaxIndex + 1));
 let dialogueQueue = [];
 
 const pd = (character, text, speed, onclick, buttons, promptText, pc, textStyle, sound) => {
-    if(typeof speed === 'object' || speed instanceof Object) {
+    if (typeof speed === 'object' || speed instanceof Object) {
         onclick = speed.onclick
         buttons = speed.buttons
         promptText = speed.promptText
@@ -48,10 +48,10 @@ const pd = (character, text, speed, onclick, buttons, promptText, pc, textStyle,
         sound = speed.sound
         speed = speed.speed
     }
-    if(typeof character === 'string' || character instanceof String) {
+    if (typeof character === 'string' || character instanceof String) {
         character = characters.find((c) => c.id === character)
     }
-    if(typeof character === 'number' || character instanceof Number) {
+    if (typeof character === 'number' || character instanceof Number) {
         character = characters[character]
     }
     dialogueQueue.push({
@@ -61,7 +61,7 @@ const pd = (character, text, speed, onclick, buttons, promptText, pc, textStyle,
 
 const dialogue = (d) => {
     let { character, text, speed, onclick, buttons, promptText, pc, textStyle, sound } = d[0]
-    if(sound) sfx(sound)
+    if (sound) sfx(sound)
     if (!character || !text) return alertModal("ERROR");
     let dialogueTextBox = document.querySelector(".dialogue .content .text-box");
     let characterImg = document.querySelector(".dialogue .content img");
@@ -73,14 +73,14 @@ const dialogue = (d) => {
     );
     dialogueText.className = 'dialogue-text'
     characterName.innerText = character.name;
-    if(promptText) {
+    if (promptText) {
         let r = prompt(promptText)
-        while(!r) {
+        while (!r) {
             alert('你要寫東西啊')
             r = prompt(promptText)
         }
         text = text.replaceAll('{prompt}', r)
-        if(pc) pc(r)
+        if (pc) pc(r)
     }
     dialogueText.innerHTML = "";
     let i = text.length;
@@ -88,22 +88,22 @@ const dialogue = (d) => {
     dialogueModal.classList.add("show");
     text = text.trim();
     const { statusMaxIndex, idleIndex, statusAmount } = character;
-    if(typeof buttons === 'array' || buttons instanceof Array) {
+    if (typeof buttons === 'array' || buttons instanceof Array) {
         let e = setInterval(() => {
-            if(i > 0) return;
+            if (i > 0) return;
             buttons.forEach(button => {
                 let b = document.createElement('button')
                 b.classList.add('dialogueButton')
                 b.innerText = button.text
                 b.onclick = () => {
-                    if(dialogueQueue.length > 1) {
+                    if (dialogueQueue.length > 1) {
                         dialogueQueue.shift();
                         dialogue(dialogueQueue)
                     } else {
                         dialogueModal.classList.remove("show");
                     }
                     b.disabled = true;
-                    if(button.callback) {
+                    if (button.callback) {
                         dialogueQueue.shift()
                         button.callback()
                     }
@@ -114,7 +114,7 @@ const dialogue = (d) => {
             clearInterval(e)
         })
     }
-    
+
     let j = setInterval(() => {
         if (i > 0) {
             if (statusMaxIndex >= 1 || statusAmount > 1) {
@@ -127,15 +127,14 @@ const dialogue = (d) => {
             clearInterval(j);
         }
     }, speed || 100);
-    if(typeof textStyle === 'string' || textStyle instanceof String) dialogueText.classList.add(textStyle)
-    else if(typeof textStyle === 'array' || textStyle instanceof Array) {
+    if (typeof textStyle === 'string' || textStyle instanceof String) dialogueText.classList.add(textStyle)
+    else if (typeof textStyle === 'array' || textStyle instanceof Array) {
         textStyle.forEach(style => dialogueText.classList.add(style))
     }
     let jin = setInterval(() => {
         if (i > 0) {
             dialogueModal.onclick = () => {
                 if (i > 0) {
-                    console.log("e");
                     i = 0;
                     clearInterval(j);
                     dialogueText.innerHTML = text;
@@ -143,14 +142,14 @@ const dialogue = (d) => {
             };
             return;
         }
-        if(buttons) return
-        if(dialogueQueue.length > 1) {
+        if (buttons) return
+        if (dialogueQueue.length > 1) {
             dialogueModal.onclick = () => {
                 if (i > 0) return;
                 clearInterval(jin)
                 dialogueQueue.shift();
                 dialogue(dialogueQueue)
-                if(onclick) {
+                if (onclick) {
                     dialogueQueue.shift()
                     onclick()
                 }
@@ -163,25 +162,13 @@ const dialogue = (d) => {
             clearInterval(jin)
             dialogueModal.classList.remove("show");
             dialogueQueue.shift()
-            if(onclick) onclick()
+            if (onclick) onclick()
             dialogueModal.onclick = null;
         };
     });
 };
 
-if(date(7,26)) {
-    pd(characters[0], '聽說今天是迪米生日')
-    pd(characters[0], '我們祝他生日快樂吧!')
-    pd(characters[0], '生日快樂!', 100, () => {
-        confetti({
-            particleCount: antilag? 50 : 200,
-            spread: 360,
-            origin: { y: 0.6 },
-        });
-        giveAch('birthday')
-    })
-    dialogue(dialogueQueue)
-}
+
 let dq = () => dialogue(dialogueQueue)
 
 const hardModeActivation = () => {

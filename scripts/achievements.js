@@ -171,7 +171,7 @@ let achievements = [
 aa.innerText = achievements.length
 
 let showNotif = (text, time) => {
-    if(!time) time = 5
+    if (!time) time = 5
     notif.querySelector('p').innerText = text
     notif.style.opacity = '1'
     setTimeout(() => {
@@ -187,7 +187,7 @@ const checkAchievements = () => {
     })
     alist.innerHTML = ''
     yaa.innerText = playerAchievements.length
-    if(!playerAchievements[0]) {
+    if (!playerAchievements[0]) {
         alist.innerHTML = '<h3>你還沒有任何成就！</h3>'
         return
     }
@@ -201,21 +201,16 @@ const checkAchievements = () => {
 checkAchievements()
 
 const giveAch = (id) => {
-    if($.jStorage.get(id) === true) return
+    if ($.jStorage.get(id) === true) return
     $.jStorage.set(id, true)
     giveSparkles(achievements.find(a => a.id === id).reward)
     showNotif('你獲得新成就！')
     checkAchievements()
 }
 
-if(!$.jStorage.get('achSparklesGiven')) {
+if (!$.jStorage.get('achSparklesGiven')) {
     playerAchievements.forEach(a => {
         giveSparkles(a.reward)
     })
     $.jStorage.set('achSparklesGiven', true)
 }
-let e = 0
-achievements.forEach((a) => {
-    e+=a.reward
-})
-console.log(e)

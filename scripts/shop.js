@@ -4,7 +4,10 @@ const shopButton = document.querySelector(".shop-button")
 let types = [];
 let ckcRainbow = false;
 let t = false;
+let img
 if ($.jStorage.get("t")) t = true;
+let shopItems = [];
+let shopItemClasses = [];
 
 const findAll = (array, whatToFind) => {
     let newArray = [];
@@ -40,7 +43,7 @@ class ShopItem {
         this.saveCD = saveCD || false;
         this.si = si || 0;
 
-        if(si === 1) stuff = document.querySelector(".knowledge-modal .content .stuff")
+        if (si === 1) stuff = document.querySelector(".knowledge-modal .content .stuff")
         if (!types.find((t) => t === this.type)) {
             let category = document.createElement("h1");
             category.innerHTML = this.type;
@@ -50,19 +53,19 @@ class ShopItem {
             types.push(this.type);
         }
         let item = document.createElement("div");
-        item.innerHTML = `<img src="${this.image}" alt="${this.name}" /><h2>${this.name}</h2><p>${this.description}</p><button>${this.price}✧</button>`;
+        item.innerHTML = `<img src="../images/shops/${this.image}.png" alt="${this.image}"/><h2>${this.name}</h2><p>${this.description}</p><button>${this.price}✧</button>`;
         item.querySelector("img").style.width = "calc(100% - 20px)";
         item.querySelector("button").style.padding = "5px 10px";
         item.querySelector("button").addEventListener("click", () => {
-            if(this.si !== 0) return
+            if (this.si !== 0) return
             if ($.jStorage.get("sparkles") < this.price)
                 return showNotif("你買不起!", 1);
             takeSparkles(this.price);
-            if(this.coolDown > 0) {
+            if (this.coolDown > 0) {
                 $.jStorage.set(this.id + "-cd", Date.now() + this.coolDown * 1000);
                 setInterval(() => {
                     let b = this.item.querySelector("button")
-                    if($.jStorage.get(this.id + "-cd") < Date.now()) {
+                    if ($.jStorage.get(this.id + "-cd") < Date.now()) {
                         b.disabled = false
                         b.innerText = this.price + "✧";
                     } else {
@@ -73,10 +76,10 @@ class ShopItem {
             }
             this.onBuy();
         });
-        if(this.saveCD && $.jStorage.get(this.id + "-cd")) {
+        if (this.saveCD && $.jStorage.get(this.id + "-cd")) {
             setInterval(() => {
                 let b = this.item.querySelector("button")
-                if($.jStorage.get(this.id + "-cd") < Date.now()) {
+                if ($.jStorage.get(this.id + "-cd") < Date.now()) {
                     b.disabled = false
                     b.innerText = this.price + "✧";
                 } else {
@@ -86,12 +89,16 @@ class ShopItem {
             })
         }
         this.item = item;
+        item.querySelector('button').classList.add(this.id)
+        item.classList.add('shop-item')
         stuff.append(item);
+        shopItems.push(this.id);
+        shopItemClasses.push(this);
     }
     buy() {
         this.onBuy();
     }
-    disable(isDisabled, customText) {
+    disable(isDisabled = true, customText) {
         this.item.querySelector("button").disabled = isDisabled;
         if (isDisabled) {
             this.item.querySelector("button").innerText =
@@ -103,7 +110,7 @@ class ShopItem {
     changeButton(callback) {
         callback(this.item.querySelector("button"));
     }
-    save(e) {
+    save(e = true) {
         $.jStorage.set(this.id, e);
     }
     hidden(isHidden) {
@@ -121,6 +128,12 @@ class ShopItem {
     skipCoolDown() {
         $.jStorage.set(this.id + "-cd", 0)
     }
+    onLoad(func) {
+        addEventListener('DOMContentLoaded', func);
+    }
+    ownedOnLoad(func) {
+        if ($.jStorage.get(this.id)) addEventListener('DOMContentLoaded', func)
+    }
 }
 let num = 245
 let stupidlyRandomNumber = rng(num)
@@ -135,7 +148,7 @@ let funnyItem = new ShopItem(
     "???",
     -1,
     "???",
-    "../images/???.png",
+    "???",
     "？？？",
     "???",
     () => {
@@ -157,19 +170,19 @@ let funnyItem = new ShopItem(
 )
 shopButton.addEventListener('click', () => {
     stupidlyRandomNumber = rng(num)
-    if(stupidlyRandomNumber !== 34) {
+    if (stupidlyRandomNumber !== 34) {
         funnyItem.hidden(true)
     } else funnyItem.hidden(false)
     console.log(stupidlyRandomNumber)
 })
-if(stupidlyRandomNumber !== 34) {
+if (stupidlyRandomNumber !== 34) {
     funnyItem.hidden(true)
 } else funnyItem.hidden(false)
 let speed = new ShopItem(
     "速通模式",
     500,
     "看你在120秒內贏多少次！<br/>會給兩倍的✧，但連勝不給✧。<br/>第一次購買要✧但第二次不用。<br/>啟動後會有一小時冷卻時間。<br/>會重置連勝。",
-    "../images/speed.png",
+    "speed",
     "遊玩",
     "speed",
     () => {
@@ -242,7 +255,7 @@ let hard = new ShopItem(
     "困難模式！",
     1000,
     "提示是亂碼！<br/>會給10倍✧<br/>會重置連勝。",
-    "../images/hard.png",
+    "hard",
     "遊玩",
     "hard",
     () => {
@@ -273,7 +286,7 @@ let changeWord = new ShopItem(
     "更換單字",
     200,
     "更換單字，不會重置連勝。<br/>100秒冷卻。",
-    "../images/change-word.png",
+    "change-word",
     "遊玩",
     "changeWord",
     () => {
@@ -281,27 +294,32 @@ let changeWord = new ShopItem(
     }, 100, true
 )
 let customKeyColor = new ShopItem(
-    "自訂鍵盤邊框顏色",
+    '自訂鍵盤<b class="line-through">邊框顏色</b>v2.0',
     100,
     "用 rgb 或 16進位顏色號碼或英文都可，像是rgb(0, 128, 0) 或 #00ff00 或 white",
-    "../images/custom-key-color.jpeg",
+    "custom-key-color",
     "外觀",
     "customKeyColor",
     () => {
         let color = prompt("請輸入顏色");
-        if (!color) color = "#00ff00";
+        if (!color) color = "var(--main)";
         if (color.toLowerCase() === "rainbow" || color === "彩虹") {
             ckcRainbow = true;
         } else ckcRainbow = false;
-        document
-            .querySelectorAll(".keyboard button")
-            .forEach((a) => (a.style.border = "3px solid " + color));
+        setVar('custom-key-color', color)
         customKeyColor.price = 0;
         customKeyColor.changeButton((b) => {
             b.innerText = "變換顏色";
         });
         if ($.jStorage.get("customBGIMG")) {
             giveAch("new");
+        }
+        if (!$.jStorage.get('customKeyColor')) {
+            let advs = document.createElement("button");
+            advs.innerText = '進階鍵盤設定'
+            advs.classList.add('sb')
+            customKeyColor.item.append(advs)
+            advs.onclick = () => document.querySelector('.ckc.modal').classList.add('show')
         }
         customKeyColor.save(color);
     },
@@ -312,56 +330,56 @@ if ($.jStorage.get("customKeyColor")) {
     if (color.toLowerCase() === "rainbow" || color === "彩虹") {
         ckcRainbow = true;
     } else ckcRainbow = false;
-    document
-        .querySelectorAll(".keyboard button")
-        .forEach((a) => (a.style.border = "3px solid " + color));
+    setVar('custom-key-color', color)
     customKeyColor.changeButton((b) => {
         b.innerText = "變換顏色";
     });
+    if (!customKeyColor.item.querySelector("sb")) {
+        let advs = document.createElement("button");
+        advs.innerText = '進階鍵盤設定'
+        advs.classList.add('sb')
+        advs.classList.add('adv-ckc-button')
+        customKeyColor.item.append(advs)
+        advs.onclick = () => document.querySelector('.ckc.modal').classList.add('show')
+    }
 }
 let dbgi = $.jStorage.get("dbgi") || 0;
 let customBGIMG = new ShopItem(
     "自訂背景圖片",
     200,
     "上傳圖片來改深綠色背景!",
-    "../images/custom-bg-img.jpeg",
+    "custom-bg-img",
     "外觀",
     "customBGIMG",
     () => {
         customBGIMG.price = 0;
         customBGIMG.changeButton((b) => {
             b.innerText = "變換圖片";
-            if (!customBGIMG.item.querySelector("input")) {
-                let input = document.createElement("input");
-                input.type = "file";
-                input.accept = "image/png, image/jpg, image/jpeg, image/gif";
-                input.style.display = "none";
-                customBGIMG.item.append(input);
+            b.onclick = () => {
+                let url = prompt('請輸入圖片網址，這樣才會儲存。')
+                if (!url) return;
+                customBGIMG.save(url);
+                let img = $.jStorage.get("customBGIMG");
+                document.body.style.backgroundImage = "url(" + img + ")";
+                document.body.style.backgroundSize = "cover";
             }
         });
-        let input = customBGIMG.item.querySelector("input");
-        input.onchange = () => {
-            img = URL.createObjectURL(input.files[0]);
-            document.body.style.backgroundImage = "url(" + img + ")";
-            document.body.style.backgroundSize = "cover";
-            localStorage.setItem("customBGIMG", img);
-        };
         if (customBGIMG.item.querySelectorAll("button").length <= 3) {
             let o = document.createElement("button");
             o.innerText = "半透明遊戲視窗";
-            o.style.marginTop = "10px";
-            o.style.padding = "5px 10px";
+            o.classList.add('sb')
+            o.classList.add('transparent')
             customBGIMG.item.append(o);
             let rb = document.createElement("button");
             rb.innerText = "清除圖片";
-            rb.style.marginTop = "10px";
-            rb.style.padding = "5px 10px";
+            rb.classList.add('sb')
+            rb.classList.add('removebg')
             customBGIMG.item.append(rb);
             let dbg = document.createElement("button");
             dbg.innerText = "動態背景" + (dbgi + 1) + "號";
-            dbg.style.marginTop = "10px";
-            dbg.style.padding = "5px 10px";
-            dbg.classList.add("beta");
+            dbg.classList.add('sb')
+            dbg.classList.add("buggy");
+            dbg.classList.add("dynamicbg");
             customBGIMG.item.append(dbg);
             o.addEventListener("click", () => {
                 t = !t;
@@ -402,30 +420,31 @@ if ($.jStorage.get("customBGIMG")) {
     customBGIMG.price = 0;
     customBGIMG.changeButton((b) => {
         b.innerText = "變換圖片";
-        if (!customBGIMG.item.querySelector("input")) {
-            let input = document.createElement("input");
-            input.type = "file";
-            input.accept = "image/png, image/jpg, image/jpeg, image/gif";
-            input.style.display = "none";
-            customBGIMG.item.append(input);
+        b.onclick = () => {
+            let url = prompt('請輸入圖片網址，這樣才會儲存。')
+            if (!url) return;
+            customBGIMG.save(url);
+            let img = $.jStorage.get("customBGIMG");
+            document.body.style.backgroundImage = "url(" + img + ")";
+            document.body.style.backgroundSize = "cover";
         }
     });
     if (customBGIMG.item.querySelectorAll("button").length <= 3) {
         let o = document.createElement("button");
         o.innerText = "半透明遊戲視窗";
-        o.style.marginTop = "10px";
-        o.style.padding = "5px 10px";
+        o.classList.add('sb')
+        o.classList.add('transparent')
         customBGIMG.item.append(o);
         let rb = document.createElement("button");
         rb.innerText = "清除圖片";
-        rb.style.marginTop = "10px";
-        rb.style.padding = "5px 10px";
+        rb.classList.add('sb')
+        rb.classList.add('removebg')
         customBGIMG.item.append(rb);
         let dbg = document.createElement("button");
         dbg.innerText = "動態背景" + (dbgi + 1) + "號";
-        dbg.style.marginTop = "10px";
-        dbg.style.padding = "5px 10px";
-        dbg.classList.add("beta");
+        dbg.classList.add('sb')
+        dbg.classList.add("buggy");
+        dbg.classList.add("dynamicbg");
         customBGIMG.item.append(dbg);
         o.addEventListener("click", () => {
             t = !t;
@@ -450,7 +469,7 @@ if ($.jStorage.get("customBGIMG")) {
     document.addEventListener("DOMContentLoaded", () => {
         if ($.jStorage.get("dbgi")) dynamicBGList[dbgi].play();
     });
-    let img = localStorage.getItem("customBGIMG");
+    let img = $.jStorage.get("customBGIMG");
     document.body.style.backgroundImage = "url(" + img + ")";
     document.body.style.backgroundSize = "cover";
 }
@@ -459,7 +478,7 @@ let a = new ShopItem(
     "西瓜貓",
     10,
     "可愛的西瓜貓陪你一下",
-    "../images/2.png",
+    "2",
     "其他",
     "cat",
     () => {
@@ -498,7 +517,7 @@ let a = new ShopItem(
             () => {
                 let adsf = rng(10 * catLevel, 1);
                 giveSparkles(adsf);
-                showNotif("西瓜貓找到了" + adsf + "✧!!", 1);
+                showNotif("西瓜貓找到了" + adsf * sparkleMultiplier + "✧!!", 1);
                 data.catSparkles += adsf;
             },
             (1000 * 60 * 5) / catLevel,
@@ -536,7 +555,7 @@ if ($.jStorage.get("cat")) {
         () => {
             let adsf = rng(10 * catLevel, 1);
             giveSparkles(adsf);
-            showNotif("西瓜貓找到了" + adsf + "✧!!", 1);
+            showNotif("西瓜貓找到了" + adsf * sparkleMultiplier + "✧!!", 1);
             data.catSparkles += adsf;
         },
         (1000 * 60 * 5) / catLevel,
@@ -557,7 +576,7 @@ let scam = new ShopItem(
     "無限✧!!",
     999,
     "無限✧!!1",
-    "../images/scam.jpeg",
+    "scam",
     "其他",
     "scam",
     () => {

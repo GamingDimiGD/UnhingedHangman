@@ -9,9 +9,22 @@ const all = {
     pure: () => {
         let e = all.object();
         delete e.__jstorage_meta;
+        e.bgData = localStorage.getItem("customBGIMG");
         return e;
     },
 };
+
+const repairSave = () => {
+    let dontDelete = [
+        'jStorage', 'jStorage_update'
+    ]
+    for (let key in localStorage) {
+        if (!dontDelete.includes(key)) {
+            localStorage.removeItem(key);
+        }
+    }
+    window.location.reload()
+}
 
 const exportSaveData = () => {
     let e = JSON.stringify(all.pure());
@@ -31,9 +44,10 @@ const importSave = (importSaveData) => {
     let e = JSON.parse(importSaveData);
     $.jStorage.flush()
     Object.keys(e).forEach((key) => {
+        if (key === 'bgData') return localStorage.setItem("customBGIMG", e[key]);
         $.jStorage.set(key, e[key]);
-        window.location.reload()
     });
+    window.location.reload()
 };
 
 saveUpload.addEventListener('change', () => {

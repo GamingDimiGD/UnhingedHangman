@@ -22,7 +22,7 @@ let bossScript = () => {
             pre.innerText = `Removed person ${faker.name.firstName()} ${faker.name.lastName()} from U:\\Galaxies\\Milkyway\\SolarSystem\\Planets\\Earth\\ \n` + pre.innerText
         }, 100)
     }, 5000)
-    return e
+    return;
 }
 
 let removeBP = () => {

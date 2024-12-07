@@ -13,8 +13,8 @@ const newBlock = () => {
     let y = rng(window.innerWidth - 70);
     let vx = 5 * rng(1, -1);
     let vy = 5 * rng(1, -1);
-    if(vx === 0) vx = 5
-    if(vy === 0) vy = -5
+    if (vx === 0) vx = 5
+    if (vy === 0) vy = -5
     let text = String.fromCharCode(rng(122, 97));
     let v = vocab[rng(vocab.length - 1)].word
     const animate = () => {
@@ -30,30 +30,30 @@ const newBlock = () => {
         ctx.fillText(text.toUpperCase(), x + 28, y + 42);
         timelastframe.push(Date.now())
         let deltatime = 1
-        if(timelastframe.length > 1) {
+        if (timelastframe.length > 1) {
             deltatime = (timelastframe[timelastframe.length - 1] - timelastframe[timelastframe.length - 2]) / 15
         }
         timelastframe = timelastframe.slice(-2)
         x += vx * deltatime;
         y += vy * deltatime;
-        if(balls === true)console.log(Math.floor(vx * deltatime), Math.floor(vy * deltatime), timelastframe)
+        if (balls === true) console.log(Math.floor(vx * deltatime), Math.floor(vy * deltatime), timelastframe)
         ctx.fillText(v, x, y + 90);
         if (x >= canvas.width - 70 || x <= 0) {
             text = String.fromCharCode(rng(122, 97))
             vx = -vx;
-            if(x >= canvas.width - 70) x = canvas.width - 70
-            else if(x <= 0) x=0
+            if (x >= canvas.width - 70) x = canvas.width - 70
+            else if (x <= 0) x = 0
             v = oVocab[rng(oVocab.length - 1)].word
         }
         if (y >= canvas.height - 70 || y <= 0) {
             text = String.fromCharCode(rng(122, 97))
             vy = -vy;
-            if(y >= canvas.height - 70) y = canvas.height - 70
-            else if(y <= 0) y=0
+            if (y >= canvas.height - 70) y = canvas.height - 70
+            else if (y <= 0) y = 0
             v = oVocab[rng(oVocab.length - 1)].word
         }
-        if(v.word === currentWord) {
-            while(v.word === currentWord) {
+        if (v.word === currentWord) {
+            while (v.word === currentWord) {
                 v = oVocab[rng(oVocab.length - 1)].word
             }
         }
@@ -67,8 +67,8 @@ const removeAllBlocks = () => {
 let ask
 const followMouse = (e, canvas, ctx, ask) => {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    if(canvas.width !== window.innerWidth) canvas.width = window.innerWidth;
-    if(canvas.height !== window.innerHeight) canvas.height = window.innerHeight
+    if (canvas.width !== window.innerWidth) canvas.width = window.innerWidth;
+    if (canvas.height !== window.innerHeight) canvas.height = window.innerHeight
     let x = e.clientX;
     let y = e.clientY;
     ctx.fillStyle = ask;
@@ -80,8 +80,8 @@ let fmrainbow = false;
 let image;
 let dynamicBGList = [
     {
-        play: () => {},
-        remove: () => {}
+        play: () => { },
+        remove: () => { }
     },
     {
         play: newBlock,
@@ -98,8 +98,8 @@ let dynamicBGList = [
             document.body.appendChild(canvas);
             let ctx = canvas.getContext("2d");
             ask = prompt("請輸入游標顏色 (和自訂鍵盤邊框顏色一樣)")
-            if(!ask) ask = '#00ff00'
-            if(ask.toLowerCase() === 'rainbow' || ask.toLowerCase() === '彩虹') fmrainbow = true
+            if (!ask) ask = '#00ff00'
+            if (ask.toLowerCase() === 'rainbow' || ask.toLowerCase() === '彩虹') fmrainbow = true
             addEventListener('mousemove', e => {
                 followMouse(e, canvas, ctx, ask)
             })

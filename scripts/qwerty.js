@@ -23,7 +23,6 @@ const changeToQwerty = () => {
         }
         isQwerty = false
         $.jStorage.set("qwerty", isQwerty)
-        console.log('changed to abc')
         $('.keyboard')[0].style.setProperty('--quantity', 26)
     } else {
         qwerty.innerText = '使用 abc 鍵盤'
@@ -48,12 +47,10 @@ const changeToQwerty = () => {
         }
         isQwerty = true
         $.jStorage.set("qwerty", isQwerty)
-        console.log('changed to qwerty')
         $('.keyboard')[0].style.setProperty('--quantity', 29)
     }
-    document.querySelectorAll(`.keyboard button`).forEach(b => {
-        b.style.border = '3px solid ' + $.jStorage.get('customKeyColor')
-    })
+    setVar('custom-key-color', $.jStorage.get('customKeyColor'))
+    setVar('ckc-blur', $.jStorage.get('ckcBlur'))
     cl.forEach(e => findButton(e).disabled = true)
     $.jStorage.set('qwerty', isQwerty)
 }

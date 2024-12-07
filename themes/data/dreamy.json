@@ -1,0 +1,85 @@
+{
+    "id": "dreamy",
+    "name": "夢幻",
+    "description": "奇特的配色",
+    "author": "遊戲迪米",
+    "categories": [
+        "紫色系",
+        "黃色系",
+        "暗色系"
+    ],
+    "data": [
+        {
+            "id": "w",
+            "value": "#3d1e48"
+        },
+        {
+            "id": "main",
+            "value": "#222222"
+        },
+        {
+            "id": "theme",
+            "value": "#fbd604"
+        },
+        {
+            "id": "navbar",
+            "value": "#fbd604"
+        },
+        {
+            "id": "bg",
+            "value": "#0f0f0f"
+        },
+        {
+            "id": "d",
+            "value": "#fbd6043c"
+        },
+        {
+            "id": "dialogue",
+            "value": "#ce8ce6"
+        },
+        {
+            "id": "text",
+            "value": "#ffffff"
+        },
+        {
+            "id": "text2",
+            "value": "#000000"
+        },
+        {
+            "id": "y",
+            "value": "#555000"
+        },
+        {
+            "id": "p",
+            "value": "#8844bb"
+        },
+        {
+            "id": "r",
+            "value": "#aa0000"
+        },
+        {
+            "id": "c",
+            "value": "cyan"
+        },
+        {
+            "id": "bh",
+            "value": "#ffffff"
+        },
+        {
+            "id": "link",
+            "value": "#000000"
+        },
+        {
+            "id": "lh",
+            "value": "#000000"
+        },
+        {
+            "id": "wintext",
+            "value": "#fbd604"
+        },
+        {
+            "id": "notif",
+            "value": "#000000"
+        }
+    ]
+}

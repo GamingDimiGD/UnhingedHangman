@@ -9,22 +9,29 @@ if ($.jStorage.get("undo")) {
     amountDisplay.style.display = 'unset'
 }
 undoBut.disabled = true
+
+let disableUndoButton = (bl) => {
+    document.querySelectorAll('.undo').forEach(b => {
+        b.disabled = bl
+    })
+}
+
 let undoTest = false;
 const undo = () => {
     if (!$.jStorage.get("undo") && !undoTest) return;
-    if(undoAmountsLeft <= 0) {
+    if (undoAmountsLeft <= 0) {
         undoBut.disabled = true
         pd(0, '時光機需要休息!', {
-            onclick: () => undoBut.disabled = false,
+            onclick: () => disableUndoButton(false),
         })
         dq()
         return false;
     }
     let last = clickedLetters[clickedLetters.length - 1];
-    if(!last) {
+    if (!last) {
         undoBut.disabled = true
         pd(0, '你還沒開始猜字母不能時間回朔', {
-            onclick: () => undoBut.disabled = false,
+            onclick: () => disableUndoButton(false),
         })
         dq()
         return false;
@@ -32,19 +39,19 @@ const undo = () => {
     if (last.isCorrect) {
         undoBut.disabled = true
         pd(characters[0], "你幹嘛贏了還時間回朔", {
-              onclick: () => undoBut.disabled = false,
-          });
+            onclick: () => disableUndoButton(false),
+        });
         dialogue(dialogueQueue);
         return false;
     }
     wrongGuessCount--;
-    if(rng(8 - $.jStorage.get('luck')) !== 1 && $.jStorage.get('luck') > 0) undoAmountsLeft--;
-    else if($.jStorage.get('luck') <= 0) undoAmountsLeft--;
+    if (rng(8 - $.jStorage.get('luck')) !== 1 && $.jStorage.get('luck') > 0) undoAmountsLeft--;
+    else if ($.jStorage.get('luck') <= 0) undoAmountsLeft--;
     if (wrongGuessCount > 6) wrongGuessCount = 6;
     document.querySelector(".guesses-text b").innerText =
         wrongGuessCount + " / " + maxGuesses;
     document.querySelector(".hangman-box img").src =
-        `../images/hangman-${wrongGuessCount}.png`;
+        `../images/hangman-states/hangman-${wrongGuessCount}.png`;
     document.querySelector(".hangman-box h6").innerText = version;
     last.button.disabled = false;
     clickedLetters.pop();
@@ -77,7 +84,7 @@ const undo = () => {
             $.jStorage.set("undo", true);
         }, 1000);
     }
-    if (clickedLetters.length === 0) undoBut.disabled = true;
+    if (clickedLetters.length === 0) disableUndoButton(true);
     return true;
 };
 const buyUndo = () => {

@@ -5,7 +5,6 @@ const finalBoss = (remembertoremovethis) => {
     let dall = $('body *')
     let blacklist = [
         game,
-        $('.navbar')[0],
         $('.keyboard')[0],
         $('.game-box')[0],
         $('.dropdown')[0],
@@ -26,50 +25,54 @@ const finalBoss = (remembertoremovethis) => {
     document.querySelectorAll('.boss-dialogue *').forEach(ele => blacklist.push(ele))
     document.querySelectorAll('.keyboard *').forEach(ele => blacklist.push(ele))
     document.querySelectorAll('i').forEach(ele => blacklist.push(ele))
-    let ahh = setInterval(() => {
-        let random = dall[rng(dall.length - 1)]
-        if(dall.length + 5 === blacklist.length) {
-            if(isMobile()) {
-                clearInterval(ahh)
-                alertModal('手機上會很卡! 建議在電腦上! (我認真不知道為什麼會卡)', [
-                    {
-                        text: '我還是要打boss',
-                        onclick: () => {
-                            bounce($('.dropdown')[0], 10000)
-                            bounce($('.navbar')[0], 10000)
-                            finalBossMode = true
-                            bossReady()
-                            return;
-                        }
-                    }, {
-                        text: '跳過',
-                        onclick: (b) => {
-                            clearInterval(ahh)
-                            bossFightStarting = false;
-                            bossFightMode = false;
-                            $.jStorage.set('fbb', true)
-                            window.location.reload()
-                            return;
-                        }
-                    }
-                ])
+    alertModal('要跳過boss嗎，會很卡', [
+        {
+            text: '要打',
+            onclick: () => {
+                // bounce($('.dropdown')[0], 10000)
+                // bounce($('.navbar')[0], 10000)
+                let toRemove = dall.filter(d => !blacklist.includes(d))
+                // console.log(toRemove)
+                $.each(toRemove, (i, e) => {
+                    e.hidden = true
+                })
+                blacklist.forEach(b => b.hidden = false)
+                $('.navbar')[0].hidden = true
+                $('.navbar')[0].style.display = 'none'
+                finalBossMode = true
+                bossReady()
                 return;
             }
-            bounce($('.dropdown')[0], 10000)
-            bounce($('.navbar')[0], 10000)
-            finalBossMode = true
-            bossReady()
-            return
+        }, {
+            text: '跳過',
+            onclick: () => {
+                bossFightStarting = false;
+                bossFightMode = false;
+                $.jStorage.set('fbb', true)
+                window.location.reload()
+                return;
+            }
         }
-        while (blacklist.includes(random)) {
-            random = dall[rng(dall.length - 1)]
-        }
-        console.log(random)
-        bounce(random, 10000)
-        blacklist.push(random)
-        thingsThatFell.push(random)
-        console.log(blacklist.length, dall.length)
-    }, remembertoremovethis?0:500)
+    ])
+    return;
+    // let ahh = setInterval(() => {
+    //     // let random = dall[rng(dall.length - 1)]
+    //     if (dall.length + 5 === blacklist.length) {
+    //         // bounce($('.dropdown')[0], 10000)
+    //         // bounce($('.navbar')[0], 10000)
+    //         finalBossMode = true
+    //         bossReady()
+    //         return
+    //     }
+    //     while (blacklist.includes(random)) {
+    //         random = dall[rng(dall.length - 1)]
+    //     }
+    //     console.log(random)
+    //     bounce(random, 10000)
+    //     blacklist.push(random)
+    //     thingsThatFell.push(random)
+    //     console.log(blacklist.length, dall.length)
+    // }, remembertoremovethis ? 0 : 500)
 }
 
 const theFinale = () => {
@@ -106,16 +109,16 @@ const theFinale = () => {
         pd(1, "阿蛋妳怎麼來了");
         pd(3, "你看外面", {
             onclick: () => {
-                document.querySelector(".navbar audio").src = "../sfx/uhhh.mp3";
+                music.src = "../sfx/uhhh.mp3";
             },
         });
         pd(0, "地球好像要炸掉了");
         pd(0, "阿蛋!!", {
-            sound:　"BREAK",
+            sound: "BREAK",
             textStyle: "bigtext",
         });
         pd(0, "阿蛋!!", {
-            sound:　"BREAK",
+            sound: "BREAK",
             textStyle: "bigtext",
         });
         pd(3, "啊啊啊啊", {
@@ -150,9 +153,9 @@ const theFinale = () => {
         dq();
     }, 7000);
 };
-if($.jStorage.get('bossFightBadge') && $.jStorage.get('bossFightMode')) {
-    document.querySelector(".navbar audio").src = "../sfx/uhhh.mp3";
-    document.addEventListener('DOMContentLoaded',() => {
+if ($.jStorage.get('bossFightBadge') && $.jStorage.get('bossFightMode')) {
+    music.src = "../sfx/uhhh.mp3";
+    document.addEventListener('DOMContentLoaded', () => {
         finalBoss(true)
     })
 }

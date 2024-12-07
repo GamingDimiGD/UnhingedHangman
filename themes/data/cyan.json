@@ -1,0 +1,84 @@
+{
+    "id": "cyan",
+    "name": "淺藍",
+    "description": "至少不是深藍",
+    "author": "遊戲迪米",
+    "categories": [
+        "藍色系",
+        "亮色系"
+    ],
+    "data": [
+        {
+            "id": "w",
+            "value": "#ffffff"
+        },
+        {
+            "id": "main",
+            "value": "#00ffff"
+        },
+        {
+            "id": "theme",
+            "value": "#003c3c"
+        },
+        {
+            "id": "navbar",
+            "value": "#003c3c"
+        },
+        {
+            "id": "bg",
+            "value": "#003c3c"
+        },
+        {
+            "id": "d",
+            "value": "#003c3c3c"
+        },
+        {
+            "id": "dialogue",
+            "value": "#004c4c"
+        },
+        {
+            "id": "text",
+            "value": "#000000"
+        },
+        {
+            "id": "text2",
+            "value": "#ffffff"
+        },
+        {
+            "id": "y",
+            "value": "#fff000"
+        },
+        {
+            "id": "p",
+            "value": "#cc77ff"
+        },
+        {
+            "id": "r",
+            "value": "red"
+        },
+        {
+            "id": "c",
+            "value": "cyan"
+        },
+        {
+            "id": "bh",
+            "value": "#ffffff"
+        },
+        {
+            "id": "link",
+            "value": "#00ffff"
+        },
+        {
+            "id": "lh",
+            "value": "#003c3c"
+        },
+        {
+            "id": "wintext",
+            "value": "#003c3c"
+        },
+        {
+            "id": "notif",
+            "value": "#00ffff"
+        }
+    ]
+}

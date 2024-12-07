@@ -1,0 +1,84 @@
+{
+    "id": "green",
+    "name": "綠色",
+    "description": "這些綠色長得有點奇怪",
+    "author": "遊戲迪米",
+    "categories": [
+        "綠色系",
+        "亮色系"
+    ],
+    "data": [
+        {
+            "id": "w",
+            "value": "#A8D8B9"
+        },
+        {
+            "id": "main",
+            "value": "#1B813E"
+        },
+        {
+            "id": "theme",
+            "value": "#227D51"
+        },
+        {
+            "id": "navbar",
+            "value": "#A8D8B9"
+        },
+        {
+            "id": "bg",
+            "value": "#0F4C3A"
+        },
+        {
+            "id": "d",
+            "value": "#003c003c"
+        },
+        {
+            "id": "dialogue",
+            "value": "#0F4C3A"
+        },
+        {
+            "id": "text",
+            "value": "#000000"
+        },
+        {
+            "id": "text2",
+            "value": "#A8D8B9"
+        },
+        {
+            "id": "y",
+            "value": "#E9CD4C"
+        },
+        {
+            "id": "p",
+            "value": "#B481BB"
+        },
+        {
+            "id": "r",
+            "value": "#62592C"
+        },
+        {
+            "id": "c",
+            "value": "#78C2C4"
+        },
+        {
+            "id": "bh",
+            "value": "#ffffff"
+        },
+        {
+            "id": "link",
+            "value": "#A8D8B9"
+        },
+        {
+            "id": "lh",
+            "value": "#ffffff"
+        },
+        {
+            "id": "wintext",
+            "value": "#000000"
+        },
+        {
+            "id": "notif",
+            "value": "#A8D8B9"
+        }
+    ]
+}
