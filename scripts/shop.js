@@ -395,7 +395,7 @@ let customBGIMG = new ShopItem(
             });
             rb.addEventListener("click", () => {
                 localStorage.removeItem("customBGIMG");
-                $.jStorage.setItem("customBGIMG", '');
+                $.jStorage.set("customBGIMG", '');
                 document.body.style.backgroundImage = "none";
             });
             dbg.addEventListener("click", () => {
@@ -453,7 +453,7 @@ if ($.jStorage.get("customBGIMG")) {
         });
         rb.addEventListener("click", () => {
             localStorage.removeItem("customBGIMG");
-            $.jStorage.setItem("customBGIMG", '');
+            $.jStorage.set("customBGIMG", '');
             document.body.style.backgroundImage = "none";
         });
         dbg.addEventListener("click", () => {
