@@ -318,7 +318,7 @@ const gameOver = (isVictory) => {
     undoAmountsLeft = undoAmounts;
     amountDisplay.innerText = `剩${undoAmountsLeft}次`;
     if(eduMode) $('.advmeaningb')[0].click();
-    let xp = rng(8 - $.jStorage.get('fortune')) && $.jStorage.get('fortune') > 0;
+    let xp = rng(8 - $.jStorage.get('experience')) && $.jStorage.get('experience') > 0;
     if (isVictory) {
         giveAch("won");
         giveXP(2 * (xp?2:1));
