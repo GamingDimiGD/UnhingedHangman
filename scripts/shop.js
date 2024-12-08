@@ -391,7 +391,7 @@ let customBGIMG = new ShopItem(
                 else if (!t && winStreak >= 5 && winStreak < 10)
                     game.style.background = "#fff000";
                 else if (!t && winStreak >= 10) game.style.background = "#cc77ff";
-                game.classList.toggle("transparent");
+                game.classList.toggle("t");
             });
             rb.addEventListener("click", () => {
                 localStorage.removeItem("customBGIMG");
@@ -449,7 +449,7 @@ if ($.jStorage.get("customBGIMG")) {
         customBGIMG.item.append(dbg);
         o.addEventListener("click", () => {
             t = !t;
-            game.classList.toggle("transparent");
+            game.classList.toggle("t");
         });
         rb.addEventListener("click", () => {
             localStorage.removeItem("customBGIMG");
