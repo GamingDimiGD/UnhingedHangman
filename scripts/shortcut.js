@@ -11,7 +11,7 @@ let shortcutList = [
     'changeWord',
     'customKeyColor',
     'customBGIMG',
-    'transparent',
+    'transparent-button',
     'removebg',
     'dynamicbg',
     'teach',
