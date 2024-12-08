@@ -368,7 +368,7 @@ let customBGIMG = new ShopItem(
             let o = document.createElement("button");
             o.innerText = "半透明遊戲視窗";
             o.classList.add('sb')
-            o.classList.add('transparent')
+            o.classList.add('transparent-button')
             customBGIMG.item.append(o);
             let rb = document.createElement("button");
             rb.innerText = "清除圖片";
@@ -434,7 +434,7 @@ if ($.jStorage.get("customBGIMG")) {
         let o = document.createElement("button");
         o.innerText = "半透明遊戲視窗";
         o.classList.add('sb')
-        o.classList.add('transparent')
+        o.classList.add('transparent-button')
         customBGIMG.item.append(o);
         let rb = document.createElement("button");
         rb.innerText = "清除圖片";
