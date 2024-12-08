@@ -157,7 +157,8 @@
             🎉活動!
         </button>
         <a data-hover-text="建議使用教學" href="howtoplay.html" class="dropbut howtoplay-button" target="_blank">怎麼玩?</a>
-        <a data-hover-text="遊戲有問題的話就用" href="https://forms.gle/E7PRBmx26AwEeeNu7" class="dropbut bug-report" target="_blank">遊戲問題</a>
+        <a data-hover-text="遊戲有問題的話就用" href="https://forms.gle/E7PRBmx26AwEeeNu7" class="dropbut bug-report"
+            target="_blank">遊戲問題</a>
     </div>
 
     <div class="game-modal modal">
@@ -166,8 +167,8 @@
             <h4>你輸了!</h4>
             <p id="ans">答案是: <b>這東西壞掉了</b> </p>
             <p id="meaning">意思是: <b>這東西壞掉了</b></p>
-            <a href="https://dictionary.cambridge.org/zht/%E8%A9%9E%E5%85%B8/%E8%8B%B1%E8%AA%9E-%E6%BC%A2%E8%AA%9E-%E7%B9%81%E9%AB%94/" target="_blank"
-                class="meaning-link">劍橋辭典意思</a> <br>
+            <a href="https://dictionary.cambridge.org/zht/%E8%A9%9E%E5%85%B8/%E8%8B%B1%E8%AA%9E-%E6%BC%A2%E8%AA%9E-%E7%B9%81%E9%AB%94/"
+                target="_blank" class="meaning-link">劍橋辭典意思</a> <br>
             <button class="advmeaningb">進階意思</button>
             <br />
             <button class="play-again" disabled>再玩一遍!</button>
@@ -453,6 +454,11 @@
                     <!-- can i not leave these stupid comments -->
                 </div>
             </div>
+            <button class="add-shortcut" onclick="$.jStorage.set('shortcuts', defaultShortcuts); playerShortcuts = [...defaultShortcuts]
+            reloadShortcuts();
+            $.each($('.shortcut-display'), (j, ele) => {
+            ele.innerText = playerShortcuts.includes(shortcutList[j])? `第${playerShortcuts.indexOf(playerShortcuts.find(s => s === shortcutList[j])) + 1}個` : '使用'
+        })">重設</button>
         </div>
         <button onclick="document.querySelector('.shortcut.modal').classList.remove('show')">關閉</button>
     </div>
@@ -497,13 +503,13 @@
         <div class="content">
             <h1>鍵盤設定</h1>
             <div class="ckc-presets">
-                
+
             </div>
             <div class="ckc-options">
 
             </div>
             <div class="ckc-buttons">
-                
+
             </div>
         </div>
         <button onclick="document.querySelector('.ckc.modal').classList.remove('show')">關閉</button>
