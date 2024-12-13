@@ -181,7 +181,7 @@ if (stupidlyRandomNumber !== 34) {
 let speed = new ShopItem(
     "速通模式",
     500,
-    "看你在120秒內贏多少次！<br/>會給兩倍的✧，但連勝不給✧。<br/>第一次購買要✧但第二次不用。<br/>啟動後會有一小時冷卻時間。<br/>會重置連勝。",
+    "看你在120秒內贏多少次！<br/>會給兩倍的✧，但連勝不給✧。<br/>第一次購買要✧但第二次不用。<br/>啟動後會有一小時冷卻時間。<br/>連勝會歸零。",
     "speed",
     "遊玩",
     "speed",
@@ -254,7 +254,7 @@ if ($.jStorage.get("speed")) {
 let hard = new ShopItem(
     "困難模式！",
     1000,
-    "提示是亂碼！<br/>會給10倍✧<br/>會重置連勝。",
+    "提示是亂碼！<br/>會給10倍✧<br/>連勝會歸零。",
     "hard",
     "遊玩",
     "hard",
@@ -285,7 +285,7 @@ if ($.jStorage.get("hard")) {
 let changeWord = new ShopItem(
     "更換單字",
     200,
-    "更換單字，不會重置連勝。<br/>100秒冷卻。",
+    "更換單字，連勝不會歸零。<br/>100秒冷卻。",
     "change-word",
     "遊玩",
     "changeWord",
@@ -347,7 +347,7 @@ let dbgi = $.jStorage.get("dbgi") || 0;
 let customBGIMG = new ShopItem(
     "自訂背景圖片",
     200,
-    "上傳圖片來改深綠色背景!",
+    '上傳圖片來改深綠色背景! <a href="https://www.youtube.com/watch?v=egHxjRq8eSU" target="_blank">怎麼上傳音樂與背景?</a>',
     "custom-bg-img",
     "外觀",
     "customBGIMG",

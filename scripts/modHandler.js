@@ -28,7 +28,7 @@ let modScripts = document.querySelectorAll("mod-script");
 let deleteModButtons = document.querySelectorAll(".remove-mod");
 deleteModButtons.forEach((button, index) => {
     button.onclick = () => {
-        alertModal('確定要刪除嗎? 會重制畫面', [
+        alertModal('確定要刪除嗎? 會重新整理畫面', [
             {
                 text: '確定',
                 onclick: () => {

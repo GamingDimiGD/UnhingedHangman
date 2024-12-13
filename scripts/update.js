@@ -6,6 +6,28 @@ if($.jStorage.get('version') !== version) {
 }
 let updateInfo = [
     {
+        title: '最多bug修復的更新!',
+        version: 'v1.4.1',
+        description: [
+            {
+                title: '修復Lag問題',
+                text: '當你用彩虹文字時會很卡'
+            },
+            {
+                title: '影片教你如何上傳音樂與圖片!',
+                text: '在主題跟自訂背景那裡!'
+            },
+            {
+                title: '設定會儲存!',
+                text: '你不用每次開遊戲時改設定!'
+            },
+            {
+                title: '更多...',
+                text: '修復其他bug，如: 活動雪花會在關減少效果後還是在消失的狀態。'
+            }
+        ]
+    },
+    {
         title: "最方便的更新!",
         version: 'v1.4.0',
         description: [

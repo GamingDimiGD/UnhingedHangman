@@ -1,5 +1,5 @@
 let muted = false;
-
+if ($.jStorage.get('muted')) $('#muteA')[0].click();
 const sfx = (sound, speed, keeppitch) => {
     sound = '../sfx/' + sound + '.mp3'
     if(muted) return

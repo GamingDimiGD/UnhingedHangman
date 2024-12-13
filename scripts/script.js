@@ -127,7 +127,9 @@ const toggleflash = () => {
         rmv = 255;
         document.getElementById("tfl").innerText = "關閉閃爍";
     }
+    $.jStorage.set('antiFlash', rmv === 0);
 };
+if ($.jStorage.get('antiFlash')) toggleflash();
 
 oVocab.forEach((word) => {
     if (!vocab.find((a) => a.word === word.word)) return;

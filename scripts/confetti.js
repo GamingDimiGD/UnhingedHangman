@@ -16,7 +16,10 @@ const tal = () => {
         clearInterval(interval);
         interval = setInterval(fun, is);
     }
+    $.jStorage.set('antiLag', antiLag);
 };
+
+if ($.jStorage.get('antiLag')) tal();
 
 const party = () => {
     if (rmv === 0) return;

@@ -15,7 +15,9 @@ const muteMusic = () => {
         isMuted = false;
         document.getElementById("mute").innerText = "關音樂";
     }
+    $.jStorage.set('muteMusic', isMuted);
 };
+if($.jStorage.get('muteMusic')) muteMusic()
 
 let eduMode = false;
 const toggleEduMode = () => {

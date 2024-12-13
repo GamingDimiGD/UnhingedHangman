@@ -125,7 +125,7 @@ themeColorList.forEach(color => {
     button.classList.add(color.id + '-picker')
     button.onclick = () => input.click()
     let reset = document.createElement('button')
-    reset.innerText = '重置'
+    reset.innerText = '重設'
     reset.onclick = () => {
         setVar(color.id, color.default)
         button.style.background = getVar(color.id)

@@ -202,10 +202,10 @@ Object.keys($.jStorage.get('ckc-options')).forEach(key => {
 
 
 let resetDefaultButton = document.createElement('button')
-resetDefaultButton.innerText = '全部重製';
+resetDefaultButton.innerText = '全部重設';
 
 resetDefaultButton.onclick = () => {
-    alertModal('確定重製?', [
+    alertModal('確定重設?', [
         {
             text: '確定',
             onclick: () => {

@@ -43,7 +43,6 @@
     <script src="../scripts/boss.js" defer></script>
     <script src="../scripts/inputHandler.js" defer></script>
     <script src="../scripts/theme.js" defer></script>
-    <script src="../scripts/confetti.js" defer></script>
     <script src="../scripts/dialogue.js" defer></script>
     <script src="../scripts/undo.js" defer></script>
     <script src="../scripts/qwerty.js" defer></script>
@@ -54,6 +53,7 @@
     <script src="../scripts/meaning.js" defer></script>
     <script src="../scripts/daily.js" defer></script>
     <script src="../scripts/modal.js" defer></script>
+    <script src="../scripts/confetti.js" defer></script>
     <script src="../scripts/dynamicbg.js" defer></script>
     <script src="../scripts/shop.js" defer></script>
     <script src="../scripts/knowledge.js" defer></script>
@@ -370,7 +370,9 @@
                     <h2>遊戲設定</h2>
                     <button id="mute" onclick="muteMusic()">關音樂</button>
                     <button id="muteA" onclick="muted = !muted
-                            document.getElementById('muteA').innerText = muted? '開音效' : '關音效'">關音效</button>
+                            document.getElementById('muteA').innerText = muted? '開音效' : '關音效'
+                            $.jStorage.set('muted', muted)
+                            ">關音效</button>
                     <button id="tfl" onclick="toggleflash()">關閉閃爍</button>
                     <button id="antilag" onclick="tal()">減少效果</button>
                     <button id="edumode" onclick="toggleEduMode()" data-hover-text="可以讓你在打完一局時直接看到字典意思">開啟教育模式</button>
@@ -490,12 +492,13 @@
             <h1>自訂音樂</h1>
             <audio class="main-channel" controls autoplay loop src="../sfx/Wallpaper.mp3"></audio>
             <button class="submit-music-link">使用連結上傳音樂</button>
-            <button onclick="$.jStorage.deleteKey('customMusic')">重制音樂</button>
+            <button onclick="$.jStorage.deleteKey('customMusic')">重設音樂</button>
             <button class="submit-10streak-music-link">使用連結上傳10連勝音樂</button>
-            <button onclick="$.jStorage.deleteKey('custom10StreakMusic')">重制10連勝音樂</button>
+            <button onclick="$.jStorage.deleteKey('custom10StreakMusic')">重設10連勝音樂</button>
             <button
                 onclick="$.jStorage.set('custom10StreakMusic', $.jStorage.get('customMusic') || '../sfx/Wallpaper.mp3')">10連勝音樂變為普通音樂</button>
-            為什麼不能直接上傳?<br>因為網站儲存空間太小了，塞不下，只能上傳連結。
+            為什麼不能直接上傳?<br>因為網站儲存空間太小了，塞不下，只能上傳連結。<br>
+            <a href="https://www.youtube.com/watch?v=egHxjRq8eSU" target="_blank">怎麼上傳音樂與背景?</a>
         </div>
         <button onclick="document.querySelector('.custom-music.modal').classList.remove('show')">關閉</button>
     </div>

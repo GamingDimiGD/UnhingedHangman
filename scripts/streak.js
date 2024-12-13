@@ -4,6 +4,7 @@ let b = 0;
 let styleText = `rgb(${r},${g},${b})`;
 let cs = 5;
 let snow = () => {
+    requestAnimationFrame(snow);
     if (antiLag) return;
     skew = Math.max(0.8, skew - 0.001);
     confetti({
@@ -20,8 +21,13 @@ let snow = () => {
         scalar: rng(1, 0.4),
         drift: rng(0.4, -0.4),
     });
-    requestAnimationFrame(snow);
 }
+
+const streakText = document.querySelector(".streak");
+let rList = [
+    document.querySelector(".navbar"),
+    streakText,
+]
 setInterval(() => {
     if (rmv === 0) {
         document.querySelector(".hangman-box img").style.border =
@@ -34,59 +40,50 @@ setInterval(() => {
         });
         return;
     }
-    if (r > 255) r = 255;
-    if (g > 255) g = 255;
-    if (b > 255) b = 255;
-    if (r < 0) r = 0;
-    if (g < 0) g = 0;
-    if (b < 0) b = 0;
-    if (r !== 255 && g === 0 && b === 0) {
-        styleText = `rgb(${r + cs},${g},${b})`;
-        r = r + cs;
-    } else if (r === 255 && g !== 255 && b === 0) {
-        styleText = `rgb(${r},${g + cs},${b})`;
-        g = g + cs;
-    } else if (r === 255 && g === 255 && b !== 255) {
-        styleText = `rgb(${r - cs},${g},${b + cs})`;
-        r = r - cs;
-        b = b + cs;
-    } else if (r !== 255 && g === 255 && b === 255) {
-        styleText = `rgb(${r + cs},${g - cs},${b})`;
-        g = g - cs;
-        r = r + cs;
-    } else if (r === 255 && g !== 255 && b === 255) {
-        styleText = `rgb(${r},${g + cs},${b - cs})`;
-        b = b - cs;
-        r = r + cs;
-    } else if (r !== 255 && g === 255 && b !== 255) {
-        styleText = `rgb(${r - cs},${g},${b + cs})`;
-        r = r - cs;
-        b = b + cs;
-    } else if (r !== 255 && g !== 255 && b === 255) {
-        styleText = `rgb(${r + cs},${g - cs},${b})`;
-        g = g - cs;
-        r = r + cs;
-    } else if (r >= 255 && g !== 255 && b !== 255) {
-        styleText = `rgb(${r},${g + cs},${b - cs})`;
-        b = b - cs;
-        g = g + cs;
-    }
+    // if (r > 255) r = 255;
+    // if (g > 255) g = 255;
+    // if (b > 255) b = 255;
+    // if (r < 0) r = 0;
+    // if (g < 0) g = 0;
+    // if (b < 0) b = 0;
+    // if (r !== 255 && g === 0 && b === 0) {
+    //     styleText = `rgb(${r + cs},${g},${b})`;
+    //     r = r + cs;
+    // } else if (r === 255 && g !== 255 && b === 0) {
+    //     styleText = `rgb(${r},${g + cs},${b})`;
+    //     g = g + cs;
+    // } else if (r === 255 && g === 255 && b !== 255) {
+    //     styleText = `rgb(${r - cs},${g},${b + cs})`;
+    //     r = r - cs;
+    //     b = b + cs;
+    // } else if (r !== 255 && g === 255 && b === 255) {
+    //     styleText = `rgb(${r + cs},${g - cs},${b})`;
+    //     g = g - cs;
+    //     r = r + cs;
+    // } else if (r === 255 && g !== 255 && b === 255) {
+    //     styleText = `rgb(${r},${g + cs},${b - cs})`;
+    //     b = b - cs;
+    //     r = r + cs;
+    // } else if (r !== 255 && g === 255 && b !== 255) {
+    //     styleText = `rgb(${r - cs},${g},${b + cs})`;
+    //     r = r - cs;
+    //     b = b + cs;
+    // } else if (r !== 255 && g !== 255 && b === 255) {
+    //     styleText = `rgb(${r + cs},${g - cs},${b})`;
+    //     g = g - cs;
+    //     r = r + cs;
+    // } else if (r >= 255 && g !== 255 && b !== 255) {
+    //     styleText = `rgb(${r},${g + cs},${b - cs})`;
+    //     b = b - cs;
+    //     g = g + cs;
+    // }
     if (ckcRainbow) {
-        setVar('custom-key-color', styleText)
-        setVar('ckc-b', styleText)
-    }
+        // setVar('custom-key-color', styleText)
+        // setVar('ckc-b', styleText)
+        setVar('ckc-animation', 'rainbow')
+    } else setVar('ckc-animation', 'unset')
     if (fmrainbow) {
         ask = styleText;
-    }
-    if (winStreak >= 10) {
-        document.querySelector(".hangman-box img").style.border =
-            "5px solid " + styleText;
-        document.querySelector(".navbar").style.color = styleText;
-        streakText.style.border = "3px solid " + styleText;
-        streakText.style.color = styleText;
-        keyboardDiv.querySelectorAll("button").forEach((btn) => {
-            btn.style.color = styleText;
-        });
     }
     if ($.jStorage.get('customBGIMG')) {
         $.jStorage.set("t", t);
@@ -107,7 +104,6 @@ setInterval(() => {
     let textbox = document.querySelector(".text-box");
     let e = textbox.style
 }, 10);
-const streakText = document.querySelector(".streak");
 let si;
 const checkStreak = (amount) => {
     winStreak++;
@@ -134,6 +130,12 @@ const checkStreak = (amount) => {
             btn.style.color = "var(--text2)";
         });
         game.style.border = "none";
+        rList.forEach(e => {
+            e.style.animation = 'unset';
+        })
+        keyboardDiv.querySelectorAll("button").forEach((btn) => {
+            btn.style.animation = 'unset';
+        });
         if (bossFightMode || speedRunMode) return;
         if (!music.src.includes("Wallpaper.mp3") && !$.jStorage.get('customMusic') && music.src !== "")
             music.src = "../sfx/Wallpaper.mp3";
@@ -149,11 +151,23 @@ const checkStreak = (amount) => {
         si = setInterval(() => {
             streakText.style.margin = rng(3) + "px";
         });
+        rList.forEach(e => {
+            e.style.animation = 'unset';
+        })
+        keyboardDiv.querySelectorAll("button").forEach((btn) => {
+            btn.style.animation = 'unset';
+        });
     } else if (winStreak >= 10) {
         clearInterval(si);
         game.style.border = "5px solid var(--c)";
         si = setInterval(() => {
             streakText.style.margin = rng(3) + "px";
+        });
+        rList.forEach(e => {
+            e.style.animation = 'rainbowText 5s infinite';
+        })
+        keyboardDiv.querySelectorAll("button").forEach((btn) => {
+            btn.style.animation = 'rainbowText 5s infinite';
         });
         if (bossFightMode || speedRunMode) return;
         if (!music.src.includes("Creo-Sphere.mp3") && music.src !== "" && !$.jStorage.get('custom10StreakMusic'))

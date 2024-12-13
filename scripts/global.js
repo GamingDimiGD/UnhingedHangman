@@ -12,13 +12,13 @@ let setVar = (name, val) => {
   return document.documentElement.style.setProperty(`--${name}`, val)
 }
 
-let version = 'v1.4.0'
+let version = 'v1.4.1'
 let bossFightBadge = false
 document.querySelectorAll('.version').forEach(e => e.innerText = version)
 let bossFightMode = false
 if ($.jStorage.get('bossFightMode')) bossFightMode = true
 if ($.jStorage.get('bossFightBadge')) bossFightBadge = true
-if (bossFightBadge) {
+if (bossFightBadge && window.location.href.includes('/html/')) {
   document.querySelector('.boss-fight-badge').innerText = '打敗過柴柴'
   document.querySelector('.boss-fight-badge').style.color = '#f00'
 }
