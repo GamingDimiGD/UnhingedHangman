@@ -6,6 +6,16 @@ if($.jStorage.get('version') !== version) {
 }
 let updateInfo = [
     {
+        title: '相信我這最後一次了',
+        version: 'v1.4.2',
+        description: [
+            {
+                title: '修復bug',
+                text: '修復自訂鍵盤壞掉'
+            }
+        ]
+    },
+    {
         title: '最多bug修復的更新!',
         version: 'v1.4.1',
         description: [

@@ -197,6 +197,10 @@ saveckcButton.onclick = () => {
 Object.keys($.jStorage.get('ckc-options')).forEach(key => {
     let options = $.jStorage.get('ckc-options')
     setVar(key, options[key] + (ckcVars.find(v => v.id === key).unit || ''))
+    if (!$.jStorage.get('customKeyColor')) {
+        setVar('custom-key-color', getVar('main'))
+        setVar('ckc-b', getVar('main'))
+    }
 })
 
 

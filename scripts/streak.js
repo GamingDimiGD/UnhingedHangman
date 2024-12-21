@@ -80,8 +80,7 @@ setInterval(() => {
     if (ckcRainbow) {
         // setVar('custom-key-color', styleText)
         // setVar('ckc-b', styleText)
-        setVar('ckc-animation', 'rainbow')
-    } else setVar('ckc-animation', 'unset')
+    }
     if (fmrainbow) {
         ask = styleText;
     }
@@ -104,6 +103,7 @@ setInterval(() => {
     let textbox = document.querySelector(".text-box");
     let e = textbox.style
 }, 10);
+if(ckcRainbow) setVar('ckc-animation', 'rainbow')
 let si;
 const checkStreak = (amount) => {
     winStreak++;

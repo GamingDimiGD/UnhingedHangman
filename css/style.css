@@ -28,8 +28,8 @@
     --lh:  #003c00;
     --wintext: #003c00;
     --notif: #00ff00;
-    --custom-key-color: #00ff00;
-    --ckc-b: #00ff00;
+    --custom-key-color: var(--main);
+    --ckc-b: var(--main);
     --ckc-blur: 0rem;
     --ckc-animation: unset;
     --ckc-animation2: unset;

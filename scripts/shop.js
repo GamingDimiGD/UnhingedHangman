@@ -305,7 +305,11 @@ let customKeyColor = new ShopItem(
         if (!color) color = "var(--main)";
         if (color.toLowerCase() === "rainbow" || color === "彩虹") {
             ckcRainbow = true;
-        } else ckcRainbow = false;
+            setVar('ckc-animation', 'rainbow')
+        } else {
+            ckcRainbow = false;
+            setVar('ckc-animation', 'unset')
+        }
         setVar('custom-key-color', color)
         customKeyColor.price = 0;
         customKeyColor.changeButton((b) => {
@@ -318,6 +322,7 @@ let customKeyColor = new ShopItem(
             let advs = document.createElement("button");
             advs.innerText = '進階鍵盤設定'
             advs.classList.add('sb')
+            advs.classList.add('adv-ckc-button')
             customKeyColor.item.append(advs)
             advs.onclick = () => document.querySelector('.ckc.modal').classList.add('show')
         }
@@ -329,7 +334,11 @@ if ($.jStorage.get("customKeyColor")) {
     let color = $.jStorage.get("customKeyColor");
     if (color.toLowerCase() === "rainbow" || color === "彩虹") {
         ckcRainbow = true;
-    } else ckcRainbow = false;
+        setVar('ckc-animation', 'rainbow')
+    } else {
+        ckcRainbow = false;
+        setVar('ckc-animation', 'unset')
+    }
     setVar('custom-key-color', color)
     customKeyColor.changeButton((b) => {
         b.innerText = "變換顏色";

@@ -1,4 +1,3 @@
-
 let themeColorList = [
     {
         name: '遊戲板背景',
@@ -109,7 +108,13 @@ themeColorList.forEach(color => {
 
 if (!$.jStorage.get('theme')) $.jStorage.set('theme', defaultTheme);
 
-$.jStorage.get('theme').forEach(color => setVar(color.id, color.value))
+$.jStorage.get('theme').forEach(color => {
+    setVar(color.id, color.value)
+    if (!$.jStorage.get('customKeyColor') && color.id === 'main') {
+        setVar('custom-key-color', color.value)
+        setVar('ckc-b', color.value)
+    }
+})
 
 themeColorList.forEach(color => {
     let box = document.createElement('div')
@@ -133,6 +138,10 @@ themeColorList.forEach(color => {
         let themedata = $.jStorage.get('theme')
         themedata.find(c => c.id === color.id).value = color.default
         $.jStorage.set('theme', themedata)
+        if (!$.jStorage.get('customKeyColor')) {
+            setVar('custom-key-color', getVar('main'))
+            setVar('ckc-b', getVar('main'))
+        }
     }
     box.style.alignItems = 'center'
     box.style.justifyContent = 'center'
@@ -146,6 +155,10 @@ themeColorList.forEach(color => {
         let themedata = $.jStorage.get('theme')
         themedata.find(c => c.id === color.id).value = e
         $.jStorage.set('theme', themedata)
+        if (!$.jStorage.get('customKeyColor')) {
+            setVar('custom-key-color', getVar('main'))
+            setVar('ckc-b', getVar('main'))
+        }
     }
     box.append(b, button, input, cssPicker, reset)
     $(".theme-colors").append(box)
@@ -155,6 +168,10 @@ themeColorList.forEach(color => {
         let themedata = $.jStorage.get('theme')
         themedata.find(c => c.id === color.id).value = e.target.value
         $.jStorage.set('theme', themedata)
+        if (!$.jStorage.get('customKeyColor')) {
+            setVar('custom-key-color', getVar('main'))
+            setVar('ckc-b', getVar('main'))
+        }
     })
 })
 
@@ -226,6 +243,10 @@ const pushPreset = (theme) => {
         $.jStorage.get('theme').forEach(t => {
             document.querySelector(`.${t.id}-picker`).style.background = t.value
         });
+        if (!$.jStorage.get('customKeyColor')) {
+            setVar('custom-key-color', getVar('main'))
+            setVar('ckc-b', getVar('main'))
+        }
         showNotif('已套用', 1)
     }
     let info = document.createElement('div')
@@ -262,6 +283,10 @@ themeInput.addEventListener('change', () => {
     fr.onload = () => {
         console.log(fr.result)
         importTheme(fr.result)
+    }
+    if (!$.jStorage.get('customKeyColor')) {
+        setVar('custom-key-color', getVar('main'))
+        setVar('ckc-b', getVar('main'))
     }
 })
 

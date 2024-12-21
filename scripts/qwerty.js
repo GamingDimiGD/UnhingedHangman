@@ -49,7 +49,8 @@ const changeToQwerty = () => {
         $.jStorage.set("qwerty", isQwerty)
         $('.keyboard')[0].style.setProperty('--quantity', 29)
     }
-    setVar('custom-key-color', $.jStorage.get('customKeyColor'))
+    setVar('custom-key-color', $.jStorage.get('customKeyColor')? $.jStorage.get('customKeyColor') : getVar('main'))
+    setVar('ckc-b', $.jStorage.get('customKeyColor') ? $.jStorage.get('customKeyColor') : getVar('main'))
     setVar('ckc-blur', $.jStorage.get('ckcBlur'))
     cl.forEach(e => findButton(e).disabled = true)
     $.jStorage.set('qwerty', isQwerty)

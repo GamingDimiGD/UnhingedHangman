@@ -12,7 +12,7 @@ let setVar = (name, val) => {
   return document.documentElement.style.setProperty(`--${name}`, val)
 }
 
-let version = 'v1.4.1'
+let version = 'v1.4.2'
 let bossFightBadge = false
 document.querySelectorAll('.version').forEach(e => e.innerText = version)
 let bossFightMode = false
@@ -86,11 +86,11 @@ const dateRange = (monthFrom, dayFrom, monthTo, dayTo) => {
 const toDataURL = (url, callback) => {
   var xhr = new XMLHttpRequest();
   xhr.onload = function () {
-      var reader = new FileReader();
-      reader.onloadend = () => {
-          callback(reader.result);
-      }
-      reader.readAsDataURL(xhr.response);
+    var reader = new FileReader();
+    reader.onloadend = () => {
+      callback(reader.result);
+    }
+    reader.readAsDataURL(xhr.response);
   };
   xhr.open('GET', url);
   xhr.responseType = 'blob';
