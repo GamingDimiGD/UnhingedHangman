@@ -225,7 +225,7 @@ const update = () => {
     canvas.height = window.innerHeight;
     if (window.innerWidth < 726) {
         document.head.querySelectorAll("meta")[2].content =
-            "width=device-width, initial-scale=0.75";
+            `width=device-width, initial-scale=0.75`;
         document.querySelector(".hangman-box").style.display = "none";
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);

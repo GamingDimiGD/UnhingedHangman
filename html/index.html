@@ -30,6 +30,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/disable-devtool@0.3.8/disable-devtool.min.js" crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunar-javascript/1.6.13/lunar.js"
+        integrity="sha512-tSk1UdQG0t01yvUCHGmD8Z58eax0WpQWfZ+m7FcabU9U44ENCU/n/J3QaqCUZwNtjhiaf09djhGrrZDZtCP0XQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- files -->
     <script src="../scripts/global.js" defer></script>
@@ -57,6 +60,8 @@
     <script src="../scripts/dynamicbg.js" defer></script>
     <script src="../scripts/shop.js" defer></script>
     <script src="../scripts/knowledge.js" defer></script>
+    <script src="../scripts/key.js" defer></script>
+    <script src="../scripts/midwayShop.js" defer></script>
     <script src="../scripts/ckc.js" defer></script>
     <script src="../scripts/streak.js" defer></script>
     <script src="../scripts/funMode.js" defer></script>
@@ -68,6 +73,7 @@
     <script src="../scripts/manageSave.js" defer></script>
     <script src="../scripts/YW5uaWhpbGF0ZQ==.js" defer></script>
     <script src="https://cdn.jsdelivr.net/gh/GamingDimiGD/UHEvents/event.js" defer></script>
+    <!-- TODO: change this back -->
     <script src="../scripts/mods.js" defer></script>
 
 
@@ -75,6 +81,7 @@
 </head>
 
 <body>
+    <style class="custom-css"></style>
     <audio src="" class="alt-channel" loop autoplay></audio>
     <div class="hover-text">
     </div>
@@ -110,51 +117,45 @@
         </div>
     </nav>
     <div class="dropdown">
-        <button id="ach" class="dropbut" onclick="document.querySelector('.achievements-modal').classList.add('show')"
-            data-hover-text="解成就會給獎勵">
+        <button id="ach" class="dropbut" onclick="openModal('achievements-modal')" data-hover-text="解成就會給獎勵">
             <i class="fa-solid fa-certificate"></i>
             成就
         </button>
-        <button id="shop" class="dropbut" onclick="document.querySelector('.market').classList.add('show')"
-            data-hover-text="每個遊戲商店">✧商城✧</button>
-        <button id="settings" class="dropbut" onclick="document.querySelector('.settings').classList.add('show')">
+        <button id="shop" class="dropbut" onclick="openModal('market')" data-hover-text="每個遊戲商店">✧商城✧</button>
+        <button id="settings" class="dropbut" onclick="openModal('settings')">
             <i class="fa-solid fa-gear"></i>
             設定
         </button>
-        <button id="update" class="dropbut" onclick="document.querySelector('.update-modal').classList.add('show')"
-            data-hover-text="遊戲更新內容">
+        <button id="update" class="dropbut" onclick="openModal('update-modal')" data-hover-text="遊戲更新內容">
             <i class="fa-regular fa-newspaper"></i>
             更新資訊!
         </button>
-        <button id="stats" class="dropbut" onclick="document.querySelector('.stats').classList.add('show')"
-            data-hover-text="基本上所有東西都在這">
+        <button id="stats" class="dropbut" onclick="openModal('stats')" data-hover-text="基本上所有東西都在這">
             <i class="fa-solid fa-chart-simple"></i>
             統計
         </button>
-        <button id="donate" class="dropbut" onclick="document.querySelector('.donate').classList.add('show')"
-            data-hover-text="看你要不要斗內">💵斗內我!</button>
-        <button id="levels" class="dropbut" data-hover-text="可以拿來附魔"
-            onclick="document.querySelector('.levels').classList.add('show')">
+        <button id="donate" class="dropbut" onclick="openModal('donate')" data-hover-text="看你要不要斗內">💵斗內我!</button>
+        <button id="levels" class="dropbut" data-hover-text="可以拿來附魔" onclick="openModal('levels')">
             <i class="fa-solid fa-chevron-up"></i>
             升級
         </button>
-        <button id="mods-button" class="dropbut" data-hover-text="更改遊戲內容!"
-            onclick="document.querySelector('.mods').classList.add('show')">
+        <button id="mods-button" class="dropbut" data-hover-text="更改遊戲內容!" onclick="openModal('mods')">
             <i class="fa-solid fa-screwdriver-wrench"></i>
             模組
         </button>
-        <button id="daily-login-button" class="dropbut" data-hover-text="查看獎勵"
-            onclick="document.querySelector('.daily-login').classList.add('show')">
+        <button id="daily-login-button" class="dropbut" data-hover-text="查看獎勵" onclick="openModal('daily-login')">
             🔥每日登入
         </button>
-        <button id="theme-button" class="dropbut" data-hover-text="更改顏色"
-            onclick="document.querySelector('.theme').classList.add('show')">
+        <button id="theme-button" class="dropbut" data-hover-text="更改顏色" onclick="openModal('theme')">
             <i class="fa-solid fa-palette"></i>
             主題
         </button>
-        <button id="events-button" class="dropbut" data-hover-text="查看活動!"
-            onclick="document.querySelector('.events').classList.add('show')">
+        <button id="events-button" class="dropbut" data-hover-text="查看活動!" onclick="openModal('events')">
             🎉活動!
+        </button>
+        <button id="daily-login-button" class="dropbut" data-hover-text="關於開發者!" onclick="openModal('about')">
+            <i class="fa-solid fa-circle-info"></i>
+            關於
         </button>
         <a data-hover-text="建議使用教學" href="howtoplay.html" class="dropbut howtoplay-button" target="_blank">怎麼玩?</a>
         <a data-hover-text="遊戲有問題的話就用" href="https://forms.gle/E7PRBmx26AwEeeNu7" class="dropbut bug-report"
@@ -238,7 +239,7 @@
             </div>
 
         </div>
-        <button onclick="document.querySelector('.achievements-modal').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('achievements-modal')">關閉</button>
     </div>
     <div class="market modal">
         <div class="content">
@@ -247,14 +248,33 @@
             </h1>
             <div class="shops-list">
                 <button onclick="document.querySelector('.shop-modal').classList.add('show')
-                        document.querySelector('.market').classList.remove('show')"
-                    class="shop-button">不會閃的快閃閃店</button>
+                        closeModal('market')" class="shop-button">不會閃的快閃閃店</button>
                 <button onclick="document.querySelector('.knowledge-modal').classList.add('show')
-                        document.querySelector('.market').classList.remove('show')"
-                    class="knowledge-button">冷凍知識庫</button>
+                        closeModal('market')" class="knowledge-button">冷凍知識庫</button>
+                <button onclick="limboKeys(() => {
+                    $.jStorage.set('mwsState', 2)
+                    $('.mwsb')[0].onclick = openMidwayShop
+                    pd(1, '歡迎來到我新開的商店!')
+                    pd(1, '我的店的商品可能會有一點點貴')
+                    pd(1, '一點點而已')
+                    pd(0, '耶? 你找對鑰匙了?')
+                    pd(0, '哇，你真的蠻厲害的!')
+                    pd(1, '那個真的沒有很難啦')
+                    pd(1, '你要不要玩玩看店裡的音樂播放器?')
+                    pd(0, '怎麼玩')
+                    pd(1, '上面有寫')
+                    pd(1, '拜託買一下我的東西')
+                    pd(0, '嘔我的天，貴爆')
+                    pd(1, '看看他有多少閃')
+                    pd(1, `${$.jStorage.get('sparkles')}閃`)
+                    pd(1, ($.jStorage.get('sparkles') >= 1000000)? '他都百萬富翁一定買得起啦':'好吧當我沒說')
+                    pd(0, '好喔')
+                    dq()
+                    giveAch('antiInflation')
+                })" disabled class="mwsb" data-hover-text="1000詞彙量解鎖!">中途商店</button>
             </div>
         </div>
-        <button onclick="document.querySelector('.market').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('market')">關閉</button>
     </div>
 
     <div class="shop-modal modal">
@@ -262,7 +282,7 @@
             <h1>不會閃的快閃閃店</h1>
             <div class="stuff"></div>
         </div>
-        <button onclick="document.querySelector('.shop-modal').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('shop-modal')">關閉</button>
     </div>
 
     <div class="knowledge-modal modal">
@@ -270,7 +290,7 @@
             <h1>冷凍知識庫</h1>
             <div class="stuff"></div>
         </div>
-        <button onclick="document.querySelector('.knowledge-modal').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('knowledge-modal')">關閉</button>
     </div>
 
     <div class="daily-login modal">
@@ -279,7 +299,7 @@
             <div class="perks"></div>
         </div>
         <button onclick="
-    document.querySelector('.daily-login').classList.remove('show')
+    closeModal('daily-login')
                 ">
             關閉
         </button>
@@ -296,7 +316,7 @@
             <div class="description">
             </div>
         </div>
-        <button onclick="document.querySelector('.update-modal').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('update-modal')">關閉</button>
     </div>
     <div class="stats modal">
         <div class="content">
@@ -324,7 +344,7 @@
                     }
                     ">重新計算</button>
         </div>
-        <button onclick="document.querySelector('.stats').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('stats')">關閉</button>
     </div>
     <div class="dialogue modal">
         <div class="content">
@@ -352,15 +372,18 @@
                 Powered by <img src="../images/bmc-full-logo.svg" alt="Buy me a coffee" class="bmc-svg">
             </b>
         </div>
-        <button onclick="document.querySelector('.donate').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('donate')">關閉</button>
     </div>
     <div class="levels modal small-modals">
         <div class="content">
             <h1>升級</h1>
             你的可用的等級:<b class="lcd">0</b>
             點擊一個附魔即可看它的用處!
+            <div class="enchant-list">
+
+            </div>
         </div>
-        <button onclick="document.querySelector('.levels').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('levels')">關閉</button>
     </div>
     <div class="settings modal small-modals">
         <div class="content">
@@ -399,7 +422,7 @@
                 </div>
             </div>
         </div>
-        <button onclick="document.querySelector('.settings').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('settings')">關閉</button>
     </div>
     <div class="mods modal small-modals">
         <div class="content">
@@ -414,7 +437,7 @@
             </div>
             <a href="https://youtu.be/ZAXs51AjqPw" target="_blank">怎麼製作/使用模組?</a>
         </div>
-        <button onclick="document.querySelector('.mods').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('mods')">關閉</button>
     </div>
     <div class="theme modal small-modals">
         <div class="content">
@@ -424,15 +447,60 @@
                 <!-- js code fills this in ig -->
             </div>
             <button onclick="document.querySelector('.custom-music.modal').classList.add('show')">自訂音樂</button>
-            <button onclick="loadPresets()
-            document.querySelector('.presets').classList.add('show')">選擇其他預設主題</button>
+            <button onclick="loadPresets();
+            loadMorePresets();
+            document.querySelector('.presets').classList.add('show')">選擇其他預設資源包</button>
             <div class="manage-theme-file">
-                <button class="download-theme" onclick="exportTheme()">匯出主題</button>
-                <button class="upload-theme" onclick="document.querySelector('.ti').click()">匯入主題</button>
+                <button class="download-theme" onclick="exportTheme()">匯出主題 (.uht檔案)</button>
+                <button class="upload-theme" onclick="document.querySelector('.ti').click()">匯入主題 (.uht檔案)</button>
                 <input type="file" name="" class="ti" hidden accept="*.uht">
             </div>
+            <div class="manage-rp-file">
+                <button class="download-rp" onclick="openModal('create-rp')">匯出資源包 (.json檔案)</button>
+                <button class="upload-rp" onclick="document.querySelector('.rpi').click()">匯入資源包 (.json檔案)</button>
+                <input type="file" name="" class="rpi" hidden accept="*.json">
+                <button class="upload-css" onclick="$('.upload-css-input')[0].click()">上傳自訂CSS 勿超過2500字元</button>
+                <button class="remove-css">移除自訂CSS</button>
+                <input type="file" class="upload-css-input" hidden accept="text/*,.txt,.css">
+            </div>
         </div>
-        <button onclick="document.querySelector('.theme').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('theme.modal')">關閉</button>
+    </div>
+    <div class="create-rp modal small-modals">
+        <div class="content">
+            <h1>製作資源包</h1>
+            <h2>顏色設為現在有的</h2>
+            <div class="rp-input">
+                <input type="text" placeholder="資源包的名稱" class="rp-name-input">
+                <textarea placeholder="簡介 (最多50字)" class="rp-description-input" cols="10" rows="3"></textarea>
+                <input type="text" placeholder="作者 (你)" class="rp-author-input">
+                <input type="text" placeholder="種類, 請使用半形空格隔開 ( )" class="rp-categories-input">
+                <input type="text" placeholder="圖片網址 (非必要)" class="rp-image-input">
+                <div class="rp-checkboxes">
+                    <input type="checkbox" class="rp-include-css" id="rp-include-css"><label
+                        for="rp-include-css">包含現有自訂CSS</label>
+                    <input type="checkbox" class="rp-include-music" id="rp-include-music"><label
+                        for="rp-include-music">包含現有音樂</label>
+                    <input type="checkbox" class="rp-include-10music" id="rp-include-10music"><label
+                        for="rp-include-10music">包含現有10連勝音樂</label>
+                </div>
+            </div>
+            <button class="create-rp-btn">下載</button>
+        </div>
+        <button onclick="closeModal('create-rp')">關閉</button>
+    </div>
+    <div class="import-rp modal small-modals">
+        <div class="content">
+            <h1>匯入材質包</h1>
+            <div class="preset-item resource-pack-preview"><img src="../themes/thumbnail/classic.png">
+                <div class="preset-info">
+                    <h2>經典</h2><b>綠色系 亮色系 高對比度</b><b>製作人: 遊戲迪米</b>
+                    <p>UnhingedHangman 的預設顏色!</p>
+                    <button>套用</button>
+                </div>
+            </div>
+        </div>
+        <button onclick="closeModal('import-rp')">關閉</button>
     </div>
     <div class="presets modal small-modals">
         <div class="content">
@@ -441,13 +509,14 @@
                 <!-- js code fills this in ig -->
             </div>
         </div>
-        <button onclick="document.querySelector('.presets').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('presets')">關閉</button>
     </div>
 
     <div class="shortcut modal small-modals">
         <div class="content">
             <h1>捷徑</h1>
-            按使用來把他加進捷徑裡面，在按一次可以把它移除。<br>快速鍵: 你按 1 可以按第1個捷徑按鈕，按 2 可以按第2個捷徑按紐，以此類推。<br>最多5個捷徑。
+            按使用來把他加進捷徑裡面，在按一次可以把它移除。<br>快速鍵: 你按 1 可以按第1個捷徑按鈕，按 2 可以按第2個捷徑按紐，以此類推。<br>最多捷徑數量: <b
+                class="shortcuts-limit"></b>
             <div class="cool-display-name">
                 <div class="shortcut-list">
                     <!-- js code again -->
@@ -462,7 +531,7 @@
             ele.innerText = playerShortcuts.includes(shortcutList[j])? `第${playerShortcuts.indexOf(playerShortcuts.find(s => s === shortcutList[j])) + 1}個` : '使用'
         })">重設</button>
         </div>
-        <button onclick="document.querySelector('.shortcut.modal').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('shortcut.modal')">關閉</button>
     </div>
     <div class="meaning modal small-modals">
         <div class="content">
@@ -475,7 +544,7 @@
             </div>
             <div class="smalltext">來源: Dictionary API</div>
         </div>
-        <button onclick="document.querySelector('.meaning').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('meaning')">關閉</button>
     </div>
     <div class="events modal small-modals">
         <div class="content">
@@ -485,7 +554,7 @@
                 <!-- js code ajlfdhgiuowrejdfhkoie -->
             </div>
         </div>
-        <button onclick="document.querySelector('.events.modal').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('events.modal')">關閉</button>
     </div>
     <div class="custom-music modal small-modals">
         <div class="content">
@@ -500,7 +569,7 @@
             為什麼不能直接上傳?<br>因為網站儲存空間太小了，塞不下，只能上傳連結。<br>
             <a href="https://www.youtube.com/watch?v=egHxjRq8eSU" target="_blank">怎麼上傳音樂與背景?</a>
         </div>
-        <button onclick="document.querySelector('.custom-music.modal').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('custom-music.modal')">關閉</button>
     </div>
     <div class="ckc modal small-modals">
         <div class="content">
@@ -515,7 +584,68 @@
 
             </div>
         </div>
-        <button onclick="document.querySelector('.ckc.modal').classList.remove('show')">關閉</button>
+        <button onclick="closeModal('ckc.modal')">關閉</button>
+    </div>
+    <div class="limbo-keys modal small-modals">
+        <div class="content">
+            <h1>專注</h1>
+            請點擊原本是綠色的那把鑰匙
+            <h1 class="too-tight">
+                請橫放螢幕
+            </h1>
+            <div class="key-display">
+                <img src="../images/key.png" alt="key" class="limbo-key">
+                <img src="../images/key.png" alt="key" class="limbo-key">
+                <img src="../images/key.png" alt="key" class="limbo-key">
+                <img src="../images/key.png" alt="key" class="limbo-key">
+                <img src="../images/key.png" alt="key" class="limbo-key">
+                <img src="../images/key.png" alt="key" class="limbo-key">
+                <img src="../images/key.png" alt="key" class="limbo-key">
+                <img src="../images/key.png" alt="key" class="limbo-key">
+            </div>
+        </div>
+    </div>
+    <div class="midway-shop modal small-modals">
+        <div class="content">
+            <h1>中途商店</h1>
+            <div class="shop-music-display">
+                <img src="../images/radio.png" alt="radio" class="shop-music-img">
+                <audio class="shop-music" src="../sfx/msmusic/berzerker.mp3"></audio>
+                <a href="about:blank" target="_blank" class="now-playing">尚未播放任何音樂</a>
+            </div>
+            <b class="how-to-play-with-radio">
+                可以試試看把滑鼠遠離/靠近商店的音樂播放器!
+            </b>
+            <div class="stuff">
+                <!-- 🗝️🗝️🗝️🗝️🗝️🗝️🗝️🗝️ -->
+            </div>
+        </div>
+        <button onclick="closeModal('midway-shop.modal')
+        if(!isMuted) {
+            music.play()
+            midwayShopRadio.pause()
+        }">關閉</button>
+    </div>
+    <div class="about modal small-modals">
+        <div class="content">
+            <h1>關於</h1>
+            <h3>
+                開發者: 遊戲迪米
+            </h3>
+            <p>
+                你知道嗎? 這個遊戲是我第一個大型遊戲!
+            </p>
+            <p>
+                有意見或建議可以<a href="https://discord.gg/Kb9WKKF6d6">加入Discord伺服器</a>!
+            </p>
+            <p>
+                如果要玩其他遊戲可以到<a href="https://gamingdimigd.github.io/DimiGameCenter/">迪米遊戲中心</a>來找其他遊戲!
+            </p>
+            <div class="about-stuff">
+                <img src="../images/GD Logos with hands/IMG_0823.PNG" alt="GD spinning" data-hover-text="欸押韻欸">
+            </div>
+        </div>
+        <button onclick="closeModal('about')">關閉</button>
     </div>
 </body>
 <!--   boo   -->

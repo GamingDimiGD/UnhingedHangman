@@ -6,6 +6,44 @@ if($.jStorage.get('version') !== version) {
 }
 let updateInfo = [
     {
+        title: '稍小了一點點',
+        version: 'v1.5.0',
+        description: [
+            {
+                title: '中途商店!',
+                text: '1000詞彙解鎖!!! 東西蠻貴的，建議用速通模式刷。',
+            },
+            {
+                title: '資源包!!!',
+                text: '現在可以改字體、網站的長相! 可惜你要知道怎麼寫CSS才行 :(',
+            },
+            {
+                title: '新預設主題，喔不對他現在叫預設資源包',
+                text: '黑白、駭客、紅包等主題!',
+            },
+            {
+                title: '新活動!',
+                text: '農曆新年!! 雙倍經驗和閃!',
+            },
+            {
+                title: '關於!!!',
+                text: '你現在可以在"關於"加入新的Discord伺服器，可以聊天、檢舉bug、建議等!',
+            },
+            {
+                title: '現在會要求開自動播放。',
+                text: '關音樂就不會出現了。',
+            },
+            {
+                title: '新鍵盤動畫!',
+                text: '新增逆時針旋轉!',
+            },
+            {
+                title: '修復bug',
+                text: '修復自訂鍵盤部分動畫壞掉等Bug'
+            },
+        ]
+    },
+    {
         title: '相信我這最後一次了',
         version: 'v1.4.2',
         description: [
@@ -209,8 +247,8 @@ let updateInfo = [
 updateInfo.forEach(u => {
     umud.innerHTML += `<h2>${u.version} - ${u.title}</h2>`
     u.description.forEach(d => {
-        umud.innerHTML += `<h3>${d.title}</h3>`
-        umud.innerHTML += `<p>${d.text}</p>`
+        umud.innerHTML += `<h3>- ${d.title}</h3>`
+        umud.innerHTML += `<p>${d.text}</p><br/>`
     })
 })
 umud.querySelectorAll('h2').forEach(e => {

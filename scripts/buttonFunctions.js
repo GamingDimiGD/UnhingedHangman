@@ -1,7 +1,6 @@
 const music = document.querySelector('.main-channel')
 const altChannel = document.querySelector('.alt-channel')
 music.src = $.jStorage.get('customMusic') || '../sfx/Wallpaper.mp3';
-music.play();
 let isMuted = false;
 const muteMusic = () => {
     if (!isMuted) {
@@ -17,7 +16,16 @@ const muteMusic = () => {
     }
     $.jStorage.set('muteMusic', isMuted);
 };
-if($.jStorage.get('muteMusic')) muteMusic()
+if ($.jStorage.get('muteMusic')) muteMusic()
+music.play().catch(error => {
+    if (isMuted) return;
+    alertModal('自動播放音樂權限沒開，按OK即可播放音樂', [{
+        text: 'OK',
+        onclick: () => {
+            music.play()
+        }
+    }])
+})
 
 let eduMode = false;
 const toggleEduMode = () => {
@@ -30,3 +38,10 @@ const toggleEduMode = () => {
 if ($.jStorage.get('eduMode')) toggleEduMode();
 
 
+const openModal = (className) => {
+    document.querySelector(`.${className}`).classList.add('show')
+}
+
+const closeModal = (className) => {
+    document.querySelector(`.${className}`).classList.remove('show')
+}

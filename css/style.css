@@ -24,8 +24,8 @@
     --c: cyan;
     --r: red;
     --bh: #ffffff;
-    --link:  #00ff00;
-    --lh:  #003c00;
+    --link: #00ff00;
+    --lh: #003c00;
     --wintext: #003c00;
     --notif: #00ff00;
     --custom-key-color: var(--main);
@@ -46,7 +46,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     background: var(--bg);
-    color:  var(--text);
+    color: var(--text);
 }
 
 .navbar audio {
@@ -111,6 +111,7 @@ body {
     transition: background 3s ease;
     z-index: 0;
 }
+
 .hangman-box img {
     width: 270px;
     height: 270px;
@@ -118,11 +119,13 @@ body {
     border: 3px solid var(--theme);
     background: var(--w);
 }
+
 .hangman-box h1 {
     font-size: 1.45rem;
     margin-top: 20px;
     text-align: center;
 }
+
 .word-display {
     display: flex;
     gap: 10px;
@@ -130,8 +133,9 @@ body {
     align-items: center;
     justify-content: center;
     overflow-wrap: wrap;
-    
+
 }
+
 .word-display .letter {
     width: 28px;
     font-size: 2rem;
@@ -141,24 +145,29 @@ body {
     margin-bottom: 40px;
     border-bottom: 3px solid var(--text);
     transition: border-bottom 0.3s ease-in-out;
-    
+
 }
+
 .word-display .letter.guessed {
     border-color: transparent;
     margin: -40px 0 35px;
 }
+
 .game-box h4 {
     text-align: center;
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
+
 .game-box h4 b {
     font-weight: 600;
 }
+
 .game-box .guesses-text b {
     color: #f00;
 }
+
 .game-box .keyboard {
     display: flex;
     gap: 5px;
@@ -181,7 +190,8 @@ body {
     position: relative;
 }
 
-.keyboard button::after, .keyboard button::before {
+.keyboard button::after,
+.keyboard button::before {
     content: '';
     position: absolute;
     top: calc(50% - 6px);
@@ -241,11 +251,12 @@ button {
 .dropdown button {
     padding: 2px 7px;
 }
-    
+
 :where(body) button:hover {
     background: var(--main);
     color: var(--bh)
 }
+
 .keyboard button {
     padding: 7px;
     width: calc(100% / 9 - 5px);
@@ -285,6 +296,7 @@ button[disabled] {
     color: var(--wintext);
     font-weight: 600;
 }
+
 .game-modal button {
     padding: 12px 23px;
     background-color: var(--theme);
@@ -318,10 +330,10 @@ button[disabled] {
     flex-direction: column;
     right: -100%;
     transition: right 0.4s ease;
-    z-index: 0;
     top: 60px;
     overflow-y: auto;
     max-height: 80vh;
+    z-index: 7;
 }
 
 .dropdown.open {
@@ -346,25 +358,31 @@ button[disabled] {
     #achievements {
         display: none;
     }
+
     #ach {
         z-index: 999;
     }
+
     .container {
         flex-direction: column;
         padding: 30px 15px;
         align-items: center;
     }
+
     .hangman-box img {
         width: 200px;
         height: 200px;
     }
+
     .hangman-box h1 {
         display: none;
     }
+
     .navbar {
         background: none;
         color: var(--w);
     }
+
     .navbar h1 {
         background: var(--theme);
         border-radius: 4px;
@@ -373,15 +391,19 @@ button[disabled] {
         padding-right: 7px;
         color: var(--w);
     }
+
     .info li {
         color: var(--w);
     }
+
     .navbar audio {
         display: none;
     }
+
     .navbut {
         display: none;
     }
+
     .toggle {
         display: flex;
         background: var(--theme);
@@ -390,6 +412,7 @@ button[disabled] {
         align-items: center;
         justify-content: center;
     }
+
     .info li {
         background-color: var(--theme);
         border-radius: 4px;
@@ -408,6 +431,7 @@ button[disabled] {
     .navbar h1 {
         display: none;
     }
+
     .dialogue .content {
         width: 100%;
         max-width: 97%;
@@ -415,10 +439,12 @@ button[disabled] {
         align-items: center;
         height: 90%;
     }
+
     .dialogue .content img {
         width: fit-content;
         height: 100%;
     }
+
     .text-box {
         height: 100% !important;
         max-width: 100% !important;
@@ -429,27 +455,34 @@ button[disabled] {
     .game-box {
         display: none;
     }
+
     .hangman-box {
         display: none;
     }
+
     .container h1#help {
         display: flex;
         font-size: 160px;
     }
+
     .navbar {
         display: none;
     }
 }
+
 @media (max-height: 200px) {
     .game-box {
         display: none;
     }
+
     .hangman-box {
         display: none;
     }
+
     .container h1#help {
         display: flex;
     }
+
     .navbar {
         display: none;
     }
@@ -498,14 +531,14 @@ button[disabled] {
     flex-direction: column;
     overflow-y: auto;
     margin: 5px;
-    
+
 }
 
 .achievements-modal button {
     padding: 12px 23px;
     background-color: var(--theme);
     border-radius: 7px;
-    color: var(--main);
+    color: var(--text2);
 }
 
 .achievements-modal .content li {
@@ -518,7 +551,7 @@ button[disabled] {
 
 .achievements-modal .content h3 {
     color: var(--d);
-    
+
 }
 
 .notification {
@@ -559,6 +592,7 @@ button[disabled] {
 .game-modal.show {
     pointer-events: auto;
 }
+
 .content.shop {
     background: var(--w);
     max-width: 550px;
@@ -572,31 +606,38 @@ button[disabled] {
     overflow-y: auto;
     pointer-events: none;
 }
+
 .modal.show {
     opacity: 1;
     pointer-events: auto;
 }
+
 .modal.show .content {
     pointer-events: auto;
 }
+
 .stuff {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
 }
+
 .stuff div {
     background: var(--d);
     width: calc(100% / 3 - 5px);
     padding: 5px;
     border-radius: 4px;
 }
+
 .daily-login {
     flex-direction: column;
 }
+
 .daily-login button {
     padding: 5px 10px;
 }
+
 .daily-login .content {
     background: var(--w);
     max-width: 550px;
@@ -610,12 +651,14 @@ button[disabled] {
     overflow-y: auto;
     pointer-events: none;
 }
+
 .daily-login .content .perks {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 5px;
 }
+
 .daily-login .content .perks div {
     background: var(--d);
     width: calc(100% / 3 - 5px);
@@ -624,6 +667,7 @@ button[disabled] {
     border-radius: 4px;
     height: 150px;
 }
+
 .perks div img {
     width: 100%;
 }
@@ -631,13 +675,16 @@ button[disabled] {
 .container.transparent {
     background: #ffffff3c;
 }
+
 .modal button {
     margin-top: 10px;
     padding: 5px 10px;
 }
+
 .game-modal button {
     padding: 12px 23px;
 }
+
 .update-modal .content {
     background: var(--w);
     max-width: 550px;
@@ -651,6 +698,7 @@ button[disabled] {
     overflow-y: auto;
     pointer-events: none;
 }
+
 .content {
     background: var(--w);
     border-radius: 10px;
@@ -660,6 +708,7 @@ button[disabled] {
     from {
         transform: translate(-100px, -100px);
     }
+
     to {
         transform: translate(-818.105px, -730px);
     }
@@ -677,13 +726,14 @@ button[disabled] {
     z-index: 2147483647;
     align-items: center;
     justify-content: center;
-    
+
 }
+
 .load img {
     max-width: 55px;
     max-height: 55px;
     animation: spin 3s linear infinite;
-    
+
 }
 
 
@@ -709,6 +759,7 @@ button[disabled] {
     overflow-y: auto;
     pointer-events: none;
 }
+
 .stats .content {
     background: var(--w);
     max-width: 550px;
@@ -722,6 +773,7 @@ button[disabled] {
     overflow-y: auto;
     pointer-events: none;
 }
+
 .stats .content .data {
     display: flex;
     flex-direction: column;
@@ -743,8 +795,12 @@ button[disabled] {
     pointer-events: none;
 }
 
+.alert-modal {
+    z-index: 29999;
+}
+
 .dialogue {
-    z-index: 999999999999999;
+    z-index: 19999;
 }
 
 .dialogue .content {
@@ -762,6 +818,7 @@ button[disabled] {
     width: 269px;
     border-radius: 3px;
 }
+
 .text-box {
     color: var(--text2);
     padding: 7px;
@@ -774,6 +831,7 @@ button[disabled] {
     flex-direction: column;
     max-height: 268.8px;
 }
+
 .dialogue-text {
     overflow-x: auto;
     overflow-wrap: break-word;
@@ -790,24 +848,31 @@ button[disabled] {
 .red {
     color: red;
 }
+
 .green {
     color: #0f0;
 }
+
 .blue {
     color: #00f;
 }
+
 .yellow {
     color: #ff0;
 }
+
 .darkgreen {
     color: var(--theme);
 }
+
 .bigtext {
     font-size: 3rem;
 }
+
 .smalltext {
     font-size: 0.7rem;
 }
+
 .line-through {
     text-decoration: line-through;
 }
@@ -877,9 +942,8 @@ button[disabled] {
 .slider button {
     position: absolute;
     inset: 0 0 0 0;
-    transform: 
-    rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-    translateZ(550px);
+    transform:
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
     width: 50px;
     height: 50px;
 }
@@ -892,6 +956,7 @@ button[disabled] {
     from {
         transform: perspective(1000px) rotateY(0deg);
     }
+
     to {
         transform: perspective(1000px) rotateY(360deg);
     }
@@ -901,9 +966,11 @@ button[disabled] {
     20% {
         width: 30px
     }
+
     60% {
         width: 70px
     }
+
     100% {
         width: 50px
     }
@@ -917,10 +984,12 @@ button[disabled] {
 .donate-img {
     max-width: 256px;
 }
+
 .donate {
     align-items: center;
     justify-content: center;
 }
+
 .bmc-svg {
     height: 1.5rem;
 }
@@ -929,6 +998,7 @@ button[disabled] {
     from {
         transform: perspective(1000px) rotateY(0deg);
     }
+
     to {
         transform: perspective(1000px) rotateY(360deg) scale(0);
     }
@@ -937,16 +1007,19 @@ button[disabled] {
 .level-display {
     gap: 3px
 }
+
 @media (max-width: 500px) {
     .navbar {
         font-size: 0.8rem;
     }
 }
+
 @media (max-width: 420px) {
     .navbar {
         font-size: 0.5rem;
     }
 }
+
 .enchant-div {
     display: flex;
     flex-direction: row;
@@ -954,6 +1027,7 @@ button[disabled] {
     justify-content: center;
     gap: 10px;
 }
+
 .enchant-div summary {
     display: flex;
     justify-content: center;
@@ -961,6 +1035,7 @@ button[disabled] {
     font-size: 1.5rem;
     gap: 10px;
 }
+
 .white {
     color: var(--w);
 }
@@ -969,12 +1044,15 @@ i {
     padding-top: 2px;
     padding-bottom: -2px;
 }
+
 .idk-what-to-call-this {
     margin-top: 10px;
 }
+
 .flush-save {
     background-color: red;
 }
+
 .flush-save:hover {
     background-color: var(--theme);
     color: red;
@@ -1054,11 +1132,13 @@ i {
 }
 
 .shortcut-buttons {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    /* justify-content: center; */
+    margin-top: 6px;
 }
+
+.shortcut-buttons button {
+    margin: 2.5px;
+}
+
 .shortcut-list {
     display: flex;
     flex-direction: column;
@@ -1075,6 +1155,7 @@ i {
     justify-content: center;
     width: 50%;
 }
+
 .shortcut-names b {
     padding: 5px 10px;
     margin-top: 10px;
@@ -1181,6 +1262,7 @@ i {
     background: linear-gradient(90deg, var(--theme) 70%, #00000000);
     z-index: 1000;
 }
+
 .ei {
     z-index: 1001;
     color: var(--text2);
@@ -1259,118 +1341,166 @@ i {
 .shop-item b {
     font-weight: 600 !important;
 }
+
 @keyframes rainbow {
     0% {
         background: #ff0000;
     }
+
     8% {
         background: #ff8800;
     }
+
     16% {
         background: #ffff00;
     }
+
     24% {
         background: #88ff00;
     }
+
     32% {
         background: #00ff00;
     }
+
     40% {
         background: #00ff88;
     }
+
     48% {
         background: #00ffff;
     }
+
     56% {
         background: #0088ff;
     }
+
     64% {
         background: #0000ff;
     }
+
     72% {
         background: #8800ff;
     }
+
     80% {
         background: #ff00ff;
     }
+
     88% {
         background: #ff0088;
     }
+
     100% {
         background: #ff0000;
     }
 }
+
 @keyframes rainbowText {
     0% {
         color: #ff0000;
     }
+
     8% {
         color: #ff8800;
     }
+
     16% {
         color: #ffff00;
     }
+
     24% {
         color: #88ff00;
     }
+
     32% {
         color: #00ff00;
     }
+
     40% {
         color: #00ff88;
     }
+
     48% {
         color: #00ffff;
     }
+
     56% {
         color: #0088ff;
     }
+
     64% {
         color: #0000ff;
     }
+
     72% {
         color: #8800ff;
     }
+
     80% {
         color: #ff00ff;
     }
+
     88% {
         color: #ff0088;
     }
+
     100% {
         color: #ff0000;
     }
 }
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
+
 @keyframes pulse {
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(1.01);
     }
 }
+
 @keyframes spinB {
     from {
-        transform: rotate(0deg)  translate(calc(-50% + 6px), calc(-50% + 6px));
+        transform: rotate(0deg) translate(calc(-50% + 6px), calc(-50% + 6px));
+        transform-origin: 13% 13%;
     }
+
     to {
         transform: rotate(360deg) translate(calc(-50% + 6px), calc(-50% + 6px));
+        transform-origin: 13% 13%;
     }
 }
+
+@keyframes spinCB {
+    from {
+        transform: rotate(0deg) translate(calc(-50% + 6px), calc(-50% + 6px));
+        transform-origin: 13% 13%;
+    }
+
+    to {
+        transform: rotate(-360deg) translate(calc(-50% + 6px), calc(-50% + 6px));
+        transform-origin: 13% 13%;
+    }
+}
+
 @keyframes pulseB {
     from {
-        transform: scale(1) translate(calc(-50% + 6px), calc(-50% + 6px));
+        transform: scale(100%) translate(calc(-50% + 6px), calc(-50% + 6px));
     }
+
     to {
-        transform: scale(1.01) translate(calc(-50% + 6px), calc(-50% + 6px));
+        transform: scale(110%) translate(calc(-50% + 6px + 2.5%), calc(-50% + 6px + 2.5%));
     }
 }
 
@@ -1391,4 +1521,92 @@ i {
 
 .content a {
     color: var(--text)
+}
+
+.shop-music-img {
+    width: 75px;
+}
+
+.shop-music-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.key-display {
+    height: 300px;
+    position: relative;
+    transition: transform 1s linear;
+}
+
+.limbo-keys .content {
+    max-width: 90%;
+}
+
+.limbo-key {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 150px;
+    max-height: 150px;
+    transition: left 1s ease, top 1s ease;
+}
+
+.too-tight {
+    display: none;
+    font-size: 4rem;
+}
+
+@media (max-width: 726px) {
+    .key-display {
+        display: none;
+    }
+    .too-tight {
+        display: block;
+    }
+    .limbo-key {
+        width: auto;
+        height: 20%
+    }
+}
+
+@keyframes rightKey {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(110deg);
+    }
+    100% {
+        filter: hue-rotate(0deg);
+    }
+}
+
+.resource-pack-preview img {
+    filter: blur(10px);
+}
+
+.rp-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+.about-stuff img {
+    max-width: 20%;
+    animation: yspin 5s linear infinite;
+}
+
+@keyframes yspin {
+    from {
+        transform: rotateY(0deg) scale(120%);
+    }
+    to {
+        transform: rotateY(360deg) scale(120%);
+    }
 }

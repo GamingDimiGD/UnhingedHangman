@@ -5,6 +5,10 @@ const defaultShortcuts = [
 
 let playerShortcuts = $.jStorage.get('shortcuts') || defaultShortcuts;
 
+let maxShortcuts = 5
+
+$('.shortcuts-limit').html(maxShortcuts);
+
 let shortcutList = [
     'speed',
     'hard',
@@ -21,6 +25,7 @@ let shortcutList = [
     'adv-ckc-button',
     'shop-button',
     'knowledge-button',
+    'mwsb'
 ]
 
 let sCHNames = [
@@ -38,7 +43,8 @@ let sCHNames = [
     '時間回朔',
     '進階鍵盤設定',
     '不會閃的快閃閃電',
-    '冷凍知識庫'
+    '冷凍知識庫',
+    '中途商店'
 ]
 
 let shortcutDisplay = $(".shortcut-list");
@@ -113,7 +119,7 @@ $.each(shortcutList, (i, shortcut) => {
             playerShortcuts = playerShortcuts.filter(s => s!== shortcut)
         }
         else {
-            if(playerShortcuts.length >= 5) return showNotif('最多只能有5個捷徑！')
+            if(playerShortcuts.length >= maxShortcuts) return showNotif(`最多只能有${maxShortcuts}個捷徑！`)
             playerShortcuts.push(shortcut)
         }
         $.each($('.shortcut-display'), (j, ele) => {

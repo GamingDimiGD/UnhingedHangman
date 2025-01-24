@@ -122,6 +122,8 @@ let mx, my, dx, dy, rad, deg
 //     bc = new BulletController(canvas)
 // }, 10)
 
+let mouseX, mouseY
+
 addEventListener('mousedown', e => {
     im = true
     // mx = e.x
@@ -170,11 +172,17 @@ addEventListener('mousemove', e => {
     if (window.innerWidth - e.clientX < window.innerWidth * 0.1) {
         $('.hover-text')[0].style.transform = `translate(${e.clientX - window.innerWidth * 0.1}px,${e.clientY + 30}px)`
     }
+    mouseX = e.clientX
+    mouseY = e.clientY
+    let radioX = $('.shop-music-img')[0].getBoundingClientRect().x
+    let radioY = $('.shop-music-img')[0].getBoundingClientRect().y
+    let distance = (Math.sqrt((mouseX - radioX) ** 2 + (mouseY - radioY) ** 2) / 100)
+    $('.shop-music')[0].volume = 1 / (distance > 1 ? distance : 1)
 })
 let htq;
 $('[data-hover-text]').each((i, el) => {
     $(el).on('mouseover', e => {
-        if(typeof htq === 'number') clearTimeout(htq);
+        if (typeof htq === 'number') clearTimeout(htq);
         $('.hover-text')[0].style.opacity = '1'
         $('.hover-text').html($(el).data('hover-text'))
     })
@@ -186,6 +194,7 @@ $('[data-hover-text]').each((i, el) => {
         }, 400)
     })
 })
+
 
 if (window.location.href !== 'http://127.0.0.1:5501/html/index.html') {
     DisableDevtool();

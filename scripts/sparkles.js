@@ -1,12 +1,15 @@
 let sparkleMultiplier = 1;
+
 const giveSparkles = (amount) => {
-    amount *= sparkleMultiplier
+    amount *= (sparkleMultiplier + ($.jStorage.get('increaseSparkleMultiplier')? $.jStorage.get('increaseSparkleMultiplier')/10 : 0))
+    amount = Math.round(amount)
     let d = 20
     if (amount >= 100) d = 10
     if (amount >= 500) d = 1
     if (amount >= 1000 || $.jStorage.get('sparkles') + amount >= 1000) giveAch('1ksparkles');
     if (amount >= 10000 || $.jStorage.get('sparkles') + amount >= 10000) giveAch('10ksparkles');
     if (amount >= 100000 || $.jStorage.get('sparkles') + amount >= 100000) giveAch('100ksparkles');
+    if (amount >= 1000000 || $.jStorage.get('sparkles') + amount >= 1000000) giveAch('1mSparkles');
     let originalSparkles = $.jStorage.get('sparkles');
     let addedAmount = 0
     let i = setInterval(() => {

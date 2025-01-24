@@ -1,6 +1,8 @@
 const levelDisplay = document.querySelector(".level-display b");
 const levelMeter = document.querySelector(".level-display meter");
 let xpMultiplier = 1
+let maxEnchantLevel = 5
+let maxLevel = 36
 
 if (!$.jStorage.get("level")) $.jStorage.set("level", 1);
 if (!$.jStorage.get("xp")) $.jStorage.set("xp", 0);
@@ -124,6 +126,30 @@ let levelSystem = [
     },
     {
         level: 30,
+        xpForNextLevel: 500,
+    },
+    {
+        level: 31,
+        xpForNextLevel: 600,
+    },
+    {
+        level: 32,
+        xpForNextLevel: 700,
+    },
+    {
+        level: 33,
+        xpForNextLevel: 800,
+    },
+    {
+        level: 34,
+        xpForNextLevel: 900,
+    },
+    {
+        level: 35,
+        xpForNextLevel: 1000,
+    },
+    {
+        level: 36,
         xpForNextLevel: 1,
     },
 ];
@@ -138,8 +164,9 @@ if (levelSystem.find((l) => l.level === $.jStorage.get("level")).xpForNextLevel)
 levelMeter.value = $.jStorage.get("xp");
 
 let giveXP = (amount) => {
-    amount *= xpMultiplier
-    if ($.jStorage.get("level") >= 30) return;
+    amount *= (xpMultiplier + ($.jStorage.get('increaseXPMultiplier') ? $.jStorage.get('increaseXPMultiplier')/10 : 0))
+    amount = Math.round(amount)
+    if ($.jStorage.get("level") >= maxLevel) return;
     let originalLevel = $.jStorage.get("level");
     let currentLevel = levelSystem.find(
         (l) => l.level === $.jStorage.get("level"),
@@ -149,7 +176,7 @@ let giveXP = (amount) => {
         currentLevel.xpForNextLevel &&
         $.jStorage.get("xp") >= currentLevel.xpForNextLevel
     ) {
-        if ($.jStorage.get("level") >= 30) return;
+        if ($.jStorage.get("level") >= maxLevel) return;
         $.jStorage.set(
             "xp",
             $.jStorage.get("xp") - currentLevel.xpForNextLevel,
@@ -175,8 +202,11 @@ let giveXP = (amount) => {
             (l) => l.level === $.jStorage.get("level"),
         ).xpForNextLevel;
     if ($.jStorage.get('level') >= 30) giveAch('lvl30')
+    if ($.jStorage.get('level') >= 36) giveAch('lvl36')
+    return amount;
 };
-if ($.jStorage.get('level') >= 30) giveAch('lvl30')
+if ($.jStorage.get('level') >= 36) giveAch('lvl36')
+if ($.jStorage.get('level') >= 36) giveAch('lvl30')
 
 if ($.jStorage.get('level') && !$.jStorage.get('levelCredits') && $.jStorage.get('levelCredits') !== 0) {
     $.jStorage.set('levelCredits', $.jStorage.get('level'))
@@ -230,44 +260,61 @@ let levelEnchants = [
 if ($.jStorage.get('levelCredits') > 0) $('#levels')[0].style.border = '3px solid #f00'
 else $('#levels')[0].style.border = '3px solid var(--main)'
 
-levelEnchants.forEach(enchant => {
-    if (!$.jStorage.get(enchant.id)) $.jStorage.set(enchant.id, 0)
-    let details = document.createElement('details')
-    details.classList.add('enchant-div')
-    details.classList.add(enchant.id)
-    let summary = document.createElement('summary')
-    let enchantName = document.createElement('b')
-    let enchantMeter = document.createElement('meter')
-    let enchantButton = document.createElement('button')
-    let enchantLevel = document.createElement('b')
-    enchantName.innerText = enchant.name
-    enchantMeter.min = 0
-    enchantMeter.max = 5
-    enchantMeter.optimum = 0
-    enchantMeter.value = $.jStorage.get(enchant.id)
-    enchantButton.innerHTML = '<i class="fa-solid fa-plus"></i>'
-    enchantButton.classList.add('enchant-button')
-    enchantButton.id = enchant.id
-    enchantLevel.innerText = $.jStorage.get(enchant.id)
-    summary.append(enchantName, enchantMeter, enchantButton, enchantLevel)
-    details.append(summary)
-    details.innerHTML += enchant.description
-    $('.levels .content')[0].append(details)
-})
-
-document.querySelectorAll('.enchant-button').forEach(b => {
-    b.onclick = () => {
-        let enchant = b
-        let d = document.querySelector('.' + b.id)
-        let enchantMeter = d.querySelector('meter')
-        let enchantLevel = d.querySelectorAll('b')[1]
-        if ($.jStorage.get(enchant.id) >= 5 || $.jStorage.get('levelCredits') <= 0) return;
-        $.jStorage.set(enchant.id, $.jStorage.get(enchant.id) + 1)
+const loadEnchants = () => {
+    levelEnchants.forEach(enchant => {
+        if (!$.jStorage.get(enchant.id)) $.jStorage.set(enchant.id, 0)
+        let details = document.createElement('details')
+        details.classList.add('enchant-div')
+        details.classList.add(enchant.id)
+        let summary = document.createElement('summary')
+        let enchantName = document.createElement('b')
+        let enchantMeter = document.createElement('meter')
+        let enchantButton = document.createElement('button')
+        let enchantLevel = document.createElement('b')
+        enchantName.innerText = enchant.name
+        enchantMeter.min = 0
+        enchantMeter.max = maxEnchantLevel
+        enchantMeter.optimum = 0
         enchantMeter.value = $.jStorage.get(enchant.id)
+        enchantButton.innerHTML = '<i class="fa-solid fa-plus"></i>'
+        enchantButton.classList.add('enchant-button')
+        enchantButton.id = enchant.id
         enchantLevel.innerText = $.jStorage.get(enchant.id)
-        $.jStorage.set('levelCredits', $.jStorage.get('levelCredits') - 1)
-        levelCreditsDisplay.innerText = $.jStorage.get('levelCredits')
-        if ($.jStorage.get('levelCredits') > 0) $('#levels')[0].style.border = '3px solid #f00'
-        else $('#levels')[0].style.border = '3px solid var(--main)'
+        summary.append(enchantName, enchantMeter, enchantButton, enchantLevel)
+        details.append(summary)
+        details.innerHTML += enchant.description
+        $('.enchant-list')[0].append(details)
+    })
+
+    document.querySelectorAll('.enchant-button').forEach(b => {
+        b.onclick = () => {
+            let enchant = b
+            let d = document.querySelector('.' + b.id)
+            let enchantMeter = d.querySelector('meter')
+            let enchantLevel = d.querySelectorAll('b')[1]
+            if ($.jStorage.get(enchant.id) >= maxEnchantLevel || $.jStorage.get('levelCredits') <= 0) return;
+            $.jStorage.set(enchant.id, $.jStorage.get(enchant.id) + 1)
+            enchantMeter.value = $.jStorage.get(enchant.id)
+            enchantLevel.innerText = $.jStorage.get(enchant.id)
+            $.jStorage.set('levelCredits', $.jStorage.get('levelCredits') - 1)
+            levelCreditsDisplay.innerText = $.jStorage.get('levelCredits')
+            if ($.jStorage.get('levelCredits') > 0) $('#levels')[0].style.border = '3px solid #f00'
+            else $('#levels')[0].style.border = '3px solid var(--main)'
+        }
+    })
+}
+
+loadEnchants()
+
+const reloadEnchants = () => {
+    $('.enchant-list').empty()
+    loadEnchants()
+}
+
+
+const getMults = () => {
+    return {
+        xp: xpMultiplier + ($.jStorage.get('increaseXPMultiplier') ? $.jStorage.get('increaseXPMultiplier')/10 : 0),
+        sparkles: sparkleMultiplier + ($.jStorage.get('increaseSparkleMultiplier')? $.jStorage.get('increaseSparkleMultiplier')/10 : 0)
     }
-})
+}

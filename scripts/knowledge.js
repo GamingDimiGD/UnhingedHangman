@@ -1,6 +1,5 @@
-let k = 1
-class KnowledgeItem extends ShopItem {
-    constructor(name = '', price = 0, description = '', image = '', type = '', id = '', onBuy = () => console.log('no onbuy specified'), coolDown = 0, saveCD = false, vocabAmountRequired = 0, si = k) {
+class MarketItem extends ShopItem {
+    constructor(name = '', price = 0, description = '', image = '', type = '', id = '', onBuy = () => console.log('no onbuy specified'), coolDown = 0, saveCD = false, vocabAmountRequired = 0, si = 1, customRequirements = () => { return true }, customRequirementText = '你沒有資格買這個商品!') {
         /*
          * Create a new item in the shop using this class lol
          * @param {string} name - The name of the item
@@ -16,12 +15,15 @@ class KnowledgeItem extends ShopItem {
          */
         super(name, price, description, image, type, id, onBuy, coolDown, saveCD, si)
         this.vocabAmountRequired = vocabAmountRequired;
+        this.customRequirements = customRequirements;
+        this.customRequirementText = customRequirementText;
         if (this.vocabAmountRequired > 0) {
             this.item.querySelector('button').innerText = `${this.vocabAmountRequired}詞彙量解鎖`;
         }
         this.item.querySelector("button").addEventListener('click', () => {
-            if (this.si !== 1) return
+            if (this.si === 0) return
             if (vocabAmount < this.vocabAmountRequired) return showNotif(`你還需要${this.vocabAmountRequired - vocabAmount}個詞彙才能購買這東西！`)
+            if (!this.customRequirements()) return showNotif(this.customRequirementText)
             if ($.jStorage.get("sparkles") < this.price)
                 return showNotif("你買不起!", 1);
             takeSparkles(this.price);
@@ -41,7 +43,7 @@ class KnowledgeItem extends ShopItem {
             this.onBuy();
         });
     }
-    disable(isDisabled, customText) {
+    disable(isDisabled = true, customText) {
         this.item.querySelector("button").disabled = isDisabled;
         if (isDisabled) {
             this.item.querySelector("button").innerText =
@@ -64,12 +66,12 @@ let tips = [
     ['你知道西瓜貓看似再挖閃', '實際上他用魔法把它變出來的。'],
 ]
 
-let teach = new KnowledgeItem("教學", 0, "教店員英文領取獎勵", "teach", "其他", "teach", () => {
+let teach = new MarketItem("教學", 0, "教店員英文領取獎勵", "teach", "其他", "teach", () => {
     let grn = rng(120, 80)
     giveSparkles(grn)
     showNotif(`你教店員一個英文單字，獲得${grn * sparkleMultiplier}✧！`)
 }, 240 * 60, true, 20)
-let protip = new KnowledgeItem("你知道嗎", 100, "給一個找到秘密的提示", "protip", "其他", "protip", () => {
+let protip = new MarketItem("你知道嗎", 100, "給一個找到秘密的提示", "protip", "其他", "protip", () => {
     if (isNaN(vocabAmount)) {
         pd(characters[0], '(他不在', 0)
         return dialogue(dialogueQueue)
@@ -86,7 +88,7 @@ let protip = new KnowledgeItem("你知道嗎", 100, "給一個找到秘密的提
     dialogue(dialogueQueue)
 }, 15 * 60, true, 0)
 
-let shortcut = new KnowledgeItem('捷徑', 500, '可以把一些按鈕放在鍵盤下方! 而且可以加快速鍵! 不懂的話買了就知道了。', 'shortcut', '其他', 'shortcut', () => {
+let shortcut = new MarketItem('捷徑', 500, '可以把一些按鈕放在鍵盤下方! 而且可以加快速鍵! 不懂的話買了就知道了。', 'shortcut', '其他', 'shortcut', () => {
     pd(0, '感謝你買我的發明')
     pd(0, '蠻想試試看的')
     pd(0, '我在鍵盤下方放了一個按鈕，你按它可以更改捷徑')

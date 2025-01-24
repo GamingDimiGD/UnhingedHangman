@@ -8,7 +8,7 @@ let achievements = [
         name: '世界救星',
         description: '從柴柴手中救出這個世界',
         id: 'finalBossBadge',
-        reward: 99999,
+        reward: 1000000,
     },
     {
         name: '遊戲救世主',
@@ -95,6 +95,12 @@ let achievements = [
         reward: 0,
     },
     {
+        name: '通貨膨脹',
+        description: '拿到1000000✧',
+        id: '1mSparkles',
+        reward: 5000,
+    },
+    {
         name: '西瓜貓',
         description: '領養西瓜貓 (喵)',
         id: 'cat',
@@ -162,10 +168,22 @@ let achievements = [
     },
     {
         name: '等級之王',
-        description: '到達最高30等',
+        description: '到達30等',
         id: 'lvl30',
         reward: 1000,
-    }
+    },
+    {
+        name: '等級之神',
+        description: '到達36等',
+        id: 'lvl36',
+        reward: 1000000,
+    },
+    {
+        name: '為了解決通貨膨脹',
+        description: '解鎖中途商店!',
+        id: 'antiInflation',
+        reward: 5000,
+    },
 ]
 
 aa.innerText = achievements.length

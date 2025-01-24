@@ -12,7 +12,7 @@ let setVar = (name, val) => {
   return document.documentElement.style.setProperty(`--${name}`, val)
 }
 
-let version = 'v1.4.2'
+let version = 'v1.5.0'
 let bossFightBadge = false
 document.querySelectorAll('.version').forEach(e => e.innerText = version)
 let bossFightMode = false
@@ -76,12 +76,26 @@ const compareArray = (a, b) => {
   return true
 }
 
+const todaysLunarDate = () => {
+  const today = new Date()
+  return Solar.fromYmd(today.getFullYear(), today.getMonth() + 1, today.getDate()).getLunar()
+}
+
 const date = (month, day) => {
   return new Date().getDate() === day && new Date().getMonth() + 1 === month
 }
 const dateRange = (monthFrom, dayFrom, monthTo, dayTo) => {
   return new Date().getDate() >= dayFrom && new Date().getMonth() + 1 >= monthFrom && new Date().getDate() <= dayTo && new Date().getMonth() + 1 <= monthTo
 }
+
+const lunarDate = (month, day) => {
+  return todaysLunarDate().getMonth() === month && todaysLunarDate().getDay() === day
+}
+
+const lunarDateRange = (monthFrom, dayFrom, monthTo, dayTo) => {
+  return todaysLunarDate().getMonth() >= monthFrom && todaysLunarDate().getDay() >= dayFrom && todaysLunarDate().getMonth() <= monthTo && todaysLunarDate().getDay() <= dayTo
+}
+
 // thanks stack overflow
 const toDataURL = (url, callback) => {
   var xhr = new XMLHttpRequest();

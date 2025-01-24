@@ -112,12 +112,12 @@ let dataCH = {
     bestLoginStreak: "最高的連續登入",
 };
 
-if ($.jStorage.get("loginStreak") >= 365) giveAmount = giveAmount * 999;
-else if ($.jStorage.get("loginStreak") >= 100) giveAmount = giveAmount * 10;
-else if ($.jStorage.get("loginStreak") >= 30) giveAmount = giveAmount * 5;
-else if ($.jStorage.get("loginStreak") >= 15) giveAmount = giveAmount * 4;
-else if ($.jStorage.get("loginStreak") >= 10) giveAmount = giveAmount * 3;
-else if ($.jStorage.get("loginStreak") >= 5) giveAmount = giveAmount * 2;
+if ($.jStorage.get("loginStreak") >= 365) sparkleMultiplier *= 999;
+else if ($.jStorage.get("loginStreak") >= 100) sparkleMultiplier *= 10;
+else if ($.jStorage.get("loginStreak") >= 30) sparkleMultiplier *= 5;
+else if ($.jStorage.get("loginStreak") >= 15) sparkleMultiplier *= 4;
+else if ($.jStorage.get("loginStreak") >= 10) sparkleMultiplier *= 3;
+else if ($.jStorage.get("loginStreak") >= 5) sparkleMultiplier *= 2;
 
 const toggleflash = () => {
     if (rmv === 255) {
@@ -298,11 +298,11 @@ const getRandomWord = () => {
     document.querySelector(".hint-text b").innerText = hardMode
         ? glitch(hint.length + 5)
         : hint;
-    if (rng(6 - $.jStorage.get("instinct")) === 1 && $.jStorage.get("instinct") > 0)
-        instinctLetter = currentWord[rng(currentWord.length - 1)];
-    if (rng(6 - $.jStorage.get("remove")) === 1 && $.jStorage.get('remove') > 0) {
+    if (rng(6 - $.jStorage.get("instinct")) === 0 && $.jStorage.get("instinct") > 0 && currentWord.length > 2) 
+        instinctLetter = currentWord.toLowerCase()[rng(currentWord.length - 1)];
+    if (rng(6 - $.jStorage.get("remove")) === 0 && $.jStorage.get('remove') > 0) {
         removedLetter = String.fromCharCode(rng(122, 97))
-        while(currentWord.includes(removedLetter)) {
+        while(currentWord.toLowerCase().includes(removedLetter)) {
             removedLetter = String.fromCharCode(rng(122, 97))
         }
     }
@@ -320,7 +320,7 @@ const gameOver = (isVictory) => {
     undoAmountsLeft = undoAmounts;
     amountDisplay.innerText = `剩${undoAmountsLeft}次`;
     if(eduMode) $('.advmeaningb')[0].click();
-    let xp = rng(8 - $.jStorage.get('experience')) && $.jStorage.get('experience') > 0;
+    let xp = rng(8 - $.jStorage.get('experience')) === 0 && $.jStorage.get('experience') > 0;
     if (isVictory) {
         giveAch("won");
         giveXP(2 * (xp?2:1));
@@ -328,7 +328,7 @@ const gameOver = (isVictory) => {
             tutwin = true;
         }
         data.wins++;
-        let fortune = rng(8 - $.jStorage.get('fortune')) && $.jStorage.get('fortune') > 0;
+        let fortune = rng(8 - $.jStorage.get('fortune')) === 0 && $.jStorage.get('fortune') > 0;
         if (!speedRunMode && !hardMode) giveSparkles((giveAmount + winStreak) * (fortune?2:1));
         else if (speedRunMode && !speedRunEnd) {
             speedRunWins++;
@@ -346,6 +346,12 @@ const gameOver = (isVictory) => {
         }
         if (hardMode) {
             giveSparkles((giveAmount + winStreak) * 10);
+        }
+        if(vocabAmount >= 1000 && !$.jStorage.get('mwsState')) {
+            $.jStorage.set('mwsState', 1);
+            $('.mwsb')[0].disabled = false
+            showNotif('你在商城遠處聽到了轟巄的聲音...')
+            sfx('ms')
         }
     } else {
         data.loses++;
@@ -439,7 +445,7 @@ const gameOver = (isVictory) => {
 const initGame = (button, clickedLetter) => {
     if (fbd) return;
     let forgivenessNum = rng(13 - $.jStorage.get('forgiveness'))
-    let forgiveness = forgivenessNum === 1 && $.jStorage.get('forgiveness') > 0 && !forgivenessTriggered;
+    let forgiveness = forgivenessNum === 0 && $.jStorage.get('forgiveness') > 0 && !forgivenessTriggered;
     if(button.disabled) return
     if (currentWord.toLowerCase().includes(clickedLetter)) {
         if (clickedLetter !== " ") {

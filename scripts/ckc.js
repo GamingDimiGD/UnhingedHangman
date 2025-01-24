@@ -27,9 +27,13 @@ let animations = [
         value: 'rainbow',
     },
     {
-        text: '旋轉',
+        text: '順時針旋轉',
         value: 'spinB',
     },
+    {
+        text: '逆時針旋轉',
+        value: 'spinCB'
+    }
 ]
 
 let ckcVars = [

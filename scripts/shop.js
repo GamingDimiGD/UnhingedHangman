@@ -42,8 +42,12 @@ class ShopItem {
         this.coolDown = coolDown || 0;
         this.saveCD = saveCD || false;
         this.si = si || 0;
-
-        if (si === 1) stuff = document.querySelector(".knowledge-modal .content .stuff")
+        const shops = [
+            'shop-modal',
+            'knowledge-modal',
+            'midway-shop'
+        ]
+        stuff = document.querySelector(`.${shops[this.si]} .content .stuff`)
         if (!types.find((t) => t === this.type)) {
             let category = document.createElement("h1");
             category.innerHTML = this.type;
@@ -104,7 +108,7 @@ class ShopItem {
             this.item.querySelector("button").innerText =
                 customText || "已購買";
         } else {
-            this.item.querySelector("button").innerText = this.price + "✧";
+            this.item.querySelector("button").innerText = customText || this.price + "✧";
         }
     }
     changeButton(callback) {
@@ -196,7 +200,7 @@ let speed = new ShopItem(
             time: cd,
         });
         speedRunMode = true;
-        document.querySelector("audio").src = "../sfx/WaxTerK GANGIMARI.mp3";
+        music.src = "../sfx/WaxTerK GANGIMARI.mp3";
         speed.disable(true);
         let bt = Date.now();
         let timeout = bt + 120 * 1000;
@@ -210,7 +214,7 @@ let speed = new ShopItem(
             displayText.innerText =
                 Math.floor((timeout - Date.now()) / 10) / 100 + "秒";
             if (timeout <= Date.now()) {
-                document.querySelector("audio").src = "../sfx/Wallpaper.mp3";
+                music.src = $.jStorage.get('customMusic') || '../sfx/Wallpaper.mp3';
                 speedRunEnd = true;
                 gameOver("srw");
                 speedRunMode = false;
@@ -362,6 +366,7 @@ let customBGIMG = new ShopItem(
     "customBGIMG",
     () => {
         customBGIMG.price = 0;
+        customBGIMG.save('e')
         customBGIMG.changeButton((b) => {
             b.innerText = "變換圖片";
             b.onclick = () => {
@@ -484,7 +489,10 @@ if ($.jStorage.get("customBGIMG")) {
     document.body.style.backgroundImage = "url(" + img + ")";
     document.body.style.backgroundSize = "cover";
 }
+
 let catLevel = $.jStorage.get("catLevel") || 1;
+let catInt;
+
 let a = new ShopItem(
     "西瓜貓",
     10,
@@ -501,8 +509,8 @@ let a = new ShopItem(
             a.changeButton((b) => {
                 b.innerText = a.price + "✧ 升級 等級" + catLevel;
             });
-            if (catLevel >= 10) {
-                catLevel = 10;
+            if (catLevel >= maxCatLevel) {
+                catLevel = maxCatLevel;
                 $.jStorage.set("catLevel", catLevel);
                 a.disable(true);
                 a.changeButton((b) => {
@@ -513,7 +521,15 @@ let a = new ShopItem(
             rate = rate.toString().slice(0, 5);
             a.item.querySelector("p").innerText =
                 "每" + rate + "秒 1 ~ " + 10 * catLevel + "✧";
-
+            clearInterval(catInt);
+            catInt = setInterval(
+                () => {
+                    let adsf = rng(10 * catLevel, catLevel);
+                    showNotif("西瓜貓找到了" + giveSparkles(adsf).amount + "✧!!", 1);
+                    data.catSparkles += adsf;
+                },
+                (1000 * 60 * 5) / catLevel,
+            );
             return;
         }
         let cat = document.createElement("img");
@@ -524,11 +540,10 @@ let a = new ShopItem(
         pd(characters[2], '喵')
         dialogue(dialogueQueue)
         document.querySelector(".navbar").appendChild(cat);
-        setInterval(
+        catInt = setInterval(
             () => {
-                let adsf = rng(10 * catLevel, 1);
-                giveSparkles(adsf);
-                showNotif("西瓜貓找到了" + adsf * sparkleMultiplier + "✧!!", 1);
+                let adsf = rng(10 * catLevel, catLevel);
+                showNotif("西瓜貓找到了" + giveSparkles(adsf).amount + "✧!!", 1);
                 data.catSparkles += adsf;
             },
             (1000 * 60 * 5) / catLevel,
@@ -539,18 +554,21 @@ let a = new ShopItem(
             b.innerText = a.price + "✧ 升級 等級" + catLevel;
         });
         a.item.querySelector("p").innerText =
-            "每" + (60 * 5) / catLevel + "秒 1 ~ " + 10 * catLevel + "✧";
+            "每" + (60 * 5) / catLevel + "秒 " + catLevel + " ~ " + 10 * catLevel + "✧";
         giveAch("cat");
     },
 );
+
+let maxCatLevel = $.jStorage.get('maxCatLevel') || 10
+
 if ($.jStorage.get("cat")) {
     if ($.jStorage.get("catLevel") > 1) {
         a.price = 2 ** catLevel;
         a.changeButton((b) => {
             b.innerText = a.price + "✧ 升級 等級" + catLevel;
         });
-        if (catLevel >= 10) {
-            catLevel = 10;
+        if (catLevel >= maxCatLevel) {
+            catLevel = maxCatLevel;
             $.jStorage.set("catLevel", catLevel);
             a.disable(true);
             a.changeButton((b) => {
@@ -562,17 +580,16 @@ if ($.jStorage.get("cat")) {
     cat.src = "../images/2.png";
     cat.style.height = "250%";
     document.querySelector(".navbar").appendChild(cat);
-    setInterval(
+    catInt = setInterval(
         () => {
-            let adsf = rng(10 * catLevel, 1);
-            giveSparkles(adsf);
-            showNotif("西瓜貓找到了" + adsf * sparkleMultiplier + "✧!!", 1);
+            let adsf = rng(10 * catLevel, catLevel);
+            showNotif("西瓜貓找到了" + giveSparkles(adsf).amount + "✧!!", 1);
             data.catSparkles += adsf;
         },
         (1000 * 60 * 5) / catLevel,
     );
     a.save(true);
-    if (catLevel < 10) {
+    if (catLevel < maxCatLevel) {
         a.changeButton((b) => {
             b.innerText = a.price + "✧ 升級 等級" + catLevel;
         });
@@ -580,7 +597,7 @@ if ($.jStorage.get("cat")) {
     let rate = (60 * 5) / catLevel;
     rate = rate.toString().slice(0, 5);
     a.item.querySelector("p").innerText =
-        "每" + rate + "秒 1 ~ " + 10 * catLevel + "✧";
+        "每" + rate + "秒 " + catLevel + " ~ " + 10 * catLevel + "✧";
     giveAch("cat");
 }
 let scam = new ShopItem(

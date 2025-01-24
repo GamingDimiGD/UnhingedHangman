@@ -186,18 +186,6 @@ let themes = [
     },
 ]
 
-let themeNames = [
-    'classic-dark',
-    'bloody',
-    'cyan',
-    'modern-white',
-    'modern-black',
-    'green',
-    'purple',
-    'dreamy',
-    'snowy',
-]
-
 const presetList = $('.preset-list')
 const loadPresets = () => {
     $(presetList).empty()
@@ -207,26 +195,41 @@ const loadPresets = () => {
             name: '經典',
             description: 'UnhingedHangman 的預設顏色!',
             author: '遊戲迪米',
-            categories: ['綠色系', '亮色系'],
+            categories: ['綠色系', '亮色系', '高對比度'],
             data: defaultTheme
         },
     ]
     pushPreset(themes[0])
-    themeNames.forEach(name => {
-        fetch(`../themes/data/${name}.json`)
-            .then(response => response.json())
-            .then(theme => {
-                themes.push(theme)
-                pushPreset(theme)
+}
+
+const url = `https://gamingdimigd.github.io/UHThemes/`
+
+const loadMorePresets = () => {
+    $.ajax({
+        url: `${url}idList.json`,
+        success: (data) => {
+            console.log(data)
+            data.forEach(id => {
+                $.ajax({
+                    url: `${url}themes/data/${id}.json`,
+                    success: (theme) => {
+                        theme.thumbnail = `${url}/themes/thumbnail/${id}.png`
+                        if (theme.customMusicURL) theme.customMusicURL = `${url}/themes/music/${id}.mp3`;
+                        if (theme.custom10StreakMusicURL) theme.custom10StreakMusicURL = `${url}/themes/streakMusic/${id}.mp3`;
+                        themes.push(theme)
+                        pushPreset(theme)
+                    }
+                })
             })
-    })
+        }
+    });
 }
 
 const pushPreset = (theme) => {
     let box = document.createElement('div')
     box.classList.add('preset-item')
     let img = document.createElement('img')
-    img.src = `../themes/thumbnail/${theme.id}.png`
+    img.src = theme.thumbnail || `../themes/thumbnail/${theme.id}.png`
     let title = document.createElement('h2')
     title.innerText = theme.name
     let description = document.createElement('p')
@@ -247,6 +250,11 @@ const pushPreset = (theme) => {
             setVar('custom-key-color', getVar('main'))
             setVar('ckc-b', getVar('main'))
         }
+        if (theme.customCss && theme.customCss.length < 2500) $.jStorage.set('customCss', theme.customCss)
+        else removeCss()
+        applyCss()
+        if (theme.customMusicURL) $.jStorage.set('customMusic', theme.customMusicURL)
+        if (theme.custom10StreakMusicURL) $.jStorage.set('custom10StreakMusic', theme.customMusicURL)
         showNotif('已套用', 1)
     }
     let info = document.createElement('div')
@@ -271,6 +279,7 @@ const importTheme = (importSaveData) => {
     $.jStorage.set('theme', e)
     $.jStorage.get('theme').forEach(color => setVar(color.id, color.value))
     $.jStorage.get('theme').forEach(t => {
+        if(!document.querySelector(`.${t.id}-picker`)) return console.log('Theme color id: ' + t.id + ' doesnt exist you idiot')
         document.querySelector(`.${t.id}-picker`).style.background = t.value
     });
 };
@@ -283,6 +292,57 @@ themeInput.addEventListener('change', () => {
     fr.onload = () => {
         console.log(fr.result)
         importTheme(fr.result)
+    }
+    if (!$.jStorage.get('customKeyColor')) {
+        setVar('custom-key-color', getVar('main'))
+        setVar('ckc-b', getVar('main'))
+    }
+})
+
+
+const applyCss = () => {
+    if (!$.jStorage.get('customCss')) return;
+    $('.custom-css').text($.jStorage.get('customCss'))
+}
+
+applyCss()
+
+const removeCss = () => {
+    $.jStorage.deleteKey('customCss');
+    $('.custom-css').empty()
+}
+
+const importResourcePack = (data) => {
+    let e = JSON.parse(data);
+    let preview = document.createElement('img');
+    preview.classList.add('preset-item')
+    preview.classList.add('resource-pack-preview')
+    preview.src = e.id ? `${url}/themes/thumbnail/${e.id}.png` : e.thumbnail ? e.thumbnail : `${url}/themes/thumbnail/thumbnail-placeholder.png`
+    if (e.thumbnail && e.thumbnail.startsWith(url + '/themes/thumbnail/')) preview.style.filter = 'blur(0)'
+    else preview.style.filter = 'blur(10px)'
+    let eleText = `<div class="preset-info"><h2>${e.name}</h2><b>${e.categories.join(' ')}</b><b>製作人: ${e.author}</b>
+<p>${e.description}</p>
+<button>套用</button></div>`
+    $('.resource-pack-preview').empty()
+    $('.resource-pack-preview').append(preview, eleText)
+    $('.resource-pack-preview button').on('click', () => {
+        importTheme(JSON.stringify(e.data))
+        if (e.customCss && e.customCss.length < 2500) $.jStorage.set('customCss', e.customCss)
+        else removeCss()
+        if (e.customMusicURL) $.jStorage.set('customMusic', e.customMusicURL)
+        if (e.custom10StreakMusicURL) $.jStorage.set('custom10StreakMusic', e.customMusicURL)
+        applyCss()
+        $('.import-rp')[0].classList.remove('show')
+    })
+    $('.import-rp')[0].classList.add('show')
+};
+
+$('.rpi').on('change', () => {
+    let fr = new FileReader()
+    fr.readAsText($('.rpi')[0].files[0])
+    fr.onload = () => {
+        console.log(fr.result)
+        importResourcePack(fr.result)
     }
     if (!$.jStorage.get('customKeyColor')) {
         setVar('custom-key-color', getVar('main'))
@@ -306,4 +366,53 @@ $.each($('.custom-music .content button'), (i, b) => {
     b.addEventListener('click', () => {
         music.src = $.jStorage.get('customMusic') || '../sfx/Wallpaper.mp3'
     })
+})
+
+$('.upload-css-input')[0].addEventListener('change', () => {
+    if ($('.upload-css-input')[0].files[0].size > 2500) return alertModal('超過2500字元! 請上傳小一點的檔案!')
+    let fr = new FileReader();
+    fr.readAsText($('.upload-css-input')[0].files[0]);
+    fr.onload = () => {
+        $.jStorage.set('customCss', fr.result);
+        applyCss()
+    }
+})
+
+$('.remove-css').on('click', () => {
+    alertModal('確定刪除自訂CSS?', [
+        {
+            text: '確定',
+            onclick: () => {
+                removeCss()
+            }
+        },
+        {
+            text: '取消'
+        }
+    ])
+})
+
+$('.create-rp-btn').on('click', () => {
+    let name = $('.rp-name-input').val(),
+        description = $('.rp-description-input').val(),
+        author = $('.rp-author-input').val(),
+        categories = $('.rp-categories-input').val(),
+        thumbnail = $('.rp-thumbnail-input').val(),
+        css = $('.rp-include-css')[0].checked ? $.jStorage.get('customCss') : undefined,
+        customMusicURL = $('.rp-include-music')[0].checked ? $.jStorage.get('customMusic') : undefined,
+        custom10StreakMusicURL = $('.rp-include-10music')[0].checked ? $.jStorage.get('custom10StreakMusic') : undefined;
+    if (!name || !description || !author || !categories) return alertModal('資料沒填完整!')
+    if (description.length > 50) return alertModal('簡介已超過50字!')
+    let data = {
+        name, description, author, thumbnail, customMusicURL, custom10StreakMusicURL,
+        categories: categories.split(' ').map(c => c.trim()),
+        data: $.jStorage.get('theme'),
+        customCss: css
+    }
+    let e = JSON.stringify(data);
+    let blob = new Blob([e], { type: "text/json" });
+    let a = document.createElement("a");
+    a.download = name + ".json";
+    a.href = URL.createObjectURL(blob);
+    a.click();
 })
