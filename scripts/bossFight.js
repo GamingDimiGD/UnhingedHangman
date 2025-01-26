@@ -276,7 +276,7 @@ const end = () => {
             sound: 'timemachine1',
             textStyle: 'bigtext'
         })
-        pd(1, '較什麼東西')
+        pd(1, '叫什麼東西')
         pd(3, '差點跌倒')
         pd(1, '...')
         pd(0, '這哪裡')

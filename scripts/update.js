@@ -6,6 +6,20 @@ if($.jStorage.get('version') !== version) {
 }
 let updateInfo = [
     {
+        title: '修bug更新',
+        version: 'v1.5.1',
+        description: [
+            {
+                title: '改良游標通過出現的資訊顯示方式',
+                text: '在他碰到邊緣時不會超出邊緣範圍。',
+            },
+            {
+                title: '修復部分bug',
+                text: '自打錯那些',
+            }
+        ]
+    },
+    {
         title: '稍小了一點點',
         version: 'v1.5.0',
         description: [

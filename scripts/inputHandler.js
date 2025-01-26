@@ -169,8 +169,8 @@ addEventListener('touchmove', e => {
 
 addEventListener('mousemove', e => {
     $('.hover-text')[0].style.transform = `translate(${e.clientX + 30}px,${e.clientY + 30}px)`
-    if (window.innerWidth - e.clientX < window.innerWidth * 0.1) {
-        $('.hover-text')[0].style.transform = `translate(${e.clientX - window.innerWidth * 0.1}px,${e.clientY + 30}px)`
+    if (e.clientX + 30 + $('.hover-text')[0].offsetWidth > window.innerWidth) {
+        $('.hover-text')[0].style.transform = `translate(${window.innerWidth - $('.hover-text')[0].offsetWidth}px,${e.clientY + 30}px)`
     }
     mouseX = e.clientX
     mouseY = e.clientY

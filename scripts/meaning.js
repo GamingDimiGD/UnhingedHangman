@@ -33,7 +33,7 @@ $('.advmeaningb')[0].onclick = () => {
                 </div>
                 
                 <span>同義詞: ${t.synonyms.length > 0? t.synonyms.join(' ').trim():"無"}</span><br>
-                <span class="antonyms">反義詞: ${t.synonyms.length > 0? t.antonyms.join(' ').trim():"無"}</span><br>
+                <span class="antonyms">反義詞: ${t.antonyms.length > 0? t.antonyms.join(' ').trim():"無"}</span><br>
                 </div>`
                 $.each(t.definitions, (i, d) => {
                     $('.js-input-here')[0].innerHTML += `
