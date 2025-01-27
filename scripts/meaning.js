@@ -15,15 +15,14 @@ $('.advmeaningb')[0].onclick = () => {
     $('.mwd').html(currentWord)
     $.getJSON(`${dictionaryApiURL}${currentWord}`).done(data => {
         $('.li').hide()
+        $('.js-input-here').empty()
         $.each(data, (i, m) => {
-            $('.js-input-here').html(
-                `<h2>念法與KK音標</h2>`)
+            $('.js-input-here')[0].innerHTML += `<h2>念法與KK音標 (${i + 1})</h2>`
             $.each(m.phonetics, (i, p) => {
                 $('.js-input-here')[0].innerHTML += `
                 <span>${p.audio[p.audio.length - 5] === 'k' ? '英式' : '美式'}KK音標 (${i + 1}) :${p.text}</span><br>
                 ${p.audio === "" ? "沒給念法" : `<audio src="${p.audio}" controls></audio>`}<br>`
             });
-            console.log(m.phonetics[0].audio)
             $.each(m.meanings, (i, t) => {
                 $('.js-input-here')[0].innerHTML += `<br>
                 <div class="mtype">
