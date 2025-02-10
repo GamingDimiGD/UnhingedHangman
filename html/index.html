@@ -178,24 +178,32 @@
     <div class="container">
         <h1 id="help">太擠了!</h1>
         <div class="hangman-box">
-            <h6 class="version">版本沒載入好</h6>
+            <div class="hangman-info">
+                <h6 class="version">版本沒載入好</h6><h6 class="autosave-text">自動儲存已開啟</h6>
+            </div>
             <img src="../images/hangman-states/hangman-0.png" alt="hangman" />
-            <h6 class="autosave-text">
-                自動儲存已開啟
-            </h6>
-            <h1 id="hangman">Unhinged Hangman</h1>
+            <h2 class="guesses-text">
+                錯誤次數: 
+                <b>0 / 6</b>
+            </h2>
         </div>
         <div class="game-box">
             <ul class="word-display">
             </ul>
-            <h4 class="hint-text">
-                提示:
-                <b>訂閱遊戲迪米</b>
-            </h4>
-            <h4 class="guesses-text">
-                錯誤次數:
-                <b>0 / 6</b>
-            </h4>
+            <div class="round-info">
+                <h4 class="hint-text">
+                    提示:
+                    <b>訂閱遊戲迪米</b>
+                </h4>
+                <div class="streak-display">
+                    <b class="streak">
+                        0 連勝
+                    </b>
+                    <b class="hi-streak">
+                        最高連勝紀錄: 0
+                    </b>
+                </div>
+            </div>
             <div class="keyboard">
             </div>
             <div class="shortcut-buttons">
@@ -213,12 +221,6 @@
             </div>
 
 
-            <b class="streak">
-                0 連勝
-            </b>
-            <b class="hi-streak">
-                最高連勝紀錄: 0
-            </b>
             <b class="boss-fight-badge"></b>
         </div>
     </div>

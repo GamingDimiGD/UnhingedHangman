@@ -168,7 +168,7 @@ const checkStreak = (amount) => {
         streakText.style.borderRadius = "2px";
         streakText.style.border = "3px solid var(--r)";
         si = setInterval(() => {
-            streakText.style.margin = rng(3) + "px";
+            streakText.style.marginLeft = rng(3) + "px";
         });
         rList.forEach(e => {
             e.style.animation = 'unset';
@@ -180,7 +180,7 @@ const checkStreak = (amount) => {
         clearInterval(si);
         game.style.border = "5px solid var(--c)";
         si = setInterval(() => {
-            streakText.style.margin = rng(3) + "px";
+            streakText.style.marginLeft = rng(3) + "px";
         });
         rList.forEach(e => {
             e.style.animation = 'rainbowText 5s infinite';

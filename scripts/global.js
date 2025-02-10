@@ -12,7 +12,7 @@ let setVar = (name, val) => {
   return document.documentElement.style.setProperty(`--${name}`, val)
 }
 
-let version = 'v1.5.1'
+let version = 'v1.5.2'
 let bossFightBadge = false
 document.querySelectorAll('.version').forEach(e => e.innerText = version)
 let bossFightMode = false

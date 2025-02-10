@@ -6,6 +6,20 @@ if($.jStorage.get('version') !== version) {
 }
 let updateInfo = [
     {
+        title: '新版UI!',
+        version: 'v1.5.2',
+        description: [
+            {
+                title: '改良UI!',
+                text: '更改遊戲板UI，讓UI變更乾淨一點。'
+            },
+            {
+                title: '更多遊戲!',
+                text: '你可以去首頁按下"更多遊戲！"來玩我最近新出的遊戲"Unhinged Idle"!',
+            }
+        ]
+    },
+    {
         title: '修bug更新',
         version: 'v1.5.1',
         description: [
